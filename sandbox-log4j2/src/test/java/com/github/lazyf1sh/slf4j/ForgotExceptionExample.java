@@ -17,7 +17,7 @@ public class ForgotExceptionExample
         }
         catch (Exception e)
         {
-            LOGGER.error("Now I spent ages to find NPE root cause");
+            LOGGER.error("Now I spend ages to find NPE root cause");
         }
     }
 
