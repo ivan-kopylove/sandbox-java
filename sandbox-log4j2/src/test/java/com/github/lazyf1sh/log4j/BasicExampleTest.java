@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.slf4j;
+package com.github.lazyf1sh.log4j;
 
 
 import org.apache.logging.log4j.LogManager;
