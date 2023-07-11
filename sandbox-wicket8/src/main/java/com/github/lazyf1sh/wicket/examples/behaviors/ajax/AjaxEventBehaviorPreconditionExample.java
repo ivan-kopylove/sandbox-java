@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.sandbox.wicket.examples.behaviors.ajax;
+package com.github.lazyf1sh.wicket.examples.behaviors.ajax;
 
 import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AjaxRequestTarget;
@@ -10,21 +10,20 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.PropertyModel;
 
 /**
- *
  * Purpose of this example: to show
  * What reader should know:
  * Complexity:
  */
 public class AjaxEventBehaviorPreconditionExample extends WebPage
 {
-    private AjaxEventBehaviorPreconditionModel model;
+    private com.github.lazyf1sh.sandbox.wicket.examples.behaviors.ajax.AjaxEventBehaviorPreconditionModel model;
 
     @Override
     protected void onInitialize()
     {
         super.onInitialize();
 
-        model = new AjaxEventBehaviorPreconditionModel();
+        model = new com.github.lazyf1sh.sandbox.wicket.examples.behaviors.ajax.AjaxEventBehaviorPreconditionModel();
         model.setTextField("213");
         TextField myTextField = new TextField("myTextField", new PropertyModel(model, "textField"));
         myTextField.setOutputMarkupId(true);
@@ -43,13 +42,13 @@ public class AjaxEventBehaviorPreconditionExample extends WebPage
                 }
 
                 AjaxCallListener listener = new AjaxCallListener();
-                listener.onPrecondition("if (Wicket.Event.keyCode(attrs.event) !== 13) { console.log('anykey press has been prevented'); return false; } console.log('keycode 13 is passed precondition'); return true;");
+                listener.onPrecondition(
+                        "if (Wicket.Event.keyCode(attrs.event) !== 13) { console.log('anykey press has been prevented'); return false; } console.log('keycode 13 is passed precondition'); return true;");
                 //        attributes.getDynamicExtraParameters().add("var eventKeycode = Wicket.Event.keyCode(attrs.event);" + "return {keycode: eventKeycode};");
-                attributes.getAjaxCallListeners().add(listener);
-//                attributes.setAllowDefault(true);
+                attributes.getAjaxCallListeners()
+                          .add(listener);
+                //                attributes.setAllowDefault(true);
             }
-
-
 
             @Override
             protected void onUpdate(final AjaxRequestTarget target)
