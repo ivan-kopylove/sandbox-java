@@ -8,10 +8,11 @@ import static org.junit.Assert.*;
 
 public class ClassnameLoggerTest
 {
+    private static final Logger LOGGER = LoggerFactory.getLogger(BasicExampleTest.class);
+
     @Test
     public void run()
     {
-        Logger logger = LoggerFactory.getLogger(ClassnameLoggerTest.class);
-        logger.info("classname logger");
+        LOGGER.info("classname logger");
     }
 }

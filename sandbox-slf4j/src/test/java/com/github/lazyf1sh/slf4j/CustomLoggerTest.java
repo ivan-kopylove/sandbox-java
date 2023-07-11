@@ -4,15 +4,12 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.junit.Assert.*;
+public class CustomLoggerTest {
 
-public class CustomLoggerTest
-{
+    private static final Logger LOGGER = LoggerFactory.getLogger(BasicExampleTest.class);
+
     @Test
-    public void run()
-    {
-        Logger logger = LoggerFactory.getLogger("myLogger");
-        logger.info("My custom message");
-
+    public void run() {
+        LOGGER.info("My custom message");
     }
 }

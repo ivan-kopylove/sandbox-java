@@ -6,11 +6,12 @@ import org.slf4j.LoggerFactory;
 
 
 public class BasicExampleTest {
+    private static final Logger LOGGER = LoggerFactory.getLogger(BasicExampleTest.class);
+
     @Test
     public void run() {
-        Logger logger = LoggerFactory.getLogger(BasicExampleTest.class);
-        logger.debug("Debug log message");
-        logger.info("Info log message");
-        logger.error("Error log message");
+        LOGGER.debug("Debug log message");
+        LOGGER.info("Info log message");
+        LOGGER.error("Error log message");
     }
 }
