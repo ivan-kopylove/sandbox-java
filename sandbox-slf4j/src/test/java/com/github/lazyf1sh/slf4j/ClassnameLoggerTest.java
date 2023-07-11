@@ -13,6 +13,5 @@ public class ClassnameLoggerTest
     {
         Logger logger = LoggerFactory.getLogger(ClassnameLoggerTest.class);
         logger.info("classname logger");
-
     }
 }

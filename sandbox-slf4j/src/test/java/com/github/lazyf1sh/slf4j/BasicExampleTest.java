@@ -5,13 +5,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-public class BasicExampleTest
-{
+public class BasicExampleTest {
     @Test
-    public void run()
-    {
+    public void run() {
         Logger logger = LoggerFactory.getLogger(BasicExampleTest.class);
-        logger.info("Hello World");
-
+        logger.debug("Debug log message");
+        logger.info("Info log message");
+        logger.error("Error log message");
     }
 }
