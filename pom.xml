@@ -53,6 +53,7 @@
         <module>sandbox-servlet-basic-example</module>
         <module>sandbox-dozermapper</module>
         <module>sandbox-maven-rewrite-plugin</module>
+        <module>sandbox-maven-git-build-hook</module>
     </modules>
     <dependencies>
         <dependency>
