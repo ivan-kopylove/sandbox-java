@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.log4j;
+package com.github.lazyf1sh.rewrite;
 
 import org.junit.Test;
 
