@@ -22,6 +22,7 @@
                 <configuration>
                     <installHooks>
                         <pre-commit>hooks/pre-commit</pre-commit>
+                        <pre-commit>hooks/commit-msg</pre-commit>
                     </installHooks>
                 </configuration>
                 <executions>
