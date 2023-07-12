@@ -1,3 +1,6 @@
-#!C:/Program\ Files/Git/usr/bin/sh.exe
+#!/bin/sh
 
-echo "Hello, World!"
+# This example just print "commit-msg" when you executes a commit.
+
+echo 'commit-msg';
+exit 0;
