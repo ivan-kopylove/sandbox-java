@@ -1,6 +1,3 @@
 #!/bin/sh
 
-# This example just print "pre-commit" when you executes a commit.
-
-echo 'pre-commit';
-exit 0;
+mvn clean
