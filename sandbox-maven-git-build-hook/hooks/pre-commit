@@ -1,3 +1,6 @@
-#!"C:\Program Files\Git\usr\bin\sh.exe"
+#!/bin/sh
 
-echo "Hello, World!"
+# This example just print "pre-commit" when you executes a commit.
+
+echo 'pre-commit';
+exit 0;
