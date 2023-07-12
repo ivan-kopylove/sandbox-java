@@ -5,7 +5,7 @@
     <artifactId>sandbox-spring-test-context</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <url>http://maven.apache.org</url>
+
 
     <name>spring-hibernate-test-context: how to setup environment with the spring and hibernate to execute SQL statements</name>
 

@@ -1,0 +1,1 @@
+run maven spotless:apply

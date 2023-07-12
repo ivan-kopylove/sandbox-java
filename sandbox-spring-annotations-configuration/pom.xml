@@ -5,7 +5,7 @@
     <artifactId>sandbox-spring-annotations-configuration</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <url>http://maven.apache.org</url>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
