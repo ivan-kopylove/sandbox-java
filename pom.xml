@@ -52,6 +52,7 @@
         <module>sandbox-dozermapper</module>
         <module>sandbox-maven-rewrite-plugin</module>
         <module>sandbox-maven-git-build-hook</module>
+        <module>sandbox-programming-challenges</module>
         <module>sandbox-maven-spotless</module>
     </modules>
     <dependencies>
