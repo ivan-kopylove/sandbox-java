@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.jcl.java.util;
+package com.github.ivan.kopylove.sandbox.java.util;
 
 import org.junit.Test;
 

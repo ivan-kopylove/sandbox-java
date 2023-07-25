@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.operators.plus;
+package com.github.ivan.kopylove.sandbox.java.plus;
 
 import org.junit.Test;
 
