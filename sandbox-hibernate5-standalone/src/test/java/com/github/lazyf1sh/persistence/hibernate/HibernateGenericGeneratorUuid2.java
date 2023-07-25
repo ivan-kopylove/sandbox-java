@@ -1,13 +1,10 @@
 package com.github.lazyf1sh.persistence.hibernate;
 
+import com.github.lazyf1sh.sandbox.persistence.entities.GeneratedValueUuid2;
+import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.github.lazyf1sh.sandbox.persistence.entities.BookEntity;
-import com.github.lazyf1sh.sandbox.persistence.entities.GeneratedValueUuid;
-import com.github.lazyf1sh.sandbox.persistence.entities.GeneratedValueUuid2;
-import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 
 /**
  * https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/mapping.html#d0e5294
@@ -22,13 +19,16 @@ public class HibernateGenericGeneratorUuid2
         GeneratedValueUuid2 generatedKey = new GeneratedValueUuid2();
 
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         session.persist(generatedKey);
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
 
         Assert.assertNotNull(generatedKey.getKey());
         Assert.assertTrue(generatedKey.getKey() instanceof String);
-        Assert.assertTrue(generatedKey.getKey().length() == 36);
+        Assert.assertTrue(generatedKey.getKey()
+                                      .length() == 36);
     }
 }

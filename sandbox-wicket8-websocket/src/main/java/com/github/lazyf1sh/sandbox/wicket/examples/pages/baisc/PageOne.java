@@ -6,9 +6,6 @@ import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 import org.apache.wicket.protocol.ws.api.WebSocketRequestHandler;
 import org.apache.wicket.protocol.ws.api.message.TextMessage;
 
-/**
- * @author Ivan Kopylov
- */
 public class PageOne extends WebPage
 {
     @Override
@@ -26,7 +23,8 @@ public class PageOne extends WebPage
             protected void onMessage(WebSocketRequestHandler handler, TextMessage message)
             {
                 super.onMessage(handler, message);
-                if (message.getText().startsWith("messageKey:"))
+                if (message.getText()
+                           .startsWith("messageKey:"))
                 {
                     label.setDefaultModelObject(message.getText());
                     handler.add(label);

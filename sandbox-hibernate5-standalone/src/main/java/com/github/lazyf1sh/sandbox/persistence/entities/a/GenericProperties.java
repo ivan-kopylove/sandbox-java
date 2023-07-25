@@ -1,16 +1,8 @@
 package com.github.lazyf1sh.sandbox.persistence.entities.a;
 
+import javax.persistence.*;
 import java.util.Map;
 
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.Embeddable;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-
-/**
- * @author Ivan Kopylov
- */
 @Embeddable
 public class GenericProperties
 {

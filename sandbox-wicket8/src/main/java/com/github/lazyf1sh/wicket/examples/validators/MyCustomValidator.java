@@ -5,5 +5,4 @@ import org.apache.wicket.validation.IValidator;
 public abstract class MyCustomValidator implements IValidator<String>
 {
 
-
 }

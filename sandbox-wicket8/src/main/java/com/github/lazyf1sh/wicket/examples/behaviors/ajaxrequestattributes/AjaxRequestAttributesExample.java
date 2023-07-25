@@ -18,6 +18,5 @@ public class AjaxRequestAttributesExample extends WebPage
         myTextField.setOutputMarkupId(true);
         myTextField.add(BehaviorFactory.get());
         add(myTextField);
-
     }
 }

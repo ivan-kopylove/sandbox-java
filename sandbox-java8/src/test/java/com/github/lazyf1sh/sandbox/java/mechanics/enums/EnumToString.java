@@ -4,14 +4,12 @@ public enum EnumToString
 {
     MY_VALUE("QWERTY");
 
-
     private String enumValue;
 
     EnumToString(final String enumValue)
     {
         this.enumValue = enumValue;
     }
-
 
     public String getEnumValue()
     {

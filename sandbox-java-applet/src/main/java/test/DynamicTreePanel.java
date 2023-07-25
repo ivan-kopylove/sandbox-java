@@ -27,37 +27,33 @@
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */ 
+ */
 
 package test;
 
 /*
- * This code is based on an example provided by Richard Stanford, 
+ * This code is based on an example provided by Richard Stanford,
  * a tutorial reader.
  */
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.GridLayout;
+import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.tree.DefaultMutableTreeNode;
 
-public class DynamicTreePanel extends JPanel 
-                             implements ActionListener {
-    private int newNodeSuffix = 1;
-    private static String ADD_COMMAND = "add";
+public class DynamicTreePanel extends JPanel implements ActionListener
+{
+    private static String ADD_COMMAND    = "add";
     private static String REMOVE_COMMAND = "remove";
-    private static String CLEAR_COMMAND = "clear";
-    
+    private static String CLEAR_COMMAND  = "clear";
+    private        int    newNodeSuffix  = 1;
     private DynamicTree treePanel;
 
-    public DynamicTreePanel() {
+    public DynamicTreePanel()
+    {
         super(new BorderLayout());
-        
+
         //Create the components.
         treePanel = new DynamicTree();
         populateTree(treePanel);
@@ -65,11 +61,11 @@ public class DynamicTreePanel extends JPanel
         JButton addButton = new JButton("Add");
         addButton.setActionCommand(ADD_COMMAND);
         addButton.addActionListener(this);
-        
+
         JButton removeButton = new JButton("Remove");
         removeButton.setActionCommand(REMOVE_COMMAND);
         removeButton.addActionListener(this);
-        
+
         JButton clearButton = new JButton("Clear");
         clearButton.setActionCommand(CLEAR_COMMAND);
         clearButton.addActionListener(this);
@@ -78,14 +74,36 @@ public class DynamicTreePanel extends JPanel
         treePanel.setPreferredSize(new Dimension(300, 150));
         add(treePanel, BorderLayout.CENTER);
 
-        JPanel panel = new JPanel(new GridLayout(0,3));
+        JPanel panel = new JPanel(new GridLayout(0, 3));
         panel.add(addButton);
-        panel.add(removeButton); 
+        panel.add(removeButton);
         panel.add(clearButton);
-	add(panel, BorderLayout.SOUTH);
+        add(panel, BorderLayout.SOUTH);
     }
 
-    public void populateTree(DynamicTree treePanel) {
+    /**
+     * Create the GUI and show it.  For thread safety,
+     * this method should be invoked from the
+     * event-dispatching thread.
+     */
+    private static void createAndShowGUI()
+    {
+        //Create and set up the window.
+        JFrame frame = new JFrame("DynamicTreePanel");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //Create and set up the content pane.
+        DynamicTreePanel newContentPane = new DynamicTreePanel();
+        newContentPane.setOpaque(true); //content panes must be opaque
+        frame.setContentPane(newContentPane);
+
+        //Display the window.
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    public void populateTree(DynamicTree treePanel)
+    {
         String p1Name = new String("Parent 1");
         String p2Name = new String("Parent 2");
         String c1Name = new String("Child 1");
@@ -102,40 +120,26 @@ public class DynamicTreePanel extends JPanel
         treePanel.addObject(p2, c1Name);
         treePanel.addObject(p2, c2Name);
     }
-    
-    public void actionPerformed(ActionEvent e) {
+
+    public void actionPerformed(ActionEvent e)
+    {
         String command = e.getActionCommand();
-        
-        if (ADD_COMMAND.equals(command)) {
+
+        if (ADD_COMMAND.equals(command))
+        {
             //Add button clicked
             treePanel.addObject("New Node " + newNodeSuffix++);
-        } else if (REMOVE_COMMAND.equals(command)) {
+        }
+        else if (REMOVE_COMMAND.equals(command))
+        {
             //Remove button clicked
             treePanel.removeCurrentNode();
-        } else if (CLEAR_COMMAND.equals(command)) {
+        }
+        else if (CLEAR_COMMAND.equals(command))
+        {
             //Clear button clicked.
             treePanel.clear();
         }
-    }
-
-    /**
-     * Create the GUI and show it.  For thread safety,
-     * this method should be invoked from the
-     * event-dispatching thread.
-     */
-    private static void createAndShowGUI() {
-        //Create and set up the window.
-        JFrame frame = new JFrame("DynamicTreePanel");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //Create and set up the content pane.
-        DynamicTreePanel newContentPane = new DynamicTreePanel();
-        newContentPane.setOpaque(true); //content panes must be opaque
-        frame.setContentPane(newContentPane);
-
-        //Display the window.
-        frame.pack();
-        frame.setVisible(true);
     }
     
     /*

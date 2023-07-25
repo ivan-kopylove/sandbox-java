@@ -29,7 +29,6 @@ public class ParentChildFromSubmitBugCandidate extends WebPage
         {
             private static final long serialVersionUID = 8779923761589435319L;
 
-
             @Override
             protected void onSubmit(AjaxRequestTarget target)
             {

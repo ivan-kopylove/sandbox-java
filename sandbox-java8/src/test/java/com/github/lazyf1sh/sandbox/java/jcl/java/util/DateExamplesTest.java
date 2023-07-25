@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import java.util.Date;
 
-/**
- * @author Ivan Kopylov
- */
 public class DateExamplesTest
 {
     /**

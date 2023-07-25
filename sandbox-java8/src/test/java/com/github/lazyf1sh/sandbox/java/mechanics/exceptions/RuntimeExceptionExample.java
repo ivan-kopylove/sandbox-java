@@ -2,11 +2,18 @@ package com.github.lazyf1sh.sandbox.java.mechanics.exceptions;
 
 import org.junit.Test;
 
-/**
- * @author Ivan Kopylov
- */
 public class RuntimeExceptionExample
 {
+    private static void throwRuntime()
+    {
+        throw new RuntimeException("my exception");
+    }
+
+    private static void throwException() throws Exception
+    {
+        throw new Exception("my exception");
+    }
+
     @Test
     public void main()
     {
@@ -20,15 +27,5 @@ public class RuntimeExceptionExample
             e.printStackTrace();
         }
         System.out.println("2");
-    }
-
-    private static void throwRuntime()
-    {
-        throw new RuntimeException("my exception");
-    }
-
-    private static void throwException() throws Exception
-    {
-        throw new Exception("my exception");
     }
 }

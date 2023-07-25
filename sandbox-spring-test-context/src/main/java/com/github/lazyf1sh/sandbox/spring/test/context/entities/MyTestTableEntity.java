@@ -3,9 +3,6 @@ package com.github.lazyf1sh.sandbox.spring.test.context.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * @author Ivan Kopylov
- */
 @Entity(name = "MY_TEST_TABLE")
 public class MyTestTableEntity
 {

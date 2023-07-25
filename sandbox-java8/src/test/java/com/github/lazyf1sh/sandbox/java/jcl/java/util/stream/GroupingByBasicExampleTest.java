@@ -9,9 +9,6 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * @author Ivan Kopylov
- */
 public class GroupingByBasicExampleTest
 {
     @Test
@@ -22,8 +19,9 @@ public class GroupingByBasicExampleTest
         ints.add(2);
         ints.add(3);
 
-        Map<Boolean, List<Integer>> collect = ints.stream().collect(Collectors.groupingBy(integer -> integer > 1));
-        assertTrue(collect.get(true).get(1) == 3);
+        Map<Boolean, List<Integer>> collect = ints.stream()
+                                                  .collect(Collectors.groupingBy(integer -> integer > 1));
+        assertTrue(collect.get(true)
+                          .get(1) == 3);
     }
-
 }

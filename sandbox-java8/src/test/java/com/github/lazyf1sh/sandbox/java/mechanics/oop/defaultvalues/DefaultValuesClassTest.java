@@ -2,9 +2,7 @@ package com.github.lazyf1sh.sandbox.java.mechanics.oop.defaultvalues;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Purpose: to demonstate object properties default values
@@ -30,5 +28,4 @@ public class DefaultValuesClassTest
         assertEquals(0, array[1]);
         assertEquals(0, array[2]);
     }
-
 }

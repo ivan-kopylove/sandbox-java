@@ -1,15 +1,10 @@
 package com.github.lazyf1sh.sandbox.java.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import java.sql.*;
 
 /**
  * Reproduces 1+1 attack

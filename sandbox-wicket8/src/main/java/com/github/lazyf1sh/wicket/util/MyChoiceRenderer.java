@@ -1,17 +1,10 @@
 package com.github.lazyf1sh.sandbox.wicket.util;
 
-/**
- * @author Ivan Kopylov
- */
-
 import org.apache.wicket.markup.html.form.IChoiceRenderer;
 import org.apache.wicket.model.IModel;
 
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class MyChoiceRenderer implements IChoiceRenderer<String>
 {
     @Override

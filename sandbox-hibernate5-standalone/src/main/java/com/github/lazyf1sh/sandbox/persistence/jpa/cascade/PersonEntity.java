@@ -2,14 +2,8 @@ package com.github.lazyf1sh.sandbox.persistence.jpa.cascade;
 
 import com.github.lazyf1sh.sandbox.persistence.entities.AddressEntity;
 
+import javax.persistence.*;
 import java.util.List;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class PersonEntity

@@ -1,8 +1,5 @@
 package com.github.lazyf1sh.sandbox.patterns.decorator;
 
-/**
- * @author Ivan Kopylov
- */
 class WindowDecorator implements Window
 {
     protected Window windowToBeDecorated;

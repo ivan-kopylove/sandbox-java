@@ -34,6 +34,5 @@ public class BreakToLabel1255
                 System.out.println("In Finally");      // 3
             }
         }
-
     }
 }

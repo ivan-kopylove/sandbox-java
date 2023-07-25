@@ -1,6 +1,5 @@
 package com.github.lazyf1sh.sandbox.wicket.examples.components.standard.defaultnestedtree.withprovider.complex;
 
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -16,6 +15,10 @@ import java.util.UUID;
 
 public class XmlToMyStructConverter
 {
+    private XmlToMyStructConverter()
+    {
+    }
+
     public static Optional<MyNode> convert(File xml)
     {
         //check if xml
@@ -23,7 +26,8 @@ public class XmlToMyStructConverter
         DocumentBuilder builder;
         try
         {
-            builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            builder = DocumentBuilderFactory.newInstance()
+                                            .newDocumentBuilder();
         }
         catch (ParserConfigurationException e)
         {
@@ -37,7 +41,7 @@ public class XmlToMyStructConverter
         }
         catch (SAXException e)
         {
- 
+
             return Optional.empty();
         }
         catch (IOException e)
@@ -46,7 +50,8 @@ public class XmlToMyStructConverter
         }
 
         Node root = doc.getDocumentElement();
-        MyNode treeRoot = new MyNode(UUID.randomUUID().toString(), root.getNodeName());
+        MyNode treeRoot = new MyNode(UUID.randomUUID()
+                                         .toString(), root.getNodeName());
 
         MyNode struct = getStruct(treeRoot, root);
         return Optional.of(struct);
@@ -57,25 +62,24 @@ public class XmlToMyStructConverter
         if (node.hasChildNodes())
         {
             NodeList list = node.getChildNodes();
-            for (int i = 0; i < node.getChildNodes().getLength(); i++)
+            for (int i = 0; i < node.getChildNodes()
+                                    .getLength(); i++)
             {
                 Node subNode = list.item(i);
                 if (subNode.getNodeType() == Node.ELEMENT_NODE)
                 {
-                    MyNode child = new MyNode(UUID.randomUUID().toString(), subNode.getNodeName(), treeNode);
+                    MyNode child = new MyNode(UUID.randomUUID()
+                                                  .toString(), subNode.getNodeName(), treeNode);
                     treeNode.addChild(getStruct(child, subNode));
                 }
             }
         }
         else
         {
-            treeNode.addChild(new MyNode(UUID.randomUUID().toString(), node.getNodeName(), true));
+            treeNode.addChild(new MyNode(UUID.randomUUID()
+                                             .toString(), node.getNodeName(), true));
         }
 
         return treeNode;
-    }
-
-    private XmlToMyStructConverter()
-    {
     }
 }

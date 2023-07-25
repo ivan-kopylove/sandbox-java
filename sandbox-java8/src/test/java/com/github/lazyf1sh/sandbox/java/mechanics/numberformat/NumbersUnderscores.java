@@ -6,13 +6,12 @@ import org.junit.Test;
 public class NumbersUnderscores
 {
 
-
     @Test
     public void scientificNotation()
     {
 
-//        int x = 10e1; //uncompilable
-//        float x = 10e1; //uncompilable
+        //        int x = 10e1; //uncompilable
+        //        float x = 10e1; //uncompilable
 
         double a1 = 10e1;
         double a2 = 10e01f;
@@ -73,14 +72,14 @@ public class NumbersUnderscores
     @Test
     public void invalid()
     {
-//      int value = 1,000,000;
-//        float pi1 = 3_.1415F;      // Invalid; cannot put underscores adjacent to a decimal point
-//        float pi2 = 3._1415F;      // Invalid; cannot put underscores adjacent to a decimal point
-//        long socialSecurityNumber1 = 999_99_9999_L;         // Invalid; cannot put underscores prior to an L suffix
-//        int x3 = 52_;              // Invalid; cannot put underscores at the end of a literal
-//        int x5 = 0_x52;            // Invalid; cannot put underscores in the 0x radix prefix
-//        int x6 = 0x_52;            // Invalid; cannot put underscores at the beginning of a number
-//        int x8 = 0x52_;            // Invalid; cannot put underscores at the end of a number
-//        int x11 = 052_;            // Invalid; cannot put underscores at the end of a number
+        //      int value = 1,000,000;
+        //        float pi1 = 3_.1415F;      // Invalid; cannot put underscores adjacent to a decimal point
+        //        float pi2 = 3._1415F;      // Invalid; cannot put underscores adjacent to a decimal point
+        //        long socialSecurityNumber1 = 999_99_9999_L;         // Invalid; cannot put underscores prior to an L suffix
+        //        int x3 = 52_;              // Invalid; cannot put underscores at the end of a literal
+        //        int x5 = 0_x52;            // Invalid; cannot put underscores in the 0x radix prefix
+        //        int x6 = 0x_52;            // Invalid; cannot put underscores at the beginning of a number
+        //        int x8 = 0x52_;            // Invalid; cannot put underscores at the end of a number
+        //        int x11 = 052_;            // Invalid; cannot put underscores at the end of a number
     }
 }

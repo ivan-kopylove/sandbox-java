@@ -38,6 +38,4 @@ public class ImplicitNarrowing
         byte b1 = (byte) i1;
         Assert.assertEquals(-1, b1);
     }
-
-
 }

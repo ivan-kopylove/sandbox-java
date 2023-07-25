@@ -1,9 +1,7 @@
 package com.github.lazyf1sh.sandbox.java.tomcat;
 
 import javax.servlet.ServletContextEvent;
-
 import javax.servlet.ServletContextListener;
-
 
 public class MyCustomServletListener implements ServletContextListener
 {

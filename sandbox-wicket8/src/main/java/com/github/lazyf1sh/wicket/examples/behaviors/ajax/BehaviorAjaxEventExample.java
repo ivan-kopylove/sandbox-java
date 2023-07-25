@@ -8,7 +8,7 @@ public class BehaviorAjaxEventExample extends WebPage
 {
     private static final long serialVersionUID = -5801026524059171943L;
     int i = 0;
-    
+
     @Override
     protected void onInitialize()
     {

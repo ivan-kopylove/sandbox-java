@@ -9,27 +9,8 @@ import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-/**
- * @author Ivan Kopylov
- */
 public class SerializableExamples
 {
-    @Test
-    public void serializable1()
-    {
-        String q = readAllBytesJava7("C:\\Windows\\System32\\drivers\\etc\\hosts");
-        try
-        {
-            int i = sizeof(q);
-            System.out.println(i);
-        }
-        catch (IOException e)
-        {
-            System.out.println("error " + e);
-            Assert.fail();
-        }
-    }
-
     public static int sizeof(Object obj) throws IOException
     {
         ByteArrayOutputStream byteOutputStream = new ByteArrayOutputStream();
@@ -54,5 +35,21 @@ public class SerializableExamples
             e.printStackTrace();
         }
         return content;
+    }
+
+    @Test
+    public void serializable1()
+    {
+        String q = readAllBytesJava7("C:\\Windows\\System32\\drivers\\etc\\hosts");
+        try
+        {
+            int i = sizeof(q);
+            System.out.println(i);
+        }
+        catch (IOException e)
+        {
+            System.out.println("error " + e);
+            Assert.fail();
+        }
     }
 }

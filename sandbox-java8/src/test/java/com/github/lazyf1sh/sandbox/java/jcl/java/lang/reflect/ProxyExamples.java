@@ -11,10 +11,9 @@ public class ProxyExamples
     @Test
     public void run()
     {
-        Map<String, String> proxyInstance = (Map<String, String>) Proxy.newProxyInstance(
-                ProxyExamples.class.getClassLoader(),
-                new Class[]{Map.class},
-                new DynamicInvocationHandler());
+        Map<String, String> proxyInstance = (Map<String, String>) Proxy.newProxyInstance(ProxyExamples.class.getClassLoader(),
+                                                                                         new Class[]{Map.class},
+                                                                                         new DynamicInvocationHandler());
 
         String put = proxyInstance.put("hello", "world");
         Assert.assertEquals("hello world", put);

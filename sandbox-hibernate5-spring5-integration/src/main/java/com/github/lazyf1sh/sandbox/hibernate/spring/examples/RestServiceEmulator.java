@@ -5,9 +5,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 
-/**
- * @author Ivan Kopylov
- */
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class RestServiceEmulator

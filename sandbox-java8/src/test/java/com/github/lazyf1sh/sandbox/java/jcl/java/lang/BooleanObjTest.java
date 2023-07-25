@@ -20,7 +20,6 @@ public class BooleanObjTest
 
         assertFalse(a);
         assertFalse(b);
-
     }
 
     private void modifyBoolean(Boolean value)
@@ -35,7 +34,6 @@ public class BooleanObjTest
         AtomicBoolean a = new AtomicBoolean(false);
         modifyAtomicBoolean(a);
         assertTrue(a.get());
-
     }
 
     private void modifyAtomicBoolean(AtomicBoolean value)

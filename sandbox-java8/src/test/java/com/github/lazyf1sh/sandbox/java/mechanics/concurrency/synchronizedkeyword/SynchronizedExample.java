@@ -10,9 +10,6 @@ import java.util.stream.IntStream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * @author Ivan Kopylov
- */
 public class SynchronizedExample
 {
     @Test
@@ -21,7 +18,8 @@ public class SynchronizedExample
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         CounterThreadDangerous summation = new CounterThreadDangerous();
 
-        IntStream.range(0, 1000).forEach(count -> executorService.submit(summation::calculate));
+        IntStream.range(0, 1000)
+                 .forEach(count -> executorService.submit(summation::calculate));
         executorService.awaitTermination(2000, TimeUnit.MILLISECONDS);
 
         assertTrue(summation.getSum() < 1000);
@@ -33,7 +31,8 @@ public class SynchronizedExample
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         CounterThreadSafe summation = new CounterThreadSafe();
 
-        IntStream.range(0, 1000).forEach(count -> executorService.submit(summation::calculate));
+        IntStream.range(0, 1000)
+                 .forEach(count -> executorService.submit(summation::calculate));
         executorService.awaitTermination(2000, TimeUnit.MILLISECONDS);
 
         assertEquals(1000, summation.getSum());
@@ -45,12 +44,12 @@ public class SynchronizedExample
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         CounterThreadSafeBlock summation = new CounterThreadSafeBlock();
 
-        IntStream.range(0, 1000).forEach(count -> executorService.submit(summation::calculate));
+        IntStream.range(0, 1000)
+                 .forEach(count -> executorService.submit(summation::calculate));
         executorService.awaitTermination(2000, TimeUnit.MILLISECONDS);
 
         assertEquals(1000, summation.getSum());
     }
-
 
     public class CounterThreadSafe
     {

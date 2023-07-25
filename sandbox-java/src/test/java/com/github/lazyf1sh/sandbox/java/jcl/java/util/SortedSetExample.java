@@ -16,6 +16,5 @@ public class SortedSetExample
         SortedSet<String> mySet = new TreeSet<>();
         mySet.add("a");
         mySet.add("1");
-
     }
 }

@@ -22,7 +22,6 @@ public class AnotherPage extends WebPage
         add(new AjaxLink<Void>("navigateback")
         {
 
-
             @Override
             public void onClick(AjaxRequestTarget target)
             {
@@ -35,7 +34,6 @@ public class AnotherPage extends WebPage
                 {
                 }
             }
-
         });
     }
 }

@@ -3,9 +3,6 @@ package com.github.lazyf1sh.sandbox.java.jcl.java.io;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @author Ivan Kopylov
- */
 public class FileExample
 {
     public static void main(String[] args) throws IOException

@@ -28,7 +28,8 @@ public class SomeTreeNodeProvider implements ITreeProvider<CheckedFolderNode>
     @Override
     public Iterator<? extends CheckedFolderNode> getChildren(final CheckedFolderNode node)
     {
-        return node.getChildren().iterator();
+        return node.getChildren()
+                   .iterator();
     }
 
     @Override
@@ -51,7 +52,8 @@ public class SomeTreeNodeProvider implements ITreeProvider<CheckedFolderNode>
         CheckedFolderNode node2 = new CheckedFolderNode();
         node.setParent(node);
         node2.setTitle("child node");
-        node.getChildren().add(node2);
+        node.getChildren()
+            .add(node2);
 
         state = Collections.singletonList(node);
     }

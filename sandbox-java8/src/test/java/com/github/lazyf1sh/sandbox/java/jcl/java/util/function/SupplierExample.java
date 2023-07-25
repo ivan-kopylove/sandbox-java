@@ -1,14 +1,10 @@
 package com.github.lazyf1sh.sandbox.java.jcl.java.util.function;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.function.Supplier;
 
-/**
- * @author Ivan Kopylov
- */
 public class SupplierExample
 {
     private Foo    foo = new Foo();

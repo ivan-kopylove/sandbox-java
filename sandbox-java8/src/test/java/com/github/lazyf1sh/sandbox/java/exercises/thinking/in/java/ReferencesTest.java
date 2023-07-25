@@ -44,6 +44,5 @@ public class ReferencesTest
             References.checkQueue();
         }
         System.gc();
-
     }
 }

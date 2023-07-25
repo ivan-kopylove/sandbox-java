@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class DropDownChoiceExample extends WebPage
 {
-    private static final List<String> SEARCH_ENGINES = Arrays.asList(new String[] { "1", "2", "3" });
+    private static final List<String> SEARCH_ENGINES = Arrays.asList(new String[]{"1", "2", "3"});
 
     public DropDownChoiceExample(final PageParameters parameters)
     {
@@ -24,7 +24,9 @@ public class DropDownChoiceExample extends WebPage
 
         setDefaultModel(Model.of("4"));
 
-        DropDownChoice<String> listSites = new DropDownChoice<String>("sites", (IModel<String>)getDefaultModel(), SEARCH_ENGINES);
+        DropDownChoice<String> listSites = new DropDownChoice<String>("sites",
+                                                                      (IModel<String>) getDefaultModel(),
+                                                                      SEARCH_ENGINES);
 
         Form<?> form = new Form<Void>("form")
         {

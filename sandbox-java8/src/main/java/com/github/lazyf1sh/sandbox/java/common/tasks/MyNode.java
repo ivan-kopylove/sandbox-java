@@ -80,7 +80,7 @@ class MyNode
         {
             return false;
         }
-        final MyNode myStruct = (MyNode)o;
+        final MyNode myStruct = (MyNode) o;
         return id.equals(myStruct.id);
     }
 

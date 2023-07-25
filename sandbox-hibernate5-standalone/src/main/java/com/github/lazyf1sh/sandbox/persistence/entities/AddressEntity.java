@@ -2,25 +2,17 @@ package com.github.lazyf1sh.sandbox.persistence.entities;
 
 import com.github.lazyf1sh.sandbox.persistence.jpa.cascade.PersonEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
-/**
- * @author Ivan Kopylov
- */
 @Entity
 public class AddressEntity
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int    id;
-    private String street;
-    private int    houseNumber;
-    private String city;
+    private int          id;
+    private String       street;
+    private int          houseNumber;
+    private String       city;
     private int          zipCode;
     @ManyToOne(fetch = FetchType.LAZY)
     private PersonEntity person;

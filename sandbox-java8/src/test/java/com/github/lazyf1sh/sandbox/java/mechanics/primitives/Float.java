@@ -9,8 +9,8 @@ public class Float
     @Test
     public void mistakes()
     {
-//        float f1 = 1.0; //not compilable, because it is a double
-//        float f2 = 43e1; //not compilable, because it is a double
+        //        float f1 = 1.0; //not compilable, because it is a double
+        //        float f2 = 43e1; //not compilable, because it is a double
     }
 
     @Test
@@ -48,6 +48,4 @@ public class Float
 
         System.out.println(f1);
     }
-
-
 }

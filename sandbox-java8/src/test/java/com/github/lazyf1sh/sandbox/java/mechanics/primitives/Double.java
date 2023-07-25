@@ -29,6 +29,4 @@ public class Double
 
         Assert.assertEquals(f1, d1, 0);
     }
-
-
 }

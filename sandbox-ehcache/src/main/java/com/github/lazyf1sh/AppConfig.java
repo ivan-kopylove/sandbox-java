@@ -10,21 +10,23 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
 @Configuration
-@ComponentScan({ "com.github.lazyf1sh.*" })
+@ComponentScan({"com.github.lazyf1sh.*"})
 @EnableCaching
 public class AppConfig
 {
     @Bean
-    public CacheManager cacheManager() {
+    public CacheManager cacheManager()
+    {
         return new EhCacheCacheManager(ehCacheCacheManager().getObject());
     }
 
     @Bean
-    public EhCacheManagerFactoryBean ehCacheCacheManager() {
+    public EhCacheManagerFactoryBean ehCacheCacheManager()
+    {
         EhCacheManagerFactoryBean cmfb = new EhCacheManagerFactoryBean();
         cmfb.setConfigLocation(new ClassPathResource("ehcache.xml"));
         cmfb.setShared(true);
-        
+
         return cmfb;
     }
 }

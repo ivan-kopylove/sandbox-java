@@ -6,9 +6,6 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
 import org.apache.wicket.markup.html.WebPage;
 
-/**
- * @author Ivan Kopylov
- */
 public class NestedModalWindow extends WebPage
 {
 
@@ -30,7 +27,6 @@ public class NestedModalWindow extends WebPage
 
         add(new AjaxLink<Void>("showModalWindow")
         {
-
 
             @Override
             public void onClick(AjaxRequestTarget target)

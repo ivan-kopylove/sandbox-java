@@ -4,8 +4,6 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.junit.Assert.*;
-
 public class ClassnameLoggerTest
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(BasicExampleTest.class);

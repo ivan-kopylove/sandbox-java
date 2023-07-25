@@ -64,6 +64,5 @@ public class HelloWorldPage extends WebPage
 
         add(form);
         form.add(username);
-
     }
 }

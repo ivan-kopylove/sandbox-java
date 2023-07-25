@@ -15,6 +15,7 @@ public class StreamsNullSafetyTest
     public void run()
     {
         List<String> myList = null;
-        myList.stream().forEach(System.out::println);
+        myList.stream()
+              .forEach(System.out::println);
     }
 }

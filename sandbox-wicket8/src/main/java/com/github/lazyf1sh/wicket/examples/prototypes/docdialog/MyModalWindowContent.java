@@ -60,6 +60,5 @@ public class MyModalWindowContent extends Panel
 
         controlButtonContainer.add(saveAndCloseBtn, cancelBtn, saveBtn);
         add(controlButtonContainer);
-
     }
 }

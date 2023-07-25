@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -11,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-/**
- * @author Ivan Kopylov
- */
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 public class WaitTest
 {
 
@@ -32,7 +29,9 @@ public class WaitTest
     {
         driver = new FirefoxDriver();
         baseUrl = "http://www.yandex.ru";
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage()
+              .timeouts()
+              .implicitlyWait(60, TimeUnit.SECONDS);
     }
 
     @Test

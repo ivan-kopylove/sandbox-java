@@ -24,5 +24,4 @@ class MyClass
     {
         System.out.println("Non-static block");
     }
-
 }

@@ -33,26 +33,26 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en-US">
-  <head>
+<head>
     <title>Dynamic Tree Applet Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <script type="application/javascript" src="deployJava.js"></script>
+    <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+    <script src="deployJava.js" type="application/javascript"></script>
     <script>
         var attributes = {
             alt: "Dynamic Tree Applet Demo",
-            code:'test.DynamicTreeApplet.class',
+            code: 'test.DynamicTreeApplet.class',
             archive: 'afsdkfasd-1.0-SNAPSHOT.jar,slf4j-api.jar,logback-classic.jar,logback-core.jar',
-            width:300,
-            height:300
+            width: 300,
+            height: 300
         };
-        var parameters = { fontSize:16, permissions:'all-permissions' };
+        var parameters = {fontSize: 16, permissions: 'all-permissions'};
         var version = '1.7';
         deployJava.runApplet(attributes, parameters, version);
     </script>
-  </head>
-  <body>
-    <noscript>A browser with JavaScript enabled is required for this page to operate properly.</noscript>
-    <h1>Dynamic Tree Applet Demo</h1>
-    <h2>This applet has been deployed with the applet tag <em>without</em> using JNLP</h2>
-  </body>
+</head>
+<body>
+<noscript>A browser with JavaScript enabled is required for this page to operate properly.</noscript>
+<h1>Dynamic Tree Applet Demo</h1>
+<h2>This applet has been deployed with the applet tag <em>without</em> using JNLP</h2>
+</body>
 </html>

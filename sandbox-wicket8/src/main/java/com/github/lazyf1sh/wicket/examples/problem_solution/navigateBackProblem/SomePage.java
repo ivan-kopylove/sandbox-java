@@ -10,7 +10,5 @@ public class SomePage extends WebPage
         super.onInitialize();
         SomeComponent someComp = new SomeComponent("someComponent", new SomeHugeModel());
         add(someComp);
-        
     }
-   
 }

@@ -7,7 +7,6 @@ public class SomeComponent extends Panel
     public SomeComponent(String id, SomeHugeModel model)
     {
         super(id, model);
-        
     }
 
     @Override
@@ -16,6 +15,4 @@ public class SomeComponent extends Panel
         super.onInitialize();
         setResponsePage(new AnotherPage(getPage().getPageReference()));
     }
-    
-    
 }

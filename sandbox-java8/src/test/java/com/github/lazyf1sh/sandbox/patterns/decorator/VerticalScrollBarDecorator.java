@@ -1,8 +1,5 @@
 package com.github.lazyf1sh.sandbox.patterns.decorator;
 
-/**
- * @author Ivan Kopylov
- */
 class VerticalScrollBarDecorator extends WindowDecorator
 {
     public VerticalScrollBarDecorator(Window windowToBeDecorated)
@@ -27,5 +24,4 @@ class VerticalScrollBarDecorator extends WindowDecorator
     {
         return super.getDescription() + ", including vertical scrollbars";
     }
-
 }

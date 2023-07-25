@@ -9,15 +9,26 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-/**
- * @author Ivan Kopylov
- */
 public class ReadToByteArray
 {
+    private static byte[] readFully(InputStream stream) throws IOException
+    {
+        byte[] buffer = new byte[8192];
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+        int bytesRead;
+        while ((bytesRead = stream.read(buffer)) != -1)
+        {
+            baos.write(buffer, 0, bytesRead);
+        }
+        return baos.toByteArray();
+    }
+
     @Test
     public void main() throws IOException
     {
-        URL resource = ReadToByteArray.class.getClassLoader().getResource("cameleon-transition.svg.pdf");
+        URL resource = ReadToByteArray.class.getClassLoader()
+                                            .getResource("cameleon-transition.svg.pdf");
         if (resource != null)
         {
             InputStream inputStream = null;
@@ -40,18 +51,5 @@ public class ReadToByteArray
         {
             Assert.fail();
         }
-    }
-
-    private static byte[] readFully(InputStream stream) throws IOException
-    {
-        byte[] buffer = new byte[8192];
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-
-        int bytesRead;
-        while ((bytesRead = stream.read(buffer)) != -1)
-        {
-            baos.write(buffer, 0, bytesRead);
-        }
-        return baos.toByteArray();
     }
 }

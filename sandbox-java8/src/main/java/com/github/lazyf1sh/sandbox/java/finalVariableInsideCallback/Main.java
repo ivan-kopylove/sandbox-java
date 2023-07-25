@@ -1,32 +1,27 @@
 package com.github.lazyf1sh.sandbox.java.finalVariableInsideCallback;
 
-import java.lang.instrument.Instrumentation;
-
-/**
- * @author Ivan Kopylov
- */
 public class Main
 {
-	public static void main(String[] args)
-	{
-		//errors: cannot access a non-final variable inside an inner class defined in a different method
+    public static void main(String[] args)
+    {
+        //errors: cannot access a non-final variable inside an inner class defined in a different method
 
-		final String str = "";//why this have to be final?
-		new One()
-		{
-			//With anonymous classes, you are actually declaring a "nameless" nested class q
-			@Override
-			public void someMethod()
-			{
-				
-				System.out.println(str);
-			}
-		};
-		
-		/*
-		 * For nested classes, the compiler generates a new standalone public class
-		 * with a constructor that will take all the variables it uses as arguments
-		 */
+        final String str = "";//why this have to be final?
+        new One()
+        {
+            //With anonymous classes, you are actually declaring a "nameless" nested class q
+            @Override
+            public void someMethod()
+            {
+
+                System.out.println(str);
+            }
+        };
+
+        /*
+         * For nested classes, the compiler generates a new standalone public class
+         * with a constructor that will take all the variables it uses as arguments
+         */
 
 		/*
 		public void someMethod() {
@@ -38,7 +33,7 @@ public class Main
 		    System.out.println(shared);
 		}
 		*/
-		
-		//str will be destroyed after method end
-	}
+
+        //str will be destroyed after method end
+    }
 }

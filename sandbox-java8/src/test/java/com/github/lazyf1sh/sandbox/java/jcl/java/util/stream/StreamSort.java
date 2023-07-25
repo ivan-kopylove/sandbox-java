@@ -20,9 +20,8 @@ public class StreamSort
     {
         final List<ComparableObject> list = DataProvider.createObjectsWithNulls();
         list.sort(Comparator.nullsLast(Comparator.comparing(ComparableObject::getDate))
-                .thenComparing(Comparator.nullsLast(Comparator.comparing(ComparableObject::getStr))));
+                            .thenComparing(Comparator.nullsLast(Comparator.comparing(ComparableObject::getStr))));
     }
-
 
     /**
      * First it sorts by date. If dates are equals, it sorts by string.
@@ -31,7 +30,7 @@ public class StreamSort
     public void chainedLambdaComparator()
     {
         final List<ComparableObject> list = DataProvider.createObjects();
-        list.sort(Comparator.comparing(ComparableObject::getDate).thenComparing(ComparableObject::getStr));
+        list.sort(Comparator.comparing(ComparableObject::getDate)
+                            .thenComparing(ComparableObject::getStr));
     }
-
 }

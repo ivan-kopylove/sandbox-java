@@ -1,8 +1,8 @@
 package com.github.lazyf1sh.sandbox.spring;
 
-import java.util.Date;
-
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 @Service
 public class MyService

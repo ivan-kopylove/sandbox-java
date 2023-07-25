@@ -5,9 +5,6 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-/**
- * @author Ivan Kopylov
- */
 public abstract class MyModalWindow2 extends Panel
 {
     public MyModalWindow2(String id)

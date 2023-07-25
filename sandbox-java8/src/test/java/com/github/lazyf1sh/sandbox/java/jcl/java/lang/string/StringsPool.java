@@ -63,5 +63,4 @@ public class StringsPool
         String b = new String("012");
         Assert.assertTrue(a == b.intern());
     }
-
 }

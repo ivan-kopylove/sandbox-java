@@ -2,9 +2,6 @@ package com.github.lazyf1sh.sandbox.java.exercises.fixme;
 
 import org.junit.Test;
 
-/**
- * @author Ivan Kopylov
- */
 public class whyAlwaysFive
 {
     int i = 0;
@@ -19,5 +16,4 @@ public class whyAlwaysFive
         }
         System.out.println(i);
     }
-
 }

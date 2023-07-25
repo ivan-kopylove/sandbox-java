@@ -18,9 +18,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Ivan Kopylov
- */
 public class Index extends WebPage
 {
     @Override
@@ -64,32 +61,35 @@ public class Index extends WebPage
             }
         };
         add(refreshingView);
-
-
     }
 
     private List<Class<?>> getPagesClasses()
     {
         String searchFrom = "com.github.lazyf1sh";
         List<Class<?>> result = new ArrayList<>();
-        URL root = Thread.currentThread().getContextClassLoader().getResource("");
+        URL root = Thread.currentThread()
+                         .getContextClassLoader()
+                         .getResource("");
         if (root != null)
         {
             String file1 = root.getFile();
 
             List<File> listf = Util.listf(file1, new ArrayList<>());
-            List<File> files = listf.stream().filter(file -> file.getName().endsWith(".class")).collect(Collectors.toList());
+            List<File> files = listf.stream()
+                                    .filter(file -> file.getName()
+                                                        .endsWith(".class"))
+                                    .collect(Collectors.toList());
 
             for (File file : files)
             {
                 try
                 {
 
-                    String dottedPath = file.getAbsolutePath().replaceAll("\\\\", ".");
+                    String dottedPath = file.getAbsolutePath()
+                                            .replaceAll("\\\\", ".");
                     int index = dottedPath.indexOf(searchFrom);
-                    String fqClassName = dottedPath
-                            .substring(index)
-                            .replace(".class", "");
+                    String fqClassName = dottedPath.substring(index)
+                                                   .replace(".class", "");
 
                     Class<?> cls = Class.forName(fqClassName);
                     if (WebPage.class.isAssignableFrom(cls))

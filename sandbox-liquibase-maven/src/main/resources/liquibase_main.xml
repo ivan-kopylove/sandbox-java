@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
     <changeSet id="create_table_department" author="lazyf1sh">
         <createTable tableName="department">
             <column name="id" type="int">
@@ -17,10 +15,6 @@
         </createTable>
         <comment>Purpose: basic changeset demo.</comment>
     </changeSet>
-
-
-
-
 
 
     <changeSet id="preconditions_index" context="index" author="ikopylov">
@@ -36,10 +30,6 @@
             <column name="name"/>
         </createIndex>
     </changeSet>
-
-
-
-
 
 
     <changeSet id="preconditions_index0" context="index" author="ikopylov">
@@ -75,7 +65,7 @@
         </createIndex>
     </changeSet>
 
-   <changeSet id="preconditions_index3" context="index" author="ikopylov">
+    <changeSet id="preconditions_index3" context="index" author="ikopylov">
         <preConditions onFail="MARK_RAN">
             <not>
                 <indexExists tableName="department" columnNames="name"/>
@@ -88,30 +78,6 @@
     </changeSet>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <changeSet id="add_pk_department" author="lazyf1sh">
         <preConditions onFail="MARK_RAN">
             <not>
@@ -122,190 +88,26 @@
     </changeSet>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <changeSet id="native_sql_1" author="lazyf1sh">
         <sql>
-            INSERT INTO department (id, name) VALUES (0, 'Bob')
+            INSERT INTO department (id, name)
+            VALUES (0, 'Bob')
         </sql>
         <comment>Purpose: to show native SQL.</comment>
     </changeSet>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <changeSet id="native_sql_2" author="lazyf1sh">
         <preConditions onFail="WARN">
-            <sqlCheck expectedResult="1">SELECT COUNT(*) FROM department WHERE name = 'Bob'</sqlCheck>
+            <sqlCheck expectedResult="1">SELECT COUNT(*)
+                                         FROM department
+                                         WHERE name = 'Bob'</sqlCheck>
         </preConditions>
         <sql>
-            INSERT INTO department (id, name) VALUES (1, 'John')
+            INSERT INTO department (id, name)
+            VALUES (1, 'John')
         </sql>
     </changeSet>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <changeSet id="bad_practice_01" author="lazyf1sh">
@@ -319,65 +121,27 @@
     </changeSet>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <changeSet id="good_practice_01_0" author="lazyf1sh">
         <createTable tableName="HOUSES2">
             <column name="ID" type="int"/>
         </createTable>
     </changeSet>
     <changeSet id="good_practice_01_1" author="lazyf1sh">
-        <addNotNullConstraint tableName="HOUSES2" columnName="ID" columnDataType="int" />
+        <addNotNullConstraint tableName="HOUSES2" columnName="ID" columnDataType="int"/>
     </changeSet>
     <changeSet id="good_practice_01_2" author="lazyf1sh">
         <addPrimaryKey tableName="HOUSES2" columnNames="ID"/>
     </changeSet>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <changeSet id="delete_native_sql" author="lazyf1sh">
         <sql>
-            DELETE FROM department WHERE id = '10';
+            DELETE
+            FROM department
+            WHERE id = '10';
         </sql>
         <comment>Way to shoot the leg</comment>
     </changeSet>
-
-
 
 
 </databaseChangeLog>

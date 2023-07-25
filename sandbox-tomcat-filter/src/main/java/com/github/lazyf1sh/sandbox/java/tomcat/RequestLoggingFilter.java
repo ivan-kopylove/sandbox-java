@@ -1,17 +1,10 @@
 package com.github.lazyf1sh.sandbox.java.tomcat;
 
-import java.io.IOException;
-import java.util.Enumeration;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.util.Enumeration;
 
 /**
  * @see <a href="https://www.journaldev.com/1933/java-servlet-filter-example-tutorial">https://www.journaldev.com/1933/java-servlet-filter-example-tutorial</a>
@@ -28,7 +21,7 @@ public class RequestLoggingFilter implements Filter
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException
     {
-        HttpServletRequest req = (HttpServletRequest)request;
+        HttpServletRequest req = (HttpServletRequest) request;
         Enumeration<String> params = req.getParameterNames();
         while (params.hasMoreElements())
         {
@@ -55,5 +48,4 @@ public class RequestLoggingFilter implements Filter
     {
         //we can close resources here
     }
-
 }

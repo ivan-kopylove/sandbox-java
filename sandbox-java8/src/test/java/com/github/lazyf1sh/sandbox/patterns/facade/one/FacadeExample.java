@@ -37,7 +37,6 @@ public class FacadeExample
         catalyticConverter.off();
         coolingController.off();
         airflowController.off();
-
     }
 
     @Test
@@ -107,7 +106,6 @@ public class FacadeExample
         void off()
         {
         }
-
     }
 
     class CatalyticConverter

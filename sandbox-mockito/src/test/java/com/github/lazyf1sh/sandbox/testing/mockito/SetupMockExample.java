@@ -13,7 +13,8 @@ public class SetupMockExample
     public void setupMock()
     {
         myClass = Mockito.mock(MyClass.class);
-        Mockito.when(myClass.getSomeValue()).thenReturn("Hello world");
+        Mockito.when(myClass.getSomeValue())
+               .thenReturn("Hello world");
     }
 
     @Test
@@ -22,5 +23,4 @@ public class SetupMockExample
         MyClass2 myClass2 = new MyClass2();
         Assert.assertEquals("Hello world", myClass2.getMyValue(myClass));
     }
-
 }

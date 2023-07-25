@@ -1,18 +1,10 @@
 package com.github.lazyf1sh.sandbox.java.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * @author Ivan Kopylov
- */
+import java.sql.*;
+
 public class JdbcMetadata
 {
     @Test
@@ -32,7 +24,7 @@ public class JdbcMetadata
         }
 
         ResultSetMetaData metaData = rs.getMetaData();
-        for(int i = 1; i <= metaData.getColumnCount(); i++)
+        for (int i = 1; i <= metaData.getColumnCount(); i++)
         {
             String alias = metaData.getColumnLabel(i);
             String columnClassName = metaData.getColumnClassName(i);
@@ -49,5 +41,4 @@ public class JdbcMetadata
         stat.close();
         conn.close();
     }
-
 }

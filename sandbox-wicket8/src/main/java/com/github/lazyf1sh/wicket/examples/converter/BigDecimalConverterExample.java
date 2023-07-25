@@ -19,9 +19,6 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-/**
- * @author Ivan Kopylov
- */
 public class BigDecimalConverterExample extends WebPage
 {
     private static final long serialVersionUID = 1388829190396256439L;
@@ -58,7 +55,7 @@ public class BigDecimalConverterExample extends WebPage
                         return result;
                     }
                 };
-                return (IConverter<C>)bigDecimalConverter;
+                return (IConverter<C>) bigDecimalConverter;
             }
 
             @Override
@@ -72,7 +69,6 @@ public class BigDecimalConverterExample extends WebPage
             public void error(IValidationError error)
             {
                 super.error(error);
-
             }
         };
         input.add(new AjaxFormComponentUpdatingBehavior("keyup")

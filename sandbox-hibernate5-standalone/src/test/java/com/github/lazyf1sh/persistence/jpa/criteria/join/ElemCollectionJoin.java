@@ -12,9 +12,6 @@ import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class ElemCollectionJoin
 {
     @Test
@@ -27,18 +24,19 @@ public class ElemCollectionJoin
         Root<Ticket> root = cr.from(Ticket.class);
         cr.select(root);
 
-        Join<Object, Object> objectObjectObjectMapJoin = root
-                .join("ticketDetails")
-                .join("genericProperties")
-                .join("properties");
+        Join<Object, Object> objectObjectObjectMapJoin = root.join("ticketDetails")
+                                                             .join("genericProperties")
+                                                             .join("properties");
 
         TypedQuery<Ticket> query = entityManager.createQuery(cr);
         List<Ticket> parents = query.getResultList();
 
         if (parents.size() > 0)
         {
-            parents.get(0).getTicketDetails().getGenericProperties().getProperties();
+            parents.get(0)
+                   .getTicketDetails()
+                   .getGenericProperties()
+                   .getProperties();
         }
     }
-
 }

@@ -1,16 +1,7 @@
 package com.github.lazyf1sh.sandbox.persistence.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-/**
- * @author Ivan Kopylov
- */
 @Entity
 @Table(name = "DOCUMENT")
 public class DocumentEntity
@@ -23,11 +14,7 @@ public class DocumentEntity
     private String name;
 
     @ManyToOne
-    @JoinColumns
-    ({
-        @JoinColumn(name = "DOCUMENT_USERS_LOGIN", referencedColumnName = "USERS_LOGIN"),
-        @JoinColumn(name = "DOCUMENT_USERS_SSN", referencedColumnName = "USERS_SSN")
-    })
+    @JoinColumns({@JoinColumn(name = "DOCUMENT_USERS_LOGIN", referencedColumnName = "USERS_LOGIN"), @JoinColumn(name = "DOCUMENT_USERS_SSN", referencedColumnName = "USERS_SSN")})
     private UserEntity user;
 
     public int getKey()

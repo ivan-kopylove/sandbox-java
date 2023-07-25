@@ -14,7 +14,8 @@ public class JpaSharedGeneratedValue
     public void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         GeneratedValueMostBasic g1 = new GeneratedValueMostBasic();
         entityManager.persist(g1);
@@ -25,7 +26,8 @@ public class JpaSharedGeneratedValue
         Assert.assertEquals(1, g1.getKey());
         Assert.assertEquals(2, g2.getKey());
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 }

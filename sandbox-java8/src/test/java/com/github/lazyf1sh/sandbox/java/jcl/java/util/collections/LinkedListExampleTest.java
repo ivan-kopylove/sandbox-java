@@ -52,7 +52,6 @@ public class LinkedListExampleTest
         Assert.assertEquals("c", linkedList.get(3));
     }
 
-
     @Test
     public void run3()
     {
@@ -88,5 +87,4 @@ public class LinkedListExampleTest
         Assert.assertEquals("b", linkedList.get(0));
         Assert.assertEquals("c", linkedList.get(1));
     }
-
 }

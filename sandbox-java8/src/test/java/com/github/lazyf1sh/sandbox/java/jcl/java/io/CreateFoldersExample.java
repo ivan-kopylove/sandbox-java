@@ -8,9 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * @author Ivan Kopylov
- */
 public class CreateFoldersExample
 {
     @Test
@@ -27,9 +24,12 @@ public class CreateFoldersExample
             Path p1 = Files.createDirectories(Paths.get(path1));
             Path p2 = Files.createDirectories(Paths.get(path2));
             Path p3 = Files.createDirectories(Paths.get(path3));
-            Assert.assertTrue(p1.toFile().exists());
-            Assert.assertTrue(p2.toFile().exists());
-            Assert.assertTrue(p3.toFile().exists());
+            Assert.assertTrue(p1.toFile()
+                                .exists());
+            Assert.assertTrue(p2.toFile()
+                                .exists());
+            Assert.assertTrue(p3.toFile()
+                                .exists());
         }
         catch (IOException e)
         {

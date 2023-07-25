@@ -7,9 +7,6 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * @author Ivan Kopylov
- */
 @Entity
 public class Ticket
 {

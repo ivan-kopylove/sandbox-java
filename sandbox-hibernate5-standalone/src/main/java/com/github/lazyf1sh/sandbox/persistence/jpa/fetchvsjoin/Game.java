@@ -4,9 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * @author Ivan Kopylov
- */
 @Entity(name = "GAME")
 public class Game
 {

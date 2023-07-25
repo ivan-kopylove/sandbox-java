@@ -19,7 +19,8 @@ public class JpaFlushMode
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         ParentEntity parent = new ParentEntity();
         parent.setName("some name");
@@ -27,7 +28,8 @@ public class JpaFlushMode
 
         entityManager.persist(parent);
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
@@ -35,14 +37,16 @@ public class JpaFlushMode
     public void commitMode()
     {
         EntityManager entityManager = HibernateSessionFactory.openSession();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         ParentEntity parent = entityManager.find(ParentEntity.class, 4000);
         parent.setName("new name");
 
         entityManager.setFlushMode(FlushModeType.COMMIT);
 
-        entityManager.getTransaction().commit();// hibernate does flush
+        entityManager.getTransaction()
+                     .commit();// hibernate does flush
         entityManager.close();
     }
 }

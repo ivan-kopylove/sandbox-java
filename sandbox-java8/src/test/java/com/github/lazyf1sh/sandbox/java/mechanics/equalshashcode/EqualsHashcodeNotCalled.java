@@ -6,9 +6,6 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author Ivan Kopylov
- */
 public class EqualsHashcodeNotCalled
 {
     private boolean equalsCalled   = false;
@@ -52,7 +49,6 @@ public class EqualsHashcodeNotCalled
         Assert.assertFalse(equalsCalled);
         Assert.assertTrue(hashcodeCalled);
     }
-
 
     class MyClass
     {

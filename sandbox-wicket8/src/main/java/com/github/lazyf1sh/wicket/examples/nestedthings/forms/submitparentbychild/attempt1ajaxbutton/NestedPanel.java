@@ -8,9 +8,6 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-/**
- * @author Ivan Kopylov
- */
 public class NestedPanel extends Panel
 {
     public NestedPanel(String id)
@@ -36,74 +33,74 @@ public class NestedPanel extends Panel
     private AjaxButton buildNestedSaveButton(Form<?> nestedForm)
     {
         return new AjaxButton("nestedSaveButton", nestedForm)
+        {
+            @Override
+            protected void onSubmit(AjaxRequestTarget target)
             {
-                @Override
-                protected void onSubmit(AjaxRequestTarget target)
-                {
-                    Util.showComponentMessage(this);
-                    super.onSubmit(target);
-                }
+                Util.showComponentMessage(this);
+                super.onSubmit(target);
+            }
 
-                @Override
-                protected void onBeforeRender()
-                {
-                    Util.showComponentMessage(this);
-                    super.onBeforeRender();
-                }
+            @Override
+            protected void onBeforeRender()
+            {
+                Util.showComponentMessage(this);
+                super.onBeforeRender();
+            }
 
-                @Override
-                protected void onModelChanging()
-                {
-                    Util.showComponentMessage(this);
-                    super.onModelChanging();
-                }
+            @Override
+            protected void onModelChanging()
+            {
+                Util.showComponentMessage(this);
+                super.onModelChanging();
+            }
 
-                @Override
-                protected void onModelChanged()
-                {
-                    Util.showComponentMessage(this);
-                    super.onModelChanged();
-                }
-            };
+            @Override
+            protected void onModelChanged()
+            {
+                Util.showComponentMessage(this);
+                super.onModelChanged();
+            }
+        };
     }
 
     private TextField<String> buildTextField()
     {
         return new TextField<String>("nestedTextField", Model.of("nested text field value"))
+        {
+            @Override
+            protected void onBeforeRender()
             {
-                @Override
-                protected void onBeforeRender()
-                {
-                    Util.showComponentMessage(this);
-                    super.onBeforeRender();
-                }
+                Util.showComponentMessage(this);
+                super.onBeforeRender();
+            }
 
-                @Override
-                protected void onModelChanging()
-                {
-                    Util.showComponentMessage(this);
-                    super.onModelChanging();
-                }
+            @Override
+            protected void onModelChanging()
+            {
+                Util.showComponentMessage(this);
+                super.onModelChanging();
+            }
 
-                @Override
-                protected void onModelChanged()
-                {
-                    Util.showComponentMessage(this);
-                    super.onModelChanged();
-                }
-            };
+            @Override
+            protected void onModelChanged()
+            {
+                Util.showComponentMessage(this);
+                super.onModelChanged();
+            }
+        };
     }
 
     private Form<?> buildForm()
     {
         return new Form<Void>("nestedForm")
+        {
+            @Override
+            protected void onSubmit()
             {
-                @Override
-                protected void onSubmit()
-                {
-                    Util.showComponentMessage(this);
-                    super.onSubmit();
-                }
-            };
+                Util.showComponentMessage(this);
+                super.onSubmit();
+            }
+        };
     }
 }

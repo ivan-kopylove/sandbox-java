@@ -1,6 +1,5 @@
 package com.github.lazyf1sh.sandbox.wicket.examples.behaviors.ajax;
 
-import com.github.lazyf1sh.sandbox.wicket.util.Util;
 import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AbstractDefaultAjaxBehavior;
 import org.apache.wicket.ajax.AjaxRequestTarget;
@@ -34,7 +33,10 @@ public class BehaviorAbstractDefaultAjaxExample extends WebPage
                 String callBackScript = getCallbackScript().toString();
                 String callBackUrl = getCallbackUrl().toString();
 
-                String msg = String.format("%s | callback script: %s, callbackurl: %s", "renderHead", callBackScript, callBackUrl);
+                String msg = String.format("%s | callback script: %s, callbackurl: %s",
+                                           "renderHead",
+                                           callBackScript,
+                                           callBackUrl);
                 System.out.println(msg);
 
                 super.renderHead(component, response);
@@ -44,6 +46,5 @@ public class BehaviorAbstractDefaultAjaxExample extends WebPage
         add(abstractDefaultAjaxBehavior);
         System.out.println(abstractDefaultAjaxBehavior.getCallbackScript());
         System.out.println(abstractDefaultAjaxBehavior.getCallbackUrl());
-
     }
 }

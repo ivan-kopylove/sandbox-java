@@ -5,5 +5,5 @@ import org.junit.Test;
 public class MakeSomeCodeMessHere
 {
     @Test
-    public void main() { }
+    public void main() {}
 }

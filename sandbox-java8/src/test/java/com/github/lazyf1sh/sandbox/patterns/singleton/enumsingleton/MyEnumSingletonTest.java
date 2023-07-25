@@ -1,6 +1,5 @@
 package com.github.lazyf1sh.sandbox.patterns.singleton.enumsingleton;
 
-import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 

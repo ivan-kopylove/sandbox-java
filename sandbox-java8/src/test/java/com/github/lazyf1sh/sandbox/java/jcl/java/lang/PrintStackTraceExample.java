@@ -8,7 +8,9 @@ public class PrintStackTraceExample
     @Test
     public void createDeployment()
     {
-        String s = Thread.currentThread().getStackTrace().toString();
+        String s = Thread.currentThread()
+                         .getStackTrace()
+                         .toString();
         Assert.assertTrue(s.startsWith("[Ljava.lang.StackTraceElement;@"));
     }
 }

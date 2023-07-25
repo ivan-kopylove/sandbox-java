@@ -36,7 +36,5 @@ public class ThreadLocalExampleTest
             }
         };
         thread.start();
-
     }
-
 }

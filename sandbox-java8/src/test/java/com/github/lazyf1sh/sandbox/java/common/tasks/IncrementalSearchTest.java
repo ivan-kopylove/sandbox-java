@@ -43,7 +43,9 @@ public class IncrementalSearchTest extends TestCase
         while (incrementalSearch.hasNext())
         {
             Optional<MyNode> next = incrementalSearch.getNext();
-            next.ifPresent(n -> assertTrue(n.getTitle().toLowerCase().contains(searchExpression)));
+            next.ifPresent(n -> assertTrue(n.getTitle()
+                                            .toLowerCase()
+                                            .contains(searchExpression)));
             i++;
         }
         assertEquals(i, 3);

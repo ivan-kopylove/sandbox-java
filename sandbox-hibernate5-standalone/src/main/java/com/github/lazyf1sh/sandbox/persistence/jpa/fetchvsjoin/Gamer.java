@@ -1,13 +1,8 @@
 package com.github.lazyf1sh.sandbox.persistence.jpa.fetchvsjoin;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
- *
  * @author Ivan Kopylov
  */
 @Entity(name = "GAMER")

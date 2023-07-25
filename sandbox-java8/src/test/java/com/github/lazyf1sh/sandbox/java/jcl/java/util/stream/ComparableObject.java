@@ -2,7 +2,6 @@ package com.github.lazyf1sh.sandbox.java.jcl.java.util.stream;
 
 import java.util.Date;
 
-
 public class ComparableObject
 {
 

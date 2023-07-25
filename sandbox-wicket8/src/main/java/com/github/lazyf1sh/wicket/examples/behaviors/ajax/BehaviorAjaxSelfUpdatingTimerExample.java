@@ -5,13 +5,9 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.util.time.Duration;
 
-/**
- * @author Ivan Kopylov
- */
 public class BehaviorAjaxSelfUpdatingTimerExample extends WebPage
 {
     private static final long serialVersionUID = 1090726579020985087L;
-
 
     @Override
     protected void onInitialize()

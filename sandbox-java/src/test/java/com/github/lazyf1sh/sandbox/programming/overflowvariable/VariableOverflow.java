@@ -15,8 +15,7 @@ public class VariableOverflow
             {
                 System.out.println("x>0: " + x);
             }
-        }
-        while (x < 10);
+        } while (x < 10);
         System.out.println(x);
     }
 }

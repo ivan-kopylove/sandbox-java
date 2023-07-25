@@ -40,7 +40,6 @@ public class PriorityQueExampleTest
         assertEquals(priorityQueue.poll(), "3");
     }
 
-
     @Test
     public void test()
     {

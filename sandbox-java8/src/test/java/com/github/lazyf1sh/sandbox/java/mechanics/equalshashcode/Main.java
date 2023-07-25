@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import java.util.Date;
 
-/**
- * @author Ivan Kopylov
- */
 public class Main
 {
     @Test
@@ -16,5 +13,4 @@ public class Main
         Assert.assertFalse(new Foo().equals(null));
         Assert.assertFalse(new Date().equals(null));
     }
-
 }

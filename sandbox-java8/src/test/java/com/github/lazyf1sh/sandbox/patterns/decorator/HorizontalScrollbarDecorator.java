@@ -1,8 +1,5 @@
 package com.github.lazyf1sh.sandbox.patterns.decorator;
 
-/**
- * @author Ivan Kopylov
- */
 class HorizontalScrollbarDecorator extends WindowDecorator
 {
 
@@ -28,5 +25,4 @@ class HorizontalScrollbarDecorator extends WindowDecorator
     {
         return super.getDescription() + ", including horizontal scrollbars";
     }
-
 }

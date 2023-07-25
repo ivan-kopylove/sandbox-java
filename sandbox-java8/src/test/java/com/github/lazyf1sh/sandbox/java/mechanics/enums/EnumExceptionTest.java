@@ -1,6 +1,5 @@
 package com.github.lazyf1sh.sandbox.java.mechanics.enums;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 

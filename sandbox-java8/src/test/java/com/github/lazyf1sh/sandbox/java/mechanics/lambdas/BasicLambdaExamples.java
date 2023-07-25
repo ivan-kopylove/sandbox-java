@@ -5,9 +5,6 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class BasicLambdaExamples
 {
     @Test

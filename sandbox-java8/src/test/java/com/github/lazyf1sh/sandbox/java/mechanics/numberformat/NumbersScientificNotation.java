@@ -6,13 +6,12 @@ import org.junit.Test;
 public class NumbersScientificNotation
 {
 
-
     @Test
     public void scientificNotation()
     {
 
-//        int x = 10e1; //uncompilable
-//        float x = 10e1; //uncompilable
+        //        int x = 10e1; //uncompilable
+        //        float x = 10e1; //uncompilable
 
         double a1 = 10e1;
         double a2 = 10e01f;

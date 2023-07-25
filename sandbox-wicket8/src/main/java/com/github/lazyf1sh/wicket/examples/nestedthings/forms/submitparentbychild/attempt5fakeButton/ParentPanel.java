@@ -11,9 +11,6 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-/**
- * @author Ivan Kopylov
- */
 public class ParentPanel extends Panel
 {
     private TextField<String> parentTextField;
@@ -92,13 +89,18 @@ public class ParentPanel extends Panel
             {
                 super.onEvent(event);
 
-                String msg1 = String.format("parentTextField model object: %s, convertedInput: %s", parentTextField.getModelObject(), parentTextField.getConvertedInput());
+                String msg1 = String.format("parentTextField model object: %s, convertedInput: %s",
+                                            parentTextField.getModelObject(),
+                                            parentTextField.getConvertedInput());
                 Util.showComponentMessage(this, msg1);
 
                 if (event.getPayload() instanceof String && event.getSource() instanceof NestedPanel)
                 {
                     String payload = (String) event.getPayload();
-                    String msg = String.format("parentTextField model object: %s, convertedInput: %s, payload: %s", parentTextField.getModelObject(), parentTextField.getConvertedInput(), payload);
+                    String msg = String.format("parentTextField model object: %s, convertedInput: %s, payload: %s",
+                                               parentTextField.getModelObject(),
+                                               parentTextField.getConvertedInput(),
+                                               payload);
                     Util.showComponentMessage(this, msg);
                 }
             }
@@ -148,7 +150,9 @@ public class ParentPanel extends Panel
             @Override
             protected void onSubmit()
             {
-                String msg = String.format("parentTextField model object: %s, convertedInput: %s", parentTextField.getModelObject(), parentTextField.getConvertedInput());
+                String msg = String.format("parentTextField model object: %s, convertedInput: %s",
+                                           parentTextField.getModelObject(),
+                                           parentTextField.getConvertedInput());
                 Util.showComponentMessage(this, msg);
                 super.onSubmit();
             }

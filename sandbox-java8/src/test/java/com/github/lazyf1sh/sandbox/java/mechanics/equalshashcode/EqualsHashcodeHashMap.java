@@ -7,9 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-/**
- * @author Ivan Kopylov
- */
 public class EqualsHashcodeHashMap
 {
     private boolean equalsCalled   = false;
@@ -29,7 +26,6 @@ public class EqualsHashcodeHashMap
         Assert.assertTrue(hashcodeCalled); //it's ok
     }
 
-
     @Test
     public void query()
     {
@@ -46,7 +42,6 @@ public class EqualsHashcodeHashMap
         Assert.assertTrue(hashcodeCalled); //it's ok
         Assert.assertNotNull(queryResult); //it's ok
     }
-
 
     class MyClass
     {

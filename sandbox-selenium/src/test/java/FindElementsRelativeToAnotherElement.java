@@ -1,7 +1,4 @@
-import java.io.File;
-import java.net.URL;
-import java.util.List;
-
+import com.github.lazyf1sh.sandbox.selenium.util.Utils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -10,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.github.lazyf1sh.sandbox.selenium.util.Utils;
+import java.util.List;
 
 /**
  * To find cells of table, relatively of already found element, please use dot. E.g. .//td, not //td.
@@ -62,7 +59,8 @@ public class FindElementsRelativeToAnotherElement
             webDriver.get(url);
 
             List<WebElement> rows = webDriver.findElements(By.xpath("//table//tr"));
-            List<WebElement> elements = rows.get(1).findElements(By.xpath(".//td"));
+            List<WebElement> elements = rows.get(1)
+                                            .findElements(By.xpath(".//td"));
             Assert.assertEquals(3, elements.size());
             webDriver.quit();
         }
@@ -71,5 +69,4 @@ public class FindElementsRelativeToAnotherElement
             Assert.fail();
         }
     }
-
 }

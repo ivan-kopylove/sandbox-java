@@ -5,12 +5,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.Test;
 
-public class Basic {
+public class Basic
+{
 
     private static final Log LOGGER = LogFactory.getLog(Runner.class);
 
     @Test
-    public  void main() {
+    public void main()
+    {
         LOGGER.debug("Example debug message ..");
         LOGGER.info("Example info message ..");
         LOGGER.warn("Example warn message ..");

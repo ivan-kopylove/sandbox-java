@@ -14,13 +14,13 @@ public class BehaviorFactory
         AjaxEventBehavior ajaxEventBehavior = new AjaxEventBehavior("keydown")
         {
 
+            private static final long serialVersionUID = -7734303667397500L;
+
             @Override
             protected void onEvent(final AjaxRequestTarget target)
             {
                 System.out.println("123");
             }
-
-            private static final long serialVersionUID = -7734303667397500L;
 
             @Override
             protected void updateAjaxAttributes(AjaxRequestAttributes attributes)
@@ -34,14 +34,14 @@ public class BehaviorFactory
                     @Override
                     public CharSequence getPrecondition(Component component)
                     {
-                        return "var keycode = Wicket.Event.keyCode(attrs.event);"
-                                + "if (keycode == 13) return true;"
-                                + "else return false;";
+                        return "var keycode = Wicket.Event.keyCode(attrs.event);" + "if (keycode == 13) return true;" + "else return false;";
                     }
                 };
-                attributes.getAjaxCallListeners().add(listener);
-                attributes.getDynamicExtraParameters().add("var eventKeycode = Wicket.Event.keyCode(attrs.event);" + "return {keycode: eventKeycode};");
-//                attributes.setAllowDefault(true);
+                attributes.getAjaxCallListeners()
+                          .add(listener);
+                attributes.getDynamicExtraParameters()
+                          .add("var eventKeycode = Wicket.Event.keyCode(attrs.event);" + "return {keycode: eventKeycode};");
+                //                attributes.setAllowDefault(true);
             }
         };
         return ajaxEventBehavior;

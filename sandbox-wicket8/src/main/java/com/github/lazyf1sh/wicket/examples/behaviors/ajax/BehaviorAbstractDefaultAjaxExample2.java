@@ -20,7 +20,7 @@ public class BehaviorAbstractDefaultAjaxExample2 extends WebPage
     protected void onInitialize()
     {
         super.onInitialize();
-        
+
         add(new AbstractDefaultAjaxBehavior()
         {
             private static final long serialVersionUID = 4140058103308501910L;
@@ -30,8 +30,10 @@ public class BehaviorAbstractDefaultAjaxExample2 extends WebPage
             {
                 RequestCycle cycle = RequestCycle.get();
                 WebRequest webRequest = (WebRequest) cycle.getRequest();
-                StringValue param1 = webRequest.getQueryParameters().getParameterValue("param1");
-                StringValue param2 = webRequest.getQueryParameters().getParameterValue("param2");
+                StringValue param1 = webRequest.getQueryParameters()
+                                               .getParameterValue("param1");
+                StringValue param2 = webRequest.getQueryParameters()
+                                               .getParameterValue("param2");
                 System.out.println(param1);
                 System.out.println(param2);
                 // do whatever you need with param1 and param2
@@ -53,8 +55,10 @@ public class BehaviorAbstractDefaultAjaxExample2 extends WebPage
             protected void updateAjaxAttributes(AjaxRequestAttributes attributes)
             {
                 super.updateAjaxAttributes(attributes);
-                attributes.getExtraParameters().put("param1", "PARAM_PLACEHOLDER_1");
-                attributes.getExtraParameters().put("param2", "PARAM_PLACEHOLDER_2");
+                attributes.getExtraParameters()
+                          .put("param1", "PARAM_PLACEHOLDER_1");
+                attributes.getExtraParameters()
+                          .put("param2", "PARAM_PLACEHOLDER_2");
             }
         });
     }

@@ -1,11 +1,10 @@
 package com.github.lazyf1sh.persistence.hibernate;
 
+import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 
 public class ReadInTheSameTransaction
 {
@@ -17,12 +16,15 @@ public class ReadInTheSameTransaction
         parentEntity.setName("test4");
 
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         session.saveOrUpdate(parentEntity);
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
 
         session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         ParentEntity entity = session.get(ParentEntity.class, 4);
         entity.setName("test4-2");
 
@@ -39,18 +41,20 @@ public class ReadInTheSameTransaction
         parentEntity.setName("test4");
 
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         session.saveOrUpdate(parentEntity);
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
 
         session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         ParentEntity entity = session.get(ParentEntity.class, 4);
         entity.setName("test4-2");
 
         ParentEntity entity2 = session.get(ParentEntity.class, 4);
         Assert.assertEquals("message", "test4-2", entity2.getName());
-
     }
 
     @Test
@@ -61,17 +65,19 @@ public class ReadInTheSameTransaction
         parentEntity.setName("test4");
 
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         session.saveOrUpdate(parentEntity);
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
 
         session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         ParentEntity entity = session.get(ParentEntity.class, 4);
         entity.setName("test4-2");
 
         ParentEntity entity2 = session.load(ParentEntity.class, 4);
         Assert.assertEquals("message", "test4-2", entity2.getName());
     }
-
 }

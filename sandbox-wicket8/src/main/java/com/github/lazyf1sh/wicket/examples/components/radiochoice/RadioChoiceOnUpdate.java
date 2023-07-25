@@ -32,7 +32,9 @@ public class RadioChoiceOnUpdate extends WebPage
         FeedbackPanel feedback = new FeedbackPanel("feedback");
         add(feedback);
 
-        RadioChoice<String> radioGroup = new RadioChoice<String>("radioGroup", new PropertyModel<String>(this, "selected"), TYPES);
+        RadioChoice<String> radioGroup = new RadioChoice<String>("radioGroup",
+                                                                 new PropertyModel<String>(this, "selected"),
+                                                                 TYPES);
         radioGroup.setOutputMarkupId(true);
         add(radioGroup);
 
@@ -48,7 +50,8 @@ public class RadioChoiceOnUpdate extends WebPage
             {
                 if (i.incrementAndGet() % 2 == 0)
                 {
-                    getComponent().getDefaultModel().setObject(null);
+                    getComponent().getDefaultModel()
+                                  .setObject(null);
                 }
 
                 System.out.println("RadioChoiceOnUpdate");

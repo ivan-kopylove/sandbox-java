@@ -19,6 +19,21 @@ import static org.junit.Assert.assertEquals;
  */
 public class GenericsExamples
 {
+    /**
+     * Generic method.
+     *
+     * @param a
+     * @param c
+     * @param <T>
+     */
+    static <T> void fromArrayToCollection(T[] a, Collection<T> c)
+    {
+        for (T o : a)
+        {
+            c.add(o);
+        }
+    }
+
     @Test
     public void run()
     {
@@ -63,21 +78,8 @@ public class GenericsExamples
 
     public List<?> printAll(List<?> list) //the same as using <? extends Object>.
     {
-        return list.stream().map(Object::toString).collect(Collectors.toList());
-    }
-
-    /**
-     * Generic method.
-     *
-     * @param a
-     * @param c
-     * @param <T>
-     */
-    static <T> void fromArrayToCollection(T[] a, Collection<T> c)
-    {
-        for (T o : a)
-        {
-            c.add(o);
-        }
+        return list.stream()
+                   .map(Object::toString)
+                   .collect(Collectors.toList());
     }
 }

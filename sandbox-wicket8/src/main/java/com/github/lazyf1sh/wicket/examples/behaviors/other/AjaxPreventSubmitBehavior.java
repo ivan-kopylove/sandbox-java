@@ -9,12 +9,14 @@ import org.apache.wicket.markup.html.form.TextField;
 
 public class AjaxPreventSubmitBehavior extends AjaxEventBehavior
 {
-    public AjaxPreventSubmitBehavior() {
+    public AjaxPreventSubmitBehavior()
+    {
         super("keydown");
     }
 
     @Override
-    protected void updateAjaxAttributes(final AjaxRequestAttributes attributes) {
+    protected void updateAjaxAttributes(final AjaxRequestAttributes attributes)
+    {
         super.updateAjaxAttributes(attributes);
 
         Component component = getComponent();
@@ -24,14 +26,17 @@ public class AjaxPreventSubmitBehavior extends AjaxEventBehavior
         }
 
         AjaxCallListener listener = new AjaxCallListener();
-        listener.onPrecondition("if (Wicket.Event.keyCode(attrs.event) !== 13) { console.log('anykey press has been prevented'); return false; } console.log('keycode 13 is passed precondition'); return true;");
-//        attributes.getDynamicExtraParameters().add("var eventKeycode = Wicket.Event.keyCode(attrs.event);" + "return {keycode: eventKeycode};");
-        attributes.getAjaxCallListeners().add(listener);
-//        attributes.setAllowDefault(true);
+        listener.onPrecondition(
+                "if (Wicket.Event.keyCode(attrs.event) !== 13) { console.log('anykey press has been prevented'); return false; } console.log('keycode 13 is passed precondition'); return true;");
+        //        attributes.getDynamicExtraParameters().add("var eventKeycode = Wicket.Event.keyCode(attrs.event);" + "return {keycode: eventKeycode};");
+        attributes.getAjaxCallListeners()
+                  .add(listener);
+        //        attributes.setAllowDefault(true);
     }
 
     @Override
-    protected final void onEvent(final AjaxRequestTarget target) {
+    protected final void onEvent(final AjaxRequestTarget target)
+    {
         System.out.println("AjaxPreventSubmitBehavior - onevent");
     }
 }

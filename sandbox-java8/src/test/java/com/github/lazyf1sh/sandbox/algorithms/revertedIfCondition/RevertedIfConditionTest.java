@@ -3,10 +3,6 @@ package com.github.lazyf1sh.sandbox.algorithms.revertedIfCondition;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * @author Ivan Kopylov
- */
-
 public class RevertedIfConditionTest
 {
 

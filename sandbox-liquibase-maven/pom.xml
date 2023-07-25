@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.lazyf1sh</groupId>
+    <groupId>com.github.ivan.kopylove</groupId>
     <artifactId>sandbox-liquibase-maven</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>snapshot</version>
     <build>
         <plugins>
             <plugin>
@@ -15,8 +15,8 @@
                     <changeLogFile>src/main/resources/liquibase_main.xml</changeLogFile>
                     <driver>org.h2.Driver</driver>
                     <url>jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1</url>
-<!--                    <username>hibernate</username>-->
-<!--                    <password>hibernate</password>-->
+                    <!--                    <username>hibernate</username>-->
+                    <!--                    <password>hibernate</password>-->
                     <promptOnNonLocalDatabase>true</promptOnNonLocalDatabase>
                 </configuration>
                 <executions>

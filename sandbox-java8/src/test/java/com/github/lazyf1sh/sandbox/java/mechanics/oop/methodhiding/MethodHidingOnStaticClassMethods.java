@@ -1,7 +1,5 @@
 package com.github.lazyf1sh.sandbox.java.mechanics.oop.methodhiding;
 
-import com.github.lazyf1sh.sandbox.java.mechanics.oop.methodhiding.Child;
-import com.github.lazyf1sh.sandbox.java.mechanics.oop.methodhiding.Parent;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -40,5 +38,4 @@ public class MethodHidingOnStaticClassMethods
 
         assertEquals("parent", instance.getValue());
     }
-
 }

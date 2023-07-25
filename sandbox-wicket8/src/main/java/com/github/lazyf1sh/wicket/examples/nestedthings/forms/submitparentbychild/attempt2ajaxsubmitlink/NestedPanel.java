@@ -9,9 +9,6 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-/**
- * @author Ivan Kopylov
- */
 public class NestedPanel extends Panel
 {
     private final Form<?>           injectedForm;
@@ -38,7 +35,6 @@ public class NestedPanel extends Panel
         {
             add(buildNestedSaveButtonAjaxLink());
         }
-
     }
 
     private AjaxSubmitLink buildNestedSaveButtonAjaxSubmitLink()
@@ -48,7 +44,9 @@ public class NestedPanel extends Panel
             @Override
             protected void onSubmit(AjaxRequestTarget target)
             {
-                String msg = String.format("nestedTextField model object: %s, convertedInput: %s", nestedTextField.getModelObject(), nestedTextField.getConvertedInput());
+                String msg = String.format("nestedTextField model object: %s, convertedInput: %s",
+                                           nestedTextField.getModelObject(),
+                                           nestedTextField.getConvertedInput());
                 Util.showComponentMessage(this, msg);
                 super.onSubmit(target);
             }
@@ -83,7 +81,9 @@ public class NestedPanel extends Panel
             @Override
             public void onClick(AjaxRequestTarget target)
             {
-                String msg = String.format("parentForm - onSubmit. parentTextField model object: %s, convertedInput: %s", nestedTextField.getModelObject(), nestedTextField.getConvertedInput());
+                String msg = String.format("parentForm - onSubmit. parentTextField model object: %s, convertedInput: %s",
+                                           nestedTextField.getModelObject(),
+                                           nestedTextField.getConvertedInput());
                 Util.showComponentMessage(this, msg);
             }
 

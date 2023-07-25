@@ -1,18 +1,15 @@
 package com.github.lazyf1sh.persistence.jpa;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityNotFoundException;
-
+import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
 import org.hibernate.proxy.HibernateProxy;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Difference between EntityManager#find and EntityManager#getReference
@@ -27,9 +24,11 @@ public class JpaFindvsGetReference
         parentEntity.setName("some parent name");
 
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
-        entityManger.getTransaction().begin();
+        entityManger.getTransaction()
+                    .begin();
         entityManger.persist(parentEntity);
-        entityManger.getTransaction().commit();
+        entityManger.getTransaction()
+                    .commit();
         entityManger.close();
     }
 
@@ -42,7 +41,9 @@ public class JpaFindvsGetReference
         // if the object is not found in the database null is returned
         ParentEntity parentEntityObject = entityManger.find(ParentEntity.class, 0);
 
-        assertFalse(parentEntityObject.getClass().toString().contains("_$$_jvst"));
+        assertFalse(parentEntityObject.getClass()
+                                      .toString()
+                                      .contains("_$$_jvst"));
         entityManger.close();
     }
 
@@ -59,7 +60,9 @@ public class JpaFindvsGetReference
         ParentEntity parent = entityManger.getReference(ParentEntity.class, 999999999); //no db hit, parent is proxy
 
         assertEquals(999999999, parent.getId());//no init
-        assertTrue(parent.getClass().toString().contains("$HibernateProxy$"));
+        assertTrue(parent.getClass()
+                         .toString()
+                         .contains("$HibernateProxy$"));
         assertTrue(parent instanceof HibernateProxy);
 
         entityManger.close();
@@ -73,11 +76,12 @@ public class JpaFindvsGetReference
         ParentEntity parent = entityManger.getReference(ParentEntity.class, 999999999); //no db hit
 
         assertEquals(999999999, parent.getId());//no init
-        assertTrue(parent.getClass().toString().contains("$HibernateProxy$"));
+        assertTrue(parent.getClass()
+                         .toString()
+                         .contains("$HibernateProxy$"));
         assertTrue(parent instanceof HibernateProxy);
         parent.getName(); //produces exception
 
         entityManger.close();
     }
-
 }

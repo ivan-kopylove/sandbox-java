@@ -1,8 +1,5 @@
 package com.github.lazyf1sh.sandbox.algorithms.revertedIfCondition;
 
-/**
- * @author Ivan Kopylov
- */
 public class RevertedIfCondition
 {
     /**

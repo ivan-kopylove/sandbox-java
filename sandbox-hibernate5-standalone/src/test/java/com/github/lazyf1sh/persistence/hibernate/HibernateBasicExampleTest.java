@@ -1,11 +1,10 @@
 package com.github.lazyf1sh.persistence.hibernate;
 
+import com.github.lazyf1sh.sandbox.persistence.entities.BookEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.github.lazyf1sh.sandbox.persistence.entities.BookEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 
 /**
  * Minimal example with Hibernate session - save and load saved entity<br/>
@@ -21,16 +20,20 @@ public class HibernateBasicExampleTest
         bookEntity.setId(0);
 
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         session.persist(bookEntity);
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
 
         session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
         BookEntity entity = session.find(BookEntity.class, 0);
         Assert.assertEquals(entity.getName(), "Harry Potter");
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
     }
 }

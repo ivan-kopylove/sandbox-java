@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/**
- * @author Ivan Kopylov
- */
 public class PredicateExample
 {
     @Test
@@ -18,9 +15,8 @@ public class PredicateExample
     {
         Stream<String> myStream = Stream.of("a", "b", "c");
 
-        List<String> result = myStream
-                .filter(PredicateCreator.build(a -> a.equalsIgnoreCase("a")))
-                .collect(Collectors.toList());
+        List<String> result = myStream.filter(PredicateCreator.build(a -> a.equalsIgnoreCase("a")))
+                                      .collect(Collectors.toList());
 
         Assert.assertEquals(1, result.size());
         Assert.assertEquals("a", result.get(0));

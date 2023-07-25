@@ -20,8 +20,8 @@ public class InjectMocksExample
     @Test
     public void runMocked()
     {
-        Mockito.when(myClass.getSomeValue()).thenReturn("Hello world");
+        Mockito.when(myClass.getSomeValue())
+               .thenReturn("Hello world");
         Assert.assertEquals("Hello world", myClass3.getValue());
     }
-
 }

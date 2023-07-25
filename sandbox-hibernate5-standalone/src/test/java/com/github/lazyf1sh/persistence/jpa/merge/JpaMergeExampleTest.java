@@ -1,12 +1,11 @@
 package com.github.lazyf1sh.persistence.jpa.merge;
 
-import javax.persistence.EntityManager;
-
+import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import javax.persistence.EntityManager;
 
 /**
  * Difference vs merge and persist
@@ -21,12 +20,14 @@ public class JpaMergeExampleTest
         initialEntity.setName("initial name");
 
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
-        entityManger.getTransaction().begin();
+        entityManger.getTransaction()
+                    .begin();
         ParentEntity merged = entityManger.merge(initialEntity);//copies the state from the supplied entity, and makes the new copy managed.
 
         initialEntity.setName("initial updated name");
 
-        entityManger.getTransaction().commit();
+        entityManger.getTransaction()
+                    .commit();
 
         entityManger.close();
 
@@ -46,12 +47,14 @@ public class JpaMergeExampleTest
         initialEntity.setName("initial name");
 
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
-        entityManger.getTransaction().begin();
+        entityManger.getTransaction()
+                    .begin();
         ParentEntity merged = entityManger.merge(initialEntity);//copies the state from the supplied entity, and makes the new copy managed.
 
         merged.setName("merged updated name");
 
-        entityManger.getTransaction().commit();
+        entityManger.getTransaction()
+                    .commit();
 
         entityManger.close();
 
@@ -62,7 +65,6 @@ public class JpaMergeExampleTest
         Assert.assertEquals("initial name", initialEntity.getName());
         entityManger.close();
     }
-
 
     @Test
     public void persist_then_merge()
@@ -77,19 +79,22 @@ public class JpaMergeExampleTest
 
         //save to db and commit
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
-        entityManger.getTransaction().begin();
+        entityManger.getTransaction()
+                    .begin();
         entityManger.persist(entity1);
-        entityManger.getTransaction().commit();
+        entityManger.getTransaction()
+                    .commit();
         entityManger.close();
 
         //update detached entity with the same id
         entityManger = JpaEntityManagerFactory.getEntityManger();
-        entityManger.getTransaction().begin();
+        entityManger.getTransaction()
+                    .begin();
         entityManger.merge(entity2);
-        entityManger.getTransaction().commit();
+        entityManger.getTransaction()
+                    .commit();
         entityManger.close();
     }
-
 
     @Test
     public void persist()
@@ -99,12 +104,14 @@ public class JpaMergeExampleTest
         originalEntity.setName("old parent name");
 
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
-        entityManger.getTransaction().begin();
+        entityManger.getTransaction()
+                    .begin();
         entityManger.persist(originalEntity);//makes supplied entity managed
 
         originalEntity.setName("new parent name");
 
-        entityManger.getTransaction().commit();
+        entityManger.getTransaction()
+                    .commit();
 
         entityManger.close();
 
@@ -113,5 +120,4 @@ public class JpaMergeExampleTest
         Assert.assertEquals("new parent name", parentEntity1.getName());
         entityManger.close();
     }
-
 }

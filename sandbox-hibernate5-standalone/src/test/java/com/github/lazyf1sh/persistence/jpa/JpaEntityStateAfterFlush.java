@@ -14,7 +14,8 @@ public class JpaEntityStateAfterFlush
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         ParentEntity parent = new ParentEntity();
         parent.setName("0");
@@ -22,7 +23,8 @@ public class JpaEntityStateAfterFlush
 
         entityManager.persist(parent);
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
@@ -36,7 +38,8 @@ public class JpaEntityStateAfterFlush
     public void do_flush()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         ParentEntity parent = entityManager.find(ParentEntity.class, 3000);
         parent.setName("1");
@@ -45,22 +48,23 @@ public class JpaEntityStateAfterFlush
 
         parent.setName("2");
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
     public void read_again()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         ParentEntity parent = entityManager.find(ParentEntity.class, 3000);
 
         Assert.assertEquals("2", parent.getName());
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
-
-
 }
