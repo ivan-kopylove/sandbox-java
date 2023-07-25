@@ -4,6 +4,7 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,14 +15,22 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class BasicExampleTest
 {
+    private Server server;
+
     @Before
-    public void run() throws IOException
+    public void setup() throws IOException
     {
-        Server server = ServerBuilder.forPort(8080)
-                                     .addService(new HelloServiceImpl())
-                                     .build();
+        server = ServerBuilder.forPort(8080)
+                              .addService(new HelloServiceImpl())
+                              .build();
 
         server.start();
+    }
+
+    @After
+    public void destroy() throws IOException
+    {
+        server.shutdown();
     }
 
     @Test
