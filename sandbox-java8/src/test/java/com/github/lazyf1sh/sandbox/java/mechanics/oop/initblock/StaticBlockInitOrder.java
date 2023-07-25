@@ -9,7 +9,6 @@ public class StaticBlockInitOrder
     {
         Parent p = new Child();
     }
-
 }
 
 class Parent

@@ -31,7 +31,7 @@ public class RefreshingViewExamplePage extends WebPage
             @Override
             protected Iterator<IModel<String>> getItemModels()
             {
-                return ((ArrayList)getDefaultModelObject()).iterator();
+                return ((ArrayList) getDefaultModelObject()).iterator();
             }
 
             @Override

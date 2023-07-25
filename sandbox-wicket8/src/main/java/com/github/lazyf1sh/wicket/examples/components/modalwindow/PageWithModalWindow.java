@@ -22,7 +22,6 @@ public class PageWithModalWindow extends WebPage
         add(new AjaxLink<String>("trigger1")
         {
 
-
             @Override
             public void onClick(AjaxRequestTarget target)
             {

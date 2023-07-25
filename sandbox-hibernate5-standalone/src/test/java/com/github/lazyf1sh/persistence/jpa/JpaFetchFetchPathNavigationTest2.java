@@ -1,21 +1,15 @@
 package com.github.lazyf1sh.persistence.jpa;
 
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Join;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.github.lazyf1sh.sandbox.persistence.entities.OrderEntity;
 import com.github.lazyf1sh.sandbox.persistence.entities.UserEntity;
 import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.*;
+import java.util.List;
 
 /**
  * @author Ivan Kopylov
@@ -30,7 +24,8 @@ public class JpaFetchFetchPathNavigationTest2
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         UserEntity user = new UserEntity();
         user.setName(USER_NAME_ONE);
@@ -49,7 +44,8 @@ public class JpaFetchFetchPathNavigationTest2
         entityManager.persist(order);
         entityManager.persist(order2);
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
@@ -57,7 +53,8 @@ public class JpaFetchFetchPathNavigationTest2
     public void join_fetch_together()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<OrderEntity> cq = builder.createQuery(OrderEntity.class);
@@ -73,7 +70,8 @@ public class JpaFetchFetchPathNavigationTest2
         TypedQuery<OrderEntity> query = entityManager.createQuery(cq);
         List<OrderEntity> result = query.getResultList();
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
@@ -81,7 +79,8 @@ public class JpaFetchFetchPathNavigationTest2
     public void cast_to_join()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<OrderEntity> cq = builder.createQuery(OrderEntity.class);
@@ -97,9 +96,8 @@ public class JpaFetchFetchPathNavigationTest2
         TypedQuery<OrderEntity> query = entityManager.createQuery(cq);
         List<OrderEntity> result = query.getResultList();
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
-
-
 }

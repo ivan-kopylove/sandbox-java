@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertSame;
 
-/**
- * @author Ivan Kopylov
- */
 public class BooleanComparsionTest
 {
 
@@ -24,7 +21,5 @@ public class BooleanComparsionTest
         assertSame(false, Boolean.TRUE.equals(false));
         assertSame(true, Boolean.TRUE.equals(true));
         assertSame(true, Boolean.FALSE.equals(false));
-
-
     }
 }

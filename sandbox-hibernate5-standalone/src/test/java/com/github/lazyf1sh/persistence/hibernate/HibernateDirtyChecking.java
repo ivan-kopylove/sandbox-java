@@ -1,15 +1,49 @@
 package com.github.lazyf1sh.persistence.hibernate;
 
+import com.github.lazyf1sh.sandbox.persistence.entities.BookEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.github.lazyf1sh.sandbox.persistence.entities.BookEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
-
 public class HibernateDirtyChecking
 {
+    public static void verifyDirtyCheckWorks()
+    {
+        Session session = HibernateSessionFactory.openSession();
+        session.getTransaction()
+               .begin();
+
+        BookEntity book = session.find(BookEntity.class, 1);
+        if (book != null)
+        {
+            Assert.assertEquals("Fred Brooks - The Mythical Man-Month", book.getName());
+        }
+
+        session.getTransaction()
+               .commit();
+        session.close();
+    }
+
+    @BeforeClass
+    public static void populate()
+    {
+        Session session = HibernateSessionFactory.openSession();
+        session.getTransaction()
+               .begin();
+
+        BookEntity book = new BookEntity();
+        book.setName("Maxim Dorofeev - Inbox Zero");
+        book.setId(1);
+
+        session.persist(book);
+
+        session.getTransaction()
+               .commit();
+        session.close();
+    }
+
     @Test
     public void dirtyChecking()
     {
@@ -20,7 +54,8 @@ public class HibernateDirtyChecking
     public void triggerDirtyCheck()
     {
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
 
         BookEntity book = session.find(BookEntity.class, 1);
         if (book != null)
@@ -31,41 +66,8 @@ public class HibernateDirtyChecking
             //in the database this feature is called dirty checking in hibernate
         }
 
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
     }
-
-    public static void verifyDirtyCheckWorks()
-    {
-        Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
-
-        BookEntity book = session.find(BookEntity.class, 1);
-        if (book != null)
-        {
-            Assert.assertEquals("Fred Brooks - The Mythical Man-Month", book.getName());
-        }
-
-        session.getTransaction().commit();
-        session.close();
-    }
-
-
-    @BeforeClass
-    public static void populate()
-    {
-        Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
-
-        BookEntity book = new BookEntity();
-        book.setName("Maxim Dorofeev - Inbox Zero");
-        book.setId(1);
-
-        session.persist(book);
-
-        session.getTransaction().commit();
-        session.close();
-    }
-
-
 }

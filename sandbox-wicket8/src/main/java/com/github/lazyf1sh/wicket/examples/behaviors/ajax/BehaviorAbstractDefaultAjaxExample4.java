@@ -27,7 +27,10 @@ public class BehaviorAbstractDefaultAjaxExample4 extends WebPage
             @Override
             protected void respond(AjaxRequestTarget target)
             {
-                final StringValue parameterValue = RequestCycle.get().getRequest().getQueryParameters().getParameterValue("yourName");
+                final StringValue parameterValue = RequestCycle.get()
+                                                               .getRequest()
+                                                               .getQueryParameters()
+                                                               .getParameterValue("yourName");
                 System.out.println(String.format("Hello %s", parameterValue.toString()));
             }
 
@@ -35,7 +38,10 @@ public class BehaviorAbstractDefaultAjaxExample4 extends WebPage
             public void renderHead(Component component, IHeaderResponse response)
             {
                 super.renderHead(component, response);
-                response.render(JavaScriptHeaderItem.forScript(String.format("nameOfFunction=%s", getCallbackFunction(CallbackParameter.explicit("yourName"))), "CallFromJavascriptBehavior"));
+                response.render(JavaScriptHeaderItem.forScript(String.format("nameOfFunction=%s",
+                                                                             getCallbackFunction(CallbackParameter.explicit(
+                                                                                     "yourName"))),
+                                                               "CallFromJavascriptBehavior"));
             }
         });
     }

@@ -5,6 +5,22 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
+interface CarElement
+{
+    void accept(CarElementVisitor visitor);
+}
+
+interface CarElementVisitor
+{
+    void visit(Body body);
+
+    void visit(Car car);
+
+    void visit(Engine engine);
+
+    void visit(Wheel wheel);
+}
+
 /**
  * https://en.wikipedia.org/wiki/Visitor_pattern
  *
@@ -20,23 +36,6 @@ public class VisitorPatternEntryPoint
         car.accept(new CarElementPrintVisitor());
         car.accept(new CarElementDoVisitor());
     }
-
-}
-
-interface CarElement
-{
-    void accept(CarElementVisitor visitor);
-}
-
-interface CarElementVisitor
-{
-    void visit(Body body);
-
-    void visit(Car car);
-
-    void visit(Engine engine);
-
-    void visit(Wheel wheel);
 }
 
 class Wheel implements CarElement
@@ -84,11 +83,12 @@ class Car implements CarElement
 
     public Car()
     {
-        this.elements = Arrays.asList(
-                new Wheel("front left"), new Wheel("front right"),
-                new Wheel("back left"), new Wheel("back right"),
-                new Body(), new Engine()
-        );
+        this.elements = Arrays.asList(new Wheel("front left"),
+                                      new Wheel("front right"),
+                                      new Wheel("back left"),
+                                      new Wheel("back right"),
+                                      new Body(),
+                                      new Engine());
     }
 
     @Override

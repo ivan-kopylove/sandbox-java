@@ -16,7 +16,6 @@ public class MyLongRunningTask implements Runnable
         {
             Thread.sleep(5 * 1000); // sleep for 5 seconds and pretend to be working
             onCompleteListener.onComplete();
-
         }
         catch (InterruptedException e)
         {

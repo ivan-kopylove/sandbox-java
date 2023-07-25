@@ -6,5 +6,4 @@ package com.github.lazyf1sh.sandbox.wicket.examples.markup.tags.extend;
  * Complexity: low
  */
 public class ChildPage extends ParentPage
-{
-}
+{}

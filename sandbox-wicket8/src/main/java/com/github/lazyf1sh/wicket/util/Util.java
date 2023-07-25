@@ -5,20 +5,19 @@ import org.apache.wicket.Component;
 import java.io.File;
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class Util
 {
     public static void showComponentMessage(Component component)
     {
-        String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
+        String methodName = Thread.currentThread()
+                                  .getStackTrace()[2].getMethodName();
         showComponentMessageInner(component, methodName, "");
     }
 
     public static void showComponentMessage(Component component, String other)
     {
-        String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
+        String methodName = Thread.currentThread()
+                                  .getStackTrace()[2].getMethodName();
         showComponentMessageInner(component, methodName, other);
     }
 

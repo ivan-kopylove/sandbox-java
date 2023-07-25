@@ -16,7 +16,8 @@ public class GenerationTypeIdentity
     public void generationTypeIdentity()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         IdentityExampleEntity identityExampleEntity = new IdentityExampleEntity();
 
@@ -25,6 +26,7 @@ public class GenerationTypeIdentity
         entityManager.persist(identityExampleEntity);
         Assert.assertEquals(++id, identityExampleEntity.getId());
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
     }
 }

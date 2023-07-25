@@ -15,11 +15,13 @@ public class MetadataExtractorIntegrator implements Integrator
 
     private Metadata metadata;
 
-    public Database getDatabase() {
+    public Database getDatabase()
+    {
         return database;
     }
 
-    public Metadata getMetadata() {
+    public Metadata getMetadata()
+    {
         return metadata;
     }
 

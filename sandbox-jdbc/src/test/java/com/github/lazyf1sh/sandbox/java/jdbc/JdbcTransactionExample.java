@@ -8,7 +8,7 @@ import java.sql.*;
 
 public class JdbcTransactionExample
 {
-    private static final String CREATE_PARENTTABLE = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
+    private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "INSERT INTO GEMS (GEM_KEY, NAME) VALUES (?,?)";
 
     @BeforeClass
@@ -34,7 +34,8 @@ public class JdbcTransactionExample
             preparedStatement.setInt(1, 1);
             preparedStatement.setString(2, "Opal");
             preparedStatement.executeUpdate();
-        } finally
+        }
+        finally
         {
             if (statement != null)
             {
@@ -69,8 +70,8 @@ public class JdbcTransactionExample
             conn.commit();
             statement.close();
             conn.close();
-
-        } finally
+        }
+        finally
         {
             if (statement != null)
             {

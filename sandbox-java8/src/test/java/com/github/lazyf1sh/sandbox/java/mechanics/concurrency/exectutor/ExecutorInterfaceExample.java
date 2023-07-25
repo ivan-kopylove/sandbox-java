@@ -6,8 +6,6 @@ import org.junit.Test;
 import java.util.concurrent.Executor;
 
 /**
- *
- *
  * @author Ivan Kopylov
  */
 public class ExecutorInterfaceExample
@@ -23,7 +21,11 @@ public class ExecutorInterfaceExample
                 runnable.run();
             }
         };
-        Assert.assertEquals("main", Thread.currentThread().getName());
-        executor.execute(() -> Assert.assertEquals("main", Thread.currentThread().getName()));
+        Assert.assertEquals("main",
+                            Thread.currentThread()
+                                  .getName());
+        executor.execute(() -> Assert.assertEquals("main",
+                                                   Thread.currentThread()
+                                                         .getName()));
     }
 }

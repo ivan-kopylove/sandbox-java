@@ -2,9 +2,6 @@ package com.github.lazyf1sh.sandbox.java.jcl.java.lang.functionalinterface;
 
 import org.junit.Assert;
 
-/**
- * @author Ivan Kopylov
- */
 public class Test
 {
     @org.junit.Test
@@ -37,5 +34,4 @@ public class Test
 
         Assert.assertEquals(1, lambdaInterface.someDefaultMethod());
     }
-
 }

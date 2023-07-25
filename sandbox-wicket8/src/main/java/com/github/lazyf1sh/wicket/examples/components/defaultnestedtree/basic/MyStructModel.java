@@ -34,7 +34,7 @@ public class MyStructModel extends LoadableDetachableModel<MyStruct>
         {
             return false;
         }
-        final MyStructModel that = (MyStructModel)o;
+        final MyStructModel that = (MyStructModel) o;
         return Objects.equals(id, that.id);
     }
 

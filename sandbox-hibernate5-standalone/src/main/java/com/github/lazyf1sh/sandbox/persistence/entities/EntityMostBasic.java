@@ -1,7 +1,6 @@
 package com.github.lazyf1sh.sandbox.persistence.entities;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**

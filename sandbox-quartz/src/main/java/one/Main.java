@@ -24,17 +24,15 @@ public class Main implements Job
             e.printStackTrace();
         }
 
-        Trigger trigger1 = TriggerBuilder
-                .newTrigger()
-                .withIdentity(TriggerKey.triggerKey("key_first", "group_one"))
-                .withSchedule(
-                        CronScheduleBuilder.dailyAtHourAndMinute(23, 50)).build();
+        Trigger trigger1 = TriggerBuilder.newTrigger()
+                                         .withIdentity(TriggerKey.triggerKey("key_first", "group_one"))
+                                         .withSchedule(CronScheduleBuilder.dailyAtHourAndMinute(23, 50))
+                                         .build();
 
-        Trigger trigger2 = TriggerBuilder
-                .newTrigger()
-                .withIdentity(TriggerKey.triggerKey("key_second", "group_one"))
-                .withSchedule(
-                        CronScheduleBuilder.dailyAtHourAndMinute(23, 50)).build();
+        Trigger trigger2 = TriggerBuilder.newTrigger()
+                                         .withIdentity(TriggerKey.triggerKey("key_second", "group_one"))
+                                         .withSchedule(CronScheduleBuilder.dailyAtHourAndMinute(23, 50))
+                                         .build();
 
 
         Set<Trigger> cronTriggers = new HashSet<Trigger>();
@@ -43,8 +41,10 @@ public class Main implements Job
         cronTriggers.add(trigger2);
 
 
-        JobDetail jobDetail = JobBuilder.newJob().ofType(Main.class)
-                .withIdentity(JobKey.jobKey("jobKey", "group_one")).build();
+        JobDetail jobDetail = JobBuilder.newJob()
+                                        .ofType(Main.class)
+                                        .withIdentity(JobKey.jobKey("jobKey", "group_one"))
+                                        .build();
 
         try
         {
@@ -66,7 +66,8 @@ public class Main implements Job
 
                     //get job's trigger
                     List<Trigger> triggers = (List<Trigger>) scheduler.getTriggersOfJob(jobKey);
-                    Date nextFireTime = triggers.get(0).getNextFireTime();
+                    Date nextFireTime = triggers.get(0)
+                                                .getNextFireTime();
 
                     System.out.println("[jobName] : " + jobName + " [groupName] : " + jobGroup + " - " + nextFireTime);
                 }
@@ -99,7 +100,8 @@ public class Main implements Job
 
                     //get job's trigger
                     List<Trigger> triggers = (List<Trigger>) scheduler.getTriggersOfJob(jobKey);
-                    Date nextFireTime = triggers.get(0).getNextFireTime();
+                    Date nextFireTime = triggers.get(0)
+                                                .getNextFireTime();
 
                     System.out.println("[jobName] : " + jobName + " [groupName] : " + jobGroup + " - " + nextFireTime);
                 }
@@ -109,11 +111,7 @@ public class Main implements Job
         {
             e.printStackTrace();
         }
-
-
     }
-
-
 
     public void execute(JobExecutionContext context) throws JobExecutionException
     {

@@ -1,14 +1,12 @@
 package com.github.lazyf1sh.persistence.jpa.cascade;
 
-import java.util.Collections;
-
-import javax.persistence.EntityManager;
-
-import org.junit.Test;
-
 import com.github.lazyf1sh.sandbox.persistence.entities.AddressEntity;
 import com.github.lazyf1sh.sandbox.persistence.jpa.cascade.PersonEntity;
 import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import org.junit.Test;
+
+import javax.persistence.EntityManager;
+import java.util.Collections;
 
 /**
  * https://www.baeldung.com/jpa-cascade-types
@@ -21,7 +19,8 @@ public class JpaCascadePersist
     public void whenParentSavedThenChildSaved()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         PersonEntity person = new PersonEntity();
         person.setName("devender");
@@ -31,16 +30,17 @@ public class JpaCascadePersist
 
         entityManager.persist(person);
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
-
     }
 
     @Test
     public void whenParentRemovedThenChildRemoved()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         PersonEntity person = new PersonEntity();
         person.setName("devender");
@@ -51,16 +51,19 @@ public class JpaCascadePersist
 
         entityManager.persist(person);
         int id = person.getId();
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
 
         entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         PersonEntity personEntity = entityManager.find(PersonEntity.class, id);
 
         entityManager.remove(personEntity);
-        entityManager.getTransaction().commit(); //also deletes addresses
+        entityManager.getTransaction()
+                     .commit(); //also deletes addresses
         entityManager.close();
     }
 
@@ -68,7 +71,8 @@ public class JpaCascadePersist
     public void a()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         PersonEntity person = new PersonEntity();
         person.setName("some");
@@ -79,17 +83,22 @@ public class JpaCascadePersist
 
         entityManager.persist(person);
         int id = person.getId();
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
 
         entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         PersonEntity personEntity = entityManager.find(PersonEntity.class, id);
 
-        personEntity.getAddresses().remove(personEntity.getAddresses().get(0));
+        personEntity.getAddresses()
+                    .remove(personEntity.getAddresses()
+                                        .get(0));
 
-        entityManager.getTransaction().commit(); //also deletes addresses
+        entityManager.getTransaction()
+                     .commit(); //also deletes addresses
         entityManager.close();
     }
 
@@ -97,7 +106,8 @@ public class JpaCascadePersist
     public void whenParentSavedThenMerged()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         int addressId;
         PersonEntity person = new PersonEntity();
@@ -108,11 +118,13 @@ public class JpaCascadePersist
 
         addressId = address.getId();
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
 
         entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         AddressEntity savedAddressEntity = entityManager.find(AddressEntity.class, addressId);
         PersonEntity savedPersonEntity = savedAddressEntity.getPerson();
@@ -120,7 +132,8 @@ public class JpaCascadePersist
         savedAddressEntity.setHouseNumber(24);
 
         entityManager.merge(savedPersonEntity);
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 }

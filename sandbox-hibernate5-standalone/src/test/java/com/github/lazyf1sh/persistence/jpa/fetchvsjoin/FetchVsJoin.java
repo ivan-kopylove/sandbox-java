@@ -24,7 +24,8 @@ public class FetchVsJoin
     public void join()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Gamer> cq = builder.createQuery(Gamer.class);
@@ -35,7 +36,8 @@ public class FetchVsJoin
         TypedQuery<Gamer> query = entityManager.createQuery(cq);
         query.getResultList();
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
@@ -46,7 +48,8 @@ public class FetchVsJoin
     public void fetch()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Gamer> cq = builder.createQuery(Gamer.class);
@@ -57,9 +60,8 @@ public class FetchVsJoin
         TypedQuery<Gamer> query = entityManager.createQuery(cq);
         query.getResultList();
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
-
-
 }

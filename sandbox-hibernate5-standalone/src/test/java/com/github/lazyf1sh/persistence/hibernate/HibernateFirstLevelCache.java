@@ -1,11 +1,10 @@
 package com.github.lazyf1sh.persistence.hibernate;
 
+import com.github.lazyf1sh.sandbox.persistence.entities.BookEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import com.github.lazyf1sh.sandbox.persistence.entities.BookEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
 
 import static org.junit.Assert.assertEquals;
 
@@ -23,10 +22,12 @@ public class HibernateFirstLevelCache
         book.setName("Stephen King - Shining");
 
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
 
         session.save(book);
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
     }
 
@@ -34,7 +35,8 @@ public class HibernateFirstLevelCache
     public void no_db_hit()
     {
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
 
         BookEntity book = session.load(BookEntity.class, 4);
 
@@ -44,7 +46,8 @@ public class HibernateFirstLevelCache
 
         assertEquals(book.getName(), "Stephen King - Shining");
 
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
     }
 
@@ -52,7 +55,8 @@ public class HibernateFirstLevelCache
     public void evict()
     {
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
 
         BookEntity book = session.load(BookEntity.class, 4);
 
@@ -62,7 +66,8 @@ public class HibernateFirstLevelCache
         book = session.load(BookEntity.class, 4);
         assertEquals(book.getName(), "Stephen King - Shining");
 
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
     }
 
@@ -70,7 +75,8 @@ public class HibernateFirstLevelCache
     public void clear()
     {
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
 
         BookEntity book = session.load(BookEntity.class, 4);
 
@@ -80,9 +86,8 @@ public class HibernateFirstLevelCache
         book = session.load(BookEntity.class, 4);
         assertEquals(book.getName(), "Stephen King - Shining");
 
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
         session.close();
     }
-
-
 }

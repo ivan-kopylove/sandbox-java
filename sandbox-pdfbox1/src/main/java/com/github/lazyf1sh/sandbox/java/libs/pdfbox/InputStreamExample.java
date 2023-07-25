@@ -1,12 +1,8 @@
 package com.github.lazyf1sh.sandbox.java.libs.pdfbox;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
 import org.apache.pdfbox.pdmodel.PDDocument;
+
+import java.io.*;
 
 public class InputStreamExample
 {
@@ -59,7 +55,8 @@ public class InputStreamExample
     {
         try
         {
-            PDDocument.load(data).close();
+            PDDocument.load(data)
+                      .close();
         }
         catch (Exception ex)
         {

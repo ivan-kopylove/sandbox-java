@@ -4,9 +4,6 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class FileDeletion
 {
     public static void main(String[] args)

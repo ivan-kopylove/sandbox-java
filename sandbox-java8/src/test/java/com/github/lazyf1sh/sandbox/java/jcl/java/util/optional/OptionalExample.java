@@ -5,9 +5,7 @@ import org.junit.Test;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /*
  * https://www.baeldung.com/java-optional
@@ -70,7 +68,8 @@ public class OptionalExample
     public void whenOrElseWorks_thenCorrect()
     {
         String nullName = null;
-        String name = Optional.ofNullable(nullName).orElse("john");
+        String name = Optional.ofNullable(nullName)
+                              .orElse("john");
         assertEquals("john", name);
     }
 
@@ -86,10 +85,11 @@ public class OptionalExample
     public void whenOrElseGetWorks_thenCorrect()
     {
         String nullName = null;
-        String name = Optional.ofNullable(nullName).orElseGet(() -> {
-            System.out.println("orElseGetCalled");
-            return "john";
-        });
+        String name = Optional.ofNullable(nullName)
+                              .orElseGet(() -> {
+                                  System.out.println("orElseGetCalled");
+                                  return "john";
+                              });
         assertEquals("john", name);
     }
 
@@ -105,11 +105,13 @@ public class OptionalExample
         String text = null;
 
         System.out.println("Using orElseGet:");
-        String defaultText = Optional.ofNullable(text).orElseGet(this::getMyDefault);
+        String defaultText = Optional.ofNullable(text)
+                                     .orElseGet(this::getMyDefault);
         assertEquals("Default Value", defaultText);
 
         System.out.println("Using orElse:");
-        defaultText = Optional.ofNullable(text).orElse(getMyDefault());
+        defaultText = Optional.ofNullable(text)
+                              .orElse(getMyDefault());
         assertEquals("Default Value", defaultText);
     }
 
@@ -119,11 +121,13 @@ public class OptionalExample
         String text = "Text present";
 
         System.out.println("Using orElseGet:");
-        String defaultText = Optional.ofNullable(text).orElseGet(this::getMyDefault);
+        String defaultText = Optional.ofNullable(text)
+                                     .orElseGet(this::getMyDefault);
         assertEquals("Text present", defaultText);
 
         System.out.println("Using orElse:");
-        defaultText = Optional.ofNullable(text).orElse(getMyDefault());
+        defaultText = Optional.ofNullable(text)
+                              .orElse(getMyDefault());
         assertEquals("Text present", defaultText);
     }
 
@@ -131,9 +135,8 @@ public class OptionalExample
     public void whenOrElseThrowWorks_thenCorrect()
     {
         String nullName = null;
-        String name = Optional
-                .ofNullable(nullName)
-                .orElseThrow(IllegalArgumentException::new);
+        String name = Optional.ofNullable(nullName)
+                              .orElseThrow(IllegalArgumentException::new);
     }
 
     @Test
@@ -151,5 +154,4 @@ public class OptionalExample
         Optional<String> opt = Optional.ofNullable(null);
         String name = opt.get();
     }
-
 }

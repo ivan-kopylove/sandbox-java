@@ -12,7 +12,9 @@ public class PageWithValidator extends WebPage
     protected void onInitialize()
     {
         super.onInitialize();
-        PanelThatNeedToBeValidated panelThatNeedToBeValidated = new PanelThatNeedToBeValidated("panelThatNeedToBeValidated", Model.of());
+        PanelThatNeedToBeValidated panelThatNeedToBeValidated = new PanelThatNeedToBeValidated(
+                "panelThatNeedToBeValidated",
+                Model.of());
         //I haven't managed to do this panel validatable
 
         AjaxButton button = new AjaxButton("myButton", Model.of("button text"))

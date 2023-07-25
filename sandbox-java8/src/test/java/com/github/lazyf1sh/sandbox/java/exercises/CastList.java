@@ -19,6 +19,5 @@ public class CastList
         child.addValue(new Child());
 
         Iterator<Child> iterator = ((List<Child>) (List<?>) child.getList()).iterator();
-
     }
 }

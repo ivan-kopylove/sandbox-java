@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class MyStruct implements Serializable
 {
-    private String id;
+    private String         id;
     private MyStruct       parent;
     private List<MyStruct> siblings = new ArrayList<>();
 
@@ -75,7 +75,7 @@ public class MyStruct implements Serializable
         {
             return false;
         }
-        final MyStruct myStruct = (MyStruct)o;
+        final MyStruct myStruct = (MyStruct) o;
         return id.equals(myStruct.id);
     }
 

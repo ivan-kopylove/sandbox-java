@@ -6,9 +6,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * @author Ivan Kopylov
- */
 public class CarServiceTest
 {
     @Test

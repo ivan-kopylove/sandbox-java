@@ -1,8 +1,5 @@
 package com.github.lazyf1sh.sandbox.java.dozermapper.domain.case1;
 
-/**
- * @author Ivan Kopylov
- */
 public class B
 {
     private String key_a;
@@ -16,5 +13,4 @@ public class B
     {
         this.key_a = key_a;
     }
-
 }

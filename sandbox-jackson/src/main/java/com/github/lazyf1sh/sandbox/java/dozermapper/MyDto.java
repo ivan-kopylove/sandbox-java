@@ -6,7 +6,6 @@ public class MyDto
     private String value;
     private String myCustomValue;
 
-
     public MyDto(String key, String value, String myCustomValue)
     {
         this.key = key;

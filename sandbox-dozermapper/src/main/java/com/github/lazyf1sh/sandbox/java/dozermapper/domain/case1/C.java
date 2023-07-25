@@ -1,8 +1,5 @@
 package com.github.lazyf1sh.sandbox.java.dozermapper.domain.case1;
 
-/**
- * @author Ivan Kopylov
- */
 public class C
 {
     private String key;

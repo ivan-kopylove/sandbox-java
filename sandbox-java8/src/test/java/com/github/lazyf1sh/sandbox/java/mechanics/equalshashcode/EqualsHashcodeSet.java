@@ -7,14 +7,10 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-/**
- * @author Ivan Kopylov
- */
 public class EqualsHashcodeSet
 {
     private boolean equalsCalled   = false;
     private boolean hashcodeCalled = false;
-
 
     @Test
     public void addToSet()
@@ -46,7 +42,6 @@ public class EqualsHashcodeSet
         Assert.assertTrue(equalsCalled);
         Assert.assertTrue(hashcodeCalled);
     }
-
 
     class MyClass
     {

@@ -3,19 +3,12 @@ package com.github.lazyf1sh.sandbox.java.jcl.java.time;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
 import java.util.Date;
 
-/**
- * @author Ivan Kopylov
- */
 public class LocalDateTimeExamples
 {
     @Test
@@ -35,9 +28,8 @@ public class LocalDateTimeExamples
     @Test
     public void localDateLenientBasicExample()
     {
-        DateTimeFormatter formatter = DateTimeFormatter
-                .ofPattern("dd.MM.yyyy")
-                .withResolverStyle(ResolverStyle.LENIENT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+                                                       .withResolverStyle(ResolverStyle.LENIENT);
 
         LocalDate result = LocalDate.parse("31.02.2020", formatter);
 
@@ -47,9 +39,8 @@ public class LocalDateTimeExamples
     @Test
     public void localDateTimeLenient()
     {
-        DateTimeFormatter formatter = DateTimeFormatter
-                .ofPattern("dd.MM.yyyy HH:mm")
-                .withResolverStyle(ResolverStyle.LENIENT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")
+                                                       .withResolverStyle(ResolverStyle.LENIENT);
 
         LocalDateTime result = LocalDateTime.parse("18.02.2020 15:23", formatter);
 
@@ -59,9 +50,8 @@ public class LocalDateTimeExamples
     @Test(expected = DateTimeParseException.class)
     public void localDateTimeStrict()
     {
-        DateTimeFormatter formatter = DateTimeFormatter
-                .ofPattern("dd.MM.yyyy HH:mm")
-                .withResolverStyle(ResolverStyle.STRICT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")
+                                                       .withResolverStyle(ResolverStyle.STRICT);
 
         LocalDateTime.parse("18.02.2020 15:23", formatter);
     }
@@ -72,9 +62,8 @@ public class LocalDateTimeExamples
     @Test
     public void localDateTimeLenientIncorrectDate()
     {
-        DateTimeFormatter formatter = DateTimeFormatter
-                .ofPattern("dd.MM.yyyy HH:mm")
-                .withResolverStyle(ResolverStyle.LENIENT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")
+                                                       .withResolverStyle(ResolverStyle.LENIENT);
 
         LocalDateTime result = LocalDateTime.parse("31.02.2020 15:23", formatter);
 
@@ -88,9 +77,8 @@ public class LocalDateTimeExamples
     @Test
     public void localDateTimeSmartIncorrectDate()
     {
-        DateTimeFormatter formatter = DateTimeFormatter
-                .ofPattern("dd.MM.yyyy HH:mm")
-                .withResolverStyle(ResolverStyle.SMART);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")
+                                                       .withResolverStyle(ResolverStyle.SMART);
 
         LocalDateTime result = LocalDateTime.parse("31.02.2020 15:23", formatter);
 
@@ -102,9 +90,8 @@ public class LocalDateTimeExamples
     public void localDateStrict()
     {
         String input = "31.02.2020";
-        DateTimeFormatter formatter = DateTimeFormatter
-                .ofPattern("dd.MM.yyyy")
-                .withResolverStyle(ResolverStyle.STRICT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+                                                       .withResolverStyle(ResolverStyle.STRICT);
 
         LocalDate.parse(input, formatter);
     }
@@ -123,8 +110,12 @@ public class LocalDateTimeExamples
     public void dateDiffersFromLocalDateTime()
     {
         LocalDateTime localDateTime = LocalDateTime.of(2020, 6, 15, 15, 15);
-        long a = localDateTime.atZone(ZoneId.of("UTC+03:00")).toInstant().toEpochMilli();
-        long b = localDateTime.atZone(ZoneId.of("UTC+02:00")).toInstant().toEpochMilli();
+        long a = localDateTime.atZone(ZoneId.of("UTC+03:00"))
+                              .toInstant()
+                              .toEpochMilli();
+        long b = localDateTime.atZone(ZoneId.of("UTC+02:00"))
+                              .toInstant()
+                              .toEpochMilli();
 
         Assert.assertEquals(3600000L, b - a);
         Assert.assertEquals(1592223300000L, a);
@@ -138,7 +129,9 @@ public class LocalDateTimeExamples
     public void localDateTimeToMillis()
     {
         LocalDateTime localDateTime = LocalDateTime.now();
-        long a = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+        long a = localDateTime.atZone(ZoneId.systemDefault())
+                              .toInstant()
+                              .toEpochMilli();
         long b = new Date().getTime();
 
         if (b - a > 15)
@@ -151,7 +144,8 @@ public class LocalDateTimeExamples
     @Test(expected = DateTimeParseException.class)
     public void unableToParse()
     {
-        DateTimeFormatter.ofPattern("YY").format(LocalDateTime.now());
+        DateTimeFormatter.ofPattern("YY")
+                         .format(LocalDateTime.now());
         LocalDateTime.parse("24.12.2020", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
@@ -182,7 +176,9 @@ public class LocalDateTimeExamples
         LocalDateTime localDateTime = LocalDateTime.now();
         String format = localDateTime.format(DateTimeFormatter.ofPattern("d/m/yyyy HH:MM"));
 
-        long a = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+        long a = localDateTime.atZone(ZoneId.systemDefault())
+                              .toInstant()
+                              .toEpochMilli();
         long b = new Date().getTime();
 
         if (b - a > 5)
@@ -199,9 +195,15 @@ public class LocalDateTimeExamples
     public void timeZoneHasAliases()
     {
         LocalDateTime localDateTime = LocalDateTime.of(2020, 6, 15, 15, 15);
-        long a = localDateTime.atZone(ZoneId.of("Europe/Moscow")).toInstant().toEpochMilli();
-        long b = localDateTime.atZone(ZoneId.of("Europe/Helsinki")).toInstant().toEpochMilli();
-        long c = localDateTime.atZone(ZoneId.of("Asia/Beirut")).toInstant().toEpochMilli();
+        long a = localDateTime.atZone(ZoneId.of("Europe/Moscow"))
+                              .toInstant()
+                              .toEpochMilli();
+        long b = localDateTime.atZone(ZoneId.of("Europe/Helsinki"))
+                              .toInstant()
+                              .toEpochMilli();
+        long c = localDateTime.atZone(ZoneId.of("Asia/Beirut"))
+                              .toInstant()
+                              .toEpochMilli();
         Assert.assertEquals(a, b);
         Assert.assertEquals(a, c);
     }
@@ -210,10 +212,13 @@ public class LocalDateTimeExamples
     public void test3()
     {
         LocalDateTime localDateTime = LocalDateTime.of(2020, 6, 15, 15, 15);
-        long a = localDateTime.atZone(ZoneId.of("Europe/Moscow")).toInstant().toEpochMilli();
-        long b = localDateTime.atZone(ZoneId.of("Africa/Cairo")).toInstant().toEpochMilli();
+        long a = localDateTime.atZone(ZoneId.of("Europe/Moscow"))
+                              .toInstant()
+                              .toEpochMilli();
+        long b = localDateTime.atZone(ZoneId.of("Africa/Cairo"))
+                              .toInstant()
+                              .toEpochMilli();
 
         Assert.assertEquals(3600000L, b - a);
     }
-
 }

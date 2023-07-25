@@ -31,13 +31,15 @@ public class MyStructProvider implements ITreeProvider<MyNode>
     @Override
     public boolean hasChildren(final MyNode node)
     {
-        return node != null && !node.getChilds().isEmpty();
+        return node != null && !node.getChilds()
+                                    .isEmpty();
     }
 
     @Override
     public Iterator<? extends MyNode> getChildren(final MyNode node)
     {
-        return node.getChilds().iterator();
+        return node.getChilds()
+                   .iterator();
     }
 
     @Override

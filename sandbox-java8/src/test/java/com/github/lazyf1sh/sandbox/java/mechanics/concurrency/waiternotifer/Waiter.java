@@ -12,7 +12,8 @@ public class Waiter implements Runnable
     @Override
     public void run()
     {
-        String name = Thread.currentThread().getName();
+        String name = Thread.currentThread()
+                            .getName();
         synchronized (msg)
         {
             try
@@ -29,5 +30,4 @@ public class Waiter implements Runnable
             System.out.println(name + " processed: " + msg.getMsg());
         }
     }
-
 }

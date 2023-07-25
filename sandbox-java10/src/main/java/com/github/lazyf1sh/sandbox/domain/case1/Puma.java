@@ -6,5 +6,4 @@ public abstract class Puma
     {
         return 4;
     }
-
 }

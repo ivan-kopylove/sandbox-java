@@ -14,6 +14,6 @@ class Derived extends Base
 
     public void get(String s)
     {
-        
+
     }
 }

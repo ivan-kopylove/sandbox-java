@@ -30,6 +30,5 @@ public class MissingCurlyBracketsTest
         assertEquals(0, a);
         assertEquals(1, b);
         assertEquals(0, c);
-
     }
 }

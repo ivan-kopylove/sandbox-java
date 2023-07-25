@@ -69,8 +69,6 @@ public class CheckedFolderTreePage extends WebPage
 
                             }
 
-
-
                             @Override
                             public Boolean getObject()
                             {
@@ -102,6 +100,5 @@ public class CheckedFolderTreePage extends WebPage
         };
 
         add(link, defaultNestedTree);
-
     }
 }

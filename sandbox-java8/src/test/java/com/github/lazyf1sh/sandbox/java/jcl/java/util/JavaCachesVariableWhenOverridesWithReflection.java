@@ -7,9 +7,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.function.Supplier;
 
-/**
- * @author Ivan Kopylov
- */
 public class JavaCachesVariableWhenOverridesWithReflection
 {
     @Test

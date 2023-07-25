@@ -46,5 +46,4 @@ public class ConsructorExamplesTest
         Assert.assertEquals("Green", flask.getColor());
         Assert.assertEquals("Metal", flask.getMaterial());
     }
-
 }

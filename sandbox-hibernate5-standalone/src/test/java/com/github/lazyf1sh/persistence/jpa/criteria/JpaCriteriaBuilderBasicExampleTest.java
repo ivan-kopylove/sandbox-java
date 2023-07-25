@@ -1,17 +1,15 @@
 package com.github.lazyf1sh.persistence.jpa.criteria;
 
-import java.util.List;
+import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import org.junit.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-
-import org.junit.Test;
-
-import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import java.util.List;
 
 public class JpaCriteriaBuilderBasicExampleTest
 {
@@ -33,5 +31,4 @@ public class JpaCriteriaBuilderBasicExampleTest
             System.out.println(parentEntity.getName());
         }
     }
-
 }

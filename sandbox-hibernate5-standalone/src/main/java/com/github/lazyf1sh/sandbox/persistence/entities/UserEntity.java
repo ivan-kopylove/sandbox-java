@@ -1,15 +1,11 @@
 package com.github.lazyf1sh.sandbox.persistence.entities;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
-/**
- * @author Ivan Kopylov
- */
 @Entity
 @Table(name = "USERS")
 public class UserEntity implements Serializable

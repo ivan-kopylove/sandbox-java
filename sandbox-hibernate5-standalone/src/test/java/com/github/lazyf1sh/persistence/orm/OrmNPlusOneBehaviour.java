@@ -1,22 +1,20 @@
 package com.github.lazyf1sh.persistence.orm;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+import com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity;
+import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity;
-import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * ORM N+1 problem demonstration
@@ -29,7 +27,8 @@ public class OrmNPlusOneBehaviour
         Random random = new Random();
 
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         for (int i = 7; i < 12; i++)
         {
@@ -44,12 +43,11 @@ public class OrmNPlusOneBehaviour
 
             entityManager.persist(parent);
             entityManager.persist(child);
-
         }
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
-
     }
 
     /**
@@ -65,7 +63,8 @@ public class OrmNPlusOneBehaviour
         Root<ParentEntity> root = cr.from(ParentEntity.class);
         cr.select(root);
 
-        List<ParentEntity> parents = entityManager.createQuery(cr).getResultList();
+        List<ParentEntity> parents = entityManager.createQuery(cr)
+                                                  .getResultList();
 
         for (ParentEntity parent : parents)
         {
@@ -82,7 +81,8 @@ public class OrmNPlusOneBehaviour
     public void nPlusOne()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<ParentEntity> cr = cb.createQuery(ParentEntity.class);
@@ -101,7 +101,8 @@ public class OrmNPlusOneBehaviour
             }
         }
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
@@ -109,7 +110,8 @@ public class OrmNPlusOneBehaviour
     public void solutionIsFetch()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<ParentEntity> cq = builder.createQuery(ParentEntity.class);
@@ -118,7 +120,8 @@ public class OrmNPlusOneBehaviour
         root.fetch("childs");
         cq.select(root);
 
-        List<ParentEntity> parents = entityManager.createQuery(cq).getResultList();
+        List<ParentEntity> parents = entityManager.createQuery(cq)
+                                                  .getResultList();
 
         entityManager.close();
 
@@ -131,7 +134,8 @@ public class OrmNPlusOneBehaviour
             }
         }
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
     }
 
     @Test
@@ -146,7 +150,8 @@ public class OrmNPlusOneBehaviour
         root.join("childs");
         cq.select(root);
 
-        List<ParentEntity> parents = entityManager.createQuery(cq).getResultList();
+        List<ParentEntity> parents = entityManager.createQuery(cq)
+                                                  .getResultList();
 
         entityManager.close();
 
@@ -161,5 +166,4 @@ public class OrmNPlusOneBehaviour
             }
         }
     }
-
 }

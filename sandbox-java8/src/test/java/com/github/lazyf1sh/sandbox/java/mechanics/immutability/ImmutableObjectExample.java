@@ -16,7 +16,6 @@ final public class ImmutableObjectExample
         this.speed = speed;
     }
 
-
     public String getColor()
     {
         return color;

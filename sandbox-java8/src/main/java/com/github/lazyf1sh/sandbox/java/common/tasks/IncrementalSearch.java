@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class IncrementalSearch
 {
-    private int currentPos = 0;
+    private int          currentPos = 0;
     private List<MyNode> results;
 
     public boolean hasNext()
@@ -16,7 +16,7 @@ public class IncrementalSearch
 
     public Optional<MyNode> getNext()
     {
-        if(results.size() > currentPos)
+        if (results.size() > currentPos)
         {
             Optional<MyNode> myNode = Optional.ofNullable(results.get(currentPos));
             currentPos++;
@@ -44,7 +44,9 @@ public class IncrementalSearch
         }
         else
         {
-            if (node.getTitle().toLowerCase().contains(searchExpression))
+            if (node.getTitle()
+                    .toLowerCase()
+                    .contains(searchExpression))
             {
                 result.add(node);
             }

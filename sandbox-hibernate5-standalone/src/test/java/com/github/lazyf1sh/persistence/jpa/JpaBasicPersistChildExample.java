@@ -1,16 +1,14 @@
 package com.github.lazyf1sh.persistence.jpa;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
-
-import javax.persistence.EntityManager;
-
-import org.junit.Test;
-
 import com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity;
 import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
 import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import org.junit.Test;
+
+import javax.persistence.EntityManager;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 
 public class JpaBasicPersistChildExample
 {
@@ -31,8 +29,10 @@ public class JpaBasicPersistChildExample
         childs.add(childEntity);
 
         EntityManager em = JpaEntityManagerFactory.getEntityManger();
-        em.getTransaction().begin();
+        em.getTransaction()
+          .begin();
         em.persist(parentEntity);
-        em.getTransaction().commit();
+        em.getTransaction()
+          .commit();
     }
 }

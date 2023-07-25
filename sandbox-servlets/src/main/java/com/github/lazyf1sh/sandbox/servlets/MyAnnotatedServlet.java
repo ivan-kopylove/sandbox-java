@@ -1,17 +1,13 @@
 package com.github.lazyf1sh.sandbox.servlets;
 
-import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
-/**
- * @author Ivan Kopylov
- */
-@WebServlet(name = "UserServlet", urlPatterns = { "/testAnnotated" })
+@WebServlet(name = "UserServlet", urlPatterns = {"/testAnnotated"})
 public class MyAnnotatedServlet extends HttpServlet
 {
     private static final long serialVersionUID = -2517292163679509370L;

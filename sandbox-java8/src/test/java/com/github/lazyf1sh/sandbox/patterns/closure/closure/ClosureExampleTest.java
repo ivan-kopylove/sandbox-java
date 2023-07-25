@@ -6,27 +6,33 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * search engine query with comprehensive examples:
- *  closure baeldung
+ * closure baeldung
  */
-public class ClosureExampleTest {
+public class ClosureExampleTest
+{
 
-    @Test
-    public void runTest(){
-        TextProvider provider = getProvider(15);
-        assertEquals(15,  provider.get());
-    }
+    static TextProvider getProvider(int value)
+    {
 
-    static TextProvider getProvider(int value) {
-
-        return new TextProvider() {
+        return new TextProvider()
+        {
             @Override
-            public int get() {
-               return value;
+            public int get()
+            {
+                return value;
             }
         };
     }
 
-    interface TextProvider {
+    @Test
+    public void runTest()
+    {
+        TextProvider provider = getProvider(15);
+        assertEquals(15, provider.get());
+    }
+
+    interface TextProvider
+    {
         int get();
     }
 }

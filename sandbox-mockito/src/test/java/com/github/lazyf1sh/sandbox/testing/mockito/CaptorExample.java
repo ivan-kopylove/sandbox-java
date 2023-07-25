@@ -1,10 +1,10 @@
 package com.github.lazyf1sh.sandbox.testing.mockito;
 
-import java.util.List;
-
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
+
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,7 +17,8 @@ public class CaptorExample
         ArgumentCaptor<String> arg = ArgumentCaptor.forClass(String.class);
 
         mockList.add("one");
-        Mockito.verify(mockList).add(arg.capture());
+        Mockito.verify(mockList)
+               .add(arg.capture());
 
         assertEquals("one", arg.getValue());
     }

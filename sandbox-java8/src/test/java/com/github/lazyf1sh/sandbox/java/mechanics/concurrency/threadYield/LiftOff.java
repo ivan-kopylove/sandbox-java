@@ -1,13 +1,10 @@
 package com.github.lazyf1sh.sandbox.java.mechanics.concurrency.threadYield;
 
-/**
- * @author Ivan Kopylov
- */
 public class LiftOff implements Runnable
 {
-    protected      int countDown = 10;
     private static int taskCount = 0;
     private final  int id        = taskCount++;
+    protected      int countDown = 10;
 
     public LiftOff()
     {

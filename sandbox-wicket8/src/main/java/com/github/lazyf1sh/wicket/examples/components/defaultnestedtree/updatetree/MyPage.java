@@ -1,6 +1,7 @@
 package com.github.lazyf1sh.sandbox.wicket.examples.components.standard.defaultnestedtree.updatetree;
 
 //import com.sun.org.apache.xerces.internal.dom.DeferredElementImpl;
+
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.extensions.markup.html.repeater.tree.DefaultNestedTree;
@@ -24,10 +25,47 @@ import java.io.IOException;
 
 /**
  * https://i.imgur.com/Wh82sDX.gif
- *
  */
 public class MyPage extends WebPage
 {
+    public static TreeNode getDemoStruct2() throws IOException, ParserConfigurationException, SAXException
+    {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+
+        File f = new File("C:\\1\\apache-tomcat-7.0.42\\conf\\server.xml");
+        Document doc = builder.parse(f);
+        Node root = doc.getDocumentElement();
+        DefaultMutableTreeNode treeRoot = new DefaultMutableTreeNode(root.getNodeName());
+        TreeNode result = getStruct(treeRoot, root);
+
+        return result;
+    }
+
+    private static DefaultMutableTreeNode getStruct(DefaultMutableTreeNode treeNode, Node node)
+    {
+        if (node.hasChildNodes())
+        {
+            NodeList list = node.getChildNodes();
+            for (int i = 0; i < node.getChildNodes()
+                                    .getLength(); i++)
+            {
+                Node subNode = list.item(i);
+                //                if(subNode instanceof DeferredElementImpl)
+                //                {
+                //                    DefaultMutableTreeNode child = new DefaultMutableTreeNode(subNode.getNodeName());
+                //                    treeNode.add(getStruct(child, subNode));
+                //                }
+            }
+        }
+        else
+        {
+            treeNode.add(new DefaultMutableTreeNode(node.getNodeName()));
+        }
+
+        return treeNode;
+    }
+
     @Override
     protected void onInitialize()
     {
@@ -51,7 +89,8 @@ public class MyPage extends WebPage
             e.printStackTrace();
         }
 
-        final TreeModelProvider<DefaultMutableTreeNode> modelProvider = new TreeModelProvider<DefaultMutableTreeNode>(model)
+        final TreeModelProvider<DefaultMutableTreeNode> modelProvider = new TreeModelProvider<DefaultMutableTreeNode>(
+                model)
         {
             @Override
             public IModel<DefaultMutableTreeNode> model(DefaultMutableTreeNode object)
@@ -81,42 +120,5 @@ public class MyPage extends WebPage
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("my_root_string");
         root.add(new DefaultMutableTreeNode("my_string"));
         return root;
-    }
-
-    public static TreeNode getDemoStruct2() throws IOException, ParserConfigurationException, SAXException
-    {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-
-        File f = new File("C:\\1\\apache-tomcat-7.0.42\\conf\\server.xml");
-        Document doc = builder.parse(f);
-        Node root = doc.getDocumentElement();
-        DefaultMutableTreeNode treeRoot = new DefaultMutableTreeNode(root.getNodeName());
-        TreeNode result = getStruct(treeRoot, root);
-
-        return result;
-    }
-
-    private static DefaultMutableTreeNode getStruct(DefaultMutableTreeNode treeNode, Node node)
-    {
-        if(node.hasChildNodes())
-        {
-            NodeList list = node.getChildNodes();
-            for(int i = 0; i < node.getChildNodes().getLength(); i++)
-            {
-                Node subNode = list.item(i);
-//                if(subNode instanceof DeferredElementImpl)
-//                {
-//                    DefaultMutableTreeNode child = new DefaultMutableTreeNode(subNode.getNodeName());
-//                    treeNode.add(getStruct(child, subNode));
-//                }
-            }
-        }
-        else
-        {
-            treeNode.add(new DefaultMutableTreeNode(node.getNodeName()));
-        }
-
-        return treeNode;
     }
 }

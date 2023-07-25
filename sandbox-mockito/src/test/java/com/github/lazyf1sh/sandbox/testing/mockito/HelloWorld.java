@@ -10,7 +10,8 @@ public class HelloWorld
     public void run()
     {
         MyClass mock = Mockito.mock(MyClass.class);
-        Mockito.when(mock.getSomeValue()).thenReturn("hello world");
+        Mockito.when(mock.getSomeValue())
+               .thenReturn("hello world");
         Assert.assertEquals("hello world", mock.getSomeValue());
     }
 }

@@ -26,7 +26,6 @@ public class FinalFieldHiding
         Assert.assertEquals(10, parent.f2);
         Assert.assertEquals("test", ((Child) parent).f2);
     }
-
 }
 
 class Parent

@@ -1,20 +1,16 @@
 package com.github.lazyf1sh.sandbox.java.mechanics.lambdas;
 
-/**
- * @author Ivan Kopylov
- */
 class Person
 {
+    private String givenName;
+    private String surName;
+    private int    age;
     Person(String givenName, String surName, int age)
     {
         this.givenName = givenName;
         this.surName = surName;
         this.age = age;
     }
-
-    private String givenName;
-    private String surName;
-    private int    age;
 
     public String getGivenName()
     {
@@ -45,5 +41,4 @@ class Person
     {
         this.age = age;
     }
-
 }

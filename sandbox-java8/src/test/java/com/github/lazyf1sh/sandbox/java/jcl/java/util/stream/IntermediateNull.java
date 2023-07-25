@@ -15,9 +15,9 @@ public class IntermediateNull
     public void a()
     {
         List<Object> mapped = Stream.of("1", "2")
-                .map(s -> null)
-                .peek(System.out::println)
-                .collect(Collectors.toList());
+                                    .map(s -> null)
+                                    .peek(System.out::println)
+                                    .collect(Collectors.toList());
 
         Assert.assertNull(mapped.get(0));
         Assert.assertNull(mapped.get(1));
@@ -28,13 +28,11 @@ public class IntermediateNull
     public void b()
     {
         List<Object> mapped = Stream.of("1", "2")
-                .map(s -> null)
-                .filter(Objects::nonNull) //this helps
-                .peek(System.out::println)
-                .collect(Collectors.toList());
+                                    .map(s -> null)
+                                    .filter(Objects::nonNull) //this helps
+                                    .peek(System.out::println)
+                                    .collect(Collectors.toList());
 
         Assert.assertEquals(0, mapped.size());
     }
-
-
 }

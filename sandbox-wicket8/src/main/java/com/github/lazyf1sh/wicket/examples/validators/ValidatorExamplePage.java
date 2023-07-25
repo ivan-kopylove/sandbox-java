@@ -7,9 +7,6 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.validation.IValidatable;
 import org.apache.wicket.validation.IValidator;
 
-/**
- * @author Ivan Kopylov
- */
 public class ValidatorExamplePage extends WebPage
 {
     private static final long serialVersionUID = 7132129081649580796L;
@@ -26,7 +23,8 @@ public class ValidatorExamplePage extends WebPage
             public void validate(final IValidatable<String> validatable)
             {
                 System.out.println("value: " + validatable.getValue());
-                System.out.println("model object: " + validatable.getModel().getObject());
+                System.out.println("model object: " + validatable.getModel()
+                                                                 .getObject());
             }
         });
         Form<?> form = new Form<Void>("form");

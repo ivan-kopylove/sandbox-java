@@ -16,7 +16,8 @@ public class JpaOrderByExample
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         Building building = new Building();
         building.setKey(0);
@@ -24,7 +25,8 @@ public class JpaOrderByExample
 
         entityManager.persist(building);
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
     }
 
@@ -32,7 +34,8 @@ public class JpaOrderByExample
     public void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         Building building = entityManager.find(Building.class, 0L);
         List<String> phoneNumbers = building.getPhoneNumbers();
@@ -49,8 +52,8 @@ public class JpaOrderByExample
         Assert.assertEquals("8", phoneNumbers.get(9));
         Assert.assertEquals("9", phoneNumbers.get(10));
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
         entityManager.close();
-
     }
 }

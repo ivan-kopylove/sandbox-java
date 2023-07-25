@@ -1,20 +1,18 @@
 package com.github.lazyf1sh.persistence.jpa.criteria.join;
 
-import java.util.List;
+import com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity;
+import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity;
-import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import java.util.List;
 
 /**
  * This example demonstrates minimal join boilerplate
@@ -38,12 +36,14 @@ public class JpaCriteriaBuilderJoinExampleTest
 
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
 
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         entityManager.persist(parentEntity);
         entityManager.persist(childEntity);
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
     }
 
     @Test
@@ -62,7 +62,11 @@ public class JpaCriteriaBuilderJoinExampleTest
 
         for (ParentEntity parentEntity : result)
         {
-            Assert.assertEquals("some child name", parentEntity.getChilds().iterator().next().getName());
+            Assert.assertEquals("some child name",
+                                parentEntity.getChilds()
+                                            .iterator()
+                                            .next()
+                                            .getName());
             Assert.assertEquals("some parent name", parentEntity.getName());
         }
     }

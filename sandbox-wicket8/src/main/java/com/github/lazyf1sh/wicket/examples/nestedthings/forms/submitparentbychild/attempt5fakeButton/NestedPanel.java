@@ -11,14 +11,10 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.util.visit.IVisitor;
 
-/**
- * @author Ivan Kopylov
- */
 public class NestedPanel extends Panel
 {
 
     private TextField<String> textFieldNested;
-
 
     public NestedPanel(String id)
     {
@@ -47,15 +43,19 @@ public class NestedPanel extends Panel
             @Override
             protected void onSubmit(AjaxRequestTarget target)
             {
-                String msg = String.format("parentTextField model object: %s, convertedInput: %s", textFieldNested.getModelObject(), textFieldNested.getConvertedInput());
+                String msg = String.format("parentTextField model object: %s, convertedInput: %s",
+                                           textFieldNested.getModelObject(),
+                                           textFieldNested.getConvertedInput());
                 Util.showComponentMessage(this, msg);
 
-                NestedPanel.this.getPage().visitChildren((IVisitor<Component, Void>) (object, visit) -> {
-                    if (object.getId().equals("parentSaveButton"))
-                    {
-                        NestedPanel.this.send(object, Broadcast.EXACT, "qwe");
-                    }
-                });
+                NestedPanel.this.getPage()
+                                .visitChildren((IVisitor<Component, Void>) (object, visit) -> {
+                                    if (object.getId()
+                                              .equals("parentSaveButton"))
+                                    {
+                                        NestedPanel.this.send(object, Broadcast.EXACT, "qwe");
+                                    }
+                                });
 
                 super.onSubmit(target);
             }

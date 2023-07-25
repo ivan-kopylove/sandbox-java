@@ -7,9 +7,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
-/**
- * @author Ivan Kopylov
- */
 public class ExceptionsExampleFinally
 {
     @Test

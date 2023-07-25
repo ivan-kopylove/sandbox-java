@@ -1,13 +1,12 @@
 package com.github.lazyf1sh.persistence.jpa.refresh;
 
-import javax.persistence.EntityManager;
-
+import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
+import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
-import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import javax.persistence.EntityManager;
 
 /**
  * Example of EntityManager#refresh.
@@ -24,9 +23,11 @@ public class JpaUpdateExampleTest
         parentEntity.setName("Robert Patrick");
 
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
         entityManager.persist(parentEntity);
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
     }
 
     @Test
@@ -36,7 +37,8 @@ public class JpaUpdateExampleTest
         ParentEntity parentEntity = entityManger.find(ParentEntity.class, 101);
         parentEntity.setName("Linda Hamilton");
 
-        parentEntity = entityManger.find(ParentEntity.class, 101); //loads from persistence context first, then from database
+        parentEntity = entityManger.find(ParentEntity.class,
+                                         101); //loads from persistence context first, then from database
 
         Assert.assertEquals("Linda Hamilton", parentEntity.getName());
 

@@ -18,11 +18,10 @@ public class ErrorIndicatorBehavior extends Behavior implements IValidator
     @Override
     public void onComponentTag(Component c, ComponentTag tag)
     {
-        FormComponent fc = (FormComponent)c;
+        FormComponent fc = (FormComponent) c;
         if (!fc.isValid())
         {
             tag.append("class", "error", " ");
         }
     }
-
 }

@@ -11,19 +11,20 @@ public class dsajkldasd
     public void test()
     {
 
-        Stream.of(new MyObj("a"), new MyObj("b")).peek(o ->
-        {
-            if (true)
-            {
-                o.setDasjlkdas("");
-            }
-        }).collect(Collectors.toList());
+        Stream.of(new MyObj("a"), new MyObj("b"))
+              .peek(o -> {
+                  if (true)
+                  {
+                      o.setDasjlkdas("");
+                  }
+              })
+              .collect(Collectors.toList());
 
 
-        Stream.of(new MyObj("a"), new MyObj("b")).filter(obj ->
-        {
-            return true;
-        }).collect(Collectors.toList());
+        Stream.of(new MyObj("a"), new MyObj("b"))
+              .filter(obj -> {
+                  return true;
+              })
+              .collect(Collectors.toList());
     }
-
 }

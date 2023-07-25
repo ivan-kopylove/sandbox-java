@@ -8,9 +8,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class ArraysAsListFixedSizeExampleTest
 {
     @Test(expected = UnsupportedOperationException.class)
@@ -35,5 +32,4 @@ public class ArraysAsListFixedSizeExampleTest
         mutableList.add("3");
         Assert.assertEquals("3", mutableList.get(2));
     }
-
 }

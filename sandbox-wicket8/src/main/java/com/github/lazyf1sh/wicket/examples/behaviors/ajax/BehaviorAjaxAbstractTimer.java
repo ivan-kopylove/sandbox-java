@@ -7,9 +7,6 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.util.time.Duration;
 
-/**
- * @author Ivan Kopylov
- */
 public class BehaviorAjaxAbstractTimer extends WebPage
 {
     private static final long serialVersionUID = 1090726579020985087L;

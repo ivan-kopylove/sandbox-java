@@ -1,24 +1,25 @@
 package com.github.lazyf1sh.sandbox.domain;
 
-/**
- * @author Ivan Kopylov
- */
 public class Dog extends Animal
 {
-private String name;
+    private String name;
 
-    public Dog() {
+    public Dog()
+    {
     }
 
-    public Dog(String name) {
+    public Dog(String name)
+    {
         this.name = name;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 }

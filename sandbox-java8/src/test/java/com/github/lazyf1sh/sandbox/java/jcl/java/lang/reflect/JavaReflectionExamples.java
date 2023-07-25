@@ -27,7 +27,8 @@ public class JavaReflectionExamples
     {
         Picture picture = new Picture();
 
-        Field f1 = picture.getClass().getDeclaredField("size");
+        Field f1 = picture.getClass()
+                          .getDeclaredField("size");
         f1.setAccessible(true);
         f1.set(picture, 500);
 
@@ -39,7 +40,8 @@ public class JavaReflectionExamples
     {
         Picture picture = new Picture();
 
-        Field f1 = picture.getClass().getField("size");
+        Field f1 = picture.getClass()
+                          .getField("size");
     }
 
     /**
@@ -57,7 +59,6 @@ public class JavaReflectionExamples
         // modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
         Assert.assertEquals("red", Lamp.getColor());
-
     }
 
     /**
@@ -78,7 +79,5 @@ public class JavaReflectionExamples
 
         field.set(null, "myValue");
         Assert.assertEquals("myValue", Wall.getKek());
-
     }
-
 }

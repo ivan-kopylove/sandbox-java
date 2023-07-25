@@ -1,6 +1,9 @@
 package com.github.lazyf1sh.sandbox.hibernate.spring.examples;
 
-import java.util.List;
+import com.github.lazyf1sh.sandbox.hibernate.spring.entities.ParentEntity;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -9,12 +12,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.transaction.Transactional;
-
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Service;
-
-import com.github.lazyf1sh.sandbox.hibernate.spring.entities.ParentEntity;
+import java.util.List;
 
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
@@ -26,8 +24,8 @@ public class DocumentLoader
 
     public List<ParentEntity> load(String name)
     {
-//        boolean active = entityManager.getTransaction().isActive();
-//        System.out.println(String.format("Transaction is active: %s", active));
+        //        boolean active = entityManager.getTransaction().isActive();
+        //        System.out.println(String.format("Transaction is active: %s", active));
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<ParentEntity> query = builder.createQuery(ParentEntity.class);
         Root<ParentEntity> root = query.from(ParentEntity.class);
@@ -36,6 +34,7 @@ public class DocumentLoader
 
         query.select(root);
         query.where(name_);
-        return entityManager.createQuery(query).getResultList();
+        return entityManager.createQuery(query)
+                            .getResultList();
     }
 }

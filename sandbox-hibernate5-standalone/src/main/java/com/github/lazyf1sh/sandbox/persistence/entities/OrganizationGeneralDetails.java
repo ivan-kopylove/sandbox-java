@@ -2,9 +2,6 @@ package com.github.lazyf1sh.sandbox.persistence.entities;
 
 import javax.persistence.Column;
 
-/**
- * @author Ivan Kopylov
- */
 public class OrganizationGeneralDetails
 {
     @Column(name = "GOAL")

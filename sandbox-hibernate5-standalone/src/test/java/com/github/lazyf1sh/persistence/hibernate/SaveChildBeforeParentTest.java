@@ -1,12 +1,11 @@
 package com.github.lazyf1sh.persistence.hibernate;
 
-import org.hibernate.Session;
-import org.hibernate.TransientPropertyValueException;
-import org.junit.Test;
-
 import com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity;
 import com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity;
 import com.github.lazyf1sh.sandbox.persistence.util.HibernateSessionFactory;
+import org.hibernate.Session;
+import org.hibernate.TransientPropertyValueException;
+import org.junit.Test;
 
 /**
  * This example demonstrates exception when saving child before parent
@@ -17,7 +16,8 @@ public class SaveChildBeforeParentTest
     public void saveChildBeforeParent()
     {
         Session session = HibernateSessionFactory.openSession();
-        session.getTransaction().begin();
+        session.getTransaction()
+               .begin();
 
         ParentEntity parentEntity = new ParentEntity();
         parentEntity.setId(10);
@@ -31,9 +31,9 @@ public class SaveChildBeforeParentTest
 
         session.saveOrUpdate(childEntity);
         session.saveOrUpdate(parentEntity);
-        session.getTransaction().commit();
+        session.getTransaction()
+               .commit();
 
         session.close();
     }
-
 }

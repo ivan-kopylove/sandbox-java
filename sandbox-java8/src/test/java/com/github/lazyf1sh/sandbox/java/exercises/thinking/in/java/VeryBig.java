@@ -1,8 +1,5 @@
 package com.github.lazyf1sh.sandbox.java.exercises.thinking.in.java;
 
-/**
- * @author Ivan Kopylov
- */
 public class VeryBig
 {
     private static final int    SIZE = 10000;

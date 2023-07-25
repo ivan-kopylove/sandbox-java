@@ -4,17 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.UUID;
+import java.io.*;
 
 /**
- *
- *
  * @author Ivan Kopylov
  */
 
@@ -35,7 +27,6 @@ public class SerialVersionUid
 
         Assert.assertTrue(file.exists());
     }
-
 
     @Test
     public void readWrittenFile() throws IOException, ClassNotFoundException

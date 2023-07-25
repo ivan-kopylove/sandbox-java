@@ -10,9 +10,6 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-/**
- * @author Ivan Kopylov
- */
 public class ParentPanel extends Panel
 {
     private TextField<String> parentTextField;
@@ -47,50 +44,50 @@ public class ParentPanel extends Panel
     private AjaxButton buildParentSaveButton(Form<?> parentForm)
     {
         return new AjaxButton("parentSaveButton", parentForm)
+        {
+            @Override
+            protected void onSubmit(AjaxRequestTarget target)
             {
-                @Override
-                protected void onSubmit(AjaxRequestTarget target)
-                {
-                    Util.showComponentMessage(this);
-                    super.onSubmit(target);
-                }
+                Util.showComponentMessage(this);
+                super.onSubmit(target);
+            }
 
-                @Override
-                protected void onBeforeRender()
-                {
-                    Util.showComponentMessage(this);
-                    super.onBeforeRender();
-                }
+            @Override
+            protected void onBeforeRender()
+            {
+                Util.showComponentMessage(this);
+                super.onBeforeRender();
+            }
 
-                @Override
-                protected void onModelChanging()
-                {
-                    Util.showComponentMessage(this);
-                    super.onModelChanging();
-                }
+            @Override
+            protected void onModelChanging()
+            {
+                Util.showComponentMessage(this);
+                super.onModelChanging();
+            }
 
-                @Override
-                protected void onModelChanged()
-                {
-                    Util.showComponentMessage(this);
-                    super.onModelChanged();
-                }
-            };
+            @Override
+            protected void onModelChanged()
+            {
+                Util.showComponentMessage(this);
+                super.onModelChanged();
+            }
+        };
     }
 
     private AjaxLink<Void> buildShowNestedWindowButton(ModalWindow nestedWindow)
     {
         return new AjaxLink<Void>("showNestedWindow")
+        {
+            @Override
+            public void onClick(AjaxRequestTarget target)
             {
-                @Override
-                public void onClick(AjaxRequestTarget target)
-                {
-                    Util.showComponentMessage(this);
-                    nestedWindow.setContent(new NestedPanel(nestedWindow.getContentId()));
-                    nestedWindow.setTitle("Nested window");
-                    nestedWindow.show(target);
-                }
-            };
+                Util.showComponentMessage(this);
+                nestedWindow.setContent(new NestedPanel(nestedWindow.getContentId()));
+                nestedWindow.setTitle("Nested window");
+                nestedWindow.show(target);
+            }
+        };
     }
 
     private TextField<String> buildTextField()
@@ -123,22 +120,24 @@ public class ParentPanel extends Panel
     private Form<?> buildForm()
     {
         return new Form<Void>("parentForm")
+        {
+            @Override
+            protected boolean wantSubmitOnNestedFormSubmit()
             {
-                @Override
-                protected boolean wantSubmitOnNestedFormSubmit()
-                {
-                    //try to switch flag
-                    return true;//wicket will iterate over parent components also and validate them
-                    //also, place a breakpoint to FormComponent.validate and check what components are validated
-                }
+                //try to switch flag
+                return true;//wicket will iterate over parent components also and validate them
+                //also, place a breakpoint to FormComponent.validate and check what components are validated
+            }
 
-                @Override
-                protected void onSubmit()
-                {
-                    String msg = String.format("parentTextField model object: %s, convertedInput: %s", parentTextField.getModelObject(), parentTextField.getConvertedInput());
-                    Util.showComponentMessage(this, msg);
-                    super.onSubmit();
-                }
-            };
+            @Override
+            protected void onSubmit()
+            {
+                String msg = String.format("parentTextField model object: %s, convertedInput: %s",
+                                           parentTextField.getModelObject(),
+                                           parentTextField.getConvertedInput());
+                Util.showComponentMessage(this, msg);
+                super.onSubmit();
+            }
+        };
     }
 }

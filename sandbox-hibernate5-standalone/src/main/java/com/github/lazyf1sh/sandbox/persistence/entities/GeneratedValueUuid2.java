@@ -1,10 +1,10 @@
 package com.github.lazyf1sh.sandbox.persistence.entities;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class GeneratedValueUuid2

@@ -7,7 +7,7 @@ package com.github.lazyf1sh.sandbox.persistence.domain;
  */
 public class CompoundObject
 {
-    private int a;
+    private int    a;
     private String b;
 
     public CompoundObject(final int a, final String b)

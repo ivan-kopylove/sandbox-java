@@ -18,11 +18,12 @@ public class Dsad
     public void streamWithoutTerminalOperationIsNotExecuted()
     {
         AtomicBoolean result = new AtomicBoolean(false);
-        Stream.of("a", "b").map(Function.identity()).peek(s -> {
-            System.out.println(s);
-            result.set(true);
-
-        });
+        Stream.of("a", "b")
+              .map(Function.identity())
+              .peek(s -> {
+                  System.out.println(s);
+                  result.set(true);
+              });
         Assert.assertFalse(result.get());
     }
 }

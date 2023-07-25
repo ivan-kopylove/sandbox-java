@@ -8,12 +8,14 @@ public class ThreadRunVsThreadStart
     @Test
     public void start()
     {
-        String parentThreadName = Thread.currentThread().getName();
+        String parentThreadName = Thread.currentThread()
+                                        .getName();
         Thread thread = new Thread()
         {
             public void run()
             {
-                String childThreadName = Thread.currentThread().getName();
+                String childThreadName = Thread.currentThread()
+                                               .getName();
                 Assert.assertNotEquals(parentThreadName, childThreadName);
             }
         };
@@ -24,12 +26,14 @@ public class ThreadRunVsThreadStart
     @Test
     public void run()
     {
-        String parentThreadName = Thread.currentThread().getName();
+        String parentThreadName = Thread.currentThread()
+                                        .getName();
         Thread thread = new Thread()
         {
             public void run()
             {
-                String childThreadName = Thread.currentThread().getName();
+                String childThreadName = Thread.currentThread()
+                                               .getName();
                 Assert.assertEquals(parentThreadName, childThreadName);
             }
         };

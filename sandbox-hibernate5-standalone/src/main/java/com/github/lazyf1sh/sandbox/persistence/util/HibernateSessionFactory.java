@@ -9,12 +9,18 @@ public final class HibernateSessionFactory
 {
     private static final SessionFactory sessionFactory = buildSessionFactory();
 
+    private HibernateSessionFactory()
+    {
+    }
+
     private static SessionFactory buildSessionFactory()
     {
         try
         {
-            return new Configuration().configure().buildSessionFactory(); //looks for hibernate.cfg.xml
-        } catch (HibernateException e)
+            return new Configuration().configure()
+                                      .buildSessionFactory(); //looks for hibernate.cfg.xml
+        }
+        catch (HibernateException e)
         {
             System.out.println("Hibernate session factory configuration failed " + e);
             throw new ExceptionInInitializerError();
@@ -34,10 +40,5 @@ public final class HibernateSessionFactory
     public static void close()
     {
         sessionFactory.close();
-    }
-
-
-    private HibernateSessionFactory()
-    {
     }
 }

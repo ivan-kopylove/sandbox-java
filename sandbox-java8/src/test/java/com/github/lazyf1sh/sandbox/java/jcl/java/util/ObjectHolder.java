@@ -2,17 +2,12 @@ package com.github.lazyf1sh.sandbox.java.jcl.java.util;
 
 import java.util.function.Supplier;
 
-/**
- * @author Ivan Kopylov
- */
 public class ObjectHolder
 {
     private static final String FINAL_STR = "initial";
-    private static       String STR       = "initial";
-
     private static final Supplier<String> SUPPLIER = () -> "initial";
-
     private static final int intFinalValue = 5000;
+    private static       String STR       = "initial";
     private static       int intValue      = 5000;
 
     public static String getFinalStr()

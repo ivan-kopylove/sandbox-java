@@ -55,6 +55,5 @@ public class LoadableDetachableModelExample extends WebPage
             }
         };
         add(clickMe);
-
     }
 }

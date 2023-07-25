@@ -1,11 +1,11 @@
 package exercise.node.converter;
 
-import java.util.List;
 import java.util.Objects;
 
-public class ListNode {
+public class ListNode
+{
 
-    private int val;
+    private int      val;
     private ListNode next;
 
     public ListNode(int val, ListNode next)
@@ -15,17 +15,24 @@ public class ListNode {
         this.next = next;
     }
 
-
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o)
+    {
+        if (this == o)
+        {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass())
+        {
+            return false;
+        }
         ListNode listNode = (ListNode) o;
         return val == listNode.val;
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         return Objects.hash(val);
     }
 }

@@ -3,9 +3,6 @@ package com.github.lazyf1sh.sandbox.java.jcl.java.lang.string;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * @author Ivan Kopylov
- */
 public class StringFormat
 {
     @Test
@@ -15,5 +12,4 @@ public class StringFormat
         System.out.println(s);
         Assert.assertEquals("∞  sometext", s);
     }
-
 }

@@ -6,9 +6,6 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.HiddenField;
 
-/**
- * @author Ivan Kopylov
- */
 public class HiddenFieldExamplePage extends WebPage
 {
 

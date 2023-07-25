@@ -6,9 +6,6 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- * @author Ivan Kopylov
- */
 public class Util
 {
     public static String calculateFileSha256(byte[] bytes) throws NoSuchAlgorithmException, IOException
@@ -27,9 +24,13 @@ public class Util
         byte[] hash = digest.digest();
         StringBuilder hexString = new StringBuilder();
 
-        for (int i = 0; i < hash.length; i++) {
+        for (int i = 0; i < hash.length; i++)
+        {
             String hex = Integer.toHexString(0xff & hash[i]);
-            if(hex.length() == 1) hexString.append('0');
+            if (hex.length() == 1)
+            {
+                hexString.append('0');
+            }
             hexString.append(hex);
         }
 

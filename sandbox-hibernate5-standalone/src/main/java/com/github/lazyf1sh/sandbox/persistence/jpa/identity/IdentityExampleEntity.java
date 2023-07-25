@@ -1,10 +1,6 @@
 package com.github.lazyf1sh.sandbox.persistence.jpa.identity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "IDENTITY_EXAMPLE")
 public class IdentityExampleEntity

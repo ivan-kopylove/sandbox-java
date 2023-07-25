@@ -12,10 +12,10 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-<!--        <property name="hibernate.cache.use_second_level_cache">true</property>-->
-<!--        <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>-->
-<!--        <property name="hibernate.javax.cache.uri">classpath://ehcache.xml</property>-->
-<!--        <property name="hibernate.cache.region.factory_class">jcache</property>-->
+        <!--        <property name="hibernate.cache.use_second_level_cache">true</property>-->
+        <!--        <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>-->
+        <!--        <property name="hibernate.javax.cache.uri">classpath://ehcache.xml</property>-->
+        <!--        <property name="hibernate.cache.region.factory_class">jcache</property>-->
 
 
         <mapping class="com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity"/>

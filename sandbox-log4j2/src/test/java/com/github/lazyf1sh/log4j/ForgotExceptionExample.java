@@ -21,7 +21,6 @@ public class ForgotExceptionExample
         }
     }
 
-
     @Test
     public void correct()
     {
@@ -35,6 +34,4 @@ public class ForgotExceptionExample
             LOGGER.error("I can quickly find root cause", e);
         }
     }
-
-
 }

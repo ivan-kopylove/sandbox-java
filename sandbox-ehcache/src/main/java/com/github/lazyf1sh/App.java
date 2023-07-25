@@ -1,18 +1,16 @@
 package com.github.lazyf1sh;
 
-import java.util.Iterator;
-import java.util.Map;
-
+import net.sf.ehcache.CacheManager;
+import net.sf.ehcache.Element;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import net.sf.ehcache.CacheManager;
-import net.sf.ehcache.Element;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Hello world!
- *
  */
 public class App
 {
@@ -30,18 +28,20 @@ public class App
         net.sf.ehcache.Cache cache = manager.getCache("cacheName");
 
         Map<Object, Element> a = cache.getAll(cache.getKeys());
-        
-        Iterator<Element> i = a.values().iterator();
-        while(i.hasNext())
+
+        Iterator<Element> i = a.values()
+                               .iterator();
+        while (i.hasNext())
         {
-           System.out.println(i.next().getValue());
+            System.out.println(i.next()
+                                .getValue());
         }
-        
+
         cache.getSize();
 
         System.out.println(cache.getSize());
 
         manager.shutdown();
-        ((ConfigurableApplicationContext)context).close();
+        ((ConfigurableApplicationContext) context).close();
     }
 }

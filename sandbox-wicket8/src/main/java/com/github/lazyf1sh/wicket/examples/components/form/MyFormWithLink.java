@@ -25,7 +25,6 @@ public class MyFormWithLink extends WebPage
             {
                 int i = 0;
             }
-
         };
 
         Label label = new Label("label", Model.of("123"));

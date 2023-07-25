@@ -14,8 +14,6 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- *
- *
  * @author Ivan Kopylov
  */
 public class ChartUpdater
@@ -27,10 +25,12 @@ public class ChartUpdater
         Record[] data = generateData();
 
         // create an asynchronous task that will write the data to the client
-        UpdateTask updateTask = new UpdateTask(message.getApplication(), message.getSessionId(), message.getKey(), data);
+        UpdateTask updateTask = new UpdateTask(message.getApplication(),
+                                               message.getSessionId(),
+                                               message.getKey(),
+                                               data);
         scheduledExecutorService.schedule(updateTask, 1, TimeUnit.SECONDS);
     }
-
 
     /**
      * Generates some random data to send to the client
@@ -51,7 +51,6 @@ public class ChartUpdater
         }
         return data;
     }
-
 
     /**
      * A task that sends data to the client by pushing it to the web socket connection
@@ -92,7 +91,9 @@ public class ChartUpdater
 
             while (dataIndex < data.length)
             {
-                IWebSocketConnection connection = webSocketConnectionRegistry.getConnection(application, sessionId, key);
+                IWebSocketConnection connection = webSocketConnectionRegistry.getConnection(application,
+                                                                                            sessionId,
+                                                                                            key);
                 try
                 {
                     Record record = data[dataIndex++];
@@ -105,8 +106,7 @@ public class ChartUpdater
                     }
                     connection.sendMessage(json);
                     connection.sendMessage(new IWebSocketPushMessage()
-                    {
-                    });
+                    {});
 
 
                     // sleep for a while to simulate work
@@ -114,7 +114,8 @@ public class ChartUpdater
                 }
                 catch (InterruptedException x)
                 {
-                    Thread.currentThread().interrupt();
+                    Thread.currentThread()
+                          .interrupt();
                     break;
                 }
                 catch (Exception e)

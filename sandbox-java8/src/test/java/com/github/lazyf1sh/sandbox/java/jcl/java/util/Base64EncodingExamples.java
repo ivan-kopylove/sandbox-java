@@ -13,9 +13,6 @@ import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-/**
- * @author Ivan Kopylov
- */
 public class Base64EncodingExamples
 {
     private String STR = "str";
@@ -28,7 +25,8 @@ public class Base64EncodingExamples
     @Test
     public void java_bytes_to_Base64()
     {
-        String result = java.util.Base64.getEncoder().encodeToString(STR.getBytes());
+        String result = java.util.Base64.getEncoder()
+                                        .encodeToString(STR.getBytes());
         Assert.assertEquals(BASE64_STR, result);
     }
 
@@ -44,12 +42,14 @@ public class Base64EncodingExamples
     public void java_bytes_to_Base64_File() throws IOException
     {
 
-        URL resource = getClass().getClassLoader().getResource(fileName);
+        URL resource = getClass().getClassLoader()
+                                 .getResource(fileName);
         if (resource != null)
         {
             File myFile = new File(resource.getFile());
             byte[] bytes = Files.readAllBytes(Paths.get(myFile.getAbsolutePath()));
-            String result = java.util.Base64.getEncoder().encodeToString(bytes);
+            String result = java.util.Base64.getEncoder()
+                                            .encodeToString(bytes);
             Assert.assertEquals(BASE64_FILE, result);
         }
         else
@@ -61,16 +61,17 @@ public class Base64EncodingExamples
     @Test
     public void java_base64_to_bytes() throws IOException, NoSuchAlgorithmException
     {
-        byte[] decoded = Base64.getDecoder().decode(BASE64_FILE);
+        byte[] decoded = Base64.getDecoder()
+                               .decode(BASE64_FILE);
         String sha256 = Util.calculateFileSha256(decoded);
         Assert.assertEquals(SHA256_FILE, sha256);
     }
 
-
     @Test
     public void jersey_bytes_to_Base64_File() throws IOException
     {
-        URL resource = getClass().getClassLoader().getResource("cameleon-transition.svg.pdf");
+        URL resource = getClass().getClassLoader()
+                                 .getResource("cameleon-transition.svg.pdf");
         if (resource != null)
         {
             File myFile = new File(resource.getFile());
@@ -85,6 +86,4 @@ public class Base64EncodingExamples
             Assert.fail();
         }
     }
-
-
 }

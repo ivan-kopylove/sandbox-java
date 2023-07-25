@@ -3,9 +3,6 @@ package com.github.lazyf1sh.sandbox.persistence.entities.a;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-/**
- * @author Ivan Kopylov
- */
 @Embeddable
 public class PropertyValue
 {

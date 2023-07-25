@@ -37,20 +37,20 @@ public class VariableInsideAnonymousClassCallTest
             }
         };
 
-        Field[] a_fields = a.getClass().getDeclaredFields();
-        Stream.of(a_fields).filter(field -> B.class.isAssignableFrom(field.getType()))
-                .forEach(field -> {
-                    try
-                    {
-                        field.setAccessible(true);
-                        ((B) field.get(a)).targetMethodToCall();
-                    }
-                    catch (Exception ex)
-                    {
-                        fail();
-                    }
-                });
-
+        Field[] a_fields = a.getClass()
+                            .getDeclaredFields();
+        Stream.of(a_fields)
+              .filter(field -> B.class.isAssignableFrom(field.getType()))
+              .forEach(field -> {
+                  try
+                  {
+                      field.setAccessible(true);
+                      ((B) field.get(a)).targetMethodToCall();
+                  }
+                  catch (Exception ex)
+                  {
+                      fail();
+                  }
+              });
     }
-
 }

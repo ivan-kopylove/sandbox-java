@@ -9,12 +9,14 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-public class RunnerTest {
+public class RunnerTest
+{
 
     private static final Logger LOGGER = LogManager.getLogger(RunnerTest.class);
 
     @Test
-    public void testMain() throws WebSocketException, IOException {
+    public void testMain() throws WebSocketException, IOException
+    {
 
 
         WebSocket socket = new WebSocketFactory().createSocket("wss://echo.websocket.org");
@@ -23,5 +25,4 @@ public class RunnerTest {
         socket.connect();
         socket.sendText("hi");
     }
-
 }

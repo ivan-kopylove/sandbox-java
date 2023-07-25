@@ -11,6 +11,9 @@ public class Building
 {
     @Id
     private long key;
+    @ElementCollection
+    @OrderBy
+    private List<String> phoneNumbers;
 
     public long getKey()
     {
@@ -21,10 +24,6 @@ public class Building
     {
         this.key = key;
     }
-
-    @ElementCollection
-    @OrderBy
-    private List<String> phoneNumbers;
 
     public List<String> getPhoneNumbers()
     {

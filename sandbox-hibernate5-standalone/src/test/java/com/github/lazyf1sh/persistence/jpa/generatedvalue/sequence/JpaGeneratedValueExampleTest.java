@@ -1,12 +1,11 @@
 package com.github.lazyf1sh.persistence.jpa.generatedvalue.sequence;
 
-import javax.persistence.EntityManager;
-
+import com.github.lazyf1sh.sandbox.persistence.entities.Car;
+import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.github.lazyf1sh.sandbox.persistence.entities.Car;
-import com.github.lazyf1sh.sandbox.persistence.util.JpaEntityManagerFactory;
+import javax.persistence.EntityManager;
 
 /**
  * JPA @GeneratedValue examples
@@ -17,7 +16,8 @@ public class JpaGeneratedValueExampleTest
     public void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction()
+                     .begin();
 
         Car car1 = new Car();
         car1.setName("ZAZ Zaporozhets");
@@ -40,6 +40,7 @@ public class JpaGeneratedValueExampleTest
         Assert.assertEquals(2, car2.getKey());
         Assert.assertEquals(3, car3.getKey());
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction()
+                     .commit();
     }
 }

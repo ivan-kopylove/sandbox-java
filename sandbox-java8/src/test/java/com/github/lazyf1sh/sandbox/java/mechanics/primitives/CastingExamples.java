@@ -62,7 +62,6 @@ public class CastingExamples
         Assert.assertEquals(30, b);
     }
 
-
     /**
      * Implicit narrowing is supported among byte, char, short, and int when literals are used.
      */
@@ -70,19 +69,18 @@ public class CastingExamples
     public void narrowingCastingImplicit()
     {
         byte b1 = 127; //implicit cast from integer to byte.
-//        char c1 = -1;
-//        char c2 = 65536;
+        //        char c1 = -1;
+        //        char c2 = 65536;
         char c2 = 65535;
         Assert.assertEquals(127, b1);
         Assert.assertEquals(65535, c2);
     }
 
-
     @Test
     public void narrowingCastingImplicit1()
     {
         int i1 = 5000;
-//        byte b1 = i1;//d'oh, only for literals
+        //        byte b1 = i1;//d'oh, only for literals
     }
 
     /**
@@ -91,10 +89,9 @@ public class CastingExamples
     @Test
     public void narrowingCastingFloatingPointNumbers()
     {
-//        float f1 = 1.0; //attempt to cast double to float
+        //        float f1 = 1.0; //attempt to cast double to float
         float f2 = 1.0f; //legal notation, works fine
     }
-
 
     /**
      * Explicit cast is required to case byte primitive to Integer wrapper.
@@ -102,8 +99,8 @@ public class CastingExamples
     @Test
     public void noAutobox()
     {
-//        byte b = 1;
-//        Integer i = b; //no automatic widening to int and then auto box.
+        //        byte b = 1;
+        //        Integer i = b; //no automatic widening to int and then auto box.
 
         byte q = 1;
         int i = q; // automatic widening

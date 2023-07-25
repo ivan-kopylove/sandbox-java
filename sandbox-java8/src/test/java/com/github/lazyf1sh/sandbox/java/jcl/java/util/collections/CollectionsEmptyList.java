@@ -5,9 +5,6 @@ import org.junit.Test;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class CollectionsEmptyList
 {
     @Test(expected = UnsupportedOperationException.class)

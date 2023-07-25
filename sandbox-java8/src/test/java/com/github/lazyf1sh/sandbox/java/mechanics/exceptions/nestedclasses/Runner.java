@@ -24,5 +24,4 @@ public class Runner
         Child b = new Child();
         b.run();
     }
-
 }

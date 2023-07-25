@@ -8,8 +8,8 @@ import org.apache.wicket.markup.html.form.Form;
 /**
  * Problem: form submit doesnt trigge?
  * Why AjaxLink cannot be used to submit?
- *
- *
+ * <p>
+ * <p>
  * How much buttons can be added to submit form?
  */
 public class FormDoesntSubmitSolutionOne extends WebPage

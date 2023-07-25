@@ -12,7 +12,6 @@ import com.sun.jersey.api.client.ClientRequest;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.filter.ClientFilter;
 import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
-import com.sun.xml.internal.ws.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,53 +23,16 @@ import java.util.Locale;
 /**
  * Created by ikopylov on 21.06.2017.
  */
-public class DynamicTreeApplet extends JApplet {
+@SuppressWarnings("removal")
+public class DynamicTreeApplet extends JApplet
+{
 
     private static final String LOGFILENAME         = "printing.log";
     private static final String PARAM_FULL_USER_ID  = "FULL_USER_ID";
     private static final String PARAM_USER_PASSWORD = "USER_PASSWORD";
-    private Locale locale;
+    private              Locale locale;
 
     //Called when this applet is loaded into the browser.
-
-    public void init() {
-        Client client = Client.create();
-        client.addFilter(new HTTPBasicAuthFilter(getParameter(PARAM_FULL_USER_ID), getParameter(PARAM_USER_PASSWORD)));
-        client.addFilter(new ClientFilter()
-        {
-            @Override
-            public ClientResponse handle(ClientRequest cr) throws ClientHandlerException
-            {
-                if (!cr.getHeaders().containsKey(HttpHeaders.ACCEPT_LANGUAGE))
-                {
-                    cr.getHeaders().add(HttpHeaders.ACCEPT_LANGUAGE, locale.getLanguage());
-                }
-                return getNext().handle(cr);
-            }
-        });
-
-
-        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        //Execute a job on the event-dispatching thread; creating this applet's GUI.
-        try {
-            SwingUtilities.invokeAndWait(new Runnable() {
-                public void run() {
-                    createGUI();
-                }
-            });
-        } catch (Exception e) {
-            System.err.println("createGUI didn't complete successfully");
-        }
-    }
-
-    private void createGUI() {
-        Logger logger = createFileLogger();
-        logger.info("Hello World");
-
-        DynamicTreePanel newContentPane = new DynamicTreePanel();
-        newContentPane.setOpaque(true);
-        setContentPane(newContentPane);
-    }
 
     private static Logger createFileLogger()
     {
@@ -78,7 +40,7 @@ public class DynamicTreeApplet extends JApplet {
         String userHome = System.getProperty("user.home");
         String file = new File(userHome, LOGFILENAME).getAbsolutePath();
 
-        LoggerContext context = (LoggerContext)LoggerFactory.getILoggerFactory();
+        LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
         PatternLayoutEncoder ple = new PatternLayoutEncoder();
         ple.setPattern("%-12date{YYYY-MM-dd HH:mm:ss.SSS} %-5level - %msg%n");
         ple.setContext(context);
@@ -100,12 +62,58 @@ public class DynamicTreeApplet extends JApplet {
         fileAppender.setRollingPolicy(timeBasedRollingPolicy);
         fileAppender.start();
 
-        ch.qos.logback.classic.Logger fileLogger = (ch.qos.logback.classic.Logger)LoggerFactory.getLogger(name);
+        ch.qos.logback.classic.Logger fileLogger = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(name);
         fileLogger.addAppender(fileAppender);
         fileLogger.setLevel(Level.DEBUG);
         fileLogger.setAdditive(false);
         return fileLogger;
     }
 
+    public void init()
+    {
+        Client client = Client.create();
+        client.addFilter(new HTTPBasicAuthFilter(getParameter(PARAM_FULL_USER_ID), getParameter(PARAM_USER_PASSWORD)));
+        client.addFilter(new ClientFilter()
+        {
+            @Override
+            public ClientResponse handle(ClientRequest cr) throws ClientHandlerException
+            {
+                if (!cr.getHeaders()
+                       .containsKey(HttpHeaders.ACCEPT_LANGUAGE))
+                {
+                    cr.getHeaders()
+                      .add(HttpHeaders.ACCEPT_LANGUAGE, locale.getLanguage());
+                }
+                return getNext().handle(cr);
+            }
+        });
 
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        //Execute a job on the event-dispatching thread; creating this applet's GUI.
+        try
+        {
+            SwingUtilities.invokeAndWait(new Runnable()
+            {
+                public void run()
+                {
+                    createGUI();
+                }
+            });
+        }
+        catch (Exception e)
+        {
+            System.err.println("createGUI didn't complete successfully");
+        }
+    }
+
+    private void createGUI()
+    {
+        Logger logger = createFileLogger();
+        logger.info("Hello World");
+
+        DynamicTreePanel newContentPane = new DynamicTreePanel();
+        newContentPane.setOpaque(true);
+        setContentPane(newContentPane);
+    }
 }

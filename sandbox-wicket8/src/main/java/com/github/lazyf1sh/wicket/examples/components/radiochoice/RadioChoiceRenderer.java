@@ -10,9 +10,6 @@ import org.apache.wicket.model.PropertyModel;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author Ivan Kopylov
- */
 public class RadioChoiceRenderer extends WebPage
 {
     private static final List<String> TYPES = Arrays.asList("Shared Host", "VPS", "Dedicated Server");
@@ -28,7 +25,10 @@ public class RadioChoiceRenderer extends WebPage
 
         add(new FeedbackPanel("feedback"));
 
-        RadioChoice<String> hostingType = new RadioChoice<String>("hosting", new PropertyModel<String>(this, "selected"), TYPES, new MyChoiceRenderer());
+        RadioChoice<String> hostingType = new RadioChoice<String>("hosting",
+                                                                  new PropertyModel<String>(this, "selected"),
+                                                                  TYPES,
+                                                                  new MyChoiceRenderer());
 
         Form<?> form = new Form<Void>("form")
         {

@@ -3,6 +3,7 @@
 - For Servlet container 3.x, you can annotate the listener with @WebListener, no need to declares in web.xml.
 
 - <listener-class>:
+
 ```
 This element registers a listener with the Web container.
 
@@ -21,5 +22,6 @@ Session Attribute Listener example, to listen for changes to session attributes
 ```
 
 # Links
+
 - https://www.mkyong.com/servlet/what-is-listener-servletcontextlistener-example/
 - http://wiki.metawerx.net/wiki/Web.xml.ListenerClass

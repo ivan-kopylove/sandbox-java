@@ -1,6 +1,7 @@
 package com.github.lazyf1sh.sandbox.java.libs;
 
-import junit.framework.TestCase;
+import org.apache.pdfbox.multipdf.PDFMergerUtility;
+import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -8,13 +9,22 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import org.apache.pdfbox.multipdf.PDFMergerUtility;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 public class MergeSinglePdfTest
 {
+    private static byte[] readPdf()
+    {
+        try
+        {
+            return Files.readAllBytes(Paths.get("src\\main\\resources\\1.4 (acrobat 5.x) medium.pdf"));
+        }
+        catch (IOException e)
+        {
+            return new byte[0];
+        }
+    }
+
     @Test
     public void a()
     {
@@ -40,18 +50,5 @@ public class MergeSinglePdfTest
         }
 
         assertArrayEquals(pdf, result);
-    }
-
-
-    private static byte[] readPdf()
-    {
-        try
-        {
-            return Files.readAllBytes(Paths.get("src\\main\\resources\\1.4 (acrobat 5.x) medium.pdf"));
-        }
-        catch (IOException e)
-        {
-            return new byte[0];
-        }
     }
 }

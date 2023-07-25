@@ -7,9 +7,6 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * @author Ivan Kopylov
- */
 public class ArrayListToStringTest
 {
     @Test

@@ -8,12 +8,9 @@ import org.dozer.Mapper;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * @author Ivan Kopylov
- */
 public class MapObjectToString
 {
-    private Mapper MAPPER  = DozerMapper.getInstance();
+    private Mapper MAPPER = DozerMapper.getInstance();
 
     @Test
     public void run()

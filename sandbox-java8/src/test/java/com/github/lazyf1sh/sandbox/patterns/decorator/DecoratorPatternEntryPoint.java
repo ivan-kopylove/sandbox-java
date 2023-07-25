@@ -15,6 +15,7 @@ public class DecoratorPatternEntryPoint
     {
         Window decoratedWindow = new HorizontalScrollbarDecorator(new VerticalScrollBarDecorator(new SimpleWindow()));
         System.out.println(decoratedWindow.getDescription());
-        Assert.assertEquals("simple window, including vertical scrollbars, including horizontal scrollbars", decoratedWindow.getDescription());
+        Assert.assertEquals("simple window, including vertical scrollbars, including horizontal scrollbars",
+                            decoratedWindow.getDescription());
     }
 }

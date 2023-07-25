@@ -1,17 +1,14 @@
 package com.github.lazyf1sh.sandbox.persistence.util;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import org.hibernate.integrator.spi.Integrator;
+import org.hibernate.jpa.boot.spi.IntegratorProvider;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
-import org.hibernate.integrator.spi.Integrator;
-import org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl;
-import org.hibernate.jpa.boot.internal.PersistenceUnitInfoDescriptor;
-import org.hibernate.jpa.boot.spi.IntegratorProvider;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class JpaEntityManagerFactory
 {
@@ -33,12 +30,10 @@ public final class JpaEntityManagerFactory
         Map<String, Object> configuration = new HashMap<>();
 
         Integrator integrator = MetadataExtractorIntegrator.INSTANCE;
-        if (integrator != null) {
+        if (integrator != null)
+        {
             configuration.put("hibernate.integrator_provider",
-                    (IntegratorProvider) () -> Collections.singletonList(
-                            MetadataExtractorIntegrator.INSTANCE
-                    )
-            );
+                              (IntegratorProvider) () -> Collections.singletonList(MetadataExtractorIntegrator.INSTANCE));
         }
 
         return Persistence.createEntityManagerFactory("my-persistence-unit", configuration);
@@ -56,5 +51,4 @@ public final class JpaEntityManagerFactory
     {
         emf.close();
     }
-
 }

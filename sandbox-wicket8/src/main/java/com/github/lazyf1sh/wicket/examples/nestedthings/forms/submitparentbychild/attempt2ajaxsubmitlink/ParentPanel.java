@@ -10,14 +10,11 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-/**
- * @author Ivan Kopylov
- */
 public class ParentPanel extends Panel
 {
     private TextField<String> parentTextField;
     private ModalWindow       nestedWindow;
-    private Form<?> parentForm;
+    private Form<?>           parentForm;
 
     public ParentPanel(String id)
     {
@@ -133,8 +130,10 @@ public class ParentPanel extends Panel
             @Override
             protected void onSubmit()
             {
-                String msg = String.format("parentTextField model object: %s, convertedInput: %s", parentTextField.getModelObject(), parentTextField.getConvertedInput());
-                Util.showComponentMessage(this,  msg);
+                String msg = String.format("parentTextField model object: %s, convertedInput: %s",
+                                           parentTextField.getModelObject(),
+                                           parentTextField.getConvertedInput());
+                Util.showComponentMessage(this, msg);
 
                 super.onSubmit();
             }

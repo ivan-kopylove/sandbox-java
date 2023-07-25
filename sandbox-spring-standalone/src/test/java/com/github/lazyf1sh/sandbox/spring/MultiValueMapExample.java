@@ -1,13 +1,13 @@
 package com.github.lazyf1sh.sandbox.spring;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Purpose of this example: to practice MultiValueMap usage.<br/>
@@ -24,8 +24,12 @@ public class MultiValueMapExample
         multiValueMap.put("key2", Collections.singletonList("1"));
         multiValueMap.put("key2", Arrays.asList("2", "3")); //overwrites previous value
 
-        Assert.assertEquals("2", multiValueMap.get("key1").get(0));
-        Assert.assertEquals("3", multiValueMap.get("key1").get(1));
+        Assert.assertEquals("2",
+                            multiValueMap.get("key1")
+                                         .get(0));
+        Assert.assertEquals("3",
+                            multiValueMap.get("key1")
+                                         .get(1));
     }
 
     /**
@@ -40,9 +44,14 @@ public class MultiValueMapExample
         multiValueMap.put("key2", Collections.singletonList("1"));
         multiValueMap.put("key2", Arrays.asList("2", "3")); //overwrites previous value
 
-        Assert.assertNotEquals("1", multiValueMap.get("key1").get(0));
-        Assert.assertNotEquals("1", multiValueMap.get("key1").get(1));
-        Assert.assertNotEquals("1", multiValueMap.get("key1").get(2));
+        Assert.assertNotEquals("1",
+                               multiValueMap.get("key1")
+                                            .get(0));
+        Assert.assertNotEquals("1",
+                               multiValueMap.get("key1")
+                                            .get(1));
+        Assert.assertNotEquals("1",
+                               multiValueMap.get("key1")
+                                            .get(2));
     }
-
 }

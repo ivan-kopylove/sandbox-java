@@ -32,5 +32,4 @@ public class RunnableLambdaExampleTest
         r1.run();
         r2.run();
     }
-
 }

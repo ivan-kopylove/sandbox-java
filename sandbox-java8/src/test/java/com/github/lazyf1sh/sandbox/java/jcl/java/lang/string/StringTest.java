@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * @author Ivan Kopylov
- */
 public class StringTest
 {
     @Test
@@ -43,13 +40,10 @@ public class StringTest
         Assert.assertEquals(4, lastIndex);
     }
 
-
     @Test
     public void lastIndexOf2()
     {
         int lastIndex = "abcdab".lastIndexOf("a", 2);
         Assert.assertEquals(0, lastIndex);
     }
-
-
 }

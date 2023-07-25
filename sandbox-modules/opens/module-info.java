@@ -1,3 +1,3 @@
 module my.module {
-  opens com.my.package;
+    opens com.my.package;
 }

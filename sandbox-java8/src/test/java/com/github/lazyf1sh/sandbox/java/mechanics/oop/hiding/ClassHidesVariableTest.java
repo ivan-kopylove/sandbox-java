@@ -40,5 +40,4 @@ public class ClassHidesVariableTest
             return message;
         }
     }
-
 }

@@ -7,9 +7,6 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-/**
- * @author Ivan Kopylov
- */
 public class EqualsHashcodeMustBePairedBySemantics
 {
     private boolean equalsCalled   = false;
@@ -31,7 +28,6 @@ public class EqualsHashcodeMustBePairedBySemantics
         Assert.assertTrue(hashcodeCalled);
         Assert.assertFalse(containsResult); //false because after finding by hashcode, equals check failed inside HashSet
     }
-
 
     class WronglyDefinedEqualsHashcode
     {

@@ -35,12 +35,12 @@ public class DbMock
         return myStructList;
     }
 
-
     public static MyStruct findMyStruct(List<MyStruct> MyStructs, String id)
     {
         for (MyStruct MyStruct : MyStructs)
         {
-            if (MyStruct.getId().equals(id))
+            if (MyStruct.getId()
+                        .equals(id))
             {
                 return MyStruct;
             }

@@ -1,17 +1,16 @@
 package com.github.lazyf1sh.sandbox.java.common.tasks;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Random;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
+import java.util.Random;
 
 /**
  * Hello world!
@@ -41,13 +40,15 @@ public class App
         if (node.hasChildNodes())
         {
             NodeList list = node.getChildNodes();
-            for (int i = 0; i < node.getChildNodes().getLength(); i++)
+            for (int i = 0; i < node.getChildNodes()
+                                    .getLength(); i++)
             {
                 Node subNode = list.item(i);
                 if (subNode.getNodeType() == Node.ELEMENT_NODE)
                 {
-                    DocumentNode child = new DocumentNode(String.valueOf(new Random().nextInt(500000)), subNode.getNodeName(),
-                            treeNode);
+                    DocumentNode child = new DocumentNode(String.valueOf(new Random().nextInt(500000)),
+                                                          subNode.getNodeName(),
+                                                          treeNode);
                     treeNode.addChild(getStruct(child, subNode));
                 }
             }
@@ -59,5 +60,4 @@ public class App
 
         return treeNode;
     }
-
 }

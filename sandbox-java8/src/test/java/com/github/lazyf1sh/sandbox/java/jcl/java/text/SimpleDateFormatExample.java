@@ -7,9 +7,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * @author Ivan Kopylov
- */
 public class SimpleDateFormatExample
 {
     @Test

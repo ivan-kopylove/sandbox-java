@@ -112,7 +112,7 @@ public class DocumentNode implements Serializable
         {
             return false;
         }
-        final DocumentNode myStruct = (DocumentNode)o;
+        final DocumentNode myStruct = (DocumentNode) o;
         return id.equals(myStruct.id);
     }
 

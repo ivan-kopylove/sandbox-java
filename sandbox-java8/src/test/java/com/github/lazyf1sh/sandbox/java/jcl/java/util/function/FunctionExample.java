@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import java.util.function.Function;
 
-/**
- * @author Ivan Kopylov
- */
 public class FunctionExample
 {
     @Test
