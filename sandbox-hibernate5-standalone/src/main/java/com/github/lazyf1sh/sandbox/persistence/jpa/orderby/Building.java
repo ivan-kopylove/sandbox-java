@@ -10,7 +10,7 @@ import java.util.List;
 public class Building
 {
     @Id
-    private long key;
+    private long         key;
     @ElementCollection
     @OrderBy
     private List<String> phoneNumbers;

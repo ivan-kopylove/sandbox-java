@@ -10,13 +10,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-  <parent>
+    <parent>
         <groupId>com.github.ivan.kopylove</groupId>
         <artifactId>sandbox-java-parent</artifactId>
         <version>snapshot</version>
     </parent>
-
-
 
 
     <dependencies>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sandbox-spring-webmvc</artifactId>
     <packaging>war</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>snapshot</version>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
@@ -21,7 +21,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-  <parent>
+    <parent>
         <groupId>com.github.ivan.kopylove</groupId>
         <artifactId>sandbox-java-parent</artifactId>
         <version>snapshot</version>

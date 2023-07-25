@@ -3,7 +3,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.ivan.kopylove</groupId>
     <artifactId>sandbox-wicket8</artifactId>
     <version>2</version>
     <packaging>war</packaging>
@@ -11,6 +10,14 @@
     <properties>
         <wicket.version>8.8.0</wicket.version>
     </properties>
+
+
+    <parent>
+        <groupId>com.github.ivan.kopylove</groupId>
+        <artifactId>sandbox-java-parent</artifactId>
+        <version>snapshot</version>
+    </parent>
+
 
     <dependencies>
         <dependency>
@@ -47,7 +54,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>8</release>
                 </configuration>

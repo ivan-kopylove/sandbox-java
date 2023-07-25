@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sandbox-spring-annotations-configuration</artifactId>
     <packaging>war</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>snapshot</version>
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>

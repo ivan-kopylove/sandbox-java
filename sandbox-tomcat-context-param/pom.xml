@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.ivan.kopylove</groupId>
     <artifactId>sandbox-tomcat-context-param</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>snapshot</version>
     <packaging>war</packaging>
     <name>sandbox-tomcat-context-param</name>
     <properties>

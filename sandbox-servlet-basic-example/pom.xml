@@ -5,7 +5,7 @@
 
     <groupId>com.github.ivan.kopylove</groupId>
     <artifactId>sandbox-servlet-basic-example</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>snapshot</version>
     <packaging>war</packaging>
 
     <name>sandbox-servlet-basic-example</name>

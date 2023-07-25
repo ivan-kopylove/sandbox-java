@@ -4,11 +4,11 @@ import java.util.function.Supplier;
 
 public class ObjectHolder
 {
-    private static final String FINAL_STR = "initial";
-    private static final Supplier<String> SUPPLIER = () -> "initial";
-    private static final int intFinalValue = 5000;
-    private static       String STR       = "initial";
-    private static       int intValue      = 5000;
+    private static final String           FINAL_STR     = "initial";
+    private static final Supplier<String> SUPPLIER      = () -> "initial";
+    private static final int              intFinalValue = 5000;
+    private static       String           STR           = "initial";
+    private static       int              intValue      = 5000;
 
     public static String getFinalStr()
     {

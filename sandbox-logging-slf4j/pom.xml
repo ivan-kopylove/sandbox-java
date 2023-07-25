@@ -1,7 +1,6 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.ivan.kopylove</groupId>
     <artifactId>sandbox-logging-slf4j</artifactId>
     <packaging>jar</packaging>
     <version>snapshot</version>
@@ -10,12 +9,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
+    <parent>
+        <groupId>com.github.ivan.kopylove</groupId>
+        <artifactId>sandbox-java-parent</artifactId>
+        <version>snapshot</version>
+    </parent>
+
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>17</release>
                 </configuration>

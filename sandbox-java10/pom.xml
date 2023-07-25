@@ -4,24 +4,27 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.ivan.kopylove</groupId>
     <artifactId>sandbox-java10</artifactId>
     <version>snapshot</version>
+
+
+    <parent>
+        <groupId>com.github.ivan.kopylove</groupId>
+        <artifactId>sandbox-java-parent</artifactId>
+        <version>snapshot</version>
+    </parent>
+
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>10</source>
-                    <target>10</target>
+                    <release>10</release>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-
-    </dependencies>
 </project>

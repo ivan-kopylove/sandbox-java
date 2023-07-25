@@ -44,11 +44,11 @@ import java.awt.event.ActionListener;
 
 public class DynamicTreePanel extends JPanel implements ActionListener
 {
-    private static String ADD_COMMAND    = "add";
-    private static String REMOVE_COMMAND = "remove";
-    private static String CLEAR_COMMAND  = "clear";
-    private        int    newNodeSuffix  = 1;
-    private DynamicTree treePanel;
+    private static String      ADD_COMMAND    = "add";
+    private static String      REMOVE_COMMAND = "remove";
+    private static String      CLEAR_COMMAND  = "clear";
+    private        int         newNodeSuffix  = 1;
+    private        DynamicTree treePanel;
 
     public DynamicTreePanel()
     {
