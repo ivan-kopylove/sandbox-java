@@ -16,19 +16,7 @@
     </parent>
 
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <release>8</release>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
+      <dependencies>
 
         <dependency>
             <groupId>org.powermock</groupId>
