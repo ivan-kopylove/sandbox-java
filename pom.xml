@@ -51,7 +51,7 @@
         <module>sandbox-maven-rewrite-plugin</module>
         <module>sandbox-maven-spotless</module>
         <module>sandbox-mockito</module>
-        <module>sandbox-pdfbox1</module>
+        <module>sandbox-pdfbox</module>
         <module>sandbox-powermockito</module>
         <module>sandbox-programming-challenges</module>
         <module>sandbox-quartz</module>
