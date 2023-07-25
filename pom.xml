@@ -27,48 +27,48 @@
 
 
     <modules>
-        <module>sandbox-websocket-client-javax</module>
-        <module>sandbox-websocket-client-nv</module>
-        <module>sandbox-log4j2</module>
-        <module>sandbox-spring-test-context</module>
-        <module>sandbox-commons-logging-log4j</module>
-        <module>sandbox-commons-logging</module>
-        <module>sandbox-java-applet</module>
-        <module>sandbox-servlets</module>
-        <module>sandbox-ehcache</module>
-        <module>sandbox-quartz</module>
-        <module>sandbox-spring-webmvc</module>
-        <module>sandbox-spring-standalone</module>
-        <module>sandbox-mockito</module>
-        <module>sandbox-powermockito</module>
-        <module>sandbox-pdfbox1</module>
-        <module>sandbox-jackson</module>
-        <module>sandbox-wicket8</module>
-        <module>sandbox-wicket8-websocket</module>
-        <module>sandbox-slf4j</module>
-        <module>sandbox-selenium</module>
-        <module>sandbox-jasper-embedded</module>
-        <module>sandbox-hibernate5-standalone</module>
-        <module>sandbox-hibernate5-spring5-integration</module>
         <module>sandbox-camel</module>
-        <module>sandbox-jdbc</module>
-        <module>sandbox-liquibase-maven</module>
-        <module>sandbox-log4j</module>
-        <module>sandbox-java</module>
+        <module>sandbox-dozermapper</module>
+        <module>sandbox-ehcache</module>
+        <module>sandbox-gRPC</module>
+        <module>sandbox-hibernate5-spring5-integration</module>
+        <module>sandbox-hibernate5-standalone</module>
+        <module>sandbox-jackson</module>
+        <module>sandbox-jasper-embedded</module>
+        <module>sandbox-java-applet</module>
+        <module>sandbox-java10</module>
         <module>sandbox-java8</module>
         <module>sandbox-java9</module>
-        <module>sandbox-java10</module>
-        <module>sandbox-tomcat-listener</module>
-        <module>sandbox-tomcat-filter</module>
-        <module>sandbox-tomcat-context-param</module>
-        <module>sandbox-spring-annotations-configuration</module>
-        <module>sandbox-servlet-basic-example</module>
-        <module>sandbox-dozermapper</module>
-        <module>sandbox-maven-rewrite-plugin</module>
+        <module>sandbox-java</module>
+        <module>sandbox-jdbc</module>
+        <module>sandbox-liquibase-maven</module>
+        <module>sandbox-logging-commons-logging-log4j</module>
+        <module>sandbox-logging-commons-logging</module>
+        <module>sandbox-logging-log4j2</module>
+        <module>sandbox-logging-log4j</module>
+        <module>sandbox-logging-slf4j</module>
         <module>sandbox-maven-git-build-hook</module>
-        <module>sandbox-programming-challenges</module>
+        <module>sandbox-maven-rewrite-plugin</module>
         <module>sandbox-maven-spotless</module>
-        <module>sandbox-gRPC</module>
+        <module>sandbox-mockito</module>
+        <module>sandbox-pdfbox1</module>
+        <module>sandbox-powermockito</module>
+        <module>sandbox-programming-challenges</module>
+        <module>sandbox-quartz</module>
+        <module>sandbox-selenium</module>
+        <module>sandbox-servlet-basic-example</module>
+        <module>sandbox-servlets</module>
+        <module>sandbox-spring-annotations-configuration</module>
+        <module>sandbox-spring-standalone</module>
+        <module>sandbox-spring-test-context</module>
+        <module>sandbox-spring-webmvc</module>
+        <module>sandbox-tomcat-context-param</module>
+        <module>sandbox-tomcat-filter</module>
+        <module>sandbox-tomcat-listener</module>
+        <module>sandbox-websocket-client-javax</module>
+        <module>sandbox-websocket-client-nv</module>
+        <module>sandbox-wicket8-websocket</module>
+        <module>sandbox-wicket8</module>
 
     </modules>
     <dependencies>
