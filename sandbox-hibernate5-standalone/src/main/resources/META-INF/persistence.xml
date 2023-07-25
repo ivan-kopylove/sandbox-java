@@ -4,20 +4,20 @@
     <persistence-unit name="my-persistence-unit">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>com.github.lazyf1sh.sandbox.persistence.jpa.identity.IdentityExampleEntity</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.GeneratedValueUuid</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.GeneratedValueUuid2</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.UserEntity</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.Car</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.DocumentEntity</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.jpa.join.Ticket</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.BookEntity</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.ChildEntity</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.MyEmbeddable</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.ParentEntity</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.ParentEntityWithEmbedded</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.PageEntity</class>
-        <class>com.github.lazyf1sh.sandbox.persistence.entities.OrderEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.jpa.identity.IdentityExampleEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.GeneratedValueUuid</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.GeneratedValueUuid2</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.UserEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.Car</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.DocumentEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.jpa.join.Ticket</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.ChildEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.MyEmbeddable</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntityWithEmbedded</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.PageEntity</class>
+        <class>com.github.ivan.kopylove.sandbox.persistence.entities.OrderEntity</class>
         <properties>
             <property name="hibernate.show_sql" value="true"/>
             <!--            <property name="hibernate.format_sql" value="true"/>-->

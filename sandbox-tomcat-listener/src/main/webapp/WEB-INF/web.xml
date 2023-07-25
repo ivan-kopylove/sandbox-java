@@ -5,7 +5,7 @@
 
     <listener>
         <listener-class>
-            com.github.lazyf1sh.sandbox.java.tomcat.MyCustomServletListener
+            com.github.ivan.kopylove.sandbox.java.tomcat.MyCustomServletListener
         </listener-class>
     </listener>
 

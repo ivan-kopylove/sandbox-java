@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-java --module-path target -m module.two/com.github.lazyf1sh.someapp.SomeappRunner
+java --module-path target -m module.two/com.github.ivan.kopylove.someapp.SomeappRunner

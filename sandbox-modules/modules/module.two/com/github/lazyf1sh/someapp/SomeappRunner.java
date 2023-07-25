@@ -1,6 +1,6 @@
-package com.github.lazyf1sh.someapp;
+package com.github.ivan.kopylove.someapp;
 
-import com.github.lazyf1sh.somemodule.Run;
+import com.github.ivan.kopylove.somemodule.Run;
 
 public class SomeappRunner
 {

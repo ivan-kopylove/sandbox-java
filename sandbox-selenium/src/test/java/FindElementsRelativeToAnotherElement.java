@@ -1,4 +1,4 @@
-import com.github.lazyf1sh.sandbox.selenium.util.Utils;
+import com.github.ivan.kopylove.sandbox.selenium.util.Utils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

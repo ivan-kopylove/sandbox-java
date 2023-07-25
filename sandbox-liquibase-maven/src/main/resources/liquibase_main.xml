@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
-    <changeSet id="create_table_department" author="lazyf1sh">
+    <changeSet id="create_table_department" author="ivan.kopylov">
         <createTable tableName="department">
             <column name="id" type="int">
                 <constraints primaryKey="true" nullable="false"/>
@@ -17,7 +17,7 @@
     </changeSet>
 
 
-    <changeSet id="preconditions_index" context="index" author="ikopylov">
+    <changeSet id="preconditions_index" context="index" author="ivan.kopylov">
         <preConditions onFail="MARK_RAN">
             <not>
                 <indexExists tableName="department" columnNames="name"/>
@@ -32,7 +32,7 @@
     </changeSet>
 
 
-    <changeSet id="preconditions_index0" context="index" author="ikopylov">
+    <changeSet id="preconditions_index0" context="index" author="ivan.kopylov">
         <preConditions onFail="MARK_RAN">
             <not>
                 <indexExists tableName="department" columnNames="name"/>
@@ -43,7 +43,7 @@
         </createIndex>
     </changeSet>
 
-    <changeSet id="preconditions_index1" context="index" author="ikopylov">
+    <changeSet id="preconditions_index1" context="index" author="ivan.kopylov">
         <preConditions onFail="MARK_RAN">
             <not>
                 <indexExists tableName="department" columnNames="name"/>
@@ -54,7 +54,7 @@
         </createIndex>
     </changeSet>
 
-    <changeSet id="preconditions_index2" context="index" author="ikopylov">
+    <changeSet id="preconditions_index2" context="index" author="ivan.kopylov">
         <preConditions onFail="MARK_RAN">
             <not>
                 <indexExists indexName="IDX_department_name"/>
@@ -65,7 +65,7 @@
         </createIndex>
     </changeSet>
 
-    <changeSet id="preconditions_index3" context="index" author="ikopylov">
+    <changeSet id="preconditions_index3" context="index" author="ivan.kopylov">
         <preConditions onFail="MARK_RAN">
             <not>
                 <indexExists tableName="department" columnNames="name"/>
@@ -78,7 +78,7 @@
     </changeSet>
 
 
-    <changeSet id="add_pk_department" author="lazyf1sh">
+    <changeSet id="add_pk_department" author="ivan.kopylov">
         <preConditions onFail="MARK_RAN">
             <not>
                 <primaryKeyExists tableName="department" primaryKeyName="PK_department"/>
@@ -88,7 +88,7 @@
     </changeSet>
 
 
-    <changeSet id="native_sql_1" author="lazyf1sh">
+    <changeSet id="native_sql_1" author="ivan.kopylov">
         <sql>
             INSERT INTO department (id, name)
             VALUES (0, 'Bob')
@@ -97,7 +97,7 @@
     </changeSet>
 
 
-    <changeSet id="native_sql_2" author="lazyf1sh">
+    <changeSet id="native_sql_2" author="ivan.kopylov">
         <preConditions onFail="WARN">
             <sqlCheck expectedResult="1">SELECT COUNT(*)
                                          FROM department
@@ -110,7 +110,7 @@
     </changeSet>
 
 
-    <changeSet id="bad_practice_01" author="lazyf1sh">
+    <changeSet id="bad_practice_01" author="ivan.kopylov">
         <createTable tableName="HOUSES">
             <column name="ID" type="int">
                 <constraints nullable="false"/>
@@ -121,20 +121,20 @@
     </changeSet>
 
 
-    <changeSet id="good_practice_01_0" author="lazyf1sh">
+    <changeSet id="good_practice_01_0" author="ivan.kopylov">
         <createTable tableName="HOUSES2">
             <column name="ID" type="int"/>
         </createTable>
     </changeSet>
-    <changeSet id="good_practice_01_1" author="lazyf1sh">
+    <changeSet id="good_practice_01_1" author="ivan.kopylov">
         <addNotNullConstraint tableName="HOUSES2" columnName="ID" columnDataType="int"/>
     </changeSet>
-    <changeSet id="good_practice_01_2" author="lazyf1sh">
+    <changeSet id="good_practice_01_2" author="ivan.kopylov">
         <addPrimaryKey tableName="HOUSES2" columnNames="ID"/>
     </changeSet>
 
 
-    <changeSet id="delete_native_sql" author="lazyf1sh">
+    <changeSet id="delete_native_sql" author="ivan.kopylov">
         <sql>
             DELETE
             FROM department

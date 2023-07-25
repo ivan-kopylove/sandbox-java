@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.sandbox.instrumentation.agent;
+package com.github.ivan.kopylove.sandbox.instrumentation.agent;
 
 import java.lang.instrument.Instrumentation;
 

@@ -1,3 +1,3 @@
 module module.one {
-    exports com.github.lazyf1sh.somemodule;
+    exports com.github.ivan.kopylove.somemodule;
 }
