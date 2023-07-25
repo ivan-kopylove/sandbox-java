@@ -2,7 +2,6 @@ package com.github.ivan.kopylove.sandbox.java.dozermapper;
 
 import com.github.ivan.kopylove.sandbox.java.dozermapper.conf.DozerMapper;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.*;
-import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.*;
 import org.dozer.Mapper;
 import org.junit.Assert;
 import org.junit.Test;

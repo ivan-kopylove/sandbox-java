@@ -3,7 +3,6 @@ package com.github.ivan.kopylove.sandbox.java.dozermapper.conf;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.*;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.From;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.To;
-import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.*;
 import org.dozer.loader.api.BeanMappingBuilder;
 import org.dozer.loader.api.TypeMappingOptions;
 

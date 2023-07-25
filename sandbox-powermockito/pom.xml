@@ -16,7 +16,7 @@
     </parent>
 
 
-      <dependencies>
+    <dependencies>
 
         <dependency>
             <groupId>org.powermock</groupId>

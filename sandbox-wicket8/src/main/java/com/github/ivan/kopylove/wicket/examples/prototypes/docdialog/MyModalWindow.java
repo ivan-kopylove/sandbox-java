@@ -9,7 +9,6 @@ public class MyModalWindow extends ModalWindow
     public MyModalWindow(String id)
     {
         super(id);
-        setContent(new MyModalWindowContent(
-                getContentId()));
+        setContent(new MyModalWindowContent(getContentId()));
     }
 }

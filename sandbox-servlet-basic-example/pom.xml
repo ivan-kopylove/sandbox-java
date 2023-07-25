@@ -9,7 +9,6 @@
     <packaging>war</packaging>
 
 
-
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
         <artifactId>sandbox-java-parent</artifactId>
