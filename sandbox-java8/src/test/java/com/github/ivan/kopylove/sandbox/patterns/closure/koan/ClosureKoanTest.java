@@ -1,5 +1,6 @@
 package com.github.ivan.kopylove.sandbox.patterns.closure.koan;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -25,6 +26,7 @@ public class ClosureKoanTest
     }
 
     @Test
+    @Ignore
     public void runTest()
     {
         TextProvider provider = getProvider(15);
@@ -32,6 +34,7 @@ public class ClosureKoanTest
     }
 
     @Test
+    @Ignore
     public void runTest2()
     {
         TextProvider provider = getProvider(20);

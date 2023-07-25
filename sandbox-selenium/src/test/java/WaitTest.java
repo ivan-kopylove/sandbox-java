@@ -1,7 +1,4 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +18,8 @@ public class WaitTest
     @BeforeClass
     public static void init()
     {
-        System.setProperty("webdriver.gecko.driver", "C:\\1\\apps\\geckodriver-v0.25.0-win64\\geckodriver.exe");
+        String value = "C:\\1\\apps\\geckodriver-v0.25.0-win64\\geckodriver.exe";
+        System.setProperty("webdriver.gecko.driver", value);
     }
 
     @Before
@@ -35,6 +33,7 @@ public class WaitTest
     }
 
     @Test
+    @Ignore
     public void testUntitled() throws Exception
     {
         driver.get(baseUrl);

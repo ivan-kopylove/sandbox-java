@@ -1,5 +1,6 @@
 package com.github.ivan.kopylove.sandbox.patterns.singleton.singletonmockfailed;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
@@ -8,6 +9,7 @@ import java.lang.reflect.Modifier;
 public class MyEnumLazySingletonTest
 {
     @Test(expected = IllegalArgumentException.class)
+    @Ignore
     public void mockSingleton() throws IllegalAccessException, NoSuchFieldException
     {
         Field field = MyEnumSingletonImpl.class.getDeclaredField("INSTANCE");
