@@ -6,12 +6,11 @@
     <packaging>jar</packaging>
     <version>snapshot</version>
 
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
+    <parent>
+        <groupId>com.github.ivan.kopylove</groupId>
+        <artifactId>sandbox-java-parent</artifactId>
+        <version>snapshot</version>
+    </parent>
 
     <dependencies>
         <dependency>

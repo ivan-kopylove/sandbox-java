@@ -3,6 +3,7 @@ package com.github.ivan.kopylove.slf4j;
 import com.github.ivan.kopylove.sanbox.java.websocket.ChatClientEndpoint;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.json.Json;
@@ -26,6 +27,7 @@ public class BasicExampleTest
     }
 
     @Test
+    @Ignore
     public void main() throws InterruptedException, URISyntaxException
     {
         final ChatClientEndpoint clientEndPoint = new ChatClientEndpoint(new URI("wss://echo.websocket.org/"));
