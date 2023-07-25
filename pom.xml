@@ -37,10 +37,9 @@
         <module>sandbox-jackson</module>
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
-        <module>sandbox-java10</module>
-        <module>sandbox-java8</module>
-        <module>sandbox-java9</module>
-        <module>sandbox-java</module>
+        <module>sandbox-java-10</module>
+        <module>sandbox-java-8</module>
+        <module>sandbox-java-9</module>
         <module>sandbox-jdbc</module>
         <module>sandbox-liquibase-maven</module>
         <module>sandbox-logging-commons-logging-log4j</module>

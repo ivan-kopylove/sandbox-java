@@ -4,7 +4,7 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>sandbox-java</artifactId>
+    <artifactId>sandbox-java-10</artifactId>
     <version>snapshot</version>
 
 
@@ -15,4 +15,16 @@
     </parent>
 
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>10</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
