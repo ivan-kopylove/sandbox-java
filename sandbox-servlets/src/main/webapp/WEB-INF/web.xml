@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>testServlet</servlet-name>
-        <servlet-class>com.github.lazyf1sh.sandbox.servlets.TestServlet</servlet-class>
+        <servlet-class>com.github.ivan.kopylove.sandbox.servlets.TestServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>testServlet</servlet-name>

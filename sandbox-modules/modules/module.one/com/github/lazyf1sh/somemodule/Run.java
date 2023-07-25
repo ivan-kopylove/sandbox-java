@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.somemodule;
+package com.github.ivan.kopylove.somemodule;
 
 public class Run
 {

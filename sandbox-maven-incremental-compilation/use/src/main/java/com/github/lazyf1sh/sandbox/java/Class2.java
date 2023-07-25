@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.sandbox.java;
+package com.github.ivan.kopylove.sandbox.java;
 
 /**
  * Hello world!

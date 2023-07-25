@@ -14,7 +14,7 @@
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"/>
     <bean name="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
 
-    <context:component-scan base-package="com.github.lazyf1sh.sandbox.spring.test.context.entities"
+    <context:component-scan base-package="com.github.ivan.kopylove.sandbox.spring.test.context.entities"
                             scoped-proxy="interfaces"/>
 
     <bean id="testDbDataSource" name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -27,7 +27,7 @@
     <bean id="testSessionFactory"
           class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
           p:dataSource-ref="testDbDataSource"
-          p:packagesToScan="com.github.lazyf1sh.sandbox.spring.test.context.entities">
+          p:packagesToScan="com.github.ivan.kopylove.sandbox.spring.test.context.entities">
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
