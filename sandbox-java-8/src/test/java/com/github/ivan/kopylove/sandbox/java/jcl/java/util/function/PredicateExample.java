@@ -1,8 +1,8 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.function;
 
 import com.github.ivan.kopylove.sandbox.java.jcl.util.function.PredicateCreator;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,7 +18,7 @@ public class PredicateExample
         List<String> result = myStream.filter(PredicateCreator.build(a -> a.equalsIgnoreCase("a")))
                                       .collect(Collectors.toList());
 
-        Assert.assertEquals(1, result.size());
-        Assert.assertEquals("a", result.get(0));
+        Assertions.assertEquals(1, result.size());
+        Assertions.assertEquals("a", result.get(0));
     }
 }

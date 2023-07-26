@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.io;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -37,7 +37,7 @@ public class ReadToByteArray
                 inputStream = new FileInputStream(resource.getFile());
                 byte[] b = readFully(inputStream);
                 System.out.println(b.length);
-                Assert.assertEquals(35347, b.length);
+                Assertions.assertEquals(35347, b.length);
             }
             finally
             {
@@ -49,7 +49,7 @@ public class ReadToByteArray
         }
         else
         {
-            Assert.fail();
+            Assertions.fail();
         }
     }
 }

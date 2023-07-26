@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.primitives;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class DoublePrecisionProblem
 {
@@ -20,6 +20,6 @@ public class DoublePrecisionProblem
         double d = 0.3;
         double result = d * 3;
         System.out.println(result);
-        Assert.assertEquals(0.8999999999999999, result, 0);
+        Assertions.assertEquals(0.8999999999999999, result, 0);
     }
 }

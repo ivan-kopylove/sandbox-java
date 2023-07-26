@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.labels;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * enthuware.ocpjp.i.v11.2.1255

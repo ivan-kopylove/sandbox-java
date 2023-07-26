@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.stream;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,8 +22,8 @@ public class OrderOfOperationsMatters
                                      .map(s -> s + "-postfix")
                                      .collect(Collectors.toList());
 
-        Assert.assertEquals(3, result1.size());
-        Assert.assertEquals(2, result2.size());
+        Assertions.assertEquals(3, result1.size());
+        Assertions.assertEquals(2, result2.size());
     }
 
     @Test

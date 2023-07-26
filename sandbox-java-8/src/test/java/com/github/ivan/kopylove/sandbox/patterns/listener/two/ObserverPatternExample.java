@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.patterns.listener.two;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * https://stackoverflow.com/questions/6270132/create-a-custom-event-in-java

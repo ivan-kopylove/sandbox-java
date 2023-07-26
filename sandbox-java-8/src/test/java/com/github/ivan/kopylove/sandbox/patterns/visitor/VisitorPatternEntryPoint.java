@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.patterns.visitor;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -42,7 +42,7 @@ class Wheel implements CarElement
 {
     private final String name;
 
-    public Wheel(final String name)
+    public Wheel(String name)
     {
         this.name = name;
     }

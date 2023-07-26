@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.patterns.adapter;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * Adapter is converter.
@@ -14,6 +14,6 @@ public class AdapterPatternExampleRunner
         Indicator celsius = new CelsiusScaleThermometer();
         IndicatorAdapter indicatorAdapter = new IndicatorAdapterImpl(celsius);
 
-        Assert.assertEquals(68.0, indicatorAdapter.getTemperature(), 0.0);
+        Assertions.assertEquals(68.0, indicatorAdapter.getTemperature(), 0.0);
     }
 }

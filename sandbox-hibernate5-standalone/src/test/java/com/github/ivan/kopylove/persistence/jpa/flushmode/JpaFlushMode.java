@@ -3,8 +3,8 @@ package com.github.ivan.kopylove.persistence.jpa.flushmode;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.FlushModeType;
@@ -15,7 +15,7 @@ import javax.persistence.FlushModeType;
 public class JpaFlushMode
 {
 
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();

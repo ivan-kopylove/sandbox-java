@@ -1,8 +1,8 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.oop.hiding;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ClassHidesVariableTest
 {
@@ -21,7 +21,7 @@ public class ClassHidesVariableTest
      */
     public class ClassHidesVariable
     {
-        private String message = "instance variable";
+        private final String message = "instance variable";
 
         public String getLocalVariable()
         {

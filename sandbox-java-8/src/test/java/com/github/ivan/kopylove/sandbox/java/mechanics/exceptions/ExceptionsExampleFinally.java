@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.exceptions;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -23,23 +23,23 @@ public class ExceptionsExampleFinally
         }
         catch (Exception e)
         {
-            Assert.assertTrue(true);
+            Assertions.assertTrue(true);
             System.out.println("Something bad happened.");
         }
         finally
         {
-            Assert.assertTrue(true);
+            Assertions.assertTrue(true);
 
-            Assert.assertTrue(true);
+            Assertions.assertTrue(true);
             System.out.println("Closing resource.");
             if (br != null)
             {
                 System.out.println("Closed resource.");
-                Assert.fail();
+                Assertions.fail();
             }
             else
             {
-                Assert.assertTrue(true);
+                Assertions.assertTrue(true);
                 System.out.println("resource is null.");
             }
         }

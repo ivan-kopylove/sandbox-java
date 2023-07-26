@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 public class HelloWorld
@@ -12,6 +12,6 @@ public class HelloWorld
         MyClass mock = Mockito.mock(MyClass.class);
         Mockito.when(mock.getSomeValue())
                .thenReturn("hello world");
-        Assert.assertEquals("hello world", mock.getSomeValue());
+        Assertions.assertEquals("hello world", mock.getSomeValue());
     }
 }

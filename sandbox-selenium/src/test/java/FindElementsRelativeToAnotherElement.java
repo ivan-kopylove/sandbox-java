@@ -1,7 +1,7 @@
 import com.github.ivan.kopylove.sandbox.selenium.util.Utils;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +17,7 @@ import java.util.List;
 public class FindElementsRelativeToAnotherElement
 {
 
-    @BeforeClass
+    @BeforeAll
     public static void init()
     {
         System.setProperty("webdriver.gecko.driver", "C:\\1\\apps\\geckodriver-v0.25.0-win64\\geckodriver.exe");
@@ -35,17 +35,17 @@ public class FindElementsRelativeToAnotherElement
             webDriver.get(url);
 
             List<WebElement> rows = webDriver.findElements(By.xpath("//table//tr"));
-            for (final WebElement row : rows)
+            for (WebElement row : rows)
             {
                 List<WebElement> elements = row.findElements(By.xpath("//td"));
-                Assert.assertEquals(6, elements.size());
+                Assertions.assertEquals(6, elements.size());
             }
 
             webDriver.quit();
         }
         else
         {
-            Assert.fail();
+            Assertions.fail();
         }
     }
 
@@ -61,12 +61,12 @@ public class FindElementsRelativeToAnotherElement
             List<WebElement> rows = webDriver.findElements(By.xpath("//table//tr"));
             List<WebElement> elements = rows.get(1)
                                             .findElements(By.xpath(".//td"));
-            Assert.assertEquals(3, elements.size());
+            Assertions.assertEquals(3, elements.size());
             webDriver.quit();
         }
         else
         {
-            Assert.fail();
+            Assertions.fail();
         }
     }
 }

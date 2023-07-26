@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.nullValue;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class NullValueExamples
 {
@@ -11,6 +11,6 @@ public class NullValueExamples
     @Test
     public void nullEqualsNull()
     {
-        Assert.assertTrue(null == null); // true
+        Assertions.assertNull(null); // true
     }
 }

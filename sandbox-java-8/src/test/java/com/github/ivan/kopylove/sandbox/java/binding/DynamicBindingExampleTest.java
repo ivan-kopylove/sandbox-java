@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.binding;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class DynamicBindingExampleTest
 {
@@ -14,8 +14,8 @@ public class DynamicBindingExampleTest
         System.out.println("a.i:" + a.i);
         System.out.println("b.i:" + b.i);
 
-        Assert.assertEquals(10, a.i);
-        Assert.assertEquals(10, b.i);
+        Assertions.assertEquals(10, a.i);
+        Assertions.assertEquals(10, b.i);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class DynamicBindingExampleTest
         System.out.println("a.i:" + a.i);
         System.out.println("b.i:" + b.i);
 
-        Assert.assertEquals(10, a.i);
-        Assert.assertEquals(20, b.i);
+        Assertions.assertEquals(10, a.i);
+        Assertions.assertEquals(20, b.i);
     }
 }

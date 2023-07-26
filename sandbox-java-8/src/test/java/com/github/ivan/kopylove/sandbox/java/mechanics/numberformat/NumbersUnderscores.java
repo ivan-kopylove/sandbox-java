@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.numberformat;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class NumbersUnderscores
 {
@@ -22,12 +22,12 @@ public class NumbersUnderscores
         double a5 = 15.5e-0f;
         double a6 = 15.5e-1f;
 
-        Assert.assertEquals(100.0, a1, 0);
-        Assert.assertEquals(100.0, a2, 0);
-        Assert.assertEquals(150.0, a3, 0);
-        Assert.assertEquals(155.0, a4, 0);
-        Assert.assertEquals(15.5, a5, 0);
-        Assert.assertEquals(1.55, a6, 0.0000001);
+        Assertions.assertEquals(100.0, a1, 0);
+        Assertions.assertEquals(100.0, a2, 0);
+        Assertions.assertEquals(150.0, a3, 0);
+        Assertions.assertEquals(155.0, a4, 0);
+        Assertions.assertEquals(15.5, a5, 0);
+        Assertions.assertEquals(1.55, a6, 0.0000001);
     }
 
     @Test
@@ -44,29 +44,29 @@ public class NumbersUnderscores
         int hex3 = 0xA___________A;
         float f = 9898_7878.333_333f;
 
-        Assert.assertEquals(0b00100101, nybbles);
-        Assert.assertEquals(37, nybbles);
+        Assertions.assertEquals(0b00100101, nybbles);
+        Assertions.assertEquals(37, nybbles);
 
-        Assert.assertEquals(-764832622, bytes);
-        Assert.assertEquals(0b11010010011010011001010010010010, bytes);
+        Assertions.assertEquals(-764832622, bytes);
+        Assertions.assertEquals(0b11010010011010011001010010010010, bytes);
 
-        Assert.assertEquals(0b1111000011001100, bin);
-        Assert.assertEquals(61644, bin);
+        Assertions.assertEquals(0b1111000011001100, bin);
+        Assertions.assertEquals(61644, bin);
 
 
-        Assert.assertEquals(07, oct1);
-        Assert.assertEquals(7, oct1);
-        Assert.assertEquals(010, oct2);
-        Assert.assertEquals(8, oct2);
+        Assertions.assertEquals(07, oct1);
+        Assertions.assertEquals(7, oct1);
+        Assertions.assertEquals(010, oct2);
+        Assertions.assertEquals(8, oct2);
 
-        Assert.assertEquals(0xA, hex1);
-        Assert.assertEquals(10, hex1);
-        Assert.assertEquals(0xDEAFACED, hex2);
-        Assert.assertEquals(-558912275, hex2);
-        Assert.assertEquals(170, hex3);
-        Assert.assertEquals(170, hex3);
+        Assertions.assertEquals(0xA, hex1);
+        Assertions.assertEquals(10, hex1);
+        Assertions.assertEquals(0xDEAFACED, hex2);
+        Assertions.assertEquals(-558912275, hex2);
+        Assertions.assertEquals(170, hex3);
+        Assertions.assertEquals(170, hex3);
 
-        Assert.assertEquals(98987878.333333f, f, 0);
+        Assertions.assertEquals(98987878.333333f, f, 0);
     }
 
     @Test

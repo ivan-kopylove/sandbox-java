@@ -1,8 +1,10 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.oop.defaultvalues;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  * Purpose: to demonstate object properties default values

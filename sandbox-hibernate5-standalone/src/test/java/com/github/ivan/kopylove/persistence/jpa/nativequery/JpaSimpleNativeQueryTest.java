@@ -2,8 +2,8 @@ package com.github.ivan.kopylove.persistence.jpa.nativequery;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -13,9 +13,9 @@ import java.util.List;
 /**
  * Minimal JPA example - save and load saved entity.
  */
-public class JpaSimpleNativeQuery
+public class JpaSimpleNativeQueryTest
 {
-    @Before
+    @BeforeEach
     public void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();

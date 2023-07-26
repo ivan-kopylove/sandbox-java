@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.string;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * Basic demonstration of strings pool in java. Strings are compared intentionally using reference equality.
@@ -21,46 +21,46 @@ public class StringsPool
             d += i;
         }
 
-        Assert.assertTrue(a == b);
-        Assert.assertTrue(c == a);
-        Assert.assertTrue(c == b);
+        Assertions.assertSame(a, b);
+        Assertions.assertSame(c, a);
+        Assertions.assertSame(c, b);
 
 
-        Assert.assertFalse(d == a);
-        Assert.assertFalse(d == b);
-        Assert.assertFalse(d == c);
+        Assertions.assertNotSame(d, a);
+        Assertions.assertNotSame(d, b);
+        Assertions.assertNotSame(d, c);
     }
 
     @Test
     public void test2()
     {
-        String a = new String("012");
-        String b = new String("012");
-        Assert.assertFalse(a == b);
+        String a = "012";
+        String b = "012";
+        Assertions.assertNotSame(a, b);
     }
 
     @Test
     public void test3()
     {
-        String a = new String("012");
-        String b = new String("012");
-        Assert.assertFalse(a == b);
-        Assert.assertFalse(a == b.intern());
+        String a = "012";
+        String b = "012";
+        Assertions.assertNotSame(a, b);
+        Assertions.assertNotSame(a, b.intern());
     }
 
     @Test
     public void test4()
     {
-        String a = new String("012");
-        String b = new String("012");
-        Assert.assertTrue(a.intern() == b.intern());
+        String a = "012";
+        String b = "012";
+        Assertions.assertSame(a.intern(), b.intern());
     }
 
     @Test
     public void test5()
     {
         String a = "012";
-        String b = new String("012");
-        Assert.assertTrue(a == b.intern());
+        String b = "012";
+        Assertions.assertSame(a, b.intern());
     }
 }

@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.primitives;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CastingExamples
 {
@@ -26,12 +26,12 @@ public class CastingExamples
         System.out.println("float value : " + f);
         System.out.println("double value : " + d);
 
-        Assert.assertEquals(40, b);
-        Assert.assertEquals(40, s);
-        Assert.assertEquals(40, i);
-        Assert.assertEquals(40, l);
-        Assert.assertEquals(40L, f, 0);
-        Assert.assertEquals(40, d, 0);
+        Assertions.assertEquals(40, b);
+        Assertions.assertEquals(40, s);
+        Assertions.assertEquals(40, i);
+        Assertions.assertEquals(40, l);
+        Assertions.assertEquals(40L, f, 0);
+        Assertions.assertEquals(40, d, 0);
     }
 
     /**
@@ -54,12 +54,12 @@ public class CastingExamples
         System.out.println("short value : " + s);
         System.out.println("byte value : " + b);
 
-        Assert.assertEquals(30.0, d, 0);
-        Assert.assertEquals(30.0, f, 0);
-        Assert.assertEquals(30, l);
-        Assert.assertEquals(30, i);
-        Assert.assertEquals(30, s);
-        Assert.assertEquals(30, b);
+        Assertions.assertEquals(30.0, d, 0);
+        Assertions.assertEquals(30.0, f, 0);
+        Assertions.assertEquals(30, l);
+        Assertions.assertEquals(30, i);
+        Assertions.assertEquals(30, s);
+        Assertions.assertEquals(30, b);
     }
 
     /**
@@ -72,8 +72,8 @@ public class CastingExamples
         //        char c1 = -1;
         //        char c2 = 65536;
         char c2 = 65535;
-        Assert.assertEquals(127, b1);
-        Assert.assertEquals(65535, c2);
+        Assertions.assertEquals(127, b1);
+        Assertions.assertEquals(65535, c2);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.challenges;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 
 import static java.lang.System.arraycopy;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ColumnarAdderTest
 {
@@ -30,11 +31,10 @@ public class ColumnarAdderTest
         assertThat(sum.sum("1", "0"), equalTo("1"));
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void unsupported_cases()
     {
-
-        assertThat(sum.sum("-1", "-1"), equalTo("-2"));
+        assertThrows(RuntimeException.class, () -> assertThat(sum.sum("-1", "-1"), equalTo("-2")));
     }
 
     @Test

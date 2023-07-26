@@ -3,9 +3,9 @@ package com.github.ivan.kopylove.persistence.orm;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ChildEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -21,7 +21,7 @@ import java.util.Set;
  */
 public class OrmNPlusOneBehaviour
 {
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         Random random = new Random();
@@ -130,7 +130,7 @@ public class OrmNPlusOneBehaviour
             Set<ChildEntity> childs = parent.getChilds();
             for (ChildEntity childEntity : childs)
             {
-                Assert.assertNotNull(childEntity.getName());
+                Assertions.assertNotNull(childEntity.getName());
             }
         }
 
@@ -162,7 +162,7 @@ public class OrmNPlusOneBehaviour
             Set<ChildEntity> childs = parent.getChilds();
             for (ChildEntity childEntity : childs)
             {
-                Assert.assertNotNull(childEntity.getName());
+                Assertions.assertNotNull(childEntity.getName());
             }
         }
     }

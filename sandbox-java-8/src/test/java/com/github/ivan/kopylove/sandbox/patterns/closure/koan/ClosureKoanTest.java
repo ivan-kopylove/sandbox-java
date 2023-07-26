@@ -1,9 +1,9 @@
 package com.github.ivan.kopylove.sandbox.patterns.closure.koan;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Make provider return a value passed from initial call
@@ -26,7 +26,7 @@ public class ClosureKoanTest
     }
 
     @Test
-    @Ignore
+    @Disabled
     public void runTest()
     {
         TextProvider provider = getProvider(15);
@@ -34,7 +34,7 @@ public class ClosureKoanTest
     }
 
     @Test
-    @Ignore
+    @Disabled
     public void runTest2()
     {
         TextProvider provider = getProvider(20);

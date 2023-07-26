@@ -1,6 +1,8 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.exceptions;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ExceptionsBasic
 {
@@ -23,9 +25,11 @@ public class ExceptionsBasic
     /**
      * RuntimeException (aka unchecked exceptions) and its successors are optional to handle.
      */
-    @Test(expected = RuntimeException.class)
+    @Test
     public void runtime()
     {
-        throw new RuntimeException("Exception cause msg.");
+        assertThrows(RuntimeException.class, () -> {
+            throw new RuntimeException("Exception cause msg.");
+        });
     }
 }

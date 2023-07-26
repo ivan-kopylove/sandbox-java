@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.log4j;
 
 import org.apache.log4j.Logger;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class CustomLoggerTest
 {

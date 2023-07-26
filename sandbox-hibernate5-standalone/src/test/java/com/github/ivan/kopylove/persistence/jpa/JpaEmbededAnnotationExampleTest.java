@@ -4,9 +4,9 @@ import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationBuildin
 import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationGeneralDetails;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
@@ -15,7 +15,7 @@ import javax.persistence.EntityManager;
  */
 public class JpaEmbededAnnotationExampleTest
 {
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         EntityManager entityManager = HibernateSessionFactory.openSession();
@@ -53,12 +53,12 @@ public class JpaEmbededAnnotationExampleTest
 
         OrganizationEntity organization = entityManager.find(OrganizationEntity.class, 0);
 
-        Assert.assertEquals(5,
-                            organization.getOrganizationBuildingDetails()
-                                        .getFloors());
-        Assert.assertEquals("1997",
-                            organization.getOrganizationGeneralDetails()
-                                        .getFound());
+        Assertions.assertEquals(5,
+                                organization.getOrganizationBuildingDetails()
+                                            .getFloors());
+        Assertions.assertEquals("1997",
+                                organization.getOrganizationGeneralDetails()
+                                            .getFound());
 
         entityManager.getTransaction()
                      .commit();

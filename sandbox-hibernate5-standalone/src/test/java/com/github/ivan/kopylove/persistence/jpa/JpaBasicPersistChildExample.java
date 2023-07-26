@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.persistence.jpa;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ChildEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import java.util.HashSet;

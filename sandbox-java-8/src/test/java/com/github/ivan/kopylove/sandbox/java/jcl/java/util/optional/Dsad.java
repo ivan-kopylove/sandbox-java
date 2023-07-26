@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.optional;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Function;
@@ -24,6 +24,6 @@ public class Dsad
                   System.out.println(s);
                   result.set(true);
               });
-        Assert.assertFalse(result.get());
+        Assertions.assertFalse(result.get());
     }
 }

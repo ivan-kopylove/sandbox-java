@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.patterns.listener.one;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ListenerDemo
 {

@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -20,11 +20,11 @@ public class JavaCachesVariableWhenOverridesWithReflection
         Supplier<String> supplier = () -> "overrided";
         setValue(ObjectHolder.class.getDeclaredField("SUPPLIER"), supplier);
 
-        Assert.assertEquals("initial", ObjectHolder.getFinalStr());
-        Assert.assertEquals("overrided", ObjectHolder.getSTR());
-        Assert.assertEquals("overrided", ObjectHolder.getValueFromSuplier());
-        Assert.assertEquals(5000, ObjectHolder.getIntFinalValue());
-        Assert.assertEquals(10000, ObjectHolder.getIntValue());
+        Assertions.assertEquals("initial", ObjectHolder.getFinalStr());
+        Assertions.assertEquals("overrided", ObjectHolder.getSTR());
+        Assertions.assertEquals("overrided", ObjectHolder.getValueFromSuplier());
+        Assertions.assertEquals(5000, ObjectHolder.getIntFinalValue());
+        Assertions.assertEquals(10000, ObjectHolder.getIntValue());
     }
 
     private void setValue(Field field, Object newValue) throws NoSuchFieldException, IllegalAccessException

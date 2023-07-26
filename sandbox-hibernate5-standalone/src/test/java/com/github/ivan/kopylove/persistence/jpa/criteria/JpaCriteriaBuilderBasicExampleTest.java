@@ -2,7 +2,7 @@ package com.github.ivan.kopylove.persistence.jpa.criteria;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;

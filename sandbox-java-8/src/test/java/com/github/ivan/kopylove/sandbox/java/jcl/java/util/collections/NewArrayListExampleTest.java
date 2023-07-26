@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.collections;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class NewArrayListExampleTest
 
         List<MyObj> list2 = new ArrayList<>(list1);
 
-        Assert.assertTrue(list1.get(0) == list2.get(0));
-        Assert.assertTrue(list1.get(1) == list2.get(1));
+        Assertions.assertSame(list1.get(0), list2.get(0));
+        Assertions.assertSame(list1.get(1), list2.get(1));
     }
 }

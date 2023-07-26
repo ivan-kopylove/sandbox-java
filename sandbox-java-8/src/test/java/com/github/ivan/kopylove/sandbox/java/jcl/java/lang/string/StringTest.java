@@ -1,9 +1,10 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.string;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StringTest
 {
@@ -17,33 +18,35 @@ public class StringTest
         assertEquals("1" + null, "1null");
     }
 
-    @Test(expected = StringIndexOutOfBoundsException.class)
+    @Test
     public void testException()
     {
+        assertThrows(StringIndexOutOfBoundsException.class, () -> {
 
-        String s = "0123456789_A";
-        int endIndex = "qwee".lastIndexOf("_________"); //returns -1
-        s.substring(0, endIndex); //throws exception
+            String s = "0123456789_A";
+            int endIndex = "qwee".lastIndexOf("_________"); //returns -1
+            s.substring(0, endIndex); //throws exception
+        });
     }
 
     @Test
     public void lastIndexOf1()
     {
         int lastIndex = "abcdab".lastIndexOf("a");
-        Assert.assertEquals(4, lastIndex);
+        Assertions.assertEquals(4, lastIndex);
     }
 
     @Test
     public void lastIndexOf11()
     {
         int lastIndex = "abcdab".lastIndexOf("a");
-        Assert.assertEquals(4, lastIndex);
+        Assertions.assertEquals(4, lastIndex);
     }
 
     @Test
     public void lastIndexOf2()
     {
         int lastIndex = "abcdab".lastIndexOf("a", 2);
-        Assert.assertEquals(0, lastIndex);
+        Assertions.assertEquals(0, lastIndex);
     }
 }

@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.serializable;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -49,7 +49,7 @@ public class SerializableExamples
         catch (IOException e)
         {
             System.out.println("error " + e);
-            Assert.fail();
+            Assertions.fail();
         }
     }
 }

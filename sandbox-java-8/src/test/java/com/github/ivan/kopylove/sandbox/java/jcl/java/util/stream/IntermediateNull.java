@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.stream;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Objects;
@@ -19,8 +19,8 @@ public class IntermediateNull
                                     .peek(System.out::println)
                                     .collect(Collectors.toList());
 
-        Assert.assertNull(mapped.get(0));
-        Assert.assertNull(mapped.get(1));
+        Assertions.assertNull(mapped.get(0));
+        Assertions.assertNull(mapped.get(1));
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -33,6 +33,6 @@ public class IntermediateNull
                                     .peek(System.out::println)
                                     .collect(Collectors.toList());
 
-        Assert.assertEquals(0, mapped.size());
+        Assertions.assertEquals(0, mapped.size());
     }
 }

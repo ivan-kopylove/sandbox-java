@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.reflect;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Proxy;
 import java.util.Map;
@@ -16,6 +16,6 @@ public class ProxyExamples
                                                                                          new DynamicInvocationHandler());
 
         String put = proxyInstance.put("hello", "world");
-        Assert.assertEquals("hello world", put);
+        Assertions.assertEquals("hello world", put);
     }
 }

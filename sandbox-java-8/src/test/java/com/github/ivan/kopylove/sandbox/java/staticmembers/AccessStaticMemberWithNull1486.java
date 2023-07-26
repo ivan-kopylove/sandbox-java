@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.staticmembers;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class AccessStaticMemberWithNull1486
 {
@@ -15,7 +15,7 @@ public class AccessStaticMemberWithNull1486
         myClass = null;
         System.out.println();
 
-        Assert.assertEquals("some value", myClass.VALUE);
-        Assert.assertEquals("some text", myClass.myMethod());
+        Assertions.assertEquals("some value", MyClass.VALUE);
+        Assertions.assertEquals("some text", MyClass.myMethod());
     }
 }

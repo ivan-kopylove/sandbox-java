@@ -1,8 +1,8 @@
 package com.github.ivan.kopylove.sandbox.patterns.closure.closure;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * search engine query with comprehensive examples:

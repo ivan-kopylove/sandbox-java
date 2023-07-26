@@ -2,8 +2,8 @@ package com.github.ivan.kopylove.persistence.jpa;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
@@ -28,7 +28,7 @@ public class JpaBasicExampleTest
                      .commit();
 
         BookEntity entity = entityManager.find(BookEntity.class, 6);
-        Assert.assertEquals(entity.getName(), "Terry Pratchett - The Colour of Magic");
+        Assertions.assertEquals(entity.getName(), "Terry Pratchett - The Colour of Magic");
         entityManager.close();
     }
 }

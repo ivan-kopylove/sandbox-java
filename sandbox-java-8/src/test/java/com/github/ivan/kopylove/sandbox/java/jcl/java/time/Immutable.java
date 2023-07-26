@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.time;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -21,8 +21,8 @@ public class Immutable
 
         LocalDate plus1day = now.plus(1, ChronoUnit.DAYS); //now is not modified
 
-        Assert.assertEquals(dayOfYear, now.getDayOfYear()); //now is the same
-        Assert.assertEquals(plus1day.getDayOfYear(), dayOfYear + 1);
+        Assertions.assertEquals(dayOfYear, now.getDayOfYear()); //now is the same
+        Assertions.assertEquals(plus1day.getDayOfYear(), dayOfYear + 1);
     }
 
     @Test

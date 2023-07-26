@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.oop.hiding;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class FieldsAreNotPolymorphic
 {
@@ -9,10 +9,10 @@ public class FieldsAreNotPolymorphic
     public void referenceIsFather()
     {
         Father father = new Son();
-        Assert.assertEquals(1, father.i);
-        Assert.assertEquals(2, father.getI());
-        Assert.assertEquals(10, father.j);
-        Assert.assertEquals(10, father.getJ());
+        Assertions.assertEquals(1, father.i);
+        Assertions.assertEquals(2, father.getI());
+        Assertions.assertEquals(10, father.j);
+        Assertions.assertEquals(10, father.getJ());
     }
 
     @Test
@@ -20,10 +20,10 @@ public class FieldsAreNotPolymorphic
     {
         Son son = new Son();
 
-        Assert.assertEquals(2, son.i);
-        Assert.assertEquals(20, son.j);
-        Assert.assertEquals(2, son.getI());
-        Assert.assertEquals(10, son.getJ());
+        Assertions.assertEquals(2, son.i);
+        Assertions.assertEquals(20, son.j);
+        Assertions.assertEquals(2, son.getI());
+        Assertions.assertEquals(10, son.getJ());
     }
 }
 

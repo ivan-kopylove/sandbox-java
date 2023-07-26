@@ -3,12 +3,16 @@ package com.github.ivan.kopylove.persistence.jpa;
 import com.github.ivan.kopylove.sandbox.persistence.entities.OrderEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.UserEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
-import javax.persistence.criteria.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Join;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
@@ -20,7 +24,7 @@ public class JpaFetchFetchPathNavigationTest2
     private static final String USER_NAME_ONE = "a";
     private static final String USER_NAME_TWO = "b";
 
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();

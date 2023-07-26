@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.string;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class StringFormat
 {
@@ -10,6 +10,6 @@ public class StringFormat
     {
         String s = "\u221E \u0020sometext";
         System.out.println(s);
-        Assert.assertEquals("∞  sometext", s);
+        Assertions.assertEquals("∞  sometext", s);
     }
 }

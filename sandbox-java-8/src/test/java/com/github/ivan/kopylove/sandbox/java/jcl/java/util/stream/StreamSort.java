@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.stream;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 import java.util.List;
@@ -18,7 +18,7 @@ public class StreamSort
     @Test
     public void nullSafeChainedLambdaComparator()
     {
-        final List<ComparableObject> list = DataProvider.createObjectsWithNulls();
+        List<ComparableObject> list = DataProvider.createObjectsWithNulls();
         list.sort(Comparator.nullsLast(Comparator.comparing(ComparableObject::getDate))
                             .thenComparing(Comparator.nullsLast(Comparator.comparing(ComparableObject::getStr))));
     }
@@ -29,7 +29,7 @@ public class StreamSort
     @Test
     public void chainedLambdaComparator()
     {
-        final List<ComparableObject> list = DataProvider.createObjects();
+        List<ComparableObject> list = DataProvider.createObjects();
         list.sort(Comparator.comparing(ComparableObject::getDate)
                             .thenComparing(ComparableObject::getStr));
     }

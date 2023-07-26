@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.ctor.privateCtor;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MyPrivateCtorClassRunner
 {
@@ -9,6 +9,6 @@ public class MyPrivateCtorClassRunner
     public void run()
     {
         String value = MyPrivateCtorClass.getValue();
-        Assert.assertEquals("static initializer updated value", value);
+        Assertions.assertEquals("static initializer updated value", value);
     }
 }

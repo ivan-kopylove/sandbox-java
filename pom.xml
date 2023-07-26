@@ -23,6 +23,11 @@
                     <release>8</release>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0-M3</version>
+            </plugin>
         </plugins>
     </build>
 
@@ -62,6 +67,7 @@
         <module>sandbox-spring-standalone</module>
         <module>sandbox-spring-test-context</module>
         <module>sandbox-spring-webmvc</module>
+        <module>sandbox-test-containers</module>
         <module>sandbox-tomcat-context-param</module>
         <module>sandbox-tomcat-filter</module>
         <module>sandbox-tomcat-listener</module>
@@ -73,10 +79,18 @@
     </modules>
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.2</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>

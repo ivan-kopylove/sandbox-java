@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.rare.syntax;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CommaSeparatedStatements
 {
@@ -11,7 +11,7 @@ public class CommaSeparatedStatements
         float foo = 2, bar = 3, baz = 4;//1//
         float mod1 = foo % baz, mod2 = baz % foo;  //2
         float result = mod1 > mod2 ? bar : baz; //3
-        //        Assert.assertEquals(, result); //calculate yourself
+        //        Assertions.assertEquals(, result); //calculate yourself
     }
 
     @Test
@@ -22,7 +22,7 @@ public class CommaSeparatedStatements
         int i3 = 3;
 
         int i4 = i1 + (i2 = i3);
-        Assert.assertEquals(4, i4);
+        Assertions.assertEquals(4, i4);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class CommaSeparatedStatements
                         i++;
                 }
             }
-            Assert.assertEquals(5, i);
+            Assertions.assertEquals(5, i);
         }
     }
 }

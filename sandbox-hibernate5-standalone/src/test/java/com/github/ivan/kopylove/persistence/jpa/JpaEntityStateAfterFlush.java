@@ -2,15 +2,15 @@ package com.github.ivan.kopylove.persistence.jpa;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
 public class JpaEntityStateAfterFlush
 {
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
@@ -61,7 +61,7 @@ public class JpaEntityStateAfterFlush
 
         ParentEntity parent = entityManager.find(ParentEntity.class, 3000);
 
-        Assert.assertEquals("2", parent.getName());
+        Assertions.assertEquals("2", parent.getName());
 
         entityManager.getTransaction()
                      .commit();

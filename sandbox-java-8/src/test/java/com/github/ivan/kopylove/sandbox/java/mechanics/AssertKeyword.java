@@ -1,12 +1,16 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class AssertKeyword
 {
-    @Test(expected = AssertionError.class)
+    @Test
     public void run()
     {
-        assert 2 == 1;
+        assertThrows(AssertionError.class, () -> {
+            assert 2 == 1;
+        });
     }
 }

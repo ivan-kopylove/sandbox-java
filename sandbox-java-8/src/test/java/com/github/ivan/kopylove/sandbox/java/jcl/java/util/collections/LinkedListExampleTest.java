@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.collections;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
 
@@ -26,10 +26,10 @@ public class LinkedListExampleTest
         linkedList.add("d");
         linkedList.addFirst("a");
 
-        Assert.assertEquals("a", linkedList.get(0));
-        Assert.assertEquals("b", linkedList.get(1));
-        Assert.assertEquals("c", linkedList.get(2));
-        Assert.assertEquals("d", linkedList.get(3));
+        Assertions.assertEquals("a", linkedList.get(0));
+        Assertions.assertEquals("b", linkedList.get(1));
+        Assertions.assertEquals("c", linkedList.get(2));
+        Assertions.assertEquals("d", linkedList.get(3));
     }
 
     @Test
@@ -44,12 +44,12 @@ public class LinkedListExampleTest
         linkedList.add("c");
 
         boolean bRemoved = linkedList.removeLastOccurrence("b");
-        Assert.assertTrue(bRemoved);
+        Assertions.assertTrue(bRemoved);
 
-        Assert.assertEquals("a", linkedList.get(0));
-        Assert.assertEquals("a", linkedList.get(1));
-        Assert.assertEquals("b", linkedList.get(2));
-        Assert.assertEquals("c", linkedList.get(3));
+        Assertions.assertEquals("a", linkedList.get(0));
+        Assertions.assertEquals("a", linkedList.get(1));
+        Assertions.assertEquals("b", linkedList.get(2));
+        Assertions.assertEquals("c", linkedList.get(3));
     }
 
     @Test
@@ -62,14 +62,14 @@ public class LinkedListExampleTest
         linkedList.add("c");
 
         String peeked = linkedList.peek();
-        Assert.assertEquals(peeked, "a");
-        Assert.assertEquals(4, linkedList.size());
+        Assertions.assertEquals(peeked, "a");
+        Assertions.assertEquals(4, linkedList.size());
 
 
         String poped = linkedList.pop();
 
-        Assert.assertEquals(poped, "a");
-        Assert.assertEquals(3, linkedList.size());
+        Assertions.assertEquals(poped, "a");
+        Assertions.assertEquals(3, linkedList.size());
     }
 
     @Test
@@ -83,8 +83,8 @@ public class LinkedListExampleTest
 
         linkedList.poll();
 
-        Assert.assertEquals(2, linkedList.size());
-        Assert.assertEquals("b", linkedList.get(0));
-        Assert.assertEquals("c", linkedList.get(1));
+        Assertions.assertEquals(2, linkedList.size());
+        Assertions.assertEquals("b", linkedList.get(0));
+        Assertions.assertEquals("c", linkedList.get(1));
     }
 }

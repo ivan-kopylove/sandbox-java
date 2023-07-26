@@ -1,9 +1,9 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  * Threadlocal value is accesible only from thread it is created in.
@@ -12,8 +12,8 @@ import static org.junit.Assert.assertNull;
  */
 public class ThreadLocalExampleTest
 {
-    private static ThreadLocal<Integer> THREAD_LOCAL_ONE = new ThreadLocal<>();
-    private static ThreadLocal<Integer> THREAD_LOCAL_TWO = ThreadLocal.withInitial(() -> 2);
+    private static final ThreadLocal<Integer> THREAD_LOCAL_ONE = new ThreadLocal<>();
+    private static final ThreadLocal<Integer> THREAD_LOCAL_TWO = ThreadLocal.withInitial(() -> 2);
 
     @Test
     public void run()

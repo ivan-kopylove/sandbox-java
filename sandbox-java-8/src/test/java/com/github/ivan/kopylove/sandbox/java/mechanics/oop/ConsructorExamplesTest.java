@@ -2,8 +2,8 @@ package com.github.ivan.kopylove.sandbox.java.mechanics.oop;
 
 import com.github.ivan.kopylove.sandbox.domain.Bottle;
 import com.github.ivan.kopylove.sandbox.domain.Flask;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * Constructor is a way to set initial value(s) to an object.
@@ -18,9 +18,9 @@ public class ConsructorExamplesTest
         Bottle bottle = new Bottle();
         bottle.initializeMyBottleWithMyCustomMethod(500, "Green", "Metal");
 
-        Assert.assertEquals(500, bottle.getMilliliters());
-        Assert.assertEquals("Green", bottle.getColor());
-        Assert.assertEquals("Metal", bottle.getMaterial());
+        Assertions.assertEquals(500, bottle.getMilliliters());
+        Assertions.assertEquals("Green", bottle.getColor());
+        Assertions.assertEquals("Metal", bottle.getMaterial());
     }
 
     @Test
@@ -28,9 +28,9 @@ public class ConsructorExamplesTest
     {
         Flask flask = new Flask(500, "Green", "Metal");
 
-        Assert.assertEquals(500, flask.getMilliliters());
-        Assert.assertEquals("Green", flask.getColor());
-        Assert.assertEquals("Metal", flask.getMaterial());
+        Assertions.assertEquals(500, flask.getMilliliters());
+        Assertions.assertEquals("Green", flask.getColor());
+        Assertions.assertEquals("Metal", flask.getMaterial());
     }
 
     @Test
@@ -42,8 +42,8 @@ public class ConsructorExamplesTest
         flask.setMaterial("Metal");
         flask.setMilliliters(500);
 
-        Assert.assertEquals(500, flask.getMilliliters());
-        Assert.assertEquals("Green", flask.getColor());
-        Assert.assertEquals("Metal", flask.getMaterial());
+        Assertions.assertEquals(500, flask.getMilliliters());
+        Assertions.assertEquals("Green", flask.getColor());
+        Assertions.assertEquals("Metal", flask.getMaterial());
     }
 }

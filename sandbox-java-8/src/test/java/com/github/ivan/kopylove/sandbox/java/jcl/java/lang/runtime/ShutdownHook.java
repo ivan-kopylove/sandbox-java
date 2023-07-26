@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.runtime;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ShutdownHook
 {

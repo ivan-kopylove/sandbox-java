@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class PrintStackTraceExample
 {
@@ -11,6 +11,6 @@ public class PrintStackTraceExample
         String s = Thread.currentThread()
                          .getStackTrace()
                          .toString();
-        Assert.assertTrue(s.startsWith("[Ljava.lang.StackTraceElement;@"));
+        Assertions.assertTrue(s.startsWith("[Ljava.lang.StackTraceElement;@"));
     }
 }

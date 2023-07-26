@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.spring.examples.genericBeanType;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

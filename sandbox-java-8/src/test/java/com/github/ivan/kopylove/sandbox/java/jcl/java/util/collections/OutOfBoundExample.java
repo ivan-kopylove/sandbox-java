@@ -1,23 +1,29 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.collections;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class OutOfBoundExample
 {
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void run()
     {
-        List<String> l = new ArrayList<>();
-        l.get(-1);
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            List<String> l = new ArrayList<>();
+            l.get(-1);
+        });
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void run2()
     {
-        List<String> l = new ArrayList<>();
-        l.get(500);
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            List<String> l = new ArrayList<>();
+            l.get(500);
+        });
     }
 }

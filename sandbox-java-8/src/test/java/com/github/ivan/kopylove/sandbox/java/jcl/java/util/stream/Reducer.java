@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.stream;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 import java.util.function.BinaryOperator;
@@ -21,8 +21,8 @@ public class Reducer
                                                   return current > previous ? current : previous;
                                               }
                                           });
-        Assert.assertTrue(reduced.isPresent());
-        reduced.ifPresent(value -> Assert.assertEquals(Integer.valueOf(3), value));
+        Assertions.assertTrue(reduced.isPresent());
+        reduced.ifPresent(value -> Assertions.assertEquals(Integer.valueOf(3), value));
     }
 
     @Test
@@ -38,7 +38,7 @@ public class Reducer
                                                   return current > previous ? current : previous;
                                               }
                                           });
-        Assert.assertTrue(reduced.isPresent());
-        reduced.ifPresent(value -> Assert.assertEquals(Integer.valueOf(1), value));
+        Assertions.assertTrue(reduced.isPresent());
+        reduced.ifPresent(value -> Assertions.assertEquals(Integer.valueOf(1), value));
     }
 }

@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.patterns.facade.one;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * 1. adds additional layers of abstraction.<br/>

@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.var;
 
 import com.github.ivan.kopylove.sandbox.domain.case2.CustomClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * JEP 286: Local-Variable Type Inference

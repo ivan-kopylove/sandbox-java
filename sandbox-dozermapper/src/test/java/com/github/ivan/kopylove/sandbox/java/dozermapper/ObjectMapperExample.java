@@ -1,10 +1,14 @@
 package com.github.ivan.kopylove.sandbox.java.dozermapper;
 
 import com.github.ivan.kopylove.sandbox.java.dozermapper.conf.DozerMapper;
-import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.*;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.A;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.B;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.C;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.D;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.E;
 import org.dozer.Mapper;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ObjectMapperExample
 {
@@ -17,7 +21,7 @@ public class ObjectMapperExample
         objA.setKey("1");
 
         C result = mapper.map(objA, C.class);
-        Assert.assertEquals("1", result.getKey());
+        Assertions.assertEquals("1", result.getKey());
     }
 
     @Test
@@ -28,7 +32,7 @@ public class ObjectMapperExample
         c.setKey("1");
 
         A result = mapper.map(c, A.class);
-        Assert.assertEquals("1", result.getKey());
+        Assertions.assertEquals("1", result.getKey());
     }
 
     @Test
@@ -41,7 +45,7 @@ public class ObjectMapperExample
         c.setObjA(a);
 
         B result = mapper.map(c, B.class);
-        Assert.assertEquals("2", result.getKey_a());
+        Assertions.assertEquals("2", result.getKey_a());
     }
 
     @Test
@@ -52,9 +56,9 @@ public class ObjectMapperExample
         input.setKey_a("3");
 
         C output = mapper.map(input, C.class);
-        Assert.assertEquals("3",
-                            output.getObjA()
-                                  .getKey());
+        Assertions.assertEquals("3",
+                                output.getObjA()
+                                      .getKey());
     }
 
     @Test
@@ -66,7 +70,7 @@ public class ObjectMapperExample
 
         E output = mapper.map(input, E.class);
 
-        Assert.assertNotNull(output);
-        Assert.assertNull(output.getKey());
+        Assertions.assertNotNull(output);
+        Assertions.assertNull(output.getKey());
     }
 }

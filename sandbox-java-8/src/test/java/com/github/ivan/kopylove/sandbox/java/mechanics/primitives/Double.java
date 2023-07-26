@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.primitives;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Double
 {
@@ -16,9 +16,9 @@ public class Double
         System.out.println(d2);
         System.out.println(d3);
 
-        Assert.assertEquals(1.0, d1, 0);
-        Assert.assertEquals(430, d2, 0);
-        Assert.assertEquals(4300, d3, 0);
+        Assertions.assertEquals(1.0, d1, 0);
+        Assertions.assertEquals(430, d2, 0);
+        Assertions.assertEquals(4300, d3, 0);
     }
 
     @Test
@@ -27,6 +27,6 @@ public class Double
         float f1 = 1.0f;
         double d1 = f1;
 
-        Assert.assertEquals(f1, d1, 0);
+        Assertions.assertEquals(f1, d1, 0);
     }
 }

@@ -3,11 +3,13 @@ package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.reflect;
 import com.github.ivan.kopylove.sandbox.domain.Lamp;
 import com.github.ivan.kopylove.sandbox.domain.Picture;
 import com.github.ivan.kopylove.sandbox.domain.Wall;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Private modification via standart java reflection mechanism.
@@ -32,16 +34,20 @@ public class JavaReflectionExamples
         f1.setAccessible(true);
         f1.set(picture, 500);
 
-        Assert.assertEquals(500, picture.getSize());
+        Assertions.assertEquals(500, picture.getSize());
     }
 
-    @Test(expected = NoSuchFieldException.class)
+    @Test
     public void run2() throws NoSuchFieldException
     {
-        Picture picture = new Picture();
+        assertThrows(NoSuchFieldException.class, () -> {
 
-        Field f1 = picture.getClass()
-                          .getField("size");
+
+            Picture picture = new Picture();
+
+            Field f1 = picture.getClass()
+                              .getField("size");
+        });
     }
 
     /**
@@ -58,7 +64,7 @@ public class JavaReflectionExamples
         field.set(null, "red");
         // modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
-        Assert.assertEquals("red", Lamp.getColor());
+        Assertions.assertEquals("red", Lamp.getColor());
     }
 
     /**
@@ -78,6 +84,6 @@ public class JavaReflectionExamples
         modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
         field.set(null, "myValue");
-        Assert.assertEquals("myValue", Wall.getKek());
+        Assertions.assertEquals("myValue", Wall.getKek());
     }
 }

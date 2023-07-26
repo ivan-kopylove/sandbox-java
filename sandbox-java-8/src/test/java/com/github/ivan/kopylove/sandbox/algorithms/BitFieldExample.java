@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.algorithms;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class BitFieldExample
 {
@@ -20,10 +20,10 @@ public class BitFieldExample
     {
         int combined = POWER | WILLPOWER;
 
-        Assert.assertEquals(16 + 32, combined);
-        Assert.assertEquals("100000", Integer.toBinaryString(POWER));
-        Assert.assertEquals("010000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(WILLPOWER)));
-        Assert.assertEquals("110000", Integer.toBinaryString(combined));
+        Assertions.assertEquals(16 + 32, combined);
+        Assertions.assertEquals("100000", Integer.toBinaryString(POWER));
+        Assertions.assertEquals("010000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(WILLPOWER)));
+        Assertions.assertEquals("110000", Integer.toBinaryString(combined));
     }
 
     private String fillNumberWithLeadingZeroes(int length, String s)
@@ -38,10 +38,10 @@ public class BitFieldExample
         int to_31_power = Integer.MAX_VALUE; // 2147483647;
         int to_31_power_negative = Integer.MIN_VALUE; // -2147483648;
 
-        Assert.assertEquals("01111111111111111111111111111111",
-                            fillNumberWithLeadingZeroes(32, Integer.toBinaryString(to_31_power)));
-        Assert.assertEquals("10000000000000000000000000000000",
-                            fillNumberWithLeadingZeroes(32, Integer.toBinaryString(to_31_power_negative)));
+        Assertions.assertEquals("01111111111111111111111111111111",
+                                fillNumberWithLeadingZeroes(32, Integer.toBinaryString(to_31_power)));
+        Assertions.assertEquals("10000000000000000000000000000000",
+                                fillNumberWithLeadingZeroes(32, Integer.toBinaryString(to_31_power_negative)));
     }
 
     @Test
@@ -50,10 +50,10 @@ public class BitFieldExample
         long to_63_power = Long.MAX_VALUE;
         long to_63_power_negative = Long.MIN_VALUE;
 
-        Assert.assertEquals("0111111111111111111111111111111111111111111111111111111111111111",
-                            fillNumberWithLeadingZeroes(64, Long.toBinaryString(to_63_power)));
-        Assert.assertEquals("1000000000000000000000000000000000000000000000000000000000000000",
-                            Long.toBinaryString(to_63_power_negative));
+        Assertions.assertEquals("0111111111111111111111111111111111111111111111111111111111111111",
+                                fillNumberWithLeadingZeroes(64, Long.toBinaryString(to_63_power)));
+        Assertions.assertEquals("1000000000000000000000000000000000000000000000000000000000000000",
+                                Long.toBinaryString(to_63_power_negative));
     }
 
     @Test
@@ -61,11 +61,11 @@ public class BitFieldExample
     {
         long combined = POWER | REGENERATION;
 
-        Assert.assertEquals("1000000000000000000000000000000000", Long.toBinaryString(REGENERATION));
-        Assert.assertEquals("0000000000000000000000000000100000",
-                            fillNumberWithLeadingZeroes(34, Long.toBinaryString(POWER)));
-        Assert.assertEquals("1000000000000000000000000000100000", Long.toBinaryString(combined));
-        Assert.assertEquals(8589934592L + 32, combined);
+        Assertions.assertEquals("1000000000000000000000000000000000", Long.toBinaryString(REGENERATION));
+        Assertions.assertEquals("0000000000000000000000000000100000",
+                                fillNumberWithLeadingZeroes(34, Long.toBinaryString(POWER)));
+        Assertions.assertEquals("1000000000000000000000000000100000", Long.toBinaryString(combined));
+        Assertions.assertEquals(8589934592L + 32, combined);
     }
 
     @Test
@@ -74,15 +74,15 @@ public class BitFieldExample
         long attributes = STAMINA | REGENERATION;
 
 
-        Assert.assertEquals("111111111111111111111111111111111111111111111111111111111111111",
-                            Long.toBinaryString(Long.MAX_VALUE));
-        Assert.assertEquals("111111111111111111111111111111111111111111111111111111111111111",
-                            Long.toBinaryString(STAMINA));
-        Assert.assertEquals("000000000000000000000000000001000000000000000000000000000000000",
-                            fillNumberWithLeadingZeroes(63, Long.toBinaryString(REGENERATION)));
-        Assert.assertEquals("111111111111111111111111111111111111111111111111111111111111111",
-                            Long.toBinaryString(attributes));
-        Assert.assertEquals(Long.MAX_VALUE, attributes);
+        Assertions.assertEquals("111111111111111111111111111111111111111111111111111111111111111",
+                                Long.toBinaryString(Long.MAX_VALUE));
+        Assertions.assertEquals("111111111111111111111111111111111111111111111111111111111111111",
+                                Long.toBinaryString(STAMINA));
+        Assertions.assertEquals("000000000000000000000000000001000000000000000000000000000000000",
+                                fillNumberWithLeadingZeroes(63, Long.toBinaryString(REGENERATION)));
+        Assertions.assertEquals("111111111111111111111111111111111111111111111111111111111111111",
+                                Long.toBinaryString(attributes));
+        Assertions.assertEquals(Long.MAX_VALUE, attributes);
     }
 
     @Test
@@ -91,11 +91,11 @@ public class BitFieldExample
         int attributes = POWER | WILLPOWER;
         attributes |= CHARISMA;
 
-        Assert.assertEquals("100000", Integer.toBinaryString(POWER));
-        Assert.assertEquals("010000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(WILLPOWER)));
-        Assert.assertEquals("001000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(CHARISMA)));
+        Assertions.assertEquals("100000", Integer.toBinaryString(POWER));
+        Assertions.assertEquals("010000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(WILLPOWER)));
+        Assertions.assertEquals("001000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(CHARISMA)));
 
-        Assert.assertEquals(8 + 16 + 32, attributes);
+        Assertions.assertEquals(8 + 16 + 32, attributes);
     }
 
     @Test
@@ -104,10 +104,10 @@ public class BitFieldExample
         int attributes = POWER | WILLPOWER;
         attributes &= ~WILLPOWER;
 
-        Assert.assertEquals(16 + 32 - 16, attributes);
+        Assertions.assertEquals(16 + 32 - 16, attributes);
 
-        Assert.assertEquals("100000", Integer.toBinaryString(POWER));
-        Assert.assertEquals("010000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(WILLPOWER)));
-        Assert.assertEquals("100000", Integer.toBinaryString(attributes));
+        Assertions.assertEquals("100000", Integer.toBinaryString(POWER));
+        Assertions.assertEquals("010000", fillNumberWithLeadingZeroes(6, Integer.toBinaryString(WILLPOWER)));
+        Assertions.assertEquals("100000", Integer.toBinaryString(attributes));
     }
 }
