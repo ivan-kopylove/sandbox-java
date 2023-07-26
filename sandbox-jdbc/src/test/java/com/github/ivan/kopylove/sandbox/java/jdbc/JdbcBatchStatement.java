@@ -1,8 +1,8 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ public class JdbcBatchStatement
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "";
 
-    @BeforeClass
+    @BeforeAll
     public static void create_table() throws SQLException
     {
         Connection conn = null;
@@ -28,7 +28,7 @@ public class JdbcBatchStatement
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assert.assertEquals(0, lines);
+            Assertions.assertEquals(0, lines);
         }
         finally
         {
@@ -61,9 +61,9 @@ public class JdbcBatchStatement
             int[] recordsAffected = statement.executeBatch();
 
 
-            Assert.assertEquals(1, recordsAffected[0]);
-            Assert.assertEquals(2, recordsAffected[1]);
-            Assert.assertEquals(3, recordsAffected[2]);
+            Assertions.assertEquals(1, recordsAffected[0]);
+            Assertions.assertEquals(2, recordsAffected[1]);
+            Assertions.assertEquals(3, recordsAffected[2]);
 
             statement.close();
             conn.close();

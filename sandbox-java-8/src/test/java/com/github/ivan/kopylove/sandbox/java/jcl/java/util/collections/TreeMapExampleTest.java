@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.collections;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 import java.util.Iterator;
@@ -29,11 +29,11 @@ public class TreeMapExampleTest
 
         Iterator<Integer> iterator = treeMap.keySet()
                                             .iterator();
-        Assert.assertEquals(Integer.valueOf(1), iterator.next());
-        Assert.assertEquals(Integer.valueOf(2), iterator.next());
-        Assert.assertEquals(Integer.valueOf(3), iterator.next());
-        Assert.assertEquals(Integer.valueOf(4), iterator.next());
-        Assert.assertEquals(Integer.valueOf(5), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(1), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(2), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(3), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(4), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(5), iterator.next());
     }
 
     @Test
@@ -48,11 +48,11 @@ public class TreeMapExampleTest
 
         Iterator<Integer> iterator = treeMap.keySet()
                                             .iterator();
-        Assert.assertEquals(Integer.valueOf(5), iterator.next());
-        Assert.assertEquals(Integer.valueOf(4), iterator.next());
-        Assert.assertEquals(Integer.valueOf(3), iterator.next());
-        Assert.assertEquals(Integer.valueOf(2), iterator.next());
-        Assert.assertEquals(Integer.valueOf(1), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(5), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(4), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(3), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(2), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(1), iterator.next());
     }
 
     @Test
@@ -75,10 +75,10 @@ public class TreeMapExampleTest
 
         Iterator<Integer> iterator = treeMap.keySet()
                                             .iterator();
-        Assert.assertEquals(Integer.valueOf(1), iterator.next());
-        Assert.assertEquals(Integer.valueOf(2), iterator.next());
-        Assert.assertEquals(Integer.valueOf(3), iterator.next());
-        Assert.assertEquals(Integer.valueOf(4), iterator.next());
-        Assert.assertEquals(Integer.valueOf(5), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(1), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(2), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(3), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(4), iterator.next());
+        Assertions.assertEquals(Integer.valueOf(5), iterator.next());
     }
 }

@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.sandbox.java.mechanics;
 import com.github.ivan.kopylove.sandbox.domain.Animal;
 import com.github.ivan.kopylove.sandbox.domain.Cat;
 import com.github.ivan.kopylove.sandbox.domain.RedCat;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;

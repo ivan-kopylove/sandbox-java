@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.numberformat;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class NumbersScientificNotation
 {
@@ -22,11 +22,11 @@ public class NumbersScientificNotation
         double a5 = 15.5e-0f;
         double a6 = 15.5e-1f;
 
-        Assert.assertEquals(100.0, a1, 0);
-        Assert.assertEquals(100.0, a2, 0);
-        Assert.assertEquals(150.0, a3, 0);
-        Assert.assertEquals(155.0, a4, 0);
-        Assert.assertEquals(15.5, a5, 0);
-        Assert.assertEquals(1.55, a6, 0.0000001);
+        Assertions.assertEquals(100.0, a1, 0);
+        Assertions.assertEquals(100.0, a2, 0);
+        Assertions.assertEquals(150.0, a3, 0);
+        Assertions.assertEquals(155.0, a4, 0);
+        Assertions.assertEquals(15.5, a5, 0);
+        Assertions.assertEquals(1.55, a6, 0.0000001);
     }
 }

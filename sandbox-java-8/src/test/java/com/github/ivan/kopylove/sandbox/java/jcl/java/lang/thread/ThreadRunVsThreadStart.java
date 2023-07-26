@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.thread;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ThreadRunVsThreadStart
 {
@@ -16,7 +16,7 @@ public class ThreadRunVsThreadStart
             {
                 String childThreadName = Thread.currentThread()
                                                .getName();
-                Assert.assertNotEquals(parentThreadName, childThreadName);
+                Assertions.assertNotEquals(parentThreadName, childThreadName);
             }
         };
 
@@ -34,7 +34,7 @@ public class ThreadRunVsThreadStart
             {
                 String childThreadName = Thread.currentThread()
                                                .getName();
-                Assert.assertEquals(parentThreadName, childThreadName);
+                Assertions.assertEquals(parentThreadName, childThreadName);
             }
         };
 

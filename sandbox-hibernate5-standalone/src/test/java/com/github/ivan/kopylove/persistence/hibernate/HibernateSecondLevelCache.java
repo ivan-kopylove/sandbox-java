@@ -4,17 +4,17 @@ import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.hibernate.query.NativeQuery;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  *
  */
 public class HibernateSecondLevelCache
 {
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
 

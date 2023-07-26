@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.primitives;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Float
 {
@@ -17,7 +17,7 @@ public class Float
     public void run1()
     {
         float f2 = 1.0f;
-        Assert.assertEquals(1, f2, 0);
+        Assertions.assertEquals(1, f2, 0);
     }
 
     @Test
@@ -28,9 +28,9 @@ public class Float
         float hex3 = 0x00000A;
         float hex4 = 0x00_000_A;
 
-        Assert.assertEquals(hex1, hex2, 0);
-        Assert.assertEquals(hex1, hex3, 0);
-        Assert.assertEquals(hex1, hex4, 0);
+        Assertions.assertEquals(hex1, hex2, 0);
+        Assertions.assertEquals(hex1, hex3, 0);
+        Assertions.assertEquals(hex1, hex4, 0);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class Float
     {
         float f1 = -1;
 
-        Assert.assertEquals(-1, f1, 0);
+        Assertions.assertEquals(-1, f1, 0);
     }
 
     @Test

@@ -3,15 +3,15 @@ package com.github.ivan.kopylove.persistence.jpa;
 import com.github.ivan.kopylove.sandbox.persistence.entities.DocumentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.UserEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
 public class JpaCompositeForeignKeyExample
 {
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
@@ -44,12 +44,12 @@ public class JpaCompositeForeignKeyExample
 
         DocumentEntity documentEntity = entityManager.find(DocumentEntity.class, 0);
 
-        Assert.assertEquals(99999999,
-                            documentEntity.getUser()
-                                          .getSsn());
-        Assert.assertEquals("bob",
-                            documentEntity.getUser()
-                                          .getName());
+        Assertions.assertEquals(99999999,
+                                documentEntity.getUser()
+                                              .getSsn());
+        Assertions.assertEquals("bob",
+                                documentEntity.getUser()
+                                              .getName());
 
         entityManager.getTransaction()
                      .commit();

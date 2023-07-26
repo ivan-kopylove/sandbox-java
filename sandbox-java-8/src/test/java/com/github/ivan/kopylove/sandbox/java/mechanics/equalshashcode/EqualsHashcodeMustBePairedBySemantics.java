@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.equalshashcode;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public class EqualsHashcodeMustBePairedBySemantics
 
         boolean containsResult = set.contains(new WronglyDefinedEqualsHashcode("2"));
 
-        Assert.assertTrue(equalsCalled);
-        Assert.assertTrue(hashcodeCalled);
-        Assert.assertFalse(containsResult); //false because after finding by hashcode, equals check failed inside HashSet
+        Assertions.assertTrue(equalsCalled);
+        Assertions.assertTrue(hashcodeCalled);
+        Assertions.assertFalse(containsResult); //false because after finding by hashcode, equals check failed inside HashSet
     }
 
     class WronglyDefinedEqualsHashcode

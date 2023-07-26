@@ -1,12 +1,12 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.function;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * bifunctional [baɪ'feckʃ(ə)nəl]
@@ -24,7 +24,7 @@ public class BiFunctionExample
         BiFunction<String, Integer, List<String>> biFunction = new BiFunction<String, Integer, List<String>>()
         {
             @Override
-            public List<String> apply(final String myValue, final Integer myInt)
+            public List<String> apply(String myValue, Integer myInt)
             {
                 System.out.println("Str value: " + myValue);
                 System.out.println("Int value value: " + myInt);

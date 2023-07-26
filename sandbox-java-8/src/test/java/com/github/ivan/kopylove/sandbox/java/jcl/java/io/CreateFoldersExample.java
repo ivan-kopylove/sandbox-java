@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.io;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -24,16 +24,16 @@ public class CreateFoldersExample
             Path p1 = Files.createDirectories(Paths.get(path1));
             Path p2 = Files.createDirectories(Paths.get(path2));
             Path p3 = Files.createDirectories(Paths.get(path3));
-            Assert.assertTrue(p1.toFile()
-                                .exists());
-            Assert.assertTrue(p2.toFile()
-                                .exists());
-            Assert.assertTrue(p3.toFile()
-                                .exists());
+            Assertions.assertTrue(p1.toFile()
+                                    .exists());
+            Assertions.assertTrue(p2.toFile()
+                                    .exists());
+            Assertions.assertTrue(p3.toFile()
+                                    .exists());
         }
         catch (IOException e)
         {
-            Assert.fail();
+            Assertions.fail();
             e.printStackTrace();
         }
     }

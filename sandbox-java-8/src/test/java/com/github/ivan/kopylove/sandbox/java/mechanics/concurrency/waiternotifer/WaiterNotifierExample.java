@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.concurrency.waiternotifer;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * https://www.journaldev.com/1037/java-thread-wait-notify-and-notifyall-example

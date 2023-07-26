@@ -1,10 +1,15 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Reproduces 1+1 attack
@@ -14,7 +19,7 @@ public class JdbcPreparedStatementInjection
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "INSERT INTO GEMS (GEM_KEY, NAME) VALUES (?,?)";
 
-    @BeforeClass
+    @BeforeAll
     public static void create_table_populate() throws SQLException
     {
         Connection conn = null;
@@ -26,7 +31,7 @@ public class JdbcPreparedStatementInjection
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assert.assertEquals(0, lines);
+            Assertions.assertEquals(0, lines);
 
             preparedStatement = conn.prepareStatement(SQL_INSERT_TEMPLATE);
             preparedStatement.setInt(1, 0);
@@ -76,10 +81,10 @@ public class JdbcPreparedStatementInjection
                 count++;
                 int id = rs.getInt(1);
                 String name = rs.getString(2);
-                System.out.println(String.format("id: %s, name: %s", id, name));
+                System.out.printf("id: %s, name: %s%n", id, name);
             }
 
-            Assert.assertEquals(2, count);
+            Assertions.assertEquals(2, count);
 
             statement.close();
             conn.close();
@@ -129,9 +134,9 @@ public class JdbcPreparedStatementInjection
                 count++;
                 int id = rs.getInt(1);
                 String name = rs.getString(2);
-                System.out.println(String.format("id: %s, name: %s", id, name));
+                System.out.printf("id: %s, name: %s%n", id, name);
             }
-            Assert.assertEquals(0, count);
+            Assertions.assertEquals(0, count);
 
             preparedStatement.close();
             conn.close();

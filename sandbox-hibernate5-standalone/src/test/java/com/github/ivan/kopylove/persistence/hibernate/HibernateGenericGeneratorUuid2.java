@@ -3,8 +3,8 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.GeneratedValueUuid2;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/mapping.html#d0e5294
@@ -26,9 +26,10 @@ public class HibernateGenericGeneratorUuid2
                .commit();
         session.close();
 
-        Assert.assertNotNull(generatedKey.getKey());
-        Assert.assertTrue(generatedKey.getKey() instanceof String);
-        Assert.assertTrue(generatedKey.getKey()
-                                      .length() == 36);
+        Assertions.assertNotNull(generatedKey.getKey());
+        Assertions.assertTrue(generatedKey.getKey() instanceof String);
+        Assertions.assertEquals(36,
+                                generatedKey.getKey()
+                                            .length());
     }
 }

@@ -1,15 +1,16 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics;
 
 import com.github.ivan.kopylove.sandbox.domain.Box;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Various examples of generic methods.<br/>
@@ -28,10 +29,7 @@ public class GenericsExamples
      */
     static <T> void fromArrayToCollection(T[] a, Collection<T> c)
     {
-        for (T o : a)
-        {
-            c.add(o);
-        }
+        Collections.addAll(c, a);
     }
 
     @Test

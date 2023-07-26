@@ -5,11 +5,13 @@ import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * org.hibernate.Criteria simpliest example.<br/>
@@ -19,7 +21,7 @@ import java.util.List;
  */
 public class HibernateCriteriaExample
 {
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         BookEntity book = new BookEntity();
@@ -46,10 +48,10 @@ public class HibernateCriteriaExample
         criteria.add(Restrictions.eq("name", "The Lord of the Rings"));
         List<BookEntity> list = criteria.list();
 
-        Assert.assertTrue(list.size() > 0);
-        Assert.assertEquals("The Lord of the Rings",
-                            list.get(0)
-                                .getName());
+        assertTrue(list.size() > 0);
+        assertEquals("The Lord of the Rings",
+                     list.get(0)
+                         .getName());
 
         session.getTransaction()
                .commit();

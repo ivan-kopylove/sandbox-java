@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.libs;
 
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MergeSinglePdfTest
 {
@@ -32,10 +32,10 @@ public class MergeSinglePdfTest
 
         byte[] pdf = readPdf();
 
-        final PDFMergerUtility ut = new PDFMergerUtility();
+        PDFMergerUtility ut = new PDFMergerUtility();
 
         ut.addSource(new ByteArrayInputStream(pdf));
-        final ByteArrayOutputStream mergedData = new ByteArrayOutputStream();
+        ByteArrayOutputStream mergedData = new ByteArrayOutputStream();
         ut.setDestinationStream(mergedData);
         try
         {

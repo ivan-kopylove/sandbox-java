@@ -2,9 +2,9 @@ package com.github.ivan.kopylove.persistence.jpa.refresh;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
@@ -15,7 +15,7 @@ import javax.persistence.EntityManager;
  */
 public class JpaUpdateExampleTest
 {
-    @BeforeClass
+    @BeforeAll
     public static void prepareData()
     {
         ParentEntity parentEntity = new ParentEntity();
@@ -40,10 +40,10 @@ public class JpaUpdateExampleTest
         parentEntity = entityManger.find(ParentEntity.class,
                                          101); //loads from persistence context first, then from database
 
-        Assert.assertEquals("Linda Hamilton", parentEntity.getName());
+        Assertions.assertEquals("Linda Hamilton", parentEntity.getName());
 
         entityManger.refresh(parentEntity); //forces to update entity from database
 
-        Assert.assertEquals("Robert Patrick", parentEntity.getName());
+        Assertions.assertEquals("Robert Patrick", parentEntity.getName());
     }
 }

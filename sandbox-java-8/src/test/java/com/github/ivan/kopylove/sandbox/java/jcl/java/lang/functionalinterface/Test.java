@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.functionalinterface;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 public class Test
 {
@@ -12,7 +12,7 @@ public class Test
             return 2L;
         };
 
-        Assert.assertEquals(2L, lambdaInterface.doSomething("str", 5));
+        Assertions.assertEquals(2L, lambdaInterface.doSomething("str", 5));
     }
 
     @org.junit.Test
@@ -23,7 +23,7 @@ public class Test
             return 2L;
         };
 
-        Assert.assertEquals(0, lambdaInterface.someDefaultMethod());
+        Assertions.assertEquals(0, lambdaInterface.someDefaultMethod());
     }
 
     @org.junit.Test
@@ -32,6 +32,6 @@ public class Test
 
         LambdaInterface lambdaInterface = new LambdaInterface2Impl();
 
-        Assert.assertEquals(1, lambdaInterface.someDefaultMethod());
+        Assertions.assertEquals(1, lambdaInterface.someDefaultMethod());
     }
 }

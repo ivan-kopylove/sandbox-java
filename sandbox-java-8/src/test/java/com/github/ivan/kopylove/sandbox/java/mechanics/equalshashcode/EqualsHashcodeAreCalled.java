@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.equalshashcode;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class EqualsHashcodeAreCalled
 {
@@ -16,8 +16,8 @@ public class EqualsHashcodeAreCalled
 
         myClass1.equals(myClass2);
 
-        Assert.assertTrue(equalsCalled);
-        Assert.assertFalse(hashcodeCalled);
+        Assertions.assertTrue(equalsCalled);
+        Assertions.assertFalse(hashcodeCalled);
     }
 
     class MyClass

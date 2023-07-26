@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.spring;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,7 +13,8 @@ public class SpringContextInitExampleMinimal
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext-minimal.xml");
         context.getBeanDefinitionNames();
 
-        Assert.assertEquals(1, context.getBeanDefinitionCount());
-        Assert.assertEquals("com.github.ivan.kopylove.sandbox.spring.MyBean#0", context.getBeanDefinitionNames()[0]);
+        Assertions.assertEquals(1, context.getBeanDefinitionCount());
+        Assertions.assertEquals("com.github.ivan.kopylove.sandbox.spring.MyBean#0",
+                                context.getBeanDefinitionNames()[0]);
     }
 }

@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.concurrency.threadYield;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Examples from Eckel's book.

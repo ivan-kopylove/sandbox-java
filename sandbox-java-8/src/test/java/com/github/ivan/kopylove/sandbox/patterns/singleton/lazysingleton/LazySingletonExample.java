@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.patterns.singleton.lazysingleton;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class LazySingletonExample
 {
@@ -9,6 +9,6 @@ public class LazySingletonExample
     public void lazySingleton()
     {
         LazySingleton instance = LazySingleton.getInstance();
-        Assert.assertNotNull(instance);
+        Assertions.assertNotNull(instance);
     }
 }

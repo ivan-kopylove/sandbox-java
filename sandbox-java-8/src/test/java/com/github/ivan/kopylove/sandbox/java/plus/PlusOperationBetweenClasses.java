@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.plus;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class PlusOperationBetweenClasses
 {
@@ -15,6 +15,6 @@ public class PlusOperationBetweenClasses
     public void oneOfTheClassesIsStringNoCompileError()
     {
         System.out.println("My string " + new ClassTwo());
-        System.out.println(new String("My string ") + new ClassTwo());
+        System.out.println("My string " + new ClassTwo());
     }
 }

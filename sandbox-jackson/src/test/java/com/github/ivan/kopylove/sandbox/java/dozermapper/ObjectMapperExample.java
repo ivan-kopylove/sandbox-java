@@ -2,8 +2,8 @@ package com.github.ivan.kopylove.sandbox.java.dozermapper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,7 +22,7 @@ public class ObjectMapperExample
 
         String result = new ObjectMapper().writeValueAsString(list);
         System.out.println(result);
-        Assert.assertEquals(
+        Assertions.assertEquals(
                 "[{\"key\":\"k1\",\"value\":\"v1\",\"myCustomValue\":\"cv1\"},{\"key\":\"k2\",\"value\":\"v2\",\"myCustomValue\":\"cv2\"},{\"key\":\"k3\",\"value\":\"v3\",\"myCustomValue\":\"cv3\"}]",
                 result);
     }
@@ -44,6 +44,6 @@ public class ObjectMapperExample
 
         String result = new ObjectMapper().writeValueAsString(list);
         System.out.println(result);
-        Assert.assertEquals("[{\"k1\":\"v1\",\"k2\":\"v2\"},{\"k3\":\"v3\",\"k4\":\"v4\"}]", result);
+        Assertions.assertEquals("[{\"k1\":\"v1\",\"k2\":\"v2\"},{\"k3\":\"v3\",\"k4\":\"v4\"}]", result);
     }
 }

@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.string;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

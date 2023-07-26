@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.operatorPrecedence;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Operators evaluation order.
@@ -13,7 +13,7 @@ public class OperatorPrecedence
         int x = 5;
         int y = 10;
         int result = ++x * y--;
-        //        Assert.assertEquals(, result);
+        //        Assertions.assertEquals(, result);
     }
 
     @Test
@@ -22,8 +22,8 @@ public class OperatorPrecedence
         String result1 = "1 + 2 = " + 1 + 2;
         String result2 = "1 + 2 = " + (1 + 2);
 
-        //        Assert.assertEquals("", result1);
-        //        Assert.assertEquals("", result2);
+        //        Assertions.assertEquals("", result1);
+        //        Assertions.assertEquals("", result2);
     }
 
     @Test
@@ -32,8 +32,8 @@ public class OperatorPrecedence
         String result1 = 1 + 2 + "abc";
         String result2 = "abc" + 1 + 2;
 
-        //        Assert.assertEquals("", result1);
-        //        Assert.assertEquals("", result2);
+        //        Assertions.assertEquals("", result1);
+        //        Assertions.assertEquals("", result2);
     }
 
     /**
@@ -44,6 +44,6 @@ public class OperatorPrecedence
     {
         int year = 2020;
         boolean result = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-        //        Assert.assertEquals(, result);
+        //        Assertions.assertEquals(, result);
     }
 }

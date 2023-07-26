@@ -5,12 +5,13 @@ import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.From;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.Inner;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.To;
 import org.dozer.Mapper;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MapObjectToString
 {
-    private Mapper MAPPER = DozerMapper.getInstance();
+    private final Mapper MAPPER = DozerMapper.getInstance();
 
     @Test
     public void run()
@@ -20,6 +21,6 @@ public class MapObjectToString
         from.setInner(inner);
 
         To map = MAPPER.map(from, To.class);
-        Assert.assertEquals(Inner.value, map.getReceiver());
+        assertEquals(Inner.value, map.getReceiver());
     }
 }

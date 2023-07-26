@@ -1,11 +1,14 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.optional;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /*
  * https://www.baeldung.com/java-optional
@@ -31,11 +34,14 @@ public class OptionalExample
         assertEquals("Optional[baeldung]", opt.toString());
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void givenNull_whenThrowsErrorOnCreate_thenCorrect()
     {
-        String name = null;
-        Optional<String> opt = Optional.of(name);
+        assertThrows(NullPointerException.class, () -> {
+
+            String name = null;
+            Optional<String> opt = Optional.of(name);
+        });
     }
 
     @Test
@@ -131,12 +137,15 @@ public class OptionalExample
         assertEquals("Text present", defaultText);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void whenOrElseThrowWorks_thenCorrect()
     {
-        String nullName = null;
-        String name = Optional.ofNullable(nullName)
-                              .orElseThrow(IllegalArgumentException::new);
+        assertThrows(IllegalArgumentException.class, () -> {
+
+            String nullName = null;
+            String name = Optional.ofNullable(nullName)
+                                  .orElseThrow(IllegalArgumentException::new);
+        });
     }
 
     @Test
@@ -148,10 +157,13 @@ public class OptionalExample
         assertEquals("baeldung", name);
     }
 
-    @Test(expected = NoSuchElementException.class)
+    @Test
     public void givenOptionalWithNull_whenGetThrowsException_thenCorrect()
     {
-        Optional<String> opt = Optional.ofNullable(null);
-        String name = opt.get();
+        assertThrows(NoSuchElementException.class, () -> {
+
+            Optional<String> opt = Optional.ofNullable(null);
+            String name = opt.get();
+        });
     }
 }

@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
 import com.github.ivan.kopylove.sandbox.persistence.util.MetadataExtractorIntegrator;
 import org.hibernate.mapping.PersistentClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class HibernateSpiIntegratorExample
 {

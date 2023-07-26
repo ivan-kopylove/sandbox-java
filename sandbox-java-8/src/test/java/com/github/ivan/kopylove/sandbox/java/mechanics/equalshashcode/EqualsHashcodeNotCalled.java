@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.equalshashcode;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,9 +18,9 @@ public class EqualsHashcodeNotCalled
         MyClass myClass1 = new MyClass();
         MyClass myClass2 = new MyClass();
 
-        Assert.assertNotSame(myClass1, myClass2);
-        Assert.assertFalse(equalsCalled);
-        Assert.assertFalse(hashcodeCalled);
+        Assertions.assertNotSame(myClass1, myClass2);
+        Assertions.assertFalse(equalsCalled);
+        Assertions.assertFalse(hashcodeCalled);
     }
 
     @Test
@@ -32,8 +32,8 @@ public class EqualsHashcodeNotCalled
         myClass1.equals(myClass2);
 
 
-        Assert.assertTrue(equalsCalled);
-        Assert.assertFalse(hashcodeCalled);
+        Assertions.assertTrue(equalsCalled);
+        Assertions.assertFalse(hashcodeCalled);
     }
 
     @Test
@@ -46,8 +46,8 @@ public class EqualsHashcodeNotCalled
         set.add(myClass1);
         set.add(myClass2);
 
-        Assert.assertFalse(equalsCalled);
-        Assert.assertTrue(hashcodeCalled);
+        Assertions.assertFalse(equalsCalled);
+        Assertions.assertTrue(hashcodeCalled);
     }
 
     class MyClass

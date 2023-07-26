@@ -1,14 +1,14 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class InjectMocksExample
 {
     @Mock
@@ -22,6 +22,6 @@ public class InjectMocksExample
     {
         Mockito.when(myClass.getSomeValue())
                .thenReturn("Hello world");
-        Assert.assertEquals("Hello world", myClass3.getValue());
+        Assertions.assertEquals("Hello world", myClass3.getValue());
     }
 }

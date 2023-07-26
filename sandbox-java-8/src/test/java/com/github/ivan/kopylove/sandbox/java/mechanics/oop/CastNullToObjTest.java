@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.oop;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CastNullToObjTest
 {
@@ -11,8 +11,8 @@ public class CastNullToObjTest
     @Test
     public void run()
     {
-        String str = (String) null; //no exception
+        String str = null; //no exception
 
-        Assert.assertTrue(true);
+        Assertions.assertTrue(true);
     }
 }

@@ -1,13 +1,21 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.time;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import java.time.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LocalDateTimeExamples
 {
@@ -15,14 +23,14 @@ public class LocalDateTimeExamples
     public void happyPathLocalDateTime()
     {
         LocalDateTime result = LocalDateTime.parse("24.12.2020 14:58", DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
-        Assert.assertEquals("2020-12-24T14:58", result.toString());
+        Assertions.assertEquals("2020-12-24T14:58", result.toString());
     }
 
     @Test
     public void happyPathLocalDate()
     {
         LocalDate result = LocalDate.parse("24.12.2020", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        Assert.assertEquals("2020-12-24", result.toString());
+        Assertions.assertEquals("2020-12-24", result.toString());
     }
 
     @Test
@@ -33,7 +41,7 @@ public class LocalDateTimeExamples
 
         LocalDate result = LocalDate.parse("31.02.2020", formatter);
 
-        Assert.assertEquals("2020-03-02", result.toString());
+        Assertions.assertEquals("2020-03-02", result.toString());
     }
 
     @Test
@@ -44,16 +52,18 @@ public class LocalDateTimeExamples
 
         LocalDateTime result = LocalDateTime.parse("18.02.2020 15:23", formatter);
 
-        Assert.assertEquals("2020-02-18T15:23", result.toString());
+        Assertions.assertEquals("2020-02-18T15:23", result.toString());
     }
 
-    @Test(expected = DateTimeParseException.class)
+    @Test
     public void localDateTimeStrict()
     {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")
-                                                       .withResolverStyle(ResolverStyle.STRICT);
+        assertThrows(DateTimeParseException.class, () -> {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")
+                                                           .withResolverStyle(ResolverStyle.STRICT);
 
-        LocalDateTime.parse("18.02.2020 15:23", formatter);
+            LocalDateTime.parse("18.02.2020 15:23", formatter);
+        });
     }
 
     /**
@@ -67,8 +77,8 @@ public class LocalDateTimeExamples
 
         LocalDateTime result = LocalDateTime.parse("31.02.2020 15:23", formatter);
 
-        Assert.assertEquals(2, result.getDayOfMonth());
-        Assert.assertEquals(3, result.getMonthValue());
+        Assertions.assertEquals(2, result.getDayOfMonth());
+        Assertions.assertEquals(3, result.getMonthValue());
     }
 
     /**
@@ -82,25 +92,28 @@ public class LocalDateTimeExamples
 
         LocalDateTime result = LocalDateTime.parse("31.02.2020 15:23", formatter);
 
-        Assert.assertEquals(29, result.getDayOfMonth());
-        Assert.assertEquals(2, result.getMonthValue());
+        Assertions.assertEquals(29, result.getDayOfMonth());
+        Assertions.assertEquals(2, result.getMonthValue());
     }
 
-    @Test(expected = DateTimeParseException.class)
+    @Test
     public void localDateStrict()
     {
-        String input = "31.02.2020";
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
-                                                       .withResolverStyle(ResolverStyle.STRICT);
+        assertThrows(DateTimeParseException.class, () -> {
 
-        LocalDate.parse(input, formatter);
+            String input = "31.02.2020";
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+                                                           .withResolverStyle(ResolverStyle.STRICT);
+
+            LocalDate.parse(input, formatter);
+        });
     }
 
     @Test
     public void happyPathLocalTime()
     {
         LocalTime result = LocalTime.parse("23:55", DateTimeFormatter.ofPattern("HH:mm"));
-        Assert.assertEquals("23:55", result.toString());
+        Assertions.assertEquals("23:55", result.toString());
     }
 
     /**
@@ -117,9 +130,9 @@ public class LocalDateTimeExamples
                               .toInstant()
                               .toEpochMilli();
 
-        Assert.assertEquals(3600000L, b - a);
-        Assert.assertEquals(1592223300000L, a);
-        Assert.assertEquals(1592226900000L, b);
+        Assertions.assertEquals(3600000L, b - a);
+        Assertions.assertEquals(1592223300000L, a);
+        Assertions.assertEquals(1592226900000L, b);
     }
 
     /**
@@ -136,25 +149,32 @@ public class LocalDateTimeExamples
 
         if (b - a > 15)
         {
-            Assert.fail();
+            Assertions.fail();
         }
-        Assert.assertTrue(true);
+        Assertions.assertTrue(true);
     }
 
-    @Test(expected = DateTimeParseException.class)
+    @Test
     public void unableToParse()
     {
-        DateTimeFormatter.ofPattern("YY")
-                         .format(LocalDateTime.now());
-        LocalDateTime.parse("24.12.2020", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        assertThrows(DateTimeParseException.class, () -> {
+
+            DateTimeFormatter.ofPattern("YY")
+                             .format(LocalDateTime.now());
+            LocalDateTime.parse("24.12.2020", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        });
     }
 
     /**
      * LocalDate is not suited to parse Date and time. Only date.
      */
-    @Test(expected = DateTimeParseException.class)
+    @Test
     public void unableToParseDateTime()
     {
+        assertThrows(DateTimeParseException.class, () -> {
+            List<Object> objects = Collections.emptyList();
+            objects.add("dsa");
+        });
         LocalDate.parse("24.12.2020 14:58", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
@@ -183,9 +203,9 @@ public class LocalDateTimeExamples
 
         if (b - a > 5)
         {
-            Assert.assertTrue(false);
+            Assertions.fail();
         }
-        Assert.assertTrue(true);
+        Assertions.assertTrue(true);
     }
 
     /**
@@ -204,8 +224,8 @@ public class LocalDateTimeExamples
         long c = localDateTime.atZone(ZoneId.of("Asia/Beirut"))
                               .toInstant()
                               .toEpochMilli();
-        Assert.assertEquals(a, b);
-        Assert.assertEquals(a, c);
+        Assertions.assertEquals(a, b);
+        Assertions.assertEquals(a, c);
     }
 
     @Test
@@ -219,6 +239,6 @@ public class LocalDateTimeExamples
                               .toInstant()
                               .toEpochMilli();
 
-        Assert.assertEquals(3600000L, b - a);
+        Assertions.assertEquals(3600000L, b - a);
     }
 }

@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.persistence.jpa.cascade;
 import com.github.ivan.kopylove.sandbox.persistence.entities.AddressEntity;
 import com.github.ivan.kopylove.sandbox.persistence.jpa.cascade.PersonEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import java.util.Collections;

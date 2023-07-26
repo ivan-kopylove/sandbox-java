@@ -3,10 +3,10 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * 1. First level cache cannot be turned off<br/>
@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class HibernateFirstLevelCache
 {
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         BookEntity book = new BookEntity();

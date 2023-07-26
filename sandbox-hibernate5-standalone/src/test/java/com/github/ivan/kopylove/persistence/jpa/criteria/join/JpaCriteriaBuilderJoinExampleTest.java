@@ -3,9 +3,9 @@ package com.github.ivan.kopylove.persistence.jpa.criteria.join;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ChildEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class JpaCriteriaBuilderJoinExampleTest
 {
-    @BeforeClass
+    @BeforeAll
     public static void prepareData()
     {
 
@@ -62,12 +62,12 @@ public class JpaCriteriaBuilderJoinExampleTest
 
         for (ParentEntity parentEntity : result)
         {
-            Assert.assertEquals("some child name",
-                                parentEntity.getChilds()
-                                            .iterator()
-                                            .next()
-                                            .getName());
-            Assert.assertEquals("some parent name", parentEntity.getName());
+            Assertions.assertEquals("some child name",
+                                    parentEntity.getChilds()
+                                                .iterator()
+                                                .next()
+                                                .getName());
+            Assertions.assertEquals("some parent name", parentEntity.getName());
         }
     }
 }

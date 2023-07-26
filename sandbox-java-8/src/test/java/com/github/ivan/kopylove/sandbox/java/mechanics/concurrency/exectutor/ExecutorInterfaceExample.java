@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.concurrency.exectutor;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.Executor;
 
@@ -21,11 +21,11 @@ public class ExecutorInterfaceExample
                 runnable.run();
             }
         };
-        Assert.assertEquals("main",
-                            Thread.currentThread()
-                                  .getName());
-        executor.execute(() -> Assert.assertEquals("main",
-                                                   Thread.currentThread()
-                                                         .getName()));
+        Assertions.assertEquals("main",
+                                Thread.currentThread()
+                                      .getName());
+        executor.execute(() -> Assertions.assertEquals("main",
+                                                       Thread.currentThread()
+                                                             .getName()));
     }
 }

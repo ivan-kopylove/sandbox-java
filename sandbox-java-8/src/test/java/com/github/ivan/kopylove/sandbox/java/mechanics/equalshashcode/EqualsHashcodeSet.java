@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.equalshashcode;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -22,8 +22,8 @@ public class EqualsHashcodeSet
         set.add(myClass1);
         set.add(myClass2);
 
-        Assert.assertFalse(equalsCalled);
-        Assert.assertTrue(hashcodeCalled);
+        Assertions.assertFalse(equalsCalled);
+        Assertions.assertTrue(hashcodeCalled);
     }
 
     @Test
@@ -38,9 +38,9 @@ public class EqualsHashcodeSet
 
         boolean containsResult = set.contains(new MyClass("2"));
 
-        Assert.assertTrue(containsResult);
-        Assert.assertTrue(equalsCalled);
-        Assert.assertTrue(hashcodeCalled);
+        Assertions.assertTrue(containsResult);
+        Assertions.assertTrue(equalsCalled);
+        Assertions.assertTrue(hashcodeCalled);
     }
 
     class MyClass

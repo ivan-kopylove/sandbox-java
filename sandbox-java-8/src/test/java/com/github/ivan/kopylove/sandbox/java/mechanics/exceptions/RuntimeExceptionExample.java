@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.exceptions;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class RuntimeExceptionExample
 {

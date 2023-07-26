@@ -1,16 +1,20 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.collections;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class CollectionsEmptyList
 {
-    @Test(expected = UnsupportedOperationException.class)
+    @Test
     public void run()
     {
-        List<Object> objects = Collections.emptyList();
-        objects.add("dsa");
+        assertThrows(UnsupportedOperationException.class, () -> {
+            List<Object> objects = Collections.emptyList();
+            objects.add("dsa");
+        });
     }
 }

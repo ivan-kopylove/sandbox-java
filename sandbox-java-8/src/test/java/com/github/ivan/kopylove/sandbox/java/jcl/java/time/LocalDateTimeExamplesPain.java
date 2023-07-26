@@ -1,12 +1,14 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.time;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LocalDateTimeExamplesPain
 {
@@ -19,13 +21,17 @@ public class LocalDateTimeExamplesPain
         LocalDate.parse("28022020", uuuu);
     }
 
-    @Test(expected = DateTimeParseException.class)
+    @Test
     public void yyyy()
     {
-        DateTimeFormatter yyyy = DateTimeFormatter.ofPattern("ddMMyyyy")
-                                                  .withResolverStyle(ResolverStyle.STRICT);
+        assertThrows(DateTimeParseException.class, () -> {
 
-        LocalDate.parse("28022020", yyyy);
+
+            DateTimeFormatter yyyy = DateTimeFormatter.ofPattern("ddMMyyyy")
+                                                      .withResolverStyle(ResolverStyle.STRICT);
+
+            LocalDate.parse("28022020", yyyy);
+        });
     }
 
     @Test

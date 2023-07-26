@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.equalshashcode;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,8 +22,8 @@ public class EqualsHashcodeHashMap
         map.put(myClass1, "1");
         map.put(myClass2, "2");
 
-        Assert.assertFalse(equalsCalled); //it's ok, because equals doesn't call on put operation
-        Assert.assertTrue(hashcodeCalled); //it's ok
+        Assertions.assertFalse(equalsCalled); //it's ok, because equals doesn't call on put operation
+        Assertions.assertTrue(hashcodeCalled); //it's ok
     }
 
     @Test
@@ -38,14 +38,14 @@ public class EqualsHashcodeHashMap
 
         String queryResult = map.get(new MyClass("2"));
 
-        Assert.assertTrue(equalsCalled); //it's ok
-        Assert.assertTrue(hashcodeCalled); //it's ok
-        Assert.assertNotNull(queryResult); //it's ok
+        Assertions.assertTrue(equalsCalled); //it's ok
+        Assertions.assertTrue(hashcodeCalled); //it's ok
+        Assertions.assertNotNull(queryResult); //it's ok
     }
 
     class MyClass
     {
-        private String value;
+        private final String value;
 
         public MyClass(String value)
         {

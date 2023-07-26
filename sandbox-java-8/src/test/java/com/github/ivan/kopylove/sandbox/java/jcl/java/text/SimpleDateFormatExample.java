@@ -1,11 +1,13 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.text;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SimpleDateFormatExample
 {
@@ -19,15 +21,18 @@ public class SimpleDateFormatExample
         SimpleDateFormat format2 = new SimpleDateFormat("yyyy-MM-dd");
         String result = format2.format(date);
 
-        Assert.assertEquals("2017-02-14", result);
+        Assertions.assertEquals("2017-02-14", result);
     }
 
-    @Test(expected = ParseException.class)
-    public void setLenientFalse() throws ParseException
+    @Test
+    public void setLenientFalse()
     {
-        SimpleDateFormat ddMMyyyy = new SimpleDateFormat("ddMMyyyy");
-        ddMMyyyy.setLenient(false);
-        ddMMyyyy.parse("31022020");
+        assertThrows(ParseException.class, () -> {
+
+            SimpleDateFormat ddMMyyyy = new SimpleDateFormat("ddMMyyyy");
+            ddMMyyyy.setLenient(false);
+            ddMMyyyy.parse("31022020");
+        });
     }
 
     @Test
@@ -36,8 +41,8 @@ public class SimpleDateFormatExample
         SimpleDateFormat ddMMyyyy = new SimpleDateFormat("ddMMyyyy");
         ddMMyyyy.setLenient(true);
         Date result = ddMMyyyy.parse("31022020");
-        Assert.assertEquals(2, result.getMonth());
-        Assert.assertEquals(2, result.getDate());
+        Assertions.assertEquals(2, result.getMonth());
+        Assertions.assertEquals(2, result.getDate());
     }
 
     @Test
@@ -46,8 +51,8 @@ public class SimpleDateFormatExample
         SimpleDateFormat ddMMyyyy = new SimpleDateFormat("ddMMyyyy");
         ddMMyyyy.setLenient(true);
         Date result = ddMMyyyy.parse("28022020");
-        Assert.assertEquals(1, result.getMonth());
-        Assert.assertEquals(28, result.getDate());
+        Assertions.assertEquals(1, result.getMonth());
+        Assertions.assertEquals(28, result.getDate());
     }
 
     @Test
@@ -57,8 +62,8 @@ public class SimpleDateFormatExample
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         Date result = format.parse(input);
 
-        Assert.assertEquals(23, result.getDate());
-        Assert.assertEquals(11, result.getMonth());
+        Assertions.assertEquals(23, result.getDate());
+        Assertions.assertEquals(11, result.getMonth());
     }
 
     @Test
@@ -68,6 +73,6 @@ public class SimpleDateFormatExample
         SimpleDateFormat format = new SimpleDateFormat("HH:mm");
         Date result = format.parse(input);
 
-        Assert.assertNotNull(result);
+        Assertions.assertNotNull(result);
     }
 }

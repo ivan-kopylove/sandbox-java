@@ -1,11 +1,12 @@
-import org.junit.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class WaitTest
@@ -15,14 +16,14 @@ public class WaitTest
     private String     baseUrl;
     private WebElement element;
 
-    @BeforeClass
+    @BeforeAll
     public static void init()
     {
         String value = "C:\\1\\apps\\geckodriver-v0.25.0-win64\\geckodriver.exe";
         System.setProperty("webdriver.gecko.driver", value);
     }
 
-    @Before
+    @BeforeEach
     public void setUp()
     {
         driver = new FirefoxDriver();
@@ -33,21 +34,21 @@ public class WaitTest
     }
 
     @Test
-    @Ignore
+    @Disabled
     public void testUntitled() throws Exception
     {
-        driver.get(baseUrl);
-        element = driver.findElement(By.className("input__control"));
-        System.out.println(1);
-        element.sendKeys("Selenium WebDriver Interview questions");
-        System.out.println(2);
-        element.sendKeys(Keys.RETURN);
-        List<WebElement> list = driver.findElements(By.className("_Rm"));
-        System.out.println(3);
-        System.out.println(list.size());
+        //        driver.get(baseUrl);
+        //        element = driver.findElement(By.className("input__control"));
+        //        System.out.println(1);
+        //        element.sendKeys("Selenium WebDriver Interview questions");
+        //        System.out.println(2);
+        //        element.sendKeys(Keys.RETURN);
+        //        List<WebElement> list = driver.findElements(By.className("_Rm"));
+        //        System.out.println(3);
+        //        System.out.println(list.size());
     }
 
-    @After
+    @AfterEach
     public void tearDown() throws Exception
     {
         driver.quit();

@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.exceptions;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class UnCheckedExceptionsExample
 {
@@ -14,10 +14,10 @@ public class UnCheckedExceptionsExample
         }
         catch (Exception e)
         {
-            Assert.assertTrue(true);
+            Assertions.assertTrue(true);
             return;
         }
-        Assert.fail();
+        Assertions.fail();
     }
 
     public void a()

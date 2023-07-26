@@ -3,9 +3,9 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 public class HibernateDirtyChecking
 {
@@ -18,7 +18,7 @@ public class HibernateDirtyChecking
         BookEntity book = session.find(BookEntity.class, 1);
         if (book != null)
         {
-            Assert.assertEquals("Fred Brooks - The Mythical Man-Month", book.getName());
+            Assertions.assertEquals("Fred Brooks - The Mythical Man-Month", book.getName());
         }
 
         session.getTransaction()
@@ -26,7 +26,7 @@ public class HibernateDirtyChecking
         session.close();
     }
 
-    @BeforeClass
+    @BeforeAll
     public static void populate()
     {
         Session session = HibernateSessionFactory.openSession();

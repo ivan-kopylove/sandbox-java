@@ -2,8 +2,8 @@ package com.github.ivan.kopylove.persistence.jpa.merge;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
@@ -33,9 +33,9 @@ public class JpaMergeExampleTest
 
         entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity reloadedEntity = entityManger.find(ParentEntity.class, 1);
-        Assert.assertEquals("initial name", reloadedEntity.getName());
-        Assert.assertEquals("initial name", merged.getName());
-        Assert.assertEquals("initial updated name", initialEntity.getName());
+        Assertions.assertEquals("initial name", reloadedEntity.getName());
+        Assertions.assertEquals("initial name", merged.getName());
+        Assertions.assertEquals("initial updated name", initialEntity.getName());
         entityManger.close();
     }
 
@@ -60,9 +60,9 @@ public class JpaMergeExampleTest
 
         entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity reloadedEntity = entityManger.find(ParentEntity.class, 2);
-        Assert.assertEquals("merged updated name", reloadedEntity.getName());
-        Assert.assertEquals("merged updated name", merged.getName());
-        Assert.assertEquals("initial name", initialEntity.getName());
+        Assertions.assertEquals("merged updated name", reloadedEntity.getName());
+        Assertions.assertEquals("merged updated name", merged.getName());
+        Assertions.assertEquals("initial name", initialEntity.getName());
         entityManger.close();
     }
 
@@ -117,7 +117,7 @@ public class JpaMergeExampleTest
 
         entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity parentEntity1 = entityManger.find(ParentEntity.class, 4);
-        Assert.assertEquals("new parent name", parentEntity1.getName());
+        Assertions.assertEquals("new parent name", parentEntity1.getName());
         entityManger.close();
     }
 }

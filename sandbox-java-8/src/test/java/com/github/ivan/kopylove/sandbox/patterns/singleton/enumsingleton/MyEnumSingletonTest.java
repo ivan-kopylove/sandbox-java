@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.patterns.singleton.enumsingleton;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class MyEnumSingletonTest
 {
@@ -9,6 +9,6 @@ public class MyEnumSingletonTest
     public void run()
     {
         String result = MyEnumSingleton.INSTANCE.utilMethod();
-        Assert.assertEquals(MyEnumSingleton.RETURN_RESULT, result);
+        Assertions.assertEquals(MyEnumSingleton.RETURN_RESULT, result);
     }
 }

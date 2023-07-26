@@ -1,16 +1,21 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.exceptions.errors;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class OutOfMemoryErrorExample
 {
-    @Test(expected = OutOfMemoryError.class)
+    @Test
     public void ucommentMe()
     {
-        //        List<String> list = new ArrayList<>();
-        //        for (long i = 0; i < 1_000_000_000; i++)
-        //        {
-        //            list.add(String.valueOf(i));
-        //        }
+
+        assertThrows(OutOfMemoryError.class, () -> {
+            //        List<String> list = new ArrayList<>();
+            //        for (long i = 0; i < 1_000_000_000; i++)
+            //        {
+            //            list.add(String.valueOf(i));
+            //        }
+        });
     }
 }

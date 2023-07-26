@@ -1,8 +1,8 @@
 package com.github.ivan.kopylove.sandbox.java.mechanics.oop.methodhiding;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Calling static methods on instances rather than classes is a very bad practice, and should never be done.<br/>
@@ -15,8 +15,8 @@ public class MethodHidingOnStaticClassMethods
     {
         Child child = new Child();
 
-        assertEquals("child", child.getValue());
-        assertEquals("parent", ((Parent) child).getValue());
+        assertEquals("child", Child.getValue());
+        assertEquals("parent", Parent.getValue());
 
         assertEquals("child", Child.getValue());
         assertEquals("parent", Parent.getValue());
@@ -27,8 +27,8 @@ public class MethodHidingOnStaticClassMethods
     {
         Parent instance = new Child();
 
-        assertEquals("parent", instance.getValue());
-        assertEquals("child", ((Child) instance).getValue());
+        assertEquals("parent", Parent.getValue());
+        assertEquals("child", Child.getValue());
     }
 
     @Test
@@ -36,6 +36,6 @@ public class MethodHidingOnStaticClassMethods
     {
         Parent instance = new Parent();
 
-        assertEquals("parent", instance.getValue());
+        assertEquals("parent", Parent.getValue());
     }
 }

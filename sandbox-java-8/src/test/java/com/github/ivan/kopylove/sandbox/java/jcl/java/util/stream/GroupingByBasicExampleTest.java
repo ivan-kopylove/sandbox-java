@@ -1,13 +1,14 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.stream;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GroupingByBasicExampleTest
 {
@@ -21,7 +22,8 @@ public class GroupingByBasicExampleTest
 
         Map<Boolean, List<Integer>> collect = ints.stream()
                                                   .collect(Collectors.groupingBy(integer -> integer > 1));
-        assertTrue(collect.get(true)
-                          .get(1) == 3);
+        assertEquals(3,
+                     (int) collect.get(true)
+                                  .get(1));
     }
 }

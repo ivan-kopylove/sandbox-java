@@ -2,8 +2,8 @@ package com.github.ivan.kopylove.persistence.jpa.generatedvalue.sequence;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.Car;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
@@ -28,17 +28,17 @@ public class JpaGeneratedValueExampleTest
         Car car3 = new Car();
         car3.setName("Honda");
 
-        Assert.assertEquals(0, car1.getKey());
-        Assert.assertEquals(0, car2.getKey());
-        Assert.assertEquals(0, car3.getKey());
+        Assertions.assertEquals(0, car1.getKey());
+        Assertions.assertEquals(0, car2.getKey());
+        Assertions.assertEquals(0, car3.getKey());
 
         entityManager.persist(car1);
         entityManager.persist(car2);
         entityManager.persist(car3);
 
-        Assert.assertEquals(1, car1.getKey());
-        Assert.assertEquals(2, car2.getKey());
-        Assert.assertEquals(3, car3.getKey());
+        Assertions.assertEquals(1, car1.getKey());
+        Assertions.assertEquals(2, car2.getKey());
+        Assertions.assertEquals(3, car3.getKey());
 
         entityManager.getTransaction()
                      .commit();

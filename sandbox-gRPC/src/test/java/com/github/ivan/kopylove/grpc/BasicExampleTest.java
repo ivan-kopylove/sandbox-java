@@ -4,9 +4,9 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ public class BasicExampleTest
 {
     private Server server;
 
-    @Before
+    @BeforeEach
     public void setup() throws IOException
     {
         server = ServerBuilder.forPort(8080)
@@ -27,7 +27,7 @@ public class BasicExampleTest
         server.start();
     }
 
-    @After
+    @AfterEach
     public void destroy() throws IOException
     {
         server.shutdown();

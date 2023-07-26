@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.exercises.fixme;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * Assignment vs equals
@@ -17,8 +17,8 @@ public class AssignmentVsEquals
         boolean y = false;
         while (x = y)// should be x == y
         {
-            Assert.fail();
+            Assertions.fail();
         }
-        Assert.assertTrue(true);
+        Assertions.assertTrue(true);
     }
 }

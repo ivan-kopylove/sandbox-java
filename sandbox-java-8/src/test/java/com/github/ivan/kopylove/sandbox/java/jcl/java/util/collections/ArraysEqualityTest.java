@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util.collections;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,6 @@ public class ArraysEqualityTest
         list2.add("1");
         list2.add("2");
 
-        Assert.assertTrue(list.equals(list2)); //compared in AbstractList.equals() one by one
+        Assertions.assertEquals(list, list2); //compared in AbstractList.equals() one by one
     }
 }

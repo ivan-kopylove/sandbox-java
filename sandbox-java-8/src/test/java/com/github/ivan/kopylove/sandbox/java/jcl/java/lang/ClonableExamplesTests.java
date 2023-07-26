@@ -2,18 +2,22 @@ package com.github.ivan.kopylove.sandbox.java.jcl.java.lang;
 
 import com.github.ivan.kopylove.sandbox.domain.MyClonableObj;
 import com.github.ivan.kopylove.sandbox.domain.MyNotClonableObj;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ClonableExamplesTests
 {
-    @Test(expected = CloneNotSupportedException.class)
+    @Test
     public void not_clonable() throws CloneNotSupportedException
     {
-        MyNotClonableObj original = new MyNotClonableObj();
-        original.get();
+        assertThrows(CloneNotSupportedException.class, () -> {
+
+            MyNotClonableObj original = new MyNotClonableObj();
+            original.get();
+        });
     }
 
     @Test
