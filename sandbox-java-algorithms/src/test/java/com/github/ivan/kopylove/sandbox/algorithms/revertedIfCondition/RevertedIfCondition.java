@@ -7,7 +7,7 @@ public class RevertedIfCondition
      * @param b e.g.: but not done
      * @return true if should be done, but not done. otherwise false
      */
-    public static boolean run(boolean a, boolean b)
+    public static boolean revertedIfConditionExampleOne(boolean a, boolean b)
     {
         return a && !b;
     }
@@ -17,7 +17,7 @@ public class RevertedIfCondition
      * @param b e.g.: but not done
      * @return true if should be done, but not done. otherwise false
      */
-    public static boolean run2(boolean a, boolean b)
+    public static boolean revertedIfConditionExampleTwo(boolean a, boolean b)
     {
         return a && !b;
     }

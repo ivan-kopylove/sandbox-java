@@ -2,6 +2,8 @@ package com.github.ivan.kopylove.sandbox.algorithms.revertedIfCondition;
 
 import org.junit.jupiter.api.Test;
 
+import static com.github.ivan.kopylove.sandbox.algorithms.revertedIfCondition.RevertedIfCondition.revertedIfConditionExampleOne;
+import static com.github.ivan.kopylove.sandbox.algorithms.revertedIfCondition.RevertedIfCondition.revertedIfConditionExampleTwo;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -12,19 +14,19 @@ public class RevertedIfConditionTest
     @Test
     public void run()
     {
-        assertTrue(RevertedIfCondition.run(true, false));
-        assertFalse(RevertedIfCondition.run(true, true));
-        assertFalse(RevertedIfCondition.run(false, true));
-        assertFalse(RevertedIfCondition.run(false, false));
+        assertTrue(revertedIfConditionExampleOne(true, false));
+        assertFalse(revertedIfConditionExampleOne(true, true));
+        assertFalse(revertedIfConditionExampleOne(false, true));
+        assertFalse(revertedIfConditionExampleOne(false, false));
     }
 
     @SuppressWarnings("ConstantConditions")
     @Test
     public void run2()
     {
-        assertTrue(RevertedIfCondition.run2(true, false));
-        assertFalse(RevertedIfCondition.run2(true, true));
-        assertFalse(RevertedIfCondition.run2(false, true));
-        assertFalse(RevertedIfCondition.run2(false, false));
+        assertTrue(revertedIfConditionExampleTwo(true, false));
+        assertFalse(revertedIfConditionExampleTwo(true, true));
+        assertFalse(revertedIfConditionExampleTwo(false, true));
+        assertFalse(revertedIfConditionExampleTwo(false, false));
     }
 }
