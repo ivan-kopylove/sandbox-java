@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.staticmembers;
+package f01013c558cf4e759c6e01c44cc7c6f2;
 
 class MyClass
 {

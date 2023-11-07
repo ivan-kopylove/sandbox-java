@@ -14,7 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * java concurrency example
  */
-public class LoginQueueUsingSemaphoreTest
+class LoginQueueUsingSemaphoreTest
 {
 
     @Test

@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.common.tasks;
+package ae350a00714a41da914085dd22b2a0d9;
 
 import java.util.ArrayList;
 import java.util.List;

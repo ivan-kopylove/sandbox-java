@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.common.tasks;
+package ae350a00714a41da914085dd22b2a0d9;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +8,11 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class IncrementalSearchTest
+/**
+ * facets:
+ * - algorithm
+ */
+class IncrementalSearchTest
 {
 
     @Test

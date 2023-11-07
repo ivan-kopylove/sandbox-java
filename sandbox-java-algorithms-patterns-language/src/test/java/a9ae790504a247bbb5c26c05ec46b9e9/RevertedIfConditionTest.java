@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * boolean logic playground
  */
-public class RevertedIfConditionTest
+class RevertedIfConditionTest
 {
 
     @SuppressWarnings("ConstantConditions")

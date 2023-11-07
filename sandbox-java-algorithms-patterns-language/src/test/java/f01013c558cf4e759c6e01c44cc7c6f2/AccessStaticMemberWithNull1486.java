@@ -1,8 +1,11 @@
-package com.github.ivan.kopylove.sandbox.java.staticmembers;
+package f01013c558cf4e759c6e01c44cc7c6f2;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+/**
+ * static members example
+ */
 public class AccessStaticMemberWithNull1486
 {
     /**

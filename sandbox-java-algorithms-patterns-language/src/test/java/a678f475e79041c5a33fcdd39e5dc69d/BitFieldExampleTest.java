@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BitFieldExampleTest
+class BitFieldExampleTest
 {
     private static final int MAGIC        = 1; // power of 0
     private static final int AGILITY      = 2; // power of 1

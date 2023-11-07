@@ -14,7 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  * tags:
  * - algorithms
  */
-public class IntegerToRomanTest
+class IntegerToRomanTest
 {
     private final IntegerToRoman sut = new IntegerToRoman();
 

@@ -1,6 +1,6 @@
-package com.github.ivan.kopylove.sandbox.java.binding;
+package cf1e37c646bc4352be6ae4c1c3383edf;
 
-public class A
+class A
 {
     int i = 10;
 

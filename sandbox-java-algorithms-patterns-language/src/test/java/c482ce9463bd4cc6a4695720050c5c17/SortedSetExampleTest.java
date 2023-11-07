@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.util;
+package c482ce9463bd4cc6a4695720050c5c17;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-public class SortedSetExample
+public class SortedSetExampleTest
 {
     @Test
     public void run()
