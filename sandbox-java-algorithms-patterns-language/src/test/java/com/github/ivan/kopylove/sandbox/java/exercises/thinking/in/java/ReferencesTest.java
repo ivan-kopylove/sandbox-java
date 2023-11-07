@@ -10,7 +10,7 @@ import java.util.LinkedList;
 /**
  * SoftReference > Weak Reference > PhantomReference
  *
- * @author Ivan Kopylov
+ * 
  */
 public class ReferencesTest
 {

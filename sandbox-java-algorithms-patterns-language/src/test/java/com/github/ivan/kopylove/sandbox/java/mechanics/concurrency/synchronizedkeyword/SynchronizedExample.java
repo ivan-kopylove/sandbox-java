@@ -95,7 +95,7 @@ public class SynchronizedExample
     }
 
     /**
-     * @author Ivan Kopylov
+     * 
      */
     public class CounterThreadDangerous
     {

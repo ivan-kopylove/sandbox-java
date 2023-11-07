@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 /**
  * Example of EntityManager#refresh.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class JpaUpdateExampleTest
 {

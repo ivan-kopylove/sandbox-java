@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.functionalinterface;
 /**
  * The default implementation of smth.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class LambdaInterfaceImpl implements LambdaInterface
 {

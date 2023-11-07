@@ -16,7 +16,7 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
- * @author Ivan Kopylov
+ * 
  * @see <a href="https://stackoverflow.com/questions/4511368/">https://stackoverflow.com/questions/4511368/</a>
  */
 public class JpaFetchFetchPathNavigationTest2

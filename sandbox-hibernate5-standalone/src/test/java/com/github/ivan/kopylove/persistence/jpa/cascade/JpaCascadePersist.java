@@ -11,7 +11,7 @@ import java.util.Collections;
 /**
  * https://www.baeldung.com/jpa-cascade-types
  *
- * @author Ivan Kopylov
+ * 
  */
 public class JpaCascadePersist
 {

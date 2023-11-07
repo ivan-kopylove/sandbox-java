@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * - jcl
  * - reflection mechanisms
  *
- * @author Ivan Kopylov
+ * 
  */
 class JavaReflectionExamplesTest
 {

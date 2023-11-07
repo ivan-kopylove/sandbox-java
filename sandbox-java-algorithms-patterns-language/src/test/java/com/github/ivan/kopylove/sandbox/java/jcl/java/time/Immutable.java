@@ -4,12 +4,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 /**
  * Majority of java.time.* classes are immutable.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class Immutable
 {

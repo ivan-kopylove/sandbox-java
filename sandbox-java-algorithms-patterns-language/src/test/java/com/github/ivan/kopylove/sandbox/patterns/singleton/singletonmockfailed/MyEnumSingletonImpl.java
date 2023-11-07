@@ -8,7 +8,7 @@ package com.github.ivan.kopylove.sandbox.patterns.singleton.singletonmockfailed;
  * private MySingleton(){}
  * }
  *
- * @author Ivan Kopylov
+ * 
  */
 public enum MyEnumSingletonImpl implements MyEnumSingleton
 {

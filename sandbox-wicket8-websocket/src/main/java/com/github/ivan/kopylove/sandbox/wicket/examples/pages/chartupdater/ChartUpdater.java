@@ -14,7 +14,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author Ivan Kopylov
+ * 
  */
 public class ChartUpdater
 {

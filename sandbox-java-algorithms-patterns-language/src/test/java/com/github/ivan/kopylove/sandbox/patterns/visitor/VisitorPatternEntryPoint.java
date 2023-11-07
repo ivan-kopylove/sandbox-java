@@ -22,9 +22,8 @@ interface CarElementVisitor
 }
 
 /**
- * https://en.wikipedia.org/wiki/Visitor_pattern
+ * <a href="https://en.wikipedia.org/wiki/Visitor_pattern">...</a>
  *
- * @author Ivan Kopylov
  */
 public class VisitorPatternEntryPoint
 {

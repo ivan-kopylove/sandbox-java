@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Decorator Pattern Example.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class DecoratorPatternEntryPoint
 {

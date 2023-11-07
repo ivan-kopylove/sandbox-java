@@ -3,14 +3,14 @@ package com.github.ivan.kopylove.sandbox.persistence.domain;
 /**
  * Purpose: TODO .
  *
- * @author Ivan Kopylov
+ * 
  */
 public class CompoundObject
 {
     private int    a;
     private String b;
 
-    public CompoundObject(final int a, final String b)
+    public CompoundObject(int a, String b)
     {
         this.a = a;
         this.b = b;
@@ -21,7 +21,7 @@ public class CompoundObject
         return a;
     }
 
-    public void setA(final int a)
+    public void setA(int a)
     {
         this.a = a;
     }
@@ -31,7 +31,7 @@ public class CompoundObject
         return b;
     }
 
-    public void setB(final String b)
+    public void setB(String b)
     {
         this.b = b;
     }

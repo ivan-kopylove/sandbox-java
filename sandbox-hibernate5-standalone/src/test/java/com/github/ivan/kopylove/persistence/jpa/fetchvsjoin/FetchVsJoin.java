@@ -13,7 +13,7 @@ import javax.persistence.criteria.Root;
 /**
  * In this two examples, JOIN query is used to load. They have certain difference.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class FetchVsJoin
 {

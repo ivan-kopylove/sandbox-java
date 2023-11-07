@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Examples from Eckel's book.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class BasicThreads
 {

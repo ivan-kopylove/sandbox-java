@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 /**
  * https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/mapping.html#d0e5294
  *
- * @author Ivan Kopylov
+ * 
  */
 public class HibernateGenericGeneratorUuid2
 {
@@ -27,7 +27,7 @@ public class HibernateGenericGeneratorUuid2
         session.close();
 
         Assertions.assertNotNull(generatedKey.getKey());
-        Assertions.assertTrue(generatedKey.getKey() instanceof String);
+        Assertions.assertInstanceOf(String.class, generatedKey.getKey());
         Assertions.assertEquals(36,
                                 generatedKey.getKey()
                                             .length());

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * https://www.tutorialspoint.com/java_generics/java_generics_quick_guide.htm
  *
- * @author Ivan Kopylov
+ * 
  */
 class GenericsAndWildcardsTest
 {

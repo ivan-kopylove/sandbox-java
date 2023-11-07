@@ -4,7 +4,7 @@ package com.github.ivan.kopylove.sandbox.java.mechanics.signature;
  * Java method signature example. Method signature makes method unique (at least in java).<br>
  * In computer science, a type signature or type annotation defines the inputs and outputs for a function, subroutine or method.<br>
  *
- * @author Ivan Kopylov
+ * 
  * @see <a href="https://i.imgur.com/hQByRA4.png">https://i.imgur.com/hQByRA4.png</a>
  * @see <a href="https://i.stack.imgur.com/NLlbQ.png">https://i.stack.imgur.com/NLlbQ.png</a>
  * @see <a href="https://i.imgur.com/eJlX12H.png">https://i.imgur.com/eJlX12H.png</a>

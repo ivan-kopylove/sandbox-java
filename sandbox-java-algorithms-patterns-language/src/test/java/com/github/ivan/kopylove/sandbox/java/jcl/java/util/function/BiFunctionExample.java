@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * bifunctional [baɪ'feckʃ(ə)nəl]
  *
- * @author Ivan Kopylov
+ * 
  */
 public class BiFunctionExample
 {

@@ -17,7 +17,7 @@ public class ClassHidesVariableTest
     }
 
     /**
-     * @author Ivan Kopylov
+     * 
      */
     public class ClassHidesVariable
     {

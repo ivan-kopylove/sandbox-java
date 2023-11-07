@@ -12,7 +12,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 /**
- * @author Ivan Kopylov
+ * 
  */
 
 public class SerialVersionUid

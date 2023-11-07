@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * To find cells of table, relatively of already found element, please use dot. E.g. .//td, not //td.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class FindElementsRelativeToAnotherElement
 {

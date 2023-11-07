@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Constructor is a way to set initial value(s) to an object.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class ConsructorExamplesTest
 {

@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 /**
  * The default implementation of smth.
  *
- * @author Ivan Kopylov
+ * 
  */
 public class Dsad
 {
