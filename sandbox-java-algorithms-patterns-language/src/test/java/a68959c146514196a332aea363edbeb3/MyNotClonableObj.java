@@ -1,6 +1,6 @@
-package dadsa;
+package a68959c146514196a332aea363edbeb3;
 
-class MyClonableObj implements Cloneable
+public class MyNotClonableObj
 {
     private final String field = "value";
 

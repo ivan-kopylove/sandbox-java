@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.common.tasks;
+package c8f374c64c98417ea3899283bc98ab49;
 
 import java.io.Serializable;
 import java.util.ArrayList;

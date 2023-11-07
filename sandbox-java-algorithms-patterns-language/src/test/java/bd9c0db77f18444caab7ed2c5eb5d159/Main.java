@@ -1,8 +1,8 @@
-package com.github.ivan.kopylove.sandbox.java;
+package bd9c0db77f18444caab7ed2c5eb5d159;
 
 import java.util.Scanner;
 
-public class Main
+class Main
 {
     public static void main(String[] args)
     {

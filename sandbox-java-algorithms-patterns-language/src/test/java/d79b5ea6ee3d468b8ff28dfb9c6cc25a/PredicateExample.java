@@ -1,6 +1,5 @@
-package com.github.ivan.kopylove.sandbox.java.jcl.java.util.function;
+package d79b5ea6ee3d468b8ff28dfb9c6cc25a;
 
-import com.github.ivan.kopylove.sandbox.java.jcl.util.function.PredicateCreator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

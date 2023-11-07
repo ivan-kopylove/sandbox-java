@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.common.tasks;
+package c8f374c64c98417ea3899283bc98ab49;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;

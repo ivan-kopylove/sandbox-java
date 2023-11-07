@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.jcl.util.function;
+package d79b5ea6ee3d468b8ff28dfb9c6cc25a;
 
 import java.util.function.Predicate;
 
