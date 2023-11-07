@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.exercises.thinking.in.java;
+package c8103f556aa548d3a6267d2a64a8433f;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;

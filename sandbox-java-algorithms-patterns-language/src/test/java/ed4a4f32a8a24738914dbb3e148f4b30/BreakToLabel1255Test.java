@@ -1,11 +1,15 @@
-package com.github.ivan.kopylove.sandbox.java.labels;
+package ed4a4f32a8a24738914dbb3e148f4b30;
 
 import org.junit.jupiter.api.Test;
 
 /**
+ * Labels example
+ * facets
+ * - enthuware
+ * <p>
  * enthuware.ocpjp.i.v11.2.1255
  */
-public class BreakToLabel1255
+public class BreakToLabel1255Test
 {
     @Test
     public void run()

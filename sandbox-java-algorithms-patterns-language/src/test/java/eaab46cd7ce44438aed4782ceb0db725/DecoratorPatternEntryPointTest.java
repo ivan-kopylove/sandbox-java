@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
  * - patterns
  * - decorator
  */
-public class DecoratorPatternEntryPoint
+public class DecoratorPatternEntryPointTest
 {
     @Test
     public void main()

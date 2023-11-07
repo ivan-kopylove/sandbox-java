@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.exercises.thinking.in.java;
+package c8103f556aa548d3a6267d2a64a8433f;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,9 +8,11 @@ import java.lang.ref.WeakReference;
 import java.util.LinkedList;
 
 /**
+ * facets
+ * - thinking-in-java
+ * - java-mechanism
+ * <p>
  * SoftReference > Weak Reference > PhantomReference
- *
- * 
  */
 public class ReferencesTest
 {

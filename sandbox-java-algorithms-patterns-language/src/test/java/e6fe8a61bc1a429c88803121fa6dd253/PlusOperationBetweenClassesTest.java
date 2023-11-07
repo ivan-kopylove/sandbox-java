@@ -1,8 +1,8 @@
-package com.github.ivan.kopylove.sandbox.java.plus;
+package e6fe8a61bc1a429c88803121fa6dd253;
 
 import org.junit.jupiter.api.Test;
 
-public class PlusOperationBetweenClasses
+public class PlusOperationBetweenClassesTest
 {
 
     @Test
