@@ -1,8 +1,5 @@
-package com.github.ivan.kopylove.sandbox.java.mechanics;
+package b9062e2a984f48e88071c236c14c3881;
 
-import com.github.ivan.kopylove.sandbox.domain.Animal;
-import com.github.ivan.kopylove.sandbox.domain.Cat;
-import com.github.ivan.kopylove.sandbox.domain.RedCat;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,7 +10,7 @@ import java.util.List;
  *
  * @author Ivan Kopylov
  */
-public class GenericsAndWildcards
+class GenericsAndWildcardsTest
 {
     /**
      * Upper bound wildcard

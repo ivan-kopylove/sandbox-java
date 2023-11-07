@@ -1,6 +1,5 @@
-package com.github.ivan.kopylove.sandbox.java.mechanics;
+package b93a3f80423b4421955f90e3433aaacd;
 
-import com.github.ivan.kopylove.sandbox.domain.Dog;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

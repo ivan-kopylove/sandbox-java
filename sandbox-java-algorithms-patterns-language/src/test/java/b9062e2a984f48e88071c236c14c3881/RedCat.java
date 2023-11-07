@@ -1,6 +1,6 @@
-package com.github.ivan.kopylove.sandbox.domain;
+package b9062e2a984f48e88071c236c14c3881;
 
-public class RedCat extends Cat
+class RedCat extends Cat
 {
     private final String name;
 

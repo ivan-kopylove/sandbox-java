@@ -1,6 +1,6 @@
-package com.github.ivan.kopylove.sandbox.domain;
+package b75f8767ba064db4a4caf9a54cb1e400;
 
-public class Wall
+class Wall
 {
     private static final String kek = null;
 

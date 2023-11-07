@@ -1,6 +1,5 @@
-package com.github.ivan.kopylove.sandbox.java.mechanics;
+package d743dc41d18344a99384f2a48ad46c70;
 
-import com.github.ivan.kopylove.sandbox.domain.Box;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  * @author Ivan Kopylov
  */
-public class GenericsExamples
+public class GenericsExamplesTest
 {
     /**
      * Generic method.

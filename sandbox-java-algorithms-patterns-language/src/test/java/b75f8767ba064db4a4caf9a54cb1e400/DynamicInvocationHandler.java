@@ -1,9 +1,9 @@
-package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.reflect;
+package b75f8767ba064db4a4caf9a54cb1e400;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-public class DynamicInvocationHandler implements InvocationHandler
+class DynamicInvocationHandler implements InvocationHandler
 {
 
     @Override

@@ -1,6 +1,5 @@
-package com.github.ivan.kopylove.sandbox.java.mechanics.oop;
+package d21625d643764075b481f2af93d62eef;
 
-import com.github.ivan.kopylove.sandbox.domain.Bottle;
 import com.github.ivan.kopylove.sandbox.domain.Flask;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

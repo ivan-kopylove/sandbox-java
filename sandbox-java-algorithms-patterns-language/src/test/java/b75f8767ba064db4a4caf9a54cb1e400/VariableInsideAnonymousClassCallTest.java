@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.jcl.java.lang.reflect;
+package b75f8767ba064db4a4caf9a54cb1e400;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.fail;
  *
  * @author Ivan Kopylov
  */
-public class VariableInsideAnonymousClassCallTest
+class VariableInsideAnonymousClassCallTest
 {
     @Test
     public void test()
