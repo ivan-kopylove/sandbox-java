@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.domain;
+package c22bfa3796df4a1ea8904db11eb4ccf1;
 
 import java.util.ArrayList;
 import java.util.List;

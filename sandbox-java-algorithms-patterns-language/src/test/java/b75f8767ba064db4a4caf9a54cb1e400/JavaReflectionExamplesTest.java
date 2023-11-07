@@ -1,7 +1,5 @@
 package b75f8767ba064db4a4caf9a54cb1e400;
 
-import com.github.ivan.kopylove.sandbox.domain.Lamp;
-import com.github.ivan.kopylove.sandbox.domain.Picture;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

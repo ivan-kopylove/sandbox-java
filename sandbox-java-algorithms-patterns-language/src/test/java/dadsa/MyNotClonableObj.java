@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.domain;
+package dadsa;
 
 public class MyNotClonableObj
 {

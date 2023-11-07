@@ -1,14 +1,12 @@
-package com.github.ivan.kopylove.sandbox.java.jcl.java.lang;
+package dadsa;
 
-import com.github.ivan.kopylove.sandbox.domain.MyClonableObj;
-import com.github.ivan.kopylove.sandbox.domain.MyNotClonableObj;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class ClonableExamplesTests
+class ClonableExamplesTests
 {
     @Test
     public void not_clonable() throws CloneNotSupportedException

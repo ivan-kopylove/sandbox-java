@@ -1,6 +1,6 @@
-package com.github.ivan.kopylove.sandbox.domain;
+package dadsa;
 
-public class MyClonableObj implements Cloneable
+class MyClonableObj implements Cloneable
 {
     private final String field = "value";
 
