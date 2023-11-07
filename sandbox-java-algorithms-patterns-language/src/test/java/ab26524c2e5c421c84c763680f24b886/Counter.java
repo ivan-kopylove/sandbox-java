@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.java.exercises.droptoframe;
+package ab26524c2e5c421c84c763680f24b886;
 
 public class Counter
 {

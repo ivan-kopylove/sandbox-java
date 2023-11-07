@@ -1,8 +1,13 @@
-package com.github.ivan.kopylove.sandbox.java.exercises.droptoframe;
+package ab26524c2e5c421c84c763680f24b886;
 
 import org.junit.jupiter.api.Test;
 
-public class DropToFrame
+/**
+ * facets
+ * - java-mechanic
+ * - IDE
+ */
+public class DropToFrameTest
 {
     @Test
     public void main()
