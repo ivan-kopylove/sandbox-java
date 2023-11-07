@@ -1,8 +1,11 @@
-package com.github.ivan.kopylove.sandbox.programming.overflowvariable;
+package bcaf5b2a612a473d954c429a5ebca0c0;
 
 import org.junit.jupiter.api.Test;
 
-public class VariableOverflow
+/**
+ * variable overflow demo
+ */
+public class VariableOverflowTest
 {
     @Test
     public void run()
