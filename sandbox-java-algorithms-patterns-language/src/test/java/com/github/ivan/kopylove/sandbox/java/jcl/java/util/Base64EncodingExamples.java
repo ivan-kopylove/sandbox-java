@@ -1,7 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.jcl.java.util;
 
 import com.github.ivan.kopylove.sandbox.util.Util;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -12,6 +11,7 @@ import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public class Base64EncodingExamples
@@ -28,7 +28,7 @@ public class Base64EncodingExamples
     {
         String result = java.util.Base64.getEncoder()
                                         .encodeToString(STR.getBytes());
-        Assertions.assertEquals(BASE64_STR, result);
+        assertEquals(BASE64_STR, result);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class Base64EncodingExamples
             byte[] bytes = Files.readAllBytes(Paths.get(myFile.getAbsolutePath()));
             String result = java.util.Base64.getEncoder()
                                             .encodeToString(bytes);
-            Assertions.assertEquals(BASE64_FILE, result);
+            assertEquals(BASE64_FILE, result);
         }
         else
         {
@@ -65,7 +65,7 @@ public class Base64EncodingExamples
         byte[] decoded = Base64.getDecoder()
                                .decode(BASE64_FILE);
         String sha256 = Util.calculateFileSha256(decoded);
-        Assertions.assertEquals(SHA256_FILE, sha256);
+        assertEquals(SHA256_FILE, sha256);
     }
 
     @Test

@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.util.concurrent;
+package e7ec8d9f13d54e54b34a2846de0d2584;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +11,9 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+/**
+ * java concurrency example
+ */
 public class LoginQueueUsingSemaphoreTest
 {
 
