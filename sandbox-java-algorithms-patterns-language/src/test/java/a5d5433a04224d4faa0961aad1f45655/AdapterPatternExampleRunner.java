@@ -1,10 +1,13 @@
-package com.github.ivan.kopylove.sandbox.patterns.adapter;
+package a5d5433a04224d4faa0961aad1f45655;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  * Adapter is converter.
+ * facets:
+ * - patterns
+ * - adapter
  */
 public class AdapterPatternExampleRunner
 {

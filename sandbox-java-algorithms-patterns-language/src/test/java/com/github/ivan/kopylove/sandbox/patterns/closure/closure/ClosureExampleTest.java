@@ -7,6 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * search engine query with comprehensive examples:
  * closure baeldung
+ * <p>
+ * facets:
+ * - patterns
+ * - closure
  */
 public class ClosureExampleTest
 {

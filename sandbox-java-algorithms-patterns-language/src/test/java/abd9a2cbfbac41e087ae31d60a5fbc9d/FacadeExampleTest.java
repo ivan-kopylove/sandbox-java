@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.patterns.facade.one;
+package abd9a2cbfbac41e087ae31d60a5fbc9d;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,12 +7,14 @@ import org.junit.jupiter.api.Test;
  * 2. purpose is to provide a single interface rather than multiple interfaces that does the similar kind of jobs<br/>
  * 3. Subsystem interfaces are not aware of Facade and they shouldn’t have any reference of the Facade interface.<br/>
  * 4. it doesn’t hide subsystem interfaces from the client. Whether to use Facade or not is completely dependent on client code.<br/>
- *
+ * tags:
+ * - patterns
+ * - facade
  * 
  * @see <a href=https://www.journaldev.com/1557/facade-design-pattern-in-java>https://www.journaldev.com/1557/facade-design-pattern-in-java</a>
  * @see <a href=https://www.baeldung.com/java-facade-pattern>https://www.baeldung.com/java-facade-pattern</a>
  */
-public class FacadeExample
+public class FacadeExampleTest
 {
 
     @Test

@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Decorator Pattern Example.
- *
- * 
+ * facets:
+ * - patterns
+ * - decorator
  */
 public class DecoratorPatternEntryPoint
 {

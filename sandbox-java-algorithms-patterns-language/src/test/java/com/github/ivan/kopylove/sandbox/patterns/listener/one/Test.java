@@ -1,10 +1,13 @@
 package com.github.ivan.kopylove.sandbox.patterns.listener.one;
 
-import org.junit.jupiter.api.Test;
-
-public class ListenerDemo
+/**
+ * facets:
+ * - patterns
+ * - listener
+ */
+public class Test
 {
-    @Test
+    @org.junit.jupiter.api.Test
     public void run()
     {
 
