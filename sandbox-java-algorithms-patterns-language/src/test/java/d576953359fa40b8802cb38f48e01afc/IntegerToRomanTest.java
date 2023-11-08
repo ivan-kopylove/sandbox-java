@@ -16,12 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 class IntegerToRomanTest
 {
-    private final IntegerToRoman sut = new IntegerToRoman();
-
-    private static Stream<Arguments> testCases()
-    {
-        return Stream.of(Arguments.of(3, "III"), Arguments.of(58, "LVIII"), Arguments.of(1994, "MCMXCIV"));
-    }
+    private final IntegerToRomanSolution sut = new IntegerToRomanSolution();
 
     @ParameterizedTest
     @MethodSource("testCases")
@@ -31,7 +26,12 @@ class IntegerToRomanTest
         assertThat(sut.intToRoman(input), equalTo(expected));
     }
 
-    private static class IntegerToRoman
+    private static Stream<Arguments> testCases()
+    {
+        return Stream.of(Arguments.of(3, "III"), Arguments.of(58, "LVIII"), Arguments.of(1994, "MCMXCIV"));
+    }
+
+    private static class IntegerToRomanSolution
     {
         String[] I = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
         String[] X = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
