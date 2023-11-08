@@ -18,17 +18,17 @@ class IntegerToRomanTest
 {
     private final IntegerToRomanSolution sut = new IntegerToRomanSolution();
 
+    private static Stream<Arguments> testCases()
+    {
+        return Stream.of(Arguments.of(3, "III"), Arguments.of(58, "LVIII"), Arguments.of(1994, "MCMXCIV"));
+    }
+
     @ParameterizedTest
     @MethodSource("testCases")
     public void integerToRomanTest(Integer input, String expected)
     {
         // then
         assertThat(sut.intToRoman(input), equalTo(expected));
-    }
-
-    private static Stream<Arguments> testCases()
-    {
-        return Stream.of(Arguments.of(3, "III"), Arguments.of(58, "LVIII"), Arguments.of(1994, "MCMXCIV"));
     }
 
     private static class IntegerToRomanSolution
