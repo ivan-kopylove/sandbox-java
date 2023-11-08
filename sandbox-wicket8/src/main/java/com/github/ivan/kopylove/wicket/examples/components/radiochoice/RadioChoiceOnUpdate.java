@@ -13,8 +13,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * http://examples7x.wicket.apache.org/compref/wicket/bookmarkable/org.apache.wicket.examples.compref.RadioChoicePage?0
- *
- * 
  */
 public class RadioChoiceOnUpdate extends WebPage
 {

@@ -14,8 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * tags:
  * - jcl
  * - reflection mechanisms
- *
- * 
  */
 class JavaReflectionExamplesTest
 {

@@ -23,7 +23,6 @@ interface CarElementVisitor
 
 /**
  * <a href="https://en.wikipedia.org/wiki/Visitor_pattern">...</a>
- *
  */
 public class VisitorPatternEntryPoint
 {

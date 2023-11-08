@@ -95,7 +95,7 @@ public class SynchronizedExample
     }
 
     /**
-     * 
+     *
      */
     public class CounterThreadDangerous
     {

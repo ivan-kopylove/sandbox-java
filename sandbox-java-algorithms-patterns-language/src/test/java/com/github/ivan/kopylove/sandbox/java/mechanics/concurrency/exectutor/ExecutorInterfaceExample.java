@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.concurrent.Executor;
 
 /**
- * 
+ *
  */
 public class ExecutorInterfaceExample
 {

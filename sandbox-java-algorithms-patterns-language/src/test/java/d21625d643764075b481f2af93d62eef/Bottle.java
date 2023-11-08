@@ -2,8 +2,6 @@ package d21625d643764075b481f2af93d62eef;
 
 /**
  * No constuctor means "default constuctor".
- *
- * 
  */
 public class Bottle
 {

@@ -11,8 +11,6 @@ import java.util.List;
 
 /**
  * To find cells of table, relatively of already found element, please use dot. E.g. .//td, not //td.
- *
- * 
  */
 public class FindElementsRelativeToAnotherElement
 {

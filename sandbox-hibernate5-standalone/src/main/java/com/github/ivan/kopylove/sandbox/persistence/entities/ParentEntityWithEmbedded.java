@@ -1,6 +1,13 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.Set;
 
 @Entity
@@ -22,7 +29,7 @@ public class ParentEntityWithEmbedded
         return id;
     }
 
-    public void setId(final int id)
+    public void setId(int id)
     {
         this.id = id;
     }
@@ -32,7 +39,7 @@ public class ParentEntityWithEmbedded
         return myEmbeddable;
     }
 
-    public void setMyEmbeddable(final MyEmbeddable myEmbeddable)
+    public void setMyEmbeddable(MyEmbeddable myEmbeddable)
     {
         this.myEmbeddable = myEmbeddable;
     }
@@ -42,7 +49,7 @@ public class ParentEntityWithEmbedded
         return childs;
     }
 
-    public void setChilds(final Set<ChildEntity> childs)
+    public void setChilds(Set<ChildEntity> childs)
     {
         this.childs = childs;
     }

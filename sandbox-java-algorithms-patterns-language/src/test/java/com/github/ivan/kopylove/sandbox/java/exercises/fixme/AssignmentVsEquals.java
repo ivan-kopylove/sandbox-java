@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Assignment vs equals
- *
- * 
  */
 public class AssignmentVsEquals
 {

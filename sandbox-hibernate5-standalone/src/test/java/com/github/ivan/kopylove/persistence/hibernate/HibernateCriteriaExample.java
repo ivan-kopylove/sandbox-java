@@ -16,8 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * org.hibernate.Criteria simpliest example.<br/>
  * Example available at: https://github.com/ivan-kopylove/sandbox-java
- *
- * 
  */
 public class HibernateCriteriaExample
 {

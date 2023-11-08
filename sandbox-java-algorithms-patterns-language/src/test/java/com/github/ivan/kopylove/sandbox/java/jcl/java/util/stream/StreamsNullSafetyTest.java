@@ -8,8 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Purpose of this example: to show that it is not safe to get stream from null object
- *
- * 
  */
 public class StreamsNullSafetyTest
 {

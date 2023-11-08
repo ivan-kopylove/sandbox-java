@@ -1,6 +1,13 @@
 package com.github.ivan.kopylove.sanbox.java.websocket;
 
-import javax.websocket.*;
+import javax.websocket.ClientEndpoint;
+import javax.websocket.CloseReason;
+import javax.websocket.ContainerProvider;
+import javax.websocket.OnClose;
+import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
+import javax.websocket.Session;
+import javax.websocket.WebSocketContainer;
 import java.net.URI;
 
 @ClientEndpoint
@@ -87,8 +94,8 @@ public class ChatClientEndpoint
      *
      * @author Jiji_Sasidharan
      */
-    public static interface MessageHandler
+    public interface MessageHandler
     {
-        public void handleMessage(String message);
+        void handleMessage(String message);
     }
 }

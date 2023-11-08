@@ -10,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * How to call variable passed to an anonymous class
- *
- * 
  */
 class VariableInsideAnonymousClassCallTest
 {

@@ -10,8 +10,6 @@ import org.apache.wicket.model.LoadableDetachableModel;
 
 /**
  * Called once per request cycle.
- *
- * 
  */
 public class LoadableDetachableModelExample extends WebPage
 {

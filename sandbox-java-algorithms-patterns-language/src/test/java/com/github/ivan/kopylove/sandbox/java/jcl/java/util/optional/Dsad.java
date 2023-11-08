@@ -9,8 +9,6 @@ import java.util.stream.Stream;
 
 /**
  * The default implementation of smth.
- *
- * 
  */
 public class Dsad
 {

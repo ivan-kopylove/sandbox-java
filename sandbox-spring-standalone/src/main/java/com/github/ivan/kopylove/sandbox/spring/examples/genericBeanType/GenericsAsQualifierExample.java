@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 /**
  * Spring 4.0 as it will automatically consider generics as a form of @Qualifier.
  *
- * 
  * @see <a href=https://stackoverflow.com/questions/22603291/how-to-autowire-bean-of-generic-type-t-in-spring>https://stackoverflow.com/questions/22603291/how-to-autowire-bean-of-generic-type-t-in-spring</a>
  */
 @Service

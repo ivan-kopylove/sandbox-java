@@ -16,8 +16,6 @@ import java.util.List;
 
 /**
  * This example demonstrates minimal join boilerplate
- *
- * 
  */
 public class JpaCriteriaBuilderJoinExampleTest
 {

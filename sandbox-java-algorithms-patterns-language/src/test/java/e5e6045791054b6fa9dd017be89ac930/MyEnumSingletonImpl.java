@@ -7,8 +7,6 @@ package e5e6045791054b6fa9dd017be89ac930;
  * public final static MySingleton INSTANCE = new MySingleton();
  * private MySingleton(){}
  * }
- *
- * 
  */
 public enum MyEnumSingletonImpl implements MyEnumSingleton
 {

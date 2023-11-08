@@ -1,6 +1,12 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "PAGE")
@@ -25,7 +31,7 @@ public class PageEntity
         return key;
     }
 
-    public void setKey(final int key)
+    public void setKey(int key)
     {
         this.key = key;
     }
@@ -35,7 +41,7 @@ public class PageEntity
         return book;
     }
 
-    public void setBook(final BookEntity book)
+    public void setBook(BookEntity book)
     {
         this.book = book;
     }

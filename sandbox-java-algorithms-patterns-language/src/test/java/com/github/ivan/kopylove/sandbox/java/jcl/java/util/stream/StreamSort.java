@@ -7,8 +7,6 @@ import java.util.List;
 
 /**
  * The default implementation of smth.
- *
- * 
  */
 public class StreamSort
 {

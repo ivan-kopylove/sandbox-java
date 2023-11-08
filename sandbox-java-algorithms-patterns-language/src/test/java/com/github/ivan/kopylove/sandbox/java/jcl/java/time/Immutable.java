@@ -7,8 +7,6 @@ import java.time.LocalDate;
 
 /**
  * Majority of java.time.* classes are immutable.
- *
- * 
  */
 public class Immutable
 {

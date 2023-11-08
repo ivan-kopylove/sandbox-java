@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.sandbox.java.mechanics.serialversionuid;
 import java.io.Serializable;
 
 /**
- * 
+ *
  */
 public class SerializableClass implements Serializable
 {

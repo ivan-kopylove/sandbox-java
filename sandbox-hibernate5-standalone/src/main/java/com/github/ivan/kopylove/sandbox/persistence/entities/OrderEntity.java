@@ -1,6 +1,12 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class OrderEntity
@@ -18,7 +24,7 @@ public class OrderEntity
         return user;
     }
 
-    public void setUser(final UserEntity user)
+    public void setUser(UserEntity user)
     {
         this.user = user;
     }

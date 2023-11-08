@@ -6,7 +6,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 
 /**
- * 
+ *
  */
 public class PageTwo extends WebPage
 {

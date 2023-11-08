@@ -10,8 +10,6 @@ import java.util.Collections;
 
 /**
  * https://www.baeldung.com/jpa-cascade-types
- *
- * 
  */
 public class JpaCascadePersist
 {

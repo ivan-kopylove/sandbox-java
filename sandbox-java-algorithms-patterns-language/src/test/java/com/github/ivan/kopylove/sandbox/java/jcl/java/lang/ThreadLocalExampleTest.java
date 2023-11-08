@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  * Threadlocal value is accesible only from thread it is created in.
- *
- * 
  */
 public class ThreadLocalExampleTest
 {

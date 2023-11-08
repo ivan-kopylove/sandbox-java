@@ -17,7 +17,7 @@ public class ClassHidesVariableTest
     }
 
     /**
-     * 
+     *
      */
     public class ClassHidesVariable
     {

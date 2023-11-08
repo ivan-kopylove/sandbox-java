@@ -12,7 +12,7 @@ import org.apache.wicket.protocol.ws.api.registry.IWebSocketConnectionRegistry;
 import java.io.IOException;
 
 /**
- * 
+ *
  */
 public class MyWebsocketResource extends WebSocketResource
 {

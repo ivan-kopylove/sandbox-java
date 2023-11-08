@@ -7,7 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 /**
- * 
+ *
  */
 @Entity(name = "GAMER")
 public class Gamer

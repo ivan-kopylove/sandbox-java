@@ -39,15 +39,19 @@ package test;
 import javax.swing.*;
 import javax.swing.event.TreeModelEvent;
 import javax.swing.event.TreeModelListener;
-import javax.swing.tree.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
+import javax.swing.tree.TreePath;
+import javax.swing.tree.TreeSelectionModel;
 import java.awt.*;
 
 public class DynamicTree extends JPanel
 {
     protected DefaultMutableTreeNode rootNode;
     protected DefaultTreeModel       treeModel;
-    protected JTree                  tree;
-    private   Toolkit                toolkit = Toolkit.getDefaultToolkit();
+    protected     JTree   tree;
+    private final Toolkit toolkit = Toolkit.getDefaultToolkit();
 
     public DynamicTree()
     {
