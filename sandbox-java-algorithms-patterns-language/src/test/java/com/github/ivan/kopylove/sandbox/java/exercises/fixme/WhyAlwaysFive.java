@@ -2,7 +2,11 @@ package com.github.ivan.kopylove.sandbox.java.exercises.fixme;
 
 import org.junit.jupiter.api.Test;
 
-public class whyAlwaysFive
+/**
+ * facets:
+ * - koan
+ */
+public class WhyAlwaysFive
 {
     int i = 0;
 
