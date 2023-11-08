@@ -1,6 +1,8 @@
 package test;
 
-import javax.swing.*;
+import javax.swing.JApplet;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
 
 public class HelloWorld extends JApplet
 {
