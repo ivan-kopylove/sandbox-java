@@ -11,8 +11,8 @@ import org.apache.wicket.model.Model;
 class NestedPanel extends Panel
 {
 
-    private final Form<?> parentForm;
-    private TextField<String> textFieldNested;
+    private final Form<?>           parentForm;
+    private       TextField<String> textFieldNested;
 
     public NestedPanel(String id, Form<?> parentForm)
     {
