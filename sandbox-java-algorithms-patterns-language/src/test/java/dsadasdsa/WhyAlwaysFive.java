@@ -1,12 +1,13 @@
-package com.github.ivan.kopylove.sandbox.java.exercises.fixme;
+package dsadasdsa;
 
 import org.junit.jupiter.api.Test;
 
 /**
  * facets:
  * - koan
+ * - exercise
  */
-public class WhyAlwaysFive
+class WhyAlwaysFive
 {
     int i = 0;
 

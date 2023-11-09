@@ -1,12 +1,16 @@
-package com.github.ivan.kopylove.sandbox.java.exercises.fixme;
+package dsadasdsadasd;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  * Assignment vs equals
+ * facets:
+ * - exercises
+ * - fixme
+ * - koan
  */
-public class AssignmentVsEquals
+class AssignmentVsEquals
 {
     @Test
     public void dsa()
