@@ -15,6 +15,6 @@ class MockStaticMethodOfInstance
     void runMocked()
     {
         //        Mockito.when(myClassToMockMethod.myMethod()).thenReturn("Custom value");
-        //        Assertions.assertEquals("Custom value", myClassToMockMethod.myMethod());
+        //        assertEquals("Custom value", myClassToMockMethod.myMethod());
     }
 }

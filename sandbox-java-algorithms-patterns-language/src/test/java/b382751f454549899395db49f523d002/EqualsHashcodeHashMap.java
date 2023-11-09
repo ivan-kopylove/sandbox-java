@@ -1,11 +1,14 @@
 package b382751f454549899395db49f523d002;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EqualsHashcodeHashMap
 {
@@ -22,8 +25,8 @@ class EqualsHashcodeHashMap
         map.put(myClass1, "1");
         map.put(myClass2, "2");
 
-        Assertions.assertFalse(equalsCalled); //it's ok, because equals doesn't call on put operation
-        Assertions.assertTrue(hashcodeCalled); //it's ok
+        assertFalse(equalsCalled); //it's ok, because equals doesn't call on put operation
+        assertTrue(hashcodeCalled); //it's ok
     }
 
     @Test
@@ -38,9 +41,9 @@ class EqualsHashcodeHashMap
 
         String queryResult = map.get(new MyClass("2"));
 
-        Assertions.assertTrue(equalsCalled); //it's ok
-        Assertions.assertTrue(hashcodeCalled); //it's ok
-        Assertions.assertNotNull(queryResult); //it's ok
+        assertTrue(equalsCalled); //it's ok
+        assertTrue(hashcodeCalled); //it's ok
+        assertNotNull(queryResult); //it's ok
     }
 
     class MyClass

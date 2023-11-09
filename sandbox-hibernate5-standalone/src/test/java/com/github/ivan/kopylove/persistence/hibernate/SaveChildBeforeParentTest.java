@@ -5,8 +5,9 @@ import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.hibernate.TransientPropertyValueException;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * This example demonstrates exception when saving child before parent
@@ -16,7 +17,7 @@ class SaveChildBeforeParentTest
     @Test
     void saveChildBeforeParent()
     {
-        Assertions.assertThrows(TransientPropertyValueException.class, () -> {
+        assertThrows(TransientPropertyValueException.class, () -> {
             Session session = HibernateSessionFactory.openSession();
             session.getTransaction()
                    .begin();

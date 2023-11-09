@@ -3,8 +3,9 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ReadInTheSameTransaction
 {
@@ -29,7 +30,7 @@ class ReadInTheSameTransaction
         entity.setName("test4-2");
 
         ParentEntity entity2 = session.find(ParentEntity.class, 4);
-        Assertions.assertEquals("message", "test4-2", entity2.getName());
+        assertEquals("message", "test4-2", entity2.getName());
         session.close();
     }
 
@@ -54,7 +55,7 @@ class ReadInTheSameTransaction
         entity.setName("test4-2");
 
         ParentEntity entity2 = session.get(ParentEntity.class, 4);
-        Assertions.assertEquals("message", "test4-2", entity2.getName());
+        assertEquals("message", "test4-2", entity2.getName());
     }
 
     @Test
@@ -78,6 +79,6 @@ class ReadInTheSameTransaction
         entity.setName("test4-2");
 
         ParentEntity entity2 = session.load(ParentEntity.class, 4);
-        Assertions.assertEquals("message", "test4-2", entity2.getName());
+        assertEquals("message", "test4-2", entity2.getName());
     }
 }

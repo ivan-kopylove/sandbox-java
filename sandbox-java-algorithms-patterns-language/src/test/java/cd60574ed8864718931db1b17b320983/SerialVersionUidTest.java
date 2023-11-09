@@ -1,6 +1,5 @@
 package cd60574ed8864718931db1b17b320983;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +9,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  *
@@ -30,7 +32,7 @@ class SerialVersionUidTest
         os.flush();
         os.close();
 
-        Assertions.assertTrue(file.exists());
+        assertTrue(file.exists());
     }
 
     @Test
@@ -42,6 +44,6 @@ class SerialVersionUidTest
 
         objectInputStream.close();
 
-        Assertions.assertEquals(TEST_VALUE, result.getValue());
+        assertEquals(TEST_VALUE, result.getValue());
     }
 }

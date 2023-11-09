@@ -7,8 +7,11 @@ import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.C;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.D;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.E;
 import org.dozer.Mapper;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class ObjectMapperExample
 {
@@ -21,7 +24,7 @@ class ObjectMapperExample
         objA.setKey("1");
 
         C result = mapper.map(objA, C.class);
-        Assertions.assertEquals("1", result.getKey());
+        assertEquals("1", result.getKey());
     }
 
     @Test
@@ -32,7 +35,7 @@ class ObjectMapperExample
         c.setKey("1");
 
         A result = mapper.map(c, A.class);
-        Assertions.assertEquals("1", result.getKey());
+        assertEquals("1", result.getKey());
     }
 
     @Test
@@ -45,7 +48,7 @@ class ObjectMapperExample
         c.setObjA(a);
 
         B result = mapper.map(c, B.class);
-        Assertions.assertEquals("2", result.getKey_a());
+        assertEquals("2", result.getKey_a());
     }
 
     @Test
@@ -56,9 +59,9 @@ class ObjectMapperExample
         input.setKey_a("3");
 
         C output = mapper.map(input, C.class);
-        Assertions.assertEquals("3",
-                                output.getObjA()
-                                      .getKey());
+        assertEquals("3",
+                     output.getObjA()
+                           .getKey());
     }
 
     @Test
@@ -70,7 +73,7 @@ class ObjectMapperExample
 
         E output = mapper.map(input, E.class);
 
-        Assertions.assertNotNull(output);
-        Assertions.assertNull(output.getKey());
+        assertNotNull(output);
+        assertNull(output.getKey());
     }
 }

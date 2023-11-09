@@ -3,10 +3,11 @@ package com.github.ivan.kopylove.persistence.jpa;
 import com.github.ivan.kopylove.sandbox.persistence.entities.GeneratedValueMostBasic;
 import com.github.ivan.kopylove.sandbox.persistence.entities.GeneratedValueMostBasicSecond;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JpaSharedGeneratedValue
 {
@@ -23,8 +24,8 @@ class JpaSharedGeneratedValue
         GeneratedValueMostBasicSecond g2 = new GeneratedValueMostBasicSecond();
         entityManager.persist(g2);
 
-        Assertions.assertEquals(1, g1.getKey());
-        Assertions.assertEquals(2, g2.getKey());
+        assertEquals(1, g1.getKey());
+        assertEquals(2, g2.getKey());
 
         entityManager.getTransaction()
                      .commit();

@@ -1,7 +1,8 @@
 package a1567a2e395e4fd893fe05c7afcef491;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * functional interface playground
@@ -16,7 +17,7 @@ class ExampleTest
             return 2L;
         };
 
-        Assertions.assertEquals(2L, lambdaInterface.doSomething("str", 5));
+        assertEquals(2L, lambdaInterface.doSomething("str", 5));
     }
 
     @Test
@@ -27,7 +28,7 @@ class ExampleTest
             return 2L;
         };
 
-        Assertions.assertEquals(0, lambdaInterface.someDefaultMethod());
+        assertEquals(0, lambdaInterface.someDefaultMethod());
     }
 
     @Test
@@ -36,6 +37,6 @@ class ExampleTest
 
         LambdaInterface lambdaInterface = new LambdaInterface2Impl();
 
-        Assertions.assertEquals(1, lambdaInterface.someDefaultMethod());
+        assertEquals(1, lambdaInterface.someDefaultMethod());
     }
 }

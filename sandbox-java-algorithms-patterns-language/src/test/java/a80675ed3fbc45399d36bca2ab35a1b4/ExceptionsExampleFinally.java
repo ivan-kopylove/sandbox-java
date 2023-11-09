@@ -1,11 +1,13 @@
 package a80675ed3fbc45399d36bca2ab35a1b4;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class ExceptionsExampleFinally
 {
@@ -23,23 +25,23 @@ class ExceptionsExampleFinally
         }
         catch (Exception e)
         {
-            Assertions.assertTrue(true);
+            assertTrue(true);
             System.out.println("Something bad happened.");
         }
         finally
         {
-            Assertions.assertTrue(true);
+            assertTrue(true);
 
-            Assertions.assertTrue(true);
+            assertTrue(true);
             System.out.println("Closing resource.");
             if (br != null)
             {
                 System.out.println("Closed resource.");
-                Assertions.fail();
+                fail();
             }
             else
             {
-                Assertions.assertTrue(true);
+                assertTrue(true);
                 System.out.println("resource is null.");
             }
         }

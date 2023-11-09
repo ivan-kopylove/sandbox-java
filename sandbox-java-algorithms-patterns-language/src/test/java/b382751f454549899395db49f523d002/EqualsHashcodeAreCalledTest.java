@@ -1,7 +1,9 @@
 package b382751f454549899395db49f523d002;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EqualsHashcodeAreCalledTest
 {
@@ -16,8 +18,8 @@ class EqualsHashcodeAreCalledTest
 
         myClass1.equals(myClass2);
 
-        Assertions.assertTrue(equalsCalled);
-        Assertions.assertFalse(hashcodeCalled);
+        assertTrue(equalsCalled);
+        assertFalse(hashcodeCalled);
     }
 
     class MyClass

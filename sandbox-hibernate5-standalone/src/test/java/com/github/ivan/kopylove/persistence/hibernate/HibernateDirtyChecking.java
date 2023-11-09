@@ -3,9 +3,10 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class HibernateDirtyChecking
 {
@@ -18,7 +19,7 @@ class HibernateDirtyChecking
         BookEntity book = session.find(BookEntity.class, 1);
         if (book != null)
         {
-            Assertions.assertEquals("Fred Brooks - The Mythical Man-Month", book.getName());
+            assertEquals("Fred Brooks - The Mythical Man-Month", book.getName());
         }
 
         session.getTransaction()

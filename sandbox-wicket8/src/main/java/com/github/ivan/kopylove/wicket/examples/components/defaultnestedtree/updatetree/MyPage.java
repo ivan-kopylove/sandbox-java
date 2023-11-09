@@ -89,8 +89,7 @@ class MyPage extends WebPage
             e.printStackTrace();
         }
 
-        TreeModelProvider<DefaultMutableTreeNode> modelProvider = new TreeModelProvider<DefaultMutableTreeNode>(
-                model)
+        TreeModelProvider<DefaultMutableTreeNode> modelProvider = new TreeModelProvider<DefaultMutableTreeNode>(model)
         {
             @Override
             public IModel<DefaultMutableTreeNode> model(DefaultMutableTreeNode object)

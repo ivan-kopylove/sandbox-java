@@ -28,9 +28,9 @@ class BehaviorAbstractDefaultAjaxExample4 extends WebPage
             protected void respond(AjaxRequestTarget target)
             {
                 StringValue parameterValue = RequestCycle.get()
-                                                               .getRequest()
-                                                               .getQueryParameters()
-                                                               .getParameterValue("yourName");
+                                                         .getRequest()
+                                                         .getQueryParameters()
+                                                         .getParameterValue("yourName");
                 System.out.printf("Hello %s%n", parameterValue.toString());
             }
 

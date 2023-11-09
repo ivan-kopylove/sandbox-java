@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +8,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JdbcTransactionExample
 {
@@ -27,7 +28,7 @@ class JdbcTransactionExample
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, lines);
+            assertEquals(0, lines);
 
             preparedStatement = conn.prepareStatement(SQL_INSERT_TEMPLATE);
             preparedStatement.setInt(1, 0);

@@ -1,12 +1,14 @@
 package f149ea6c47d04063a3b7cc2f6a0fb03b;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 /**
  * java streams playground
@@ -22,8 +24,8 @@ class IntermediateNullTest
                                     .peek(System.out::println)
                                     .collect(Collectors.toList());
 
-        Assertions.assertNull(mapped.get(0));
-        Assertions.assertNull(mapped.get(1));
+        assertNull(mapped.get(0));
+        assertNull(mapped.get(1));
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -36,6 +38,6 @@ class IntermediateNullTest
                                     .peek(System.out::println)
                                     .collect(Collectors.toList());
 
-        Assertions.assertEquals(0, mapped.size());
+        assertEquals(0, mapped.size());
     }
 }

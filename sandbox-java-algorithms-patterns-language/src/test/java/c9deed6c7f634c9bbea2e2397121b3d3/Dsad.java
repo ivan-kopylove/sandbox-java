@@ -1,11 +1,12 @@
 package c9deed6c7f634c9bbea2e2397121b3d3;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Function;
 import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  * The default implementation of smth.
@@ -22,6 +23,6 @@ class Dsad
                   System.out.println(s);
                   result.set(true);
               });
-        Assertions.assertFalse(result.get());
+        assertFalse(result.get());
     }
 }

@@ -1,7 +1,8 @@
 package f01013c558cf4e759c6e01c44cc7c6f2;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * static members example
@@ -18,7 +19,7 @@ class AccessStaticMemberWithNull1486
         myClass = null;
         System.out.println();
 
-        Assertions.assertEquals("some value", MyClass.VALUE);
-        Assertions.assertEquals("some text", MyClass.myMethod());
+        assertEquals("some value", MyClass.VALUE);
+        assertEquals("some text", MyClass.myMethod());
     }
 }

@@ -1,7 +1,8 @@
 package b1b9f46e2c054263a6742d62505b0b50;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CastNullToObjTest
 {
@@ -13,6 +14,6 @@ class CastNullToObjTest
     {
         String str = null; //no exception
 
-        Assertions.assertTrue(true);
+        assertTrue(true);
     }
 }

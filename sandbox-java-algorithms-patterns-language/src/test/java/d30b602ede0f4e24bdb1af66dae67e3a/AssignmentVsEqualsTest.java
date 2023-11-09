@@ -1,7 +1,9 @@
 package d30b602ede0f4e24bdb1af66dae67e3a;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Assignment vs equals
@@ -19,8 +21,8 @@ class AssignmentVsEqualsTest
         boolean y = false;
         while (x = y)// should be x == y
         {
-            Assertions.fail();
+            fail();
         }
-        Assertions.assertTrue(true);
+        assertTrue(true);
     }
 }

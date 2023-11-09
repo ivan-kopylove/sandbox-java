@@ -1,6 +1,5 @@
 package a16931c3681346acadd680c0eb3a4d65;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -8,6 +7,8 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
+import static org.junit.jupiter.api.Assertions.fail;
 
 class SerializableTest
 {
@@ -49,7 +50,7 @@ class SerializableTest
         catch (IOException e)
         {
             System.out.println("error " + e);
-            Assertions.fail();
+            fail();
         }
     }
 }

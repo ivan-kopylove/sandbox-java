@@ -5,7 +5,6 @@ import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationBuildin
 import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationGeneralDetails;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +15,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class JpaCompoundSelectionConstruction
@@ -99,11 +99,11 @@ class JpaCompoundSelectionConstruction
         query.select(compoundSelection);
         List<CompoundObject> resultList = entityManager.createQuery(query)
                                                        .getResultList();
-        Assertions.assertEquals(0,
-                                resultList.get(0)
-                                          .getA());
-        Assertions.assertEquals("Sadovnicheskaya Ulitsa 82, building 2, Moscow, Russia, 115035",
-                                resultList.get(0)
-                                          .getB());
+        assertEquals(0,
+                     resultList.get(0)
+                               .getA());
+        assertEquals("Sadovnicheskaya Ulitsa 82, building 2, Moscow, Russia, 115035",
+                     resultList.get(0)
+                               .getB());
     }
 }

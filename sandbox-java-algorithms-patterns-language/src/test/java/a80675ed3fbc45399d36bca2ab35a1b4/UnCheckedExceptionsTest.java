@@ -1,7 +1,9 @@
 package a80675ed3fbc45399d36bca2ab35a1b4;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class UnCheckedExceptionsTest
 {
@@ -14,10 +16,10 @@ class UnCheckedExceptionsTest
         }
         catch (Exception e)
         {
-            Assertions.assertTrue(true);
+            assertTrue(true);
             return;
         }
-        Assertions.fail();
+        fail();
     }
 
     public void a()

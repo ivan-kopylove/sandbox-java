@@ -4,7 +4,6 @@ import com.github.ivan.kopylove.sanbox.java.websocket.ChatClientEndpoint;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.GenericContainer;
@@ -21,6 +20,7 @@ import java.util.concurrent.CountDownLatch;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.fail;
 
 @Testcontainers
 class SharedContainerExampleTest
@@ -72,7 +72,7 @@ class SharedContainerExampleTest
         }
         else
         {
-            Assertions.fail();
+            fail();
         }
     }
 }

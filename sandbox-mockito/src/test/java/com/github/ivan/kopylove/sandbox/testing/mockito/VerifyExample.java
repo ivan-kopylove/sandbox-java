@@ -1,8 +1,9 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class VerifyExample
 {
@@ -12,7 +13,7 @@ class VerifyExample
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())
                .thenReturn("hello world");
-        Assertions.assertEquals("hello world", myclass.getSomeValue());
+        assertEquals("hello world", myclass.getSomeValue());
         Mockito.verify(myclass)
                .getSomeValue();
     }
@@ -35,7 +36,7 @@ class VerifyExample
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())
                .thenReturn("hello world");
-        Assertions.assertEquals("hello world", myclass.getSomeValue());
+        assertEquals("hello world", myclass.getSomeValue());
         Mockito.verify(myclass, Mockito.times(2))
                .getSomeValue();
     }

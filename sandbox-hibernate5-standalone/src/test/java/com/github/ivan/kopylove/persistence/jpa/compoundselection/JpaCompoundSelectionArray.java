@@ -4,7 +4,6 @@ import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationBuildin
 import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.OrganizationGeneralDetails;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +12,9 @@ import javax.persistence.criteria.CompoundSelection;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class JpaCompoundSelectionArray
 {
@@ -63,7 +65,7 @@ class JpaCompoundSelectionArray
         query.select(compoundSelection);
         Object[] resultList = entityManager.createQuery(query)
                                            .getSingleResult();
-        Assertions.assertNotNull(resultList[0]);
-        Assertions.assertEquals("Vertical", resultList[1]);
+        assertNotNull(resultList[0]);
+        assertEquals("Vertical", resultList[1]);
     }
 }

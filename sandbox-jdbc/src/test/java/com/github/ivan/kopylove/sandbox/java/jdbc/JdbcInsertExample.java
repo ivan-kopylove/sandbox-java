@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JdbcInsertExample
 {
@@ -27,7 +28,7 @@ class JdbcInsertExample
             preparedStatement = conn.createStatement();
 
             int i = preparedStatement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, i);
+            assertEquals(0, i);
         }
         finally
         {
@@ -59,7 +60,7 @@ class JdbcInsertExample
             int row = preparedStatement.executeUpdate();
 
             // rows affected
-            Assertions.assertEquals(1, row);
+            assertEquals(1, row);
 
             preparedStatement.close();
             conn.close();

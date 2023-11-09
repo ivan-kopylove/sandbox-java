@@ -13,7 +13,7 @@ class OperatorPrecedenceTest
         int x = 5;
         int y = 10;
         int result = ++x * y--;
-        //        Assertions.assertEquals(, result);
+        //        assertEquals(, result);
     }
 
     @Test
@@ -22,8 +22,8 @@ class OperatorPrecedenceTest
         String result1 = "1 + 2 = " + 1 + 2;
         String result2 = "1 + 2 = " + (1 + 2);
 
-        //        Assertions.assertEquals("", result1);
-        //        Assertions.assertEquals("", result2);
+        //        assertEquals("", result1);
+        //        assertEquals("", result2);
     }
 
     @Test
@@ -32,8 +32,8 @@ class OperatorPrecedenceTest
         String result1 = 1 + 2 + "abc";
         String result2 = "abc" + 1 + 2;
 
-        //        Assertions.assertEquals("", result1);
-        //        Assertions.assertEquals("", result2);
+        //        assertEquals("", result1);
+        //        assertEquals("", result2);
     }
 
     /**
@@ -44,6 +44,6 @@ class OperatorPrecedenceTest
     {
         int year = 2020;
         boolean result = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-        //        Assertions.assertEquals(, result);
+        //        assertEquals(, result);
     }
 }

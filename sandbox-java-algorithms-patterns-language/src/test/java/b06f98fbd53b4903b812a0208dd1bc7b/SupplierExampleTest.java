@@ -1,9 +1,11 @@
 package b06f98fbd53b4903b812a0208dd1bc7b;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.function.Supplier;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  * java.util.function experiments
@@ -24,8 +26,8 @@ class SupplierExampleTest
         foo = new Foo();
         foo.setMyString("2");
 
-        Assertions.assertEquals("1", s1.get());
-        Assertions.assertEquals("2", s2.get());
+        assertEquals("1", s1.get());
+        assertEquals("2", s2.get());
     }
 
     /**
@@ -40,7 +42,7 @@ class SupplierExampleTest
         MyClass two = abc.get();
 
 
-        Assertions.assertNotEquals(one.hashCode(), two.hashCode());
+        assertNotEquals(one.hashCode(), two.hashCode());
     }
 
     @Test

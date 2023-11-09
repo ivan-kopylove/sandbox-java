@@ -1,11 +1,12 @@
 package f149ea6c47d04063a3b7cc2f6a0fb03b;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * java streams playground
@@ -25,8 +26,8 @@ class OrderOfOperationsMattersTest
                                      .map(s -> s + "-postfix")
                                      .collect(Collectors.toList());
 
-        Assertions.assertEquals(3, result1.size());
-        Assertions.assertEquals(2, result2.size());
+        assertEquals(3, result1.size());
+        assertEquals(2, result2.size());
     }
 
     @Test

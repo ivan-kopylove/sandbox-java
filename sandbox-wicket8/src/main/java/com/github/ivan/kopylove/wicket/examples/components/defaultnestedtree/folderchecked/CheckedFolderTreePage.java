@@ -12,8 +12,8 @@ import org.apache.wicket.model.Model;
 
 class CheckedFolderTreePage extends WebPage
 {
-    private       DefaultNestedTree<CheckedFolderNode> defaultNestedTree;
     private final SomeTreeNodeProvider                 nodeProvider = new SomeTreeNodeProvider();
+    private DefaultNestedTree<CheckedFolderNode> defaultNestedTree;
     private       ProviderSubset<CheckedFolderNode>    checked;
 
     protected boolean isChecked(CheckedFolderNode CheckedFolderNode)

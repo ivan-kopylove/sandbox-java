@@ -1,12 +1,13 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
 import com.github.ivan.kopylove.sandbox.testing.mockito.domain.Bottle;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunnerDelegate;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @PowerMockRunnerDelegate(MockitoJUnitRunner.class)
 @PrepareForTest(Bottle.class)
@@ -20,6 +21,6 @@ class MockFinalMethodExample
                     .thenReturn("cup");
 
 
-        Assertions.assertEquals("cup", bottle.getBottle());
+        assertEquals("cup", bottle.getBottle());
     }
 }

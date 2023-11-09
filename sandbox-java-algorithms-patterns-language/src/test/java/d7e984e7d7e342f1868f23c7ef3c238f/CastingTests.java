@@ -1,7 +1,8 @@
 package d7e984e7d7e342f1868f23c7ef3c238f;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CastingTests
 {
@@ -26,12 +27,12 @@ class CastingTests
         System.out.println("float value : " + f);
         System.out.println("double value : " + d);
 
-        Assertions.assertEquals(40, b);
-        Assertions.assertEquals(40, s);
-        Assertions.assertEquals(40, i);
-        Assertions.assertEquals(40, l);
-        Assertions.assertEquals(40L, f, 0);
-        Assertions.assertEquals(40, d, 0);
+        assertEquals(40, b);
+        assertEquals(40, s);
+        assertEquals(40, i);
+        assertEquals(40, l);
+        assertEquals(40L, f, 0);
+        assertEquals(40, d, 0);
     }
 
     /**
@@ -54,12 +55,12 @@ class CastingTests
         System.out.println("short value : " + s);
         System.out.println("byte value : " + b);
 
-        Assertions.assertEquals(30.0, d, 0);
-        Assertions.assertEquals(30.0, f, 0);
-        Assertions.assertEquals(30, l);
-        Assertions.assertEquals(30, i);
-        Assertions.assertEquals(30, s);
-        Assertions.assertEquals(30, b);
+        assertEquals(30.0, d, 0);
+        assertEquals(30.0, f, 0);
+        assertEquals(30, l);
+        assertEquals(30, i);
+        assertEquals(30, s);
+        assertEquals(30, b);
     }
 
     /**
@@ -72,8 +73,8 @@ class CastingTests
         //        char c1 = -1;
         //        char c2 = 65536;
         char c2 = 65535;
-        Assertions.assertEquals(127, b1);
-        Assertions.assertEquals(65535, c2);
+        assertEquals(127, b1);
+        assertEquals(65535, c2);
     }
 
     @Test

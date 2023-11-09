@@ -1,5 +1,4 @@
 import com.github.ivan.kopylove.sandbox.selenium.util.Utils;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -8,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * To find cells of table, relatively of already found element, please use dot. E.g. .//td, not //td.
@@ -36,14 +38,14 @@ class FindElementsRelativeToAnotherElement
             for (WebElement row : rows)
             {
                 List<WebElement> elements = row.findElements(By.xpath("//td"));
-                Assertions.assertEquals(6, elements.size());
+                assertEquals(6, elements.size());
             }
 
             webDriver.quit();
         }
         else
         {
-            Assertions.fail();
+            fail();
         }
     }
 
@@ -59,12 +61,12 @@ class FindElementsRelativeToAnotherElement
             List<WebElement> rows = webDriver.findElements(By.xpath("//table//tr"));
             List<WebElement> elements = rows.get(1)
                                             .findElements(By.xpath(".//td"));
-            Assertions.assertEquals(3, elements.size());
+            assertEquals(3, elements.size());
             webDriver.quit();
         }
         else
         {
-            Assertions.fail();
+            fail();
         }
     }
 }

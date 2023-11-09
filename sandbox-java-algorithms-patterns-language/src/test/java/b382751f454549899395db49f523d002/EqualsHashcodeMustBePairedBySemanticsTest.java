@@ -1,11 +1,13 @@
 package b382751f454549899395db49f523d002;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EqualsHashcodeMustBePairedBySemanticsTest
 {
@@ -24,9 +26,9 @@ class EqualsHashcodeMustBePairedBySemanticsTest
 
         boolean containsResult = set.contains(new WronglyDefinedEqualsHashcode("2"));
 
-        Assertions.assertTrue(equalsCalled);
-        Assertions.assertTrue(hashcodeCalled);
-        Assertions.assertFalse(containsResult); //false because after finding by hashcode, equals check failed inside HashSet
+        assertTrue(equalsCalled);
+        assertTrue(hashcodeCalled);
+        assertFalse(containsResult); //false because after finding by hashcode, equals check failed inside HashSet
     }
 
     class WronglyDefinedEqualsHashcode

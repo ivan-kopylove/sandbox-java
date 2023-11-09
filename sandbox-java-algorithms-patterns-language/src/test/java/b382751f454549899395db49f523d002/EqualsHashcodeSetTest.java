@@ -1,11 +1,13 @@
 package b382751f454549899395db49f523d002;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EqualsHashcodeSetTest
 {
@@ -22,8 +24,8 @@ class EqualsHashcodeSetTest
         set.add(myClass1);
         set.add(myClass2);
 
-        Assertions.assertFalse(equalsCalled);
-        Assertions.assertTrue(hashcodeCalled);
+        assertFalse(equalsCalled);
+        assertTrue(hashcodeCalled);
     }
 
     @Test
@@ -38,9 +40,9 @@ class EqualsHashcodeSetTest
 
         boolean containsResult = set.contains(new MyClass("2"));
 
-        Assertions.assertTrue(containsResult);
-        Assertions.assertTrue(equalsCalled);
-        Assertions.assertTrue(hashcodeCalled);
+        assertTrue(containsResult);
+        assertTrue(equalsCalled);
+        assertTrue(hashcodeCalled);
     }
 
     class MyClass

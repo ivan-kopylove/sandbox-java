@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
@@ -9,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JdbcMetadata
 {
@@ -25,7 +26,7 @@ class JdbcMetadata
         rs = stat.executeQuery("select 'someValue', myTest.id myId, myTest.name myname from test myTest");
         while (rs.next())
         {
-            Assertions.assertEquals("Hello", rs.getString("name"));
+            assertEquals("Hello", rs.getString("name"));
         }
 
         ResultSetMetaData metaData = rs.getMetaData();

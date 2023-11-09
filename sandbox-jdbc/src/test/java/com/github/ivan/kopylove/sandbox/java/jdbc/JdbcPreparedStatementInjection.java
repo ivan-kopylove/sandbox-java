@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Reproduces 1+1 attack
@@ -31,7 +32,7 @@ class JdbcPreparedStatementInjection
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, lines);
+            assertEquals(0, lines);
 
             preparedStatement = conn.prepareStatement(SQL_INSERT_TEMPLATE);
             preparedStatement.setInt(1, 0);
@@ -84,7 +85,7 @@ class JdbcPreparedStatementInjection
                 System.out.printf("id: %s, name: %s%n", id, name);
             }
 
-            Assertions.assertEquals(2, count);
+            assertEquals(2, count);
 
             statement.close();
             conn.close();
@@ -136,7 +137,7 @@ class JdbcPreparedStatementInjection
                 String name = rs.getString(2);
                 System.out.printf("id: %s, name: %s%n", id, name);
             }
-            Assertions.assertEquals(0, count);
+            assertEquals(0, count);
 
             preparedStatement.close();
             conn.close();

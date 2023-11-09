@@ -4,12 +4,12 @@ import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.PageEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
 import org.hibernate.LazyInitializationException;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
@@ -53,8 +53,8 @@ class JpaEntityOutOfTransactionExampleTest
                      .begin();
 
         PageEntity page = entityManager.find(PageEntity.class, pageId);
-        Assertions.assertEquals("asserts pk equality", "1. Annotation; 2. Annotation", page.getAnnotations());
-        Assertions.assertEquals("asserts book name equality", page.getName(), "");
+        assertEquals("asserts pk equality", "1. Annotation; 2. Annotation", page.getAnnotations());
+        assertEquals("asserts book name equality", page.getName(), "");
 
         entityManager.getTransaction()
                      .commit();
@@ -73,8 +73,8 @@ class JpaEntityOutOfTransactionExampleTest
 
             PageEntity page = entityManager.find(PageEntity.class, pageId);
 
-            Assertions.assertEquals("asserts pk equality", "1. Annotation; 2. Annotation", page.getAnnotations());
-            Assertions.assertEquals("asserts book name equality", page.getName(), "");
+            assertEquals("asserts pk equality", "1. Annotation; 2. Annotation", page.getAnnotations());
+            assertEquals("asserts book name equality", page.getName(), "");
 
             entityManager.getTransaction()
                          .commit();
@@ -99,8 +99,8 @@ class JpaEntityOutOfTransactionExampleTest
                      .commit();
         entityManager.close();
 
-        Assertions.assertEquals("asserts pk equality", "1. Annotation; 2. Annotation", page.getAnnotations());
-        Assertions.assertEquals("asserts book name equality", page.getName(), "");
+        assertEquals("asserts pk equality", "1. Annotation; 2. Annotation", page.getAnnotations());
+        assertEquals("asserts book name equality", page.getName(), "");
 
         BookEntity book = page.getBook();
     }

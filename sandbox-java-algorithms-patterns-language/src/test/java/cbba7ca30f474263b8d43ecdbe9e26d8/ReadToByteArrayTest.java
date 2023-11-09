@@ -1,6 +1,5 @@
 package cbba7ca30f474263b8d43ecdbe9e26d8;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -8,6 +7,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * java.io.* playground
@@ -40,7 +42,7 @@ class ReadToByteArrayTest
                 inputStream = new FileInputStream(resource.getFile());
                 byte[] b = readFully(inputStream);
                 System.out.println(b.length);
-                Assertions.assertEquals(35347, b.length);
+                assertEquals(35347, b.length);
             }
             finally
             {
@@ -52,7 +54,7 @@ class ReadToByteArrayTest
         }
         else
         {
-            Assertions.fail();
+            fail();
         }
     }
 }

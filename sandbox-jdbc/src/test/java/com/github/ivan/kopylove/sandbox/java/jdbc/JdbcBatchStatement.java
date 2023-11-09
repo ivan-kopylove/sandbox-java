@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +7,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Batch reduces the number of database roundtrip which again results in significant performance gain.
@@ -28,7 +29,7 @@ class JdbcBatchStatement
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, lines);
+            assertEquals(0, lines);
         }
         finally
         {
@@ -61,9 +62,9 @@ class JdbcBatchStatement
             int[] recordsAffected = statement.executeBatch();
 
 
-            Assertions.assertEquals(1, recordsAffected[0]);
-            Assertions.assertEquals(2, recordsAffected[1]);
-            Assertions.assertEquals(3, recordsAffected[2]);
+            assertEquals(1, recordsAffected[0]);
+            assertEquals(2, recordsAffected[1]);
+            assertEquals(3, recordsAffected[2]);
 
             statement.close();
             conn.close();

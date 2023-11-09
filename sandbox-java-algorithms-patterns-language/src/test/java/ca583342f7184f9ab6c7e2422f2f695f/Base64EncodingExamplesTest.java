@@ -39,7 +39,7 @@ class Base64EncodingExamplesTest
     {
         //        byte[] encoded = com.sun.jersey.core.util.Base64.encode(STR.getBytes());
         //        String result = new String(encoded, StandardCharsets.US_ASCII);
-        //        Assertions.assertEquals(BASE64_STR, result);
+        //        assertEquals(BASE64_STR, result);
     }
 
     @Test
@@ -83,7 +83,7 @@ class Base64EncodingExamplesTest
         //
         //            byte[] encoded = com.sun.jersey.core.util.Base64.encode(bytes);
         //            String result = new String(encoded, StandardCharsets.US_ASCII);
-        //            Assertions.assertEquals(BASE64_FILE, result);
+        //            assertEquals(BASE64_FILE, result);
         //        }
         //        else
         //        {

@@ -1,7 +1,8 @@
 package dd18e4cce4164a7281bd74d046a2f037;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * facets:
@@ -14,6 +15,6 @@ class MyEnumSingletonTest
     void run()
     {
         String result = MyEnumSingleton.INSTANCE.utilMethod();
-        Assertions.assertEquals(MyEnumSingleton.RETURN_RESULT, result);
+        assertEquals(MyEnumSingleton.RETURN_RESULT, result);
     }
 }

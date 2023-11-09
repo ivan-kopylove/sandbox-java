@@ -1,7 +1,8 @@
 package e765fe4e181d4bbbbaab02e3aa661047;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CommaSeparatedStatements
 {
@@ -11,7 +12,7 @@ class CommaSeparatedStatements
         float foo = 2, bar = 3, baz = 4;//1//
         float mod1 = foo % baz, mod2 = baz % foo;  //2
         float result = mod1 > mod2 ? bar : baz; //3
-        //        Assertions.assertEquals(, result); //calculate yourself
+        //        assertEquals(, result); //calculate yourself
     }
 
     @Test
@@ -22,7 +23,7 @@ class CommaSeparatedStatements
         int i3 = 3;
 
         int i4 = i1 + (i2 = i3);
-        Assertions.assertEquals(4, i4);
+        assertEquals(4, i4);
     }
 
     @Test
@@ -43,7 +44,7 @@ class CommaSeparatedStatements
                         i++;
                 }
             }
-            Assertions.assertEquals(5, i);
+            assertEquals(5, i);
         }
     }
 }

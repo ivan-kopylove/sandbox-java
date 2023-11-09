@@ -1,7 +1,9 @@
 package c05ec907cd024a8880eb41aec17a92f0;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class ThreadRunVsThreadStart
 {
@@ -16,7 +18,7 @@ class ThreadRunVsThreadStart
             {
                 String childThreadName = Thread.currentThread()
                                                .getName();
-                Assertions.assertNotEquals(parentThreadName, childThreadName);
+                assertNotEquals(parentThreadName, childThreadName);
             }
         };
 
@@ -34,7 +36,7 @@ class ThreadRunVsThreadStart
             {
                 String childThreadName = Thread.currentThread()
                                                .getName();
-                Assertions.assertEquals(parentThreadName, childThreadName);
+                assertEquals(parentThreadName, childThreadName);
             }
         };
 

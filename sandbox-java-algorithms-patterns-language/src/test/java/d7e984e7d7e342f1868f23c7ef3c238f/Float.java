@@ -1,7 +1,8 @@
 package d7e984e7d7e342f1868f23c7ef3c238f;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Float
 {
@@ -17,7 +18,7 @@ class Float
     void run1()
     {
         float f2 = 1.0f;
-        Assertions.assertEquals(1, f2, 0);
+        assertEquals(1, f2, 0);
     }
 
     @Test
@@ -28,9 +29,9 @@ class Float
         float hex3 = 0x00000A;
         float hex4 = 0x00_000_A;
 
-        Assertions.assertEquals(hex1, hex2, 0);
-        Assertions.assertEquals(hex1, hex3, 0);
-        Assertions.assertEquals(hex1, hex4, 0);
+        assertEquals(hex1, hex2, 0);
+        assertEquals(hex1, hex3, 0);
+        assertEquals(hex1, hex4, 0);
     }
 
     @Test
@@ -38,7 +39,7 @@ class Float
     {
         float f1 = -1;
 
-        Assertions.assertEquals(-1, f1, 0);
+        assertEquals(-1, f1, 0);
     }
 
     @Test

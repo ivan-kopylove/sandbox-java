@@ -1,6 +1,5 @@
 package ca583342f7184f9ab6c7e2422f2f695f;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,6 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
@@ -41,6 +41,6 @@ class ArraysAsListFixedSizeExampleTest
         List<String> immutableList = Arrays.asList("1", "2");
         List<String> mutableList = new ArrayList<>(immutableList);
         mutableList.add("3");
-        Assertions.assertEquals("3", mutableList.get(2));
+        assertEquals("3", mutableList.get(2));
     }
 }

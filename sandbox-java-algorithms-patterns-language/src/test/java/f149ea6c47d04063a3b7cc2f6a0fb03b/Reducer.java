@@ -1,11 +1,13 @@
 package f149ea6c47d04063a3b7cc2f6a0fb03b;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 import java.util.function.BinaryOperator;
 import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class Reducer
 {
@@ -21,8 +23,8 @@ class Reducer
                                                   return current > previous ? current : previous;
                                               }
                                           });
-        Assertions.assertTrue(reduced.isPresent());
-        reduced.ifPresent(value -> Assertions.assertEquals(Integer.valueOf(3), value));
+        assertTrue(reduced.isPresent());
+        reduced.ifPresent(value -> assertEquals(Integer.valueOf(3), value));
     }
 
     @Test
@@ -38,7 +40,7 @@ class Reducer
                                                   return current > previous ? current : previous;
                                               }
                                           });
-        Assertions.assertTrue(reduced.isPresent());
-        reduced.ifPresent(value -> Assertions.assertEquals(Integer.valueOf(1), value));
+        assertTrue(reduced.isPresent());
+        reduced.ifPresent(value -> assertEquals(Integer.valueOf(1), value));
     }
 }

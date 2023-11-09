@@ -2,10 +2,11 @@ package com.github.ivan.kopylove.persistence.jpa;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Minimal JPA example - save and load saved entity.
@@ -28,7 +29,7 @@ class JpaBasicExampleTest
                      .commit();
 
         BookEntity entity = entityManager.find(BookEntity.class, 6);
-        Assertions.assertEquals(entity.getName(), "Terry Pratchett - The Colour of Magic");
+        assertEquals(entity.getName(), "Terry Pratchett - The Colour of Magic");
         entityManager.close();
     }
 }

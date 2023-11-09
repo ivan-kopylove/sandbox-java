@@ -1,7 +1,8 @@
 package fcc6e9287e6c4986bf8c12755027c96d;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * java.mechanics.oop.hiding
@@ -12,10 +13,10 @@ class FieldsAreNotPolymorphicTest
     void referenceIsFather()
     {
         Father father = new Son();
-        Assertions.assertEquals(1, father.i);
-        Assertions.assertEquals(2, father.getI());
-        Assertions.assertEquals(10, father.j);
-        Assertions.assertEquals(10, father.getJ());
+        assertEquals(1, father.i);
+        assertEquals(2, father.getI());
+        assertEquals(10, father.j);
+        assertEquals(10, father.getJ());
     }
 
     @Test
@@ -23,10 +24,10 @@ class FieldsAreNotPolymorphicTest
     {
         Son son = new Son();
 
-        Assertions.assertEquals(2, son.i);
-        Assertions.assertEquals(20, son.j);
-        Assertions.assertEquals(2, son.getI());
-        Assertions.assertEquals(10, son.getJ());
+        assertEquals(2, son.i);
+        assertEquals(20, son.j);
+        assertEquals(2, son.getI());
+        assertEquals(10, son.getJ());
     }
 }
 

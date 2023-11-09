@@ -3,7 +3,6 @@ package com.github.ivan.kopylove.persistence.orm;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ChildEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -15,6 +14,8 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * ORM N+1 problem demonstration
@@ -130,7 +131,7 @@ class OrmNPlusOneBehaviour
             Set<ChildEntity> childs = parent.getChilds();
             for (ChildEntity childEntity : childs)
             {
-                Assertions.assertNotNull(childEntity.getName());
+                assertNotNull(childEntity.getName());
             }
         }
 
@@ -162,7 +163,7 @@ class OrmNPlusOneBehaviour
             Set<ChildEntity> childs = parent.getChilds();
             for (ChildEntity childEntity : childs)
             {
-                Assertions.assertNotNull(childEntity.getName());
+                assertNotNull(childEntity.getName());
             }
         }
     }

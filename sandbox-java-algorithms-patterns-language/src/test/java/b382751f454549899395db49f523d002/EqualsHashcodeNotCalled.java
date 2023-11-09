@@ -1,10 +1,13 @@
 package b382751f454549899395db49f523d002;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EqualsHashcodeNotCalled
 {
@@ -18,9 +21,9 @@ class EqualsHashcodeNotCalled
         MyClass myClass1 = new MyClass();
         MyClass myClass2 = new MyClass();
 
-        Assertions.assertNotSame(myClass1, myClass2);
-        Assertions.assertFalse(equalsCalled);
-        Assertions.assertFalse(hashcodeCalled);
+        assertNotSame(myClass1, myClass2);
+        assertFalse(equalsCalled);
+        assertFalse(hashcodeCalled);
     }
 
     @Test
@@ -32,8 +35,8 @@ class EqualsHashcodeNotCalled
         myClass1.equals(myClass2);
 
 
-        Assertions.assertTrue(equalsCalled);
-        Assertions.assertFalse(hashcodeCalled);
+        assertTrue(equalsCalled);
+        assertFalse(hashcodeCalled);
     }
 
     @Test
@@ -46,8 +49,8 @@ class EqualsHashcodeNotCalled
         set.add(myClass1);
         set.add(myClass2);
 
-        Assertions.assertFalse(equalsCalled);
-        Assertions.assertTrue(hashcodeCalled);
+        assertFalse(equalsCalled);
+        assertTrue(hashcodeCalled);
     }
 
     class MyClass

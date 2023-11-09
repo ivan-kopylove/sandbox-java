@@ -2,10 +2,11 @@ package com.github.ivan.kopylove.persistence.jpa.generatedvalue.identity;
 
 import com.github.ivan.kopylove.sandbox.persistence.jpa.identity.IdentityExampleEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GenerationTypeIdentity
 {
@@ -22,9 +23,9 @@ class GenerationTypeIdentity
         IdentityExampleEntity identityExampleEntity = new IdentityExampleEntity();
 
         int id = identityExampleEntity.getId();
-        Assertions.assertEquals(0, id);
+        assertEquals(0, id);
         entityManager.persist(identityExampleEntity);
-        Assertions.assertEquals(++id, identityExampleEntity.getId());
+        assertEquals(++id, identityExampleEntity.getId());
 
         entityManager.getTransaction()
                      .commit();

@@ -3,8 +3,9 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Minimal example with Hibernate session - save and load saved entity<br/>
@@ -31,7 +32,7 @@ class HibernateBasicExampleTest
         session.getTransaction()
                .begin();
         BookEntity entity = session.find(BookEntity.class, 0);
-        Assertions.assertEquals(entity.getName(), "Harry Potter");
+        assertEquals(entity.getName(), "Harry Potter");
         session.getTransaction()
                .commit();
         session.close();

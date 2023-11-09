@@ -1,7 +1,8 @@
 package a2d4be4e8111473998fbc1ccd5ec3dbd;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  *
@@ -14,6 +15,6 @@ class PrintStackTraceExampleTest
         String s = Thread.currentThread()
                          .getStackTrace()
                          .toString();
-        Assertions.assertTrue(s.startsWith("[Ljava.lang.StackTraceElement;@"));
+        assertTrue(s.startsWith("[Ljava.lang.StackTraceElement;@"));
     }
 }
