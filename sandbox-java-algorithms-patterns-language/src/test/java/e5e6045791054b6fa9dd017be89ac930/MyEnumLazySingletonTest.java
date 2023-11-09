@@ -17,7 +17,7 @@ class MyEnumLazySingletonTest
 {
     @Test
     @Disabled
-    public void mockSingleton() throws IllegalAccessException, NoSuchFieldException
+    public void mockSingleton()
     {
         assertThrows(IllegalArgumentException.class, () -> {
 

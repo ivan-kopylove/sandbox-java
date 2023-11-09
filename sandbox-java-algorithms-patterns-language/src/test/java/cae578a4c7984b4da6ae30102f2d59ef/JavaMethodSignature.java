@@ -12,7 +12,7 @@ package cae578a4c7984b4da6ae30102f2d59ef;
  */
 class JavaMethodSignature
 {
-    public int add(int num1, int num2) throws Exception
+    public int add(int num1, int num2)
     {
         return num1 + num2;
     }

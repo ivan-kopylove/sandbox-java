@@ -36,7 +36,7 @@ class JavaReflectionExamplesTest
     }
 
     @Test
-    void run2() throws NoSuchFieldException
+    void run2()
     {
         assertThrows(NoSuchFieldException.class, () -> {
 

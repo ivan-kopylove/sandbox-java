@@ -17,7 +17,7 @@ class MyDebugWebsocketAdapter extends WebSocketAdapter
     private static final Logger LOGGER = LogManager.getLogger(MyDebugWebsocketAdapter.class);
 
     @Override
-    public void onTextMessage(WebSocket websocket, String message) throws Exception
+    public void onTextMessage(WebSocket websocket, String message)
     {
         LOGGER.info("onTextMessage: {}", message);
     }

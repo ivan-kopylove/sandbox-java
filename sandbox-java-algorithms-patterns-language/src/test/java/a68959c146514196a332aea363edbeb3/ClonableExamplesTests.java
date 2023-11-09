@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class ClonableExamplesTests
 {
     @Test
-    void not_clonable() throws CloneNotSupportedException
+    void not_clonable()
     {
         assertThrows(CloneNotSupportedException.class, () -> {
 

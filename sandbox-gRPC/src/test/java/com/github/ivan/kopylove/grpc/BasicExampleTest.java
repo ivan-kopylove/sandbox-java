@@ -27,7 +27,7 @@ class BasicExampleTest
     }
 
     @AfterEach
-    public void destroy() throws IOException
+    public void destroy()
     {
         server.shutdown();
     }

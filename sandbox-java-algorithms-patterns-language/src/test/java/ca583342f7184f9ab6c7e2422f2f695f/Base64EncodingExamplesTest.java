@@ -72,7 +72,7 @@ class Base64EncodingExamplesTest
     }
 
     @Test
-    void jersey_bytes_to_Base64_File() throws IOException
+    void jersey_bytes_to_Base64_File()
     {
         //        URL resource = getClass().getClassLoader()
         //                                 .getResource("cameleon-transition.svg.pdf");

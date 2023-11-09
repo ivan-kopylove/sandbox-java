@@ -1,12 +1,9 @@
 package com.github.ivan.kopylove;
 
-import com.neovisionaries.ws.client.WebSocketException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
 
 class RunnerTest
 {
@@ -15,7 +12,7 @@ class RunnerTest
 
     @Test
     @Disabled
-    public void testMain() throws WebSocketException, IOException
+    public void testMain()
     {
         //        WebSocket socket = new WebSocketFactory().createSocket("wss://echo.websocket.org");
         //        socket.addListener(new MyDebugWebsocketAdapter());

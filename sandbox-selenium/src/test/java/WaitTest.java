@@ -35,7 +35,7 @@ class WaitTest
 
     @Test
     @Disabled
-    public void testUntitled() throws Exception
+    public void testUntitled()
     {
         //        driver.get(baseUrl);
         //        element = driver.findElement(By.className("input__control"));
@@ -49,7 +49,7 @@ class WaitTest
     }
 
     @AfterEach
-    public void tearDown() throws Exception
+    public void tearDown()
     {
         driver.quit();
     }
