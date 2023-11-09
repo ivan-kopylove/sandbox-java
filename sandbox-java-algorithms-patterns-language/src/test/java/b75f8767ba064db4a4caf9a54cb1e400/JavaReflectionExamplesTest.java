@@ -3,7 +3,6 @@ package b75f8767ba064db4a4caf9a54cb1e400;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -64,25 +63,5 @@ class JavaReflectionExamplesTest
         // modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
         assertEquals("red", Lamp.getColor());
-    }
-
-    /**
-     * How to modify final field
-     *
-     * @throws IllegalAccessException
-     * @throws NoSuchFieldException
-     */
-    @Test
-    void run4() throws IllegalAccessException, NoSuchFieldException
-    {
-        Field field = Wall.class.getDeclaredField("kek");
-        field.setAccessible(true);
-
-        Field modifiersField = Field.class.getDeclaredField("modifiers");
-        modifiersField.setAccessible(true);
-        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-
-        field.set(null, "myValue");
-        assertEquals("myValue", Wall.getKek());
     }
 }

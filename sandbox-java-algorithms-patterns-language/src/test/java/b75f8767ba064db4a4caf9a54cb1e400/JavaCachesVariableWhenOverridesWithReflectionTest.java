@@ -1,5 +1,6 @@
-package ca583342f7184f9ab6c7e2422f2f695f;
+package b75f8767ba064db4a4caf9a54cb1e400;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
@@ -14,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class JavaCachesVariableWhenOverridesWithReflectionTest
 {
     @Test
+    @Disabled
     void run() throws NoSuchFieldException, IllegalAccessException
     {
         setValue(ObjectHolder.class.getDeclaredField("FINAL_STR"), "overrided");

@@ -175,7 +175,10 @@ class LocalDateTimeTest
             List<Object> objects = Collections.emptyList();
             objects.add("dsa");
         });
-        LocalDate.parse("24.12.2020 14:58", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+        assertThrows(UnsupportedOperationException.class, () -> {
+            LocalDate.parse("24.12.2020 14:58", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        });
     }
 
     @Test
