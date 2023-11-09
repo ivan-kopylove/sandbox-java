@@ -18,8 +18,8 @@ class StringPoolTest
     void basic_example()
     {
         // given
-        String a = "Duke";
-        String b = "Duke";
+        String a = "Duke"; // all compile-time constant goes into the string pool
+        String b = "Duke"; 
 
         // then
         assertTrue(a == b);
@@ -32,7 +32,7 @@ class StringPoolTest
     void intern_internalizes_string()
     {
         // given
-        String a = "01"; // goes into the string pool
+        String a = "01";
         String b = ""; // the value is calculated
 
         for (int i = 0; i < 2; i++)
@@ -62,9 +62,9 @@ class StringPoolTest
     void runtime_calculated_values_are_not_in_the_string_pool()
     {
         // given
-        String a = "John"; // goes into the string pool
-        String b = "John"; // goes into the string pool
-        String c = "Jo" + "h" + "n"; // goes into the string pool
+        String a = "John";
+        String b = "John";
+        String c = "Jo" + "h" + "n";
 
         String d = ""; // value is calculated
         for (int i = 0; i <= 2; i++)
