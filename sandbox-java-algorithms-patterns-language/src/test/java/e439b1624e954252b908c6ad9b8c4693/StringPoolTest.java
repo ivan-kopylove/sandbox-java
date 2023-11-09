@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Basic demonstration of strings pool in java. Strings are compared intentionally using reference equality.
  */
-@SuppressWarnings({"SimplifiableAssertion", // dropped in the sake of demonstration
-                   "StringEquality", // dropped in the sake of demonstration
-                   "ConstantValue", // dropped in the sake of demonstration
+@SuppressWarnings({"SimplifiableAssertion", //
+                   "StringEquality", //
+                   "ConstantValue", //
                    "StringConcatenationInLoop"}) // avoid string builder inner logic
 class StringPoolTest
 {
@@ -19,7 +19,7 @@ class StringPoolTest
     {
         // given
         String a = "Duke"; // all compile-time constant goes into the string pool
-        String b = "Duke"; 
+        String b = "Duke";
 
         // then
         assertTrue(a == b);
