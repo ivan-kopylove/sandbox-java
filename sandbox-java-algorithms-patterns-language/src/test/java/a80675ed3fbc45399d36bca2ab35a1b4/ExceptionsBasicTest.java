@@ -10,7 +10,7 @@ class ExceptionsBasicTest
      * Exception (aka checked exceptions) and its successors must be handled.
      */
     @Test
-    void basic_exception()
+    void try_to_remove_try_catch_and_check_what_happens()
     {
         try
         {
