@@ -3,7 +3,7 @@ package e439b1624e954252b908c6ad9b8c4693;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class StringFormat
+class StringFormatTest
 {
     @Test
     void main()
