@@ -173,12 +173,12 @@ class LocalDateTimeTest
     @Test
     void unableToParseDateTime()
     {
-        assertThrows(DateTimeParseException.class, () -> {
+        assertThrows(UnsupportedOperationException.class, () -> {
             List<Object> objects = Collections.emptyList();
             objects.add("dsa");
         });
 
-        assertThrows(UnsupportedOperationException.class, () -> {
+        assertThrows(DateTimeParseException.class, () -> {
             LocalDate.parse("24.12.2020 14:58", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         });
     }
