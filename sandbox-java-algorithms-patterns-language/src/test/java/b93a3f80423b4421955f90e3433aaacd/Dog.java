@@ -1,12 +1,8 @@
 package b93a3f80423b4421955f90e3433aaacd;
 
-class Dog extends Animal
+class Dog
 {
     private String name;
-
-    public Dog()
-    {
-    }
 
     public Dog(String name)
     {
