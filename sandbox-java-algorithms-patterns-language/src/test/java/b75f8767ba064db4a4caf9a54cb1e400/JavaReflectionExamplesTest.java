@@ -24,7 +24,7 @@ class JavaReflectionExamplesTest
      * @throws NoSuchFieldException
      */
     @Test
-    public void run() throws IllegalAccessException, NoSuchFieldException
+    void run() throws IllegalAccessException, NoSuchFieldException
     {
         Picture picture = new Picture();
 
@@ -37,7 +37,7 @@ class JavaReflectionExamplesTest
     }
 
     @Test
-    public void run2() throws NoSuchFieldException
+    void run2() throws NoSuchFieldException
     {
         assertThrows(NoSuchFieldException.class, () -> {
 
@@ -56,7 +56,7 @@ class JavaReflectionExamplesTest
      * @throws NoSuchFieldException
      */
     @Test
-    public void run3() throws IllegalAccessException, NoSuchFieldException
+    void run3() throws IllegalAccessException, NoSuchFieldException
     {
         Field field = Lamp.class.getDeclaredField("color");
         field.setAccessible(true);
@@ -73,7 +73,7 @@ class JavaReflectionExamplesTest
      * @throws NoSuchFieldException
      */
     @Test
-    public void run4() throws IllegalAccessException, NoSuchFieldException
+    void run4() throws IllegalAccessException, NoSuchFieldException
     {
         Field field = Wall.class.getDeclaredField("kek");
         field.setAccessible(true);

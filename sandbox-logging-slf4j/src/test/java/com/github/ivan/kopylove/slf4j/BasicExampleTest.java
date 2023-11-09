@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BasicExampleTest
+class BasicExampleTest
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(BasicExampleTest.class);
 
     @Test
-    public void run()
+    void run()
     {
         LOGGER.debug("Debug log message");
         LOGGER.info("Info log message");

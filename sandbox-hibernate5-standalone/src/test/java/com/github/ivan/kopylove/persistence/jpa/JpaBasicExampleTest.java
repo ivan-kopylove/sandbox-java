@@ -10,10 +10,10 @@ import javax.persistence.EntityManager;
 /**
  * Minimal JPA example - save and load saved entity.
  */
-public class JpaBasicExampleTest
+class JpaBasicExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

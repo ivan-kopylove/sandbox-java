@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class HibernateDirtyChecking
+class HibernateDirtyChecking
 {
     public static void verifyDirtyCheckWorks()
     {
@@ -45,7 +45,7 @@ public class HibernateDirtyChecking
     }
 
     @Test
-    public void dirtyChecking()
+    void dirtyChecking()
     {
         triggerDirtyCheck();
         verifyDirtyCheckWorks();

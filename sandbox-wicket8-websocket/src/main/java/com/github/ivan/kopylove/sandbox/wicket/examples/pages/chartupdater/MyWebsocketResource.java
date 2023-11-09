@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  *
  */
-public class MyWebsocketResource extends WebSocketResource
+class MyWebsocketResource extends WebSocketResource
 {
     @Override
     protected void onConnect(ConnectedMessage message)

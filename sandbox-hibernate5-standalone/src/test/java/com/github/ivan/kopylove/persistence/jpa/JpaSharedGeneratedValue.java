@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
-public class JpaSharedGeneratedValue
+class JpaSharedGeneratedValue
 {
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

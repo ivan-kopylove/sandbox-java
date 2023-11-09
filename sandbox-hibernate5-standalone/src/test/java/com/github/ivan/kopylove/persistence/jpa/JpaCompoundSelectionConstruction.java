@@ -18,7 +18,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class JpaCompoundSelectionConstruction
+class JpaCompoundSelectionConstruction
 {
     @BeforeAll
     public static void populate()
@@ -53,7 +53,7 @@ public class JpaCompoundSelectionConstruction
      * CompoundSelection filled according construct order.
      */
     @Test
-    public void run_incorrect()
+    void run_incorrect()
     {
         assertThrows(IllegalArgumentException.class, () -> {
 
@@ -81,7 +81,7 @@ public class JpaCompoundSelectionConstruction
      * CompoundSelection filled according construct order.
      */
     @Test
-    public void run_correct()
+    void run_correct()
     {
         EntityManager entityManager = HibernateSessionFactory.openSession();
         entityManager.getTransaction()

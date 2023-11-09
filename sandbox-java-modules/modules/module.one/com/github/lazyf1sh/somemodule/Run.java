@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.somemodule;
 
-public class Run
+class Run
 {
     public static void doSomething()
     {

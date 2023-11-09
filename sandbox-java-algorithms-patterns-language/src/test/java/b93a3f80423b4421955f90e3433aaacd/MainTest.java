@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class MainTest
+class MainTest
 {
     @Test
-    public void test1()
+    void test1()
     {
         Dog aDog = new Dog("Max");
         test1_modify1(aDog);
@@ -18,7 +18,7 @@ public class MainTest
     }
 
     @Test
-    public void test2()
+    void test2()
     {
         Dog aDog = new Dog("Max");
         test1_modify2(aDog);
@@ -26,7 +26,7 @@ public class MainTest
     }
 
     @Test
-    public void test3()
+    void test3()
     {
         Dog aDog = new Dog("Max");
         test1_modify3(aDog);

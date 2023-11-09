@@ -12,7 +12,7 @@ import javax.persistence.FlushModeType;
 /**
  * JPA allows implementations to synchronize the persistence context at other times, if they wish.
  */
-public class JpaFlushMode
+class JpaFlushMode
 {
 
     @BeforeAll
@@ -34,7 +34,7 @@ public class JpaFlushMode
     }
 
     @Test
-    public void commitMode()
+    void commitMode()
     {
         EntityManager entityManager = HibernateSessionFactory.openSession();
         entityManager.getTransaction()

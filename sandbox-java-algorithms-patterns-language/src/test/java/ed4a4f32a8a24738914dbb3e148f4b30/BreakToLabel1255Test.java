@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
  * <p>
  * enthuware.ocpjp.i.v11.2.1255
  */
-public class BreakToLabel1255Test
+class BreakToLabel1255Test
 {
     @Test
-    public void run()
+    void run()
     {
         int i = 0;
         loop:

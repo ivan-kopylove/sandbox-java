@@ -12,7 +12,7 @@ import java.io.IOException;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class BasicExampleTest
+class BasicExampleTest
 {
     private Server server;
 
@@ -33,7 +33,7 @@ public class BasicExampleTest
     }
 
     @Test
-    public void base()
+    void base()
     {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080)
                                                       .usePlaintext()

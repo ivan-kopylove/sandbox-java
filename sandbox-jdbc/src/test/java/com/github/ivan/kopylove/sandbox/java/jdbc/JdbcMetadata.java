@@ -10,10 +10,10 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcMetadata
+class JdbcMetadata
 {
     @Test
-    public void run() throws SQLException
+    void run() throws SQLException
     {
         Connection conn = DriverManager.getConnection("jdbc:h2:mem:myDb;DB_CLOSE_DELAY=-1");
         Statement stat = conn.createStatement();

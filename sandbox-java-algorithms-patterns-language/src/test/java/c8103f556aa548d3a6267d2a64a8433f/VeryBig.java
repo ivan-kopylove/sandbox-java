@@ -1,6 +1,6 @@
 package c8103f556aa548d3a6267d2a64a8433f;
 
-public class VeryBig
+class VeryBig
 {
     private static final int    SIZE = 10000;
     private final        long[] la   = new long[SIZE];

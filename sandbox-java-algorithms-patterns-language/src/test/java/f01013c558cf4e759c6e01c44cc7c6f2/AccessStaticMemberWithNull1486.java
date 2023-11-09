@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 /**
  * static members example
  */
-public class AccessStaticMemberWithNull1486
+class AccessStaticMemberWithNull1486
 {
     /**
      * null reference is prohibited be used to access static members without an exception.
      */
     @Test
-    public void run()
+    void run()
     {
         MyClass myClass = new MyClass();
         myClass = null;

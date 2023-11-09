@@ -6,7 +6,7 @@ import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.panel.Panel;
 
-public class MyModalWindowContent extends Panel
+class MyModalWindowContent extends Panel
 {
     private static final long serialVersionUID = 5609396783783385769L;
 
@@ -52,7 +52,7 @@ public class MyModalWindowContent extends Panel
             private static final long serialVersionUID = 1079394286186679880L;
 
             @Override
-            protected void onSubmit(final AjaxRequestTarget target)
+            protected void onSubmit(AjaxRequestTarget target)
             {
                 super.onSubmit(target);
             }

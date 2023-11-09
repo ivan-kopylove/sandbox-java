@@ -14,7 +14,7 @@ import java.sql.Statement;
 /**
  * Reproduces 1+1 attack
  */
-public class JdbcPreparedStatementInjection
+class JdbcPreparedStatementInjection
 {
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "INSERT INTO GEMS (GEM_KEY, NAME) VALUES (?,?)";
@@ -61,7 +61,7 @@ public class JdbcPreparedStatementInjection
     }
 
     @Test
-    public void injection_sucess() throws SQLException
+    void injection_sucess() throws SQLException
     {
         Connection conn = null;
         Statement statement = null;
@@ -112,7 +112,7 @@ public class JdbcPreparedStatementInjection
      * 2. Injection-safe.<br/>
      */
     @Test
-    public void injection_prevented() throws SQLException
+    void injection_prevented() throws SQLException
     {
         Connection conn = null;
         PreparedStatement preparedStatement = null;

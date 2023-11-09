@@ -2,7 +2,7 @@ package com.github.ivan.kopylove.wicket.examples.problem_solution.navigateBackPr
 
 import org.apache.wicket.markup.html.WebPage;
 
-public class SomePage extends WebPage
+class SomePage extends WebPage
 {
     @Override
     protected void onInitialize()

@@ -2,7 +2,7 @@ package com.github.ivan.kopylove.sandbox.instrumentation.agent;
 
 import java.lang.instrument.Instrumentation;
 
-public class MyInstrumentationAgent
+class MyInstrumentationAgent
 {
     public static void premain(String agentArgs, Instrumentation inst)
     {

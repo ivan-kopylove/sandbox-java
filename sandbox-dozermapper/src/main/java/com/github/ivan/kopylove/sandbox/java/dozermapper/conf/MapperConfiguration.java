@@ -10,7 +10,7 @@ import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.To;
 import org.dozer.loader.api.BeanMappingBuilder;
 import org.dozer.loader.api.TypeMappingOptions;
 
-public class MapperConfiguration extends BeanMappingBuilder
+class MapperConfiguration extends BeanMappingBuilder
 {
     @Override
     protected void configure()

@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * - patterns
  * - singleton
  */
-public class LazySingletonExampleTest
+class LazySingletonExampleTest
 {
     @Test
-    public void lazySingleton()
+    void lazySingleton()
     {
         LazySingleton instance = LazySingleton.getInstance();
         assertNotNull(instance);

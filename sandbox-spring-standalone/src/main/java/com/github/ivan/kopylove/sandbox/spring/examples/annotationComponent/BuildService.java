@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * that the annotated class is providing a business service to other layers within the application. (c) Pro Spring 5, 5th Edition
  */
 @Component
-public class BuildService
+class BuildService
 {
     public String build()
     {

@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.exercises.enthuware.ocpjp.i.v11.v2.e3230;
 
-public class ArrayTestCorrect
+class ArrayTestCorrect
 {
     public static void main(String[] args)
     {

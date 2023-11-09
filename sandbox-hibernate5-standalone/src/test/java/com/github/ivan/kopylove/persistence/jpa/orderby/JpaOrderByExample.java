@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 import java.util.Arrays;
 import java.util.List;
 
-public class JpaOrderByExample
+class JpaOrderByExample
 {
     @BeforeAll
     public static void populate()
@@ -31,7 +31,7 @@ public class JpaOrderByExample
     }
 
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

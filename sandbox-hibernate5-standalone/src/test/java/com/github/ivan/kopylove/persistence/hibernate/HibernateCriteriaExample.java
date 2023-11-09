@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * org.hibernate.Criteria simpliest example.<br/>
  * Example available at: https://github.com/ivan-kopylove/sandbox-java
  */
-public class HibernateCriteriaExample
+class HibernateCriteriaExample
 {
     @BeforeAll
     public static void populate()
@@ -36,7 +36,7 @@ public class HibernateCriteriaExample
     }
 
     @Test
-    public void run()
+    void run()
     {
         Session session = HibernateSessionFactory.openSession();
         session.getTransaction()

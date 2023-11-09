@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheckedFolderNode implements Serializable
+class CheckedFolderNode implements Serializable
 {
     private CheckedFolderNode       parent;
     private String                  title;
@@ -15,7 +15,7 @@ public class CheckedFolderNode implements Serializable
         return parent;
     }
 
-    public void setParent(final CheckedFolderNode parent)
+    public void setParent(CheckedFolderNode parent)
     {
         this.parent = parent;
     }
@@ -25,7 +25,7 @@ public class CheckedFolderNode implements Serializable
         return title;
     }
 
-    public void setTitle(final String title)
+    public void setTitle(String title)
     {
         this.title = title;
     }
@@ -35,7 +35,7 @@ public class CheckedFolderNode implements Serializable
         return children;
     }
 
-    public void setChildren(final List<CheckedFolderNode> children)
+    public void setChildren(List<CheckedFolderNode> children)
     {
         this.children = children;
     }

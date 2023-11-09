@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class OrderEntity
+class OrderEntity
 {
     @Id
     @GeneratedValue(generator = "itemSeqGenerator", strategy = GenerationType.SEQUENCE)

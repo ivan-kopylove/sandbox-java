@@ -5,7 +5,7 @@ import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 
-public class ParentChildFromSubmitBugCandidate extends WebPage
+class ParentChildFromSubmitBugCandidate extends WebPage
 {
 
     @Override
@@ -13,7 +13,7 @@ public class ParentChildFromSubmitBugCandidate extends WebPage
     {
         super.onInitialize();
 
-        final Form<?> form = new Form<Void>("form")
+        Form<?> form = new Form<Void>("form")
         {
             @Override
             protected void onSubmit()

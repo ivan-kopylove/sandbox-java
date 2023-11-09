@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.spring;
 
-public class MyBean
+class MyBean
 {
     public String getString()
     {

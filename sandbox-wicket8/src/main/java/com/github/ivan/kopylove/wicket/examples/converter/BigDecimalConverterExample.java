@@ -19,7 +19,7 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class BigDecimalConverterExample extends WebPage
+class BigDecimalConverterExample extends WebPage
 {
     private static final long serialVersionUID = 1388829190396256439L;
 
@@ -35,7 +35,7 @@ public class BigDecimalConverterExample extends WebPage
             private static final long serialVersionUID = 8642924278318065944L;
 
             @Override
-            public <C> IConverter<C> getConverter(final Class<C> type)
+            public <C> IConverter<C> getConverter(Class<C> type)
             {
                 BigDecimalConverter bigDecimalConverter = new BigDecimalConverter()
                 {
@@ -74,13 +74,13 @@ public class BigDecimalConverterExample extends WebPage
         input.add(new AjaxFormComponentUpdatingBehavior("keyup")
         {
             @Override
-            protected void onUpdate(final AjaxRequestTarget target)
+            protected void onUpdate(AjaxRequestTarget target)
             {
                 target.getHeaderResponse();
             }
 
             @Override
-            protected void updateAjaxAttributes(final AjaxRequestAttributes attributes)
+            protected void updateAjaxAttributes(AjaxRequestAttributes attributes)
             {
                 super.updateAjaxAttributes(attributes);
             }

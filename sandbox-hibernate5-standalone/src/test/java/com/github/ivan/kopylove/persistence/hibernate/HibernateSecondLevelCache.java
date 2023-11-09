@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  *
  */
-public class HibernateSecondLevelCache
+class HibernateSecondLevelCache
 {
     @BeforeAll
     public static void populate()
@@ -32,7 +32,7 @@ public class HibernateSecondLevelCache
     }
 
     @Test
-    public void run()
+    void run()
     {
         Session session1 = HibernateSessionFactory.openSession();
         Session session2 = HibernateSessionFactory.openSession();

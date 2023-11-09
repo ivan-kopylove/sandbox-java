@@ -10,10 +10,10 @@ import javax.persistence.EntityManager;
 /**
  * Difference vs merge and persist
  */
-public class JpaMergeExampleTest
+class JpaMergeExampleTest
 {
     @Test
-    public void merge_set_new_name_original_object()
+    void merge_set_new_name_original_object()
     {
         ParentEntity initialEntity = new ParentEntity();
         initialEntity.setId(1);
@@ -40,7 +40,7 @@ public class JpaMergeExampleTest
     }
 
     @Test
-    public void merge_set_new_name_merged_object()
+    void merge_set_new_name_merged_object()
     {
         ParentEntity initialEntity = new ParentEntity();
         initialEntity.setId(2);
@@ -67,7 +67,7 @@ public class JpaMergeExampleTest
     }
 
     @Test
-    public void persist_then_merge()
+    void persist_then_merge()
     {
         ParentEntity entity1 = new ParentEntity();
         entity1.setId(3);
@@ -97,7 +97,7 @@ public class JpaMergeExampleTest
     }
 
     @Test
-    public void persist()
+    void persist()
     {
         ParentEntity originalEntity = new ParentEntity();
         originalEntity.setId(4);

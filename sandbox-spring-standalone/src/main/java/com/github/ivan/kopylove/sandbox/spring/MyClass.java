@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Scope("prototype")
-public class MyClass
+class MyClass
 {
     private final MyService service;
 
-    public MyClass(final MyService service)
+    public MyClass(MyService service)
     {
         this.service = service;
     }

@@ -6,11 +6,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class MyStructModel extends LoadableDetachableModel<MyNode>
+class MyStructModel extends LoadableDetachableModel<MyNode>
 {
-    private String id;
+    private final String id;
 
-    public MyStructModel(final MyNode object)
+    public MyStructModel(MyNode object)
     {
         super(object);
         this.id = object.getId();
@@ -25,7 +25,7 @@ public class MyStructModel extends LoadableDetachableModel<MyNode>
     }
 
     @Override
-    public boolean equals(final Object o)
+    public boolean equals(Object o)
     {
         if (this == o)
         {
@@ -35,7 +35,7 @@ public class MyStructModel extends LoadableDetachableModel<MyNode>
         {
             return false;
         }
-        final MyStructModel that = (MyStructModel) o;
+        MyStructModel that = (MyStructModel) o;
         return Objects.equals(id, that.id);
     }
 

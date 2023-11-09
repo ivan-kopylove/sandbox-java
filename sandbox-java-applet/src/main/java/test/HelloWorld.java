@@ -4,7 +4,7 @@ import javax.swing.JApplet;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
-public class HelloWorld extends JApplet
+class HelloWorld extends JApplet
 {
     //Called when this applet is loaded into the browser.
     public void init()

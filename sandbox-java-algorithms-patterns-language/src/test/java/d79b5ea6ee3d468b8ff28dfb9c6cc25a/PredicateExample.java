@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class PredicateExample
+class PredicateExample
 {
     @Test
-    public void run()
+    void run()
     {
         Stream<String> myStream = Stream.of("a", "b", "c");
 

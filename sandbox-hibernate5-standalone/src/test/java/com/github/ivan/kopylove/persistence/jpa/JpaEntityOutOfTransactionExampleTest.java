@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  *
  */
-public class JpaEntityOutOfTransactionExampleTest
+class JpaEntityOutOfTransactionExampleTest
 {
     private static int pageId;
 
@@ -46,7 +46,7 @@ public class JpaEntityOutOfTransactionExampleTest
     }
 
     @Test
-    public void normalBehaviour()
+    void normalBehaviour()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -62,7 +62,7 @@ public class JpaEntityOutOfTransactionExampleTest
     }
 
     @Test
-    public void outOfTransactionNoFkNoGetter()
+    void outOfTransactionNoFkNoGetter()
     {
         assertThrows(LazyInitializationException.class, () -> {
 
@@ -87,7 +87,7 @@ public class JpaEntityOutOfTransactionExampleTest
     }
 
     @Test
-    public void outOfTransactionNoFkGet()
+    void outOfTransactionNoFkGet()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

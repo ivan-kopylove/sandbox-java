@@ -5,10 +5,10 @@ import com.github.ivan.kopylove.sandbox.persistence.util.MetadataExtractorIntegr
 import org.hibernate.mapping.PersistentClass;
 import org.junit.jupiter.api.Test;
 
-public class HibernateSpiIntegratorExample
+class HibernateSpiIntegratorExample
 {
     @Test
-    public void run()
+    void run()
     {
         JpaEntityManagerFactory.getEntityManger();
 

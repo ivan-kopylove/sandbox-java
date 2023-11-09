@@ -4,7 +4,7 @@ import org.apache.wicket.model.IModel;
 
 import java.util.UUID;
 
-public class RandomUuidModel implements IModel<String>
+class RandomUuidModel implements IModel<String>
 {
 
     @Override

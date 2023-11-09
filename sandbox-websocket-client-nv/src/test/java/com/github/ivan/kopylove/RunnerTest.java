@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-public class RunnerTest
+class RunnerTest
 {
 
     private static final Logger LOGGER = LogManager.getLogger(RunnerTest.class);

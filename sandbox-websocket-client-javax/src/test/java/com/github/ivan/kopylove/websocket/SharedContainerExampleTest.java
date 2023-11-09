@@ -23,7 +23,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @Testcontainers
-public class SharedContainerExampleTest
+class SharedContainerExampleTest
 {
     private static final Logger LOGGER = LogManager.getLogger(SharedContainerExampleTest.class);
 
@@ -47,7 +47,7 @@ public class SharedContainerExampleTest
     }
 
     @Test
-    public void main() throws URISyntaxException, InterruptedException
+    void main() throws URISyntaxException, InterruptedException
     {
         List<String> result = new ArrayList<>();
         CountDownLatch lock = new CountDownLatch(1);

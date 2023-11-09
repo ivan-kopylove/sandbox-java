@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "PAGE")
-public class PageEntity
+class PageEntity
 {
     @Id
     @Column(name = "PAGE_KEY")

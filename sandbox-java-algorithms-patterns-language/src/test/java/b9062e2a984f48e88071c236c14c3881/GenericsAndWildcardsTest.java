@@ -43,7 +43,7 @@ class GenericsAndWildcardsTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         List<Animal> animalList = new ArrayList<Animal>();
         List<RedCat> redCatList = new ArrayList<RedCat>();

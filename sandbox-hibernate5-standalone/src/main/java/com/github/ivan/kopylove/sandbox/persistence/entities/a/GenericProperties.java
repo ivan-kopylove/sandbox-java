@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import java.util.Map;
 
 @Embeddable
-public class GenericProperties
+class GenericProperties
 {
     @ElementCollection(fetch = FetchType.LAZY, targetClass = PropertyValue.class)
     @CollectionTable(name = "PROPERTIES", joinColumns = @JoinColumn(name = "PROPERTIES_KEY"))

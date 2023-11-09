@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * - patterns
  * - closure
  */
-public class ClosureExampleTest
+class ClosureExampleTest
 {
 
     static TextProvider getProvider(int value)
@@ -29,7 +29,7 @@ public class ClosureExampleTest
     }
 
     @Test
-    public void runTest()
+    void runTest()
     {
         TextProvider provider = getProvider(15);
         assertEquals(15, provider.get());

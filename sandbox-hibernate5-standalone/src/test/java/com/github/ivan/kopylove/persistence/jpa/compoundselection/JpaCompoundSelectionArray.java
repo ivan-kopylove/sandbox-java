@@ -14,7 +14,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-public class JpaCompoundSelectionArray
+class JpaCompoundSelectionArray
 {
     @BeforeAll
     public static void populate()
@@ -46,7 +46,7 @@ public class JpaCompoundSelectionArray
     }
 
     @Test
-    public void run_correct()
+    void run_correct()
     {
         EntityManager entityManager = HibernateSessionFactory.openSession();
         entityManager.getTransaction()

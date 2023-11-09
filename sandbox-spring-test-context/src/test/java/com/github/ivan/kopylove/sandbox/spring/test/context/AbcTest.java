@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
 @ContextConfiguration(locations = "classpath:spring-hibernate-test-context.xml")
 @TestPropertySource("classpath:spring-hibernate-test.properties")
 @ExtendWith(SpringExtension.class)
-public class AbcTest
+class AbcTest
 {
 
     @PersistenceContext

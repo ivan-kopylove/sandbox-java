@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 /**
  *
  */
-public class ChartUpdater
+class ChartUpdater
 {
     private static final ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(5);
 

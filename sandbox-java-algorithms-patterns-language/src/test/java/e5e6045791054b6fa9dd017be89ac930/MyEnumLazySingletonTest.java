@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * - patterns
  * - singleton
  */
-public class MyEnumLazySingletonTest
+class MyEnumLazySingletonTest
 {
     @Test
     @Disabled

@@ -10,10 +10,10 @@ import javax.persistence.EntityManager;
 /**
  * JPA @GeneratedValue examples
  */
-public class JpaGeneratedValueExampleTest
+class JpaGeneratedValueExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

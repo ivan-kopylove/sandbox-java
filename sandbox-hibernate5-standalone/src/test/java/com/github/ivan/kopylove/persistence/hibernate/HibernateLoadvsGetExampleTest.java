@@ -8,13 +8,14 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * this example demonsrates that
  * 1. entity var is buildEntityManagerFactory pure object
  */
-public class HibernateLoadvsGetExampleTest
+class HibernateLoadvsGetExampleTest
 {
 
     @BeforeAll
@@ -36,7 +37,7 @@ public class HibernateLoadvsGetExampleTest
      * session.get() hits the database immediately
      */
     @Test
-    public void get()
+    void get()
     {
         Session session = HibernateSessionFactory.openSession();
         session.getTransaction()
@@ -56,7 +57,7 @@ public class HibernateLoadvsGetExampleTest
      * ParentEntity is proxy
      */
     @Test
-    public void load()
+    void load()
     {
         Session session = HibernateSessionFactory.openSession();
         session.getTransaction()
@@ -65,7 +66,7 @@ public class HibernateLoadvsGetExampleTest
         session.getTransaction()
                .commit();
 
-        assertTrue(parentEntity instanceof HibernateProxy);
+        assertInstanceOf(HibernateProxy.class, parentEntity);
         assertTrue(parentEntity.getClass()
                                .toString()
                                .contains("$HibernateProxy$"));

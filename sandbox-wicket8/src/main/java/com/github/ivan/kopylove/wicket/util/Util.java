@@ -5,7 +5,7 @@ import org.apache.wicket.Component;
 import java.io.File;
 import java.util.List;
 
-public class Util
+class Util
 {
     public static void showComponentMessage(Component component)
     {

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class RestServiceEmulator
+class RestServiceEmulator
 {
     @Autowired
     private BusinessLogicService businessLogicService;

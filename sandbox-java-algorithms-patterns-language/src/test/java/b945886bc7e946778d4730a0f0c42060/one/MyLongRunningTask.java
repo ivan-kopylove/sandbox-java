@@ -1,6 +1,6 @@
 package b945886bc7e946778d4730a0f0c42060.one;
 
-public class MyLongRunningTask implements Runnable
+class MyLongRunningTask implements Runnable
 {
     private final OnCompleteListener onCompleteListener;
 

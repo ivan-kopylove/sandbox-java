@@ -11,7 +11,7 @@ import org.apache.wicket.model.LoadableDetachableModel;
 /**
  * Called once per request cycle.
  */
-public class LoadableDetachableModelExample extends WebPage
+class LoadableDetachableModelExample extends WebPage
 {
 
     @Override

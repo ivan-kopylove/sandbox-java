@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SpringContextGetBeanExample
+class SpringContextGetBeanExample
 {
     @Test
-    public void run()
+    void run()
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext-minimal.xml");
         context.getBeanDefinitionNames();

@@ -10,7 +10,7 @@ import org.apache.wicket.model.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TabbedPanelPageExample extends WebPage
+class TabbedPanelPageExample extends WebPage
 {
     @Override
     protected void onInitialize()

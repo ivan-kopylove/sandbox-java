@@ -7,7 +7,7 @@ import org.apache.wicket.ajax.markup.html.form.AjaxButton;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 
-public class PageWithModalWindow extends WebPage
+class PageWithModalWindow extends WebPage
 {
     private static final long serialVersionUID = -4348869317433578819L;
 

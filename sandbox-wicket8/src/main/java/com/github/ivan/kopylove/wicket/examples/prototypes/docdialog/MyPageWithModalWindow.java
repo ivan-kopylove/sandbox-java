@@ -5,10 +5,10 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.Model;
 
-public class MyPageWithModalWindow extends WebPage
+class MyPageWithModalWindow extends WebPage
 {
     private static final long          serialVersionUID = -4348869317433578819L;
-    private              MyModalWindow modalWindow      = new MyModalWindow("myModalWindow");
+    private final        MyModalWindow modalWindow      = new MyModalWindow("myModalWindow");
 
     @Override
     protected void onInitialize()

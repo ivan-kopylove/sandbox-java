@@ -8,14 +8,14 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.PropertyModel;
 
-public class MyPanel extends Panel
+class MyPanel extends Panel
 {
     private static final long serialVersionUID = -5825190184127240781L;
 
-    private MyModelObject  myModelObject = new MyModelObject();
-    private AjaxSubmitLink searchButton;
+    private final MyModelObject  myModelObject = new MyModelObject();
+    private final AjaxSubmitLink searchButton;
 
-    public MyPanel(final String id, AjaxSubmitLink searchButton)
+    public MyPanel(String id, AjaxSubmitLink searchButton)
     {
         super(id);
         this.searchButton = searchButton;
@@ -26,7 +26,7 @@ public class MyPanel extends Panel
     {
         super.onInitialize();
 
-        final Form<?> form = new Form<Void>("nestedForm")
+        Form<?> form = new Form<Void>("nestedForm")
         {
             private static final long serialVersionUID = -2665226028753832979L;
 
@@ -39,7 +39,7 @@ public class MyPanel extends Panel
         form.setOutputMarkupId(true);
         add(form);
 
-        final TextField<Void> textField = new TextField<>("textField", new PropertyModel<>(myModelObject, "prop"));
+        TextField<Void> textField = new TextField<>("textField", new PropertyModel<>(myModelObject, "prop"));
         textField.setOutputMarkupId(true);
         form.add(textField);
 

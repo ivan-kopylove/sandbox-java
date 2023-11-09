@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcTransactionExample
+class JdbcTransactionExample
 {
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "INSERT INTO GEMS (GEM_KEY, NAME) VALUES (?,?)";
@@ -57,7 +57,7 @@ public class JdbcTransactionExample
     }
 
     @Test
-    public void transaction_run() throws SQLException
+    void transaction_run() throws SQLException
     {
         Connection conn = null;
         Statement statement = null;

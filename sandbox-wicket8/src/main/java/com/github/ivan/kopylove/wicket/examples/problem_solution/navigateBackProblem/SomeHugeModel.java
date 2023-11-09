@@ -5,7 +5,7 @@ import org.apache.wicket.model.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SomeHugeModel extends Model<Integer>
+class SomeHugeModel extends Model<Integer>
 {
     public List<Integer> hugeAmountOfData = new ArrayList<Integer>();
 

@@ -7,7 +7,7 @@ import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.OnLoadHeaderItem;
 import org.apache.wicket.markup.html.WebPage;
 
-public class JsRenderOnLoadHeaderItem extends WebPage
+class JsRenderOnLoadHeaderItem extends WebPage
 {
     @Override
     protected void onInitialize()

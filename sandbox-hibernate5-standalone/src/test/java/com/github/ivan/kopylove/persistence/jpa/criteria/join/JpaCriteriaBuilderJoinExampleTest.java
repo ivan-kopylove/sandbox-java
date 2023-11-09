@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * This example demonstrates minimal join boilerplate
  */
-public class JpaCriteriaBuilderJoinExampleTest
+class JpaCriteriaBuilderJoinExampleTest
 {
     @BeforeAll
     public static void prepareData()
@@ -45,7 +45,7 @@ public class JpaCriteriaBuilderJoinExampleTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();

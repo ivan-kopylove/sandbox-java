@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * drop sequence if exists MyGeneratorName
  */
 @Entity
-public class GeneratedValueCustomName
+class GeneratedValueCustomName
 {
     @Id
     @GeneratedValue(generator = "MyGeneratorName")

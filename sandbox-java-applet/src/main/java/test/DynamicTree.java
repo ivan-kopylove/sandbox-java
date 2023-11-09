@@ -49,7 +49,7 @@ import javax.swing.tree.TreeSelectionModel;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 
-public class DynamicTree extends JPanel
+class DynamicTree extends JPanel
 {
     private final Toolkit                toolkit = Toolkit.getDefaultToolkit();
     protected     DefaultMutableTreeNode rootNode;

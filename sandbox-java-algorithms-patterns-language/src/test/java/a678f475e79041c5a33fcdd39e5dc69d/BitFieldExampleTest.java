@@ -17,7 +17,7 @@ class BitFieldExampleTest
     private static final long STAMINA      = 9223372036854775807L; //power of 63
 
     @Test
-    public void set_flag_1()
+    void set_flag_1()
     {
         int combined = POWER | WILLPOWER;
 
@@ -34,7 +34,7 @@ class BitFieldExampleTest
     }
 
     @Test
-    public void leading_zero_is_negative_flag()
+    void leading_zero_is_negative_flag()
     {
         int to_31_power = Integer.MAX_VALUE; // 2147483647;
         int to_31_power_negative = Integer.MIN_VALUE; // -2147483648;
@@ -46,7 +46,7 @@ class BitFieldExampleTest
     }
 
     @Test
-    public void leading_zero_is_negative_flag_long()
+    void leading_zero_is_negative_flag_long()
     {
         long to_63_power = Long.MAX_VALUE;
         long to_63_power_negative = Long.MIN_VALUE;
@@ -58,7 +58,7 @@ class BitFieldExampleTest
     }
 
     @Test
-    public void set_flag_long()
+    void set_flag_long()
     {
         long combined = POWER | REGENERATION;
 
@@ -69,7 +69,7 @@ class BitFieldExampleTest
     }
 
     @Test
-    public void leadingBit()
+    void leadingBit()
     {
         long attributes = STAMINA | REGENERATION;
 
@@ -85,7 +85,7 @@ class BitFieldExampleTest
     }
 
     @Test
-    public void set_flag_2()
+    void set_flag_2()
     {
         int attributes = POWER | WILLPOWER;
         attributes |= CHARISMA;
@@ -98,7 +98,7 @@ class BitFieldExampleTest
     }
 
     @Test
-    public void unset_flag()
+    void unset_flag()
     {
         int attributes = POWER | WILLPOWER;
         attributes &= ~WILLPOWER;

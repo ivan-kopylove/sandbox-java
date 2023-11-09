@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DynamicBindingExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         A a = new A();
         A b = new B();
@@ -25,7 +25,7 @@ class DynamicBindingExampleTest
     }
 
     @Test
-    public void run2()
+    void run2()
     {
         A a = new A();
         B b = new B();

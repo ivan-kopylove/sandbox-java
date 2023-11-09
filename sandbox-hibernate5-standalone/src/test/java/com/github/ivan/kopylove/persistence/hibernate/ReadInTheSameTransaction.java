@@ -6,10 +6,10 @@ import org.hibernate.Session;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ReadInTheSameTransaction
+class ReadInTheSameTransaction
 {
     @Test
-    public void test_find()
+    void test_find()
     {
         ParentEntity parentEntity = new ParentEntity();
         parentEntity.setId(4);
@@ -34,7 +34,7 @@ public class ReadInTheSameTransaction
     }
 
     @Test
-    public void test_get()
+    void test_get()
     {
         ParentEntity parentEntity = new ParentEntity();
         parentEntity.setId(4);
@@ -58,7 +58,7 @@ public class ReadInTheSameTransaction
     }
 
     @Test
-    public void test_load()
+    void test_load()
     {
         ParentEntity parentEntity = new ParentEntity();
         parentEntity.setId(4);

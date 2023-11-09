@@ -10,11 +10,11 @@ import org.dozer.Mapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ObjectMapperExample
+class ObjectMapperExample
 {
 
     @Test
-    public void main()
+    void main()
     {
         Mapper mapper = DozerMapper.getInstance();
         A objA = new A();
@@ -25,7 +25,7 @@ public class ObjectMapperExample
     }
 
     @Test
-    public void two()
+    void two()
     {
         Mapper mapper = DozerMapper.getInstance();
         C c = new C();
@@ -36,7 +36,7 @@ public class ObjectMapperExample
     }
 
     @Test
-    public void tdasdsawo()
+    void tdasdsawo()
     {
         Mapper mapper = DozerMapper.getInstance();
         A a = new A();
@@ -49,7 +49,7 @@ public class ObjectMapperExample
     }
 
     @Test
-    public void tdasddsawo()
+    void tdasddsawo()
     {
         Mapper mapper = DozerMapper.getInstance();
         B input = new B();
@@ -62,7 +62,7 @@ public class ObjectMapperExample
     }
 
     @Test
-    public void no_setters()
+    void no_setters()
     {
         Mapper mapper = DozerMapper.getInstance();
 

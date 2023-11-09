@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
-public class GenerationTypeIdentity
+class GenerationTypeIdentity
 {
     /**
      * This example is intended to show basic working example of GenerationType.IDENTITY.
      */
     @Test
-    public void generationTypeIdentity()
+    void generationTypeIdentity()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

@@ -11,7 +11,7 @@ import java.io.InputStream;
 /**
  * Hello world!
  */
-public class PdfValidatorExample
+class PdfValidatorExample
 {
     public static void main(String[] args)
     {

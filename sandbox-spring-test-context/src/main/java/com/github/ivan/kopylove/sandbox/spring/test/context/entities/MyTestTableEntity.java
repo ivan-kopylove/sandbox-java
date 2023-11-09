@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "MY_TEST_TABLE")
-public class MyTestTableEntity
+class MyTestTableEntity
 {
     @Id
     private int id;

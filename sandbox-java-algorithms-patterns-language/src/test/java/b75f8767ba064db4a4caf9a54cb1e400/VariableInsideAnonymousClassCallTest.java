@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 class VariableInsideAnonymousClassCallTest
 {
     @Test
-    public void test()
+    void test()
     {
         B b = new B()
         {

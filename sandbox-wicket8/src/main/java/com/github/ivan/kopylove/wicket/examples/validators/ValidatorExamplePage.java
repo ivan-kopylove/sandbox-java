@@ -7,7 +7,7 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.validation.IValidatable;
 import org.apache.wicket.validation.IValidator;
 
-public class ValidatorExamplePage extends WebPage
+class ValidatorExamplePage extends WebPage
 {
     private static final long serialVersionUID = 7132129081649580796L;
 
@@ -16,11 +16,11 @@ public class ValidatorExamplePage extends WebPage
     {
         super.onInitialize();
 
-        final TextField<String> someTextField = new TextField<String>("someTextField", Model.of(""));
+        TextField<String> someTextField = new TextField<String>("someTextField", Model.of(""));
         someTextField.add(new IValidator<String>()
         {
             @Override
-            public void validate(final IValidatable<String> validatable)
+            public void validate(IValidatable<String> validatable)
             {
                 System.out.println("value: " + validatable.getValue());
                 System.out.println("model object: " + validatable.getModel()

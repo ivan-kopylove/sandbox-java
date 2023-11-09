@@ -10,10 +10,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ObjectMapperExample
+class ObjectMapperExample
 {
     @Test
-    public void main() throws JsonProcessingException
+    void main() throws JsonProcessingException
     {
         List<MyDto> list = new ArrayList<MyDto>();
         list.add(new MyDto("k1", "v1", "cv1"));
@@ -28,7 +28,7 @@ public class ObjectMapperExample
     }
 
     @Test
-    public void run() throws JsonProcessingException
+    void run() throws JsonProcessingException
     {
         List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 

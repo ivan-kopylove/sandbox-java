@@ -46,7 +46,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DynamicTreePanel extends JPanel implements ActionListener
+class DynamicTreePanel extends JPanel implements ActionListener
 {
     private static final String      ADD_COMMAND    = "add";
     private static final String      REMOVE_COMMAND = "remove";

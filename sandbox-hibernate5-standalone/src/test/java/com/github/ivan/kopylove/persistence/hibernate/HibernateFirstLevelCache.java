@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * 1. First level cache cannot be turned off<br/>
  * 2.
  */
-public class HibernateFirstLevelCache
+class HibernateFirstLevelCache
 {
     @BeforeAll
     public static void populate()
@@ -32,7 +32,7 @@ public class HibernateFirstLevelCache
     }
 
     @Test
-    public void no_db_hit()
+    void no_db_hit()
     {
         Session session = HibernateSessionFactory.openSession();
         session.getTransaction()
@@ -52,7 +52,7 @@ public class HibernateFirstLevelCache
     }
 
     @Test
-    public void evict()
+    void evict()
     {
         Session session = HibernateSessionFactory.openSession();
         session.getTransaction()
@@ -72,7 +72,7 @@ public class HibernateFirstLevelCache
     }
 
     @Test
-    public void clear()
+    void clear()
     {
         Session session = HibernateSessionFactory.openSession();
         session.getTransaction()

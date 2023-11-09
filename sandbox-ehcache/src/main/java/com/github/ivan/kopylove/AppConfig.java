@@ -12,7 +12,7 @@ import org.springframework.core.io.ClassPathResource;
 @Configuration
 @ComponentScan({"com.github.ivan.kopylove.*"})
 @EnableCaching
-public class AppConfig
+class AppConfig
 {
     @Bean
     public CacheManager cacheManager()

@@ -8,7 +8,7 @@ import org.apache.wicket.markup.html.form.Form;
 /**
  * This is one of examples in a set of demonstrating wicket ways to call backend with various types of triggers.
  */
-public class AjaxSubmitLinkExample extends WebPage
+class AjaxSubmitLinkExample extends WebPage
 {
     @Override
     protected void onInitialize()

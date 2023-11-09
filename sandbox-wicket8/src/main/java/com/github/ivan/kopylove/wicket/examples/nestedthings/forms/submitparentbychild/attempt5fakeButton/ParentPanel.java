@@ -11,7 +11,7 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-public class ParentPanel extends Panel
+class ParentPanel extends Panel
 {
     private TextField<String> parentTextField;
 

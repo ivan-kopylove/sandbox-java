@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class OrganizationBuildingDetails
+class OrganizationBuildingDetails
 {
     @Column(name = "WORKPLACES")
     private int    workplaces;
@@ -18,7 +18,7 @@ public class OrganizationBuildingDetails
         return workplaces;
     }
 
-    public void setWorkplaces(final int workplaces)
+    public void setWorkplaces(int workplaces)
     {
         this.workplaces = workplaces;
     }
@@ -28,7 +28,7 @@ public class OrganizationBuildingDetails
         return floors;
     }
 
-    public void setFloors(final int floors)
+    public void setFloors(int floors)
     {
         this.floors = floors;
     }
@@ -38,7 +38,7 @@ public class OrganizationBuildingDetails
         return address;
     }
 
-    public void setAddress(final String address)
+    public void setAddress(String address)
     {
         this.address = address;
     }

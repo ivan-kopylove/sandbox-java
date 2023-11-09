@@ -4,13 +4,13 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
 
-public class OutputMarkupId extends WebPage
+class OutputMarkupId extends WebPage
 {
     private static final long serialVersionUID = 5628062157608422843L;
 
     public OutputMarkupId()
     {
-        final TextField<String> username = new TextField<>("username", Model.of("1"));
+        TextField<String> username = new TextField<>("username", Model.of("1"));
         username.setOutputMarkupId(true);
 
         // when setOutputMarkupId is false:

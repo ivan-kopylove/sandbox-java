@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sanbox.java.websocket;
 
-public class Runner
+class Runner
 {
     /**
      * main

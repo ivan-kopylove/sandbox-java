@@ -6,10 +6,10 @@ import java.util.HashMap;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-public class SortedSetExampleTest
+class SortedSetExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         new HashMap<>();
 

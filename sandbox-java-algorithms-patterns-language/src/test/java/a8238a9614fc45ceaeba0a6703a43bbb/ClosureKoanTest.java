@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * - closure
  * - koan
  */
-public class ClosureKoanTest
+class ClosureKoanTest
 {
 
     static TextProvider getProvider(int value)

@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class MyStructProvider implements ITreeProvider<MyNode>
+class MyStructProvider implements ITreeProvider<MyNode>
 {
     private List<MyNode> myStructList;
 
@@ -29,21 +29,21 @@ public class MyStructProvider implements ITreeProvider<MyNode>
     }
 
     @Override
-    public boolean hasChildren(final MyNode node)
+    public boolean hasChildren(MyNode node)
     {
         return node != null && !node.getChilds()
                                     .isEmpty();
     }
 
     @Override
-    public Iterator<? extends MyNode> getChildren(final MyNode node)
+    public Iterator<? extends MyNode> getChildren(MyNode node)
     {
         return node.getChilds()
                    .iterator();
     }
 
     @Override
-    public IModel<MyNode> model(final MyNode object)
+    public IModel<MyNode> model(MyNode object)
     {
         return Model.of(object);
     }

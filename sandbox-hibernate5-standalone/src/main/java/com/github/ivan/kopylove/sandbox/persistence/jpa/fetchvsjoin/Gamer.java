@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
  *
  */
 @Entity(name = "GAMER")
-public class Gamer
+class Gamer
 {
     @Id
     private int id;

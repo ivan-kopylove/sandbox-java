@@ -11,13 +11,13 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class ColumnarAdderTest
+class ColumnarAdderTest
 {
     private final ColumnarAdder     sum               = new ColumnarAdder();
     private final ThreadLocalRandom threadLocalRandom = ThreadLocalRandom.current();
 
     @Test
-    public void ten()
+    void ten()
     {
         assertThat(sum.sum("6", "4"), equalTo("10"));
         assertThat(sum.sum("1994", "6"), equalTo("2000"));
@@ -25,20 +25,20 @@ public class ColumnarAdderTest
     }
 
     @Test
-    public void corner_cases()
+    void corner_cases()
     {
         assertThat(sum.sum("0", "0"), equalTo("0"));
         assertThat(sum.sum("1", "0"), equalTo("1"));
     }
 
     @Test
-    public void unsupported_cases()
+    void unsupported_cases()
     {
         assertThrows(RuntimeException.class, () -> assertThat(sum.sum("-1", "-1"), equalTo("-2")));
     }
 
     @Test
-    public void random()
+    void random()
     {
 
         for (int i = 0; i < 100000; i++)

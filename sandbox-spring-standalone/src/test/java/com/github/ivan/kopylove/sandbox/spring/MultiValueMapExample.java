@@ -15,10 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * Purpose of this example: to practice MultiValueMap usage.<br/>
  * Multimap has a usual key and {@link List} as of values a value.
  */
-public class MultiValueMapExample
+class MultiValueMapExample
 {
     @Test
-    public void test1()
+    void test1()
     {
         MultiValueMap<String, String> multiValueMap = new LinkedMultiValueMap<>();
         multiValueMap.put("key1", Collections.singletonList("1"));
@@ -38,7 +38,7 @@ public class MultiValueMapExample
      * Demonstates that multivalue map does not appends to the values
      */
     @Test
-    public void test2()
+    void test2()
     {
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
 

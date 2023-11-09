@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.wicket.examples.components.form.nestedforms.exp
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 
-public class ParentForm extends WebPage
+class ParentForm extends WebPage
 {
     @Override
     protected void onInitialize()

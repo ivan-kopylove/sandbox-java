@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
-public class JpaCompositeForeignKeyExample
+class JpaCompositeForeignKeyExample
 {
     @BeforeAll
     public static void populate()
@@ -36,7 +36,7 @@ public class JpaCompositeForeignKeyExample
     }
 
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

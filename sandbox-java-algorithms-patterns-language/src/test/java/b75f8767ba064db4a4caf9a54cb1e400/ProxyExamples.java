@@ -9,7 +9,7 @@ import java.util.Map;
 class ProxyExamples
 {
     @Test
-    public void run()
+    void run()
     {
         Map<String, String> proxyInstance = (Map<String, String>) Proxy.newProxyInstance(ProxyExamples.class.getClassLoader(),
                                                                                          new Class[]{Map.class},

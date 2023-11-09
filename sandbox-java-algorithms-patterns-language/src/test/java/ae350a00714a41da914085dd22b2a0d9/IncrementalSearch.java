@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class IncrementalSearch
+class IncrementalSearch
 {
     private int          currentPos = 0;
     private List<MyNode> results;

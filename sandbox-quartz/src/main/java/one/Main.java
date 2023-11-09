@@ -20,7 +20,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Main implements Job
+class Main implements Job
 {
     public static void main(String[] args)
     {

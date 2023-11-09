@@ -11,14 +11,14 @@ import org.apache.wicket.model.Model;
  * Level of understanding: beginner
  * Complexity: low
  */
-public class BehaviorBasicTextfieldExample extends WebPage
+class BehaviorBasicTextfieldExample extends WebPage
 {
     @Override
     protected void onInitialize()
     {
         super.onInitialize();
 
-        final TextField<String> myTextField = new TextField<String>("myTextField", Model.of("text field"));
+        TextField<String> myTextField = new TextField<String>("myTextField", Model.of("text field"));
         myTextField.add(new AjaxEventBehavior("onclick")
         {
             private static final long serialVersionUID = -7872335862420393072L;

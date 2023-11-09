@@ -10,7 +10,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.request.cycle.RequestCycle;
 import org.apache.wicket.util.string.StringValue;
 
-public class BehaviorAbstractDefaultAjaxExample4 extends WebPage
+class BehaviorAbstractDefaultAjaxExample4 extends WebPage
 {
 
     private static final long serialVersionUID = 7352203927463159738L;
@@ -27,11 +27,11 @@ public class BehaviorAbstractDefaultAjaxExample4 extends WebPage
             @Override
             protected void respond(AjaxRequestTarget target)
             {
-                final StringValue parameterValue = RequestCycle.get()
+                StringValue parameterValue = RequestCycle.get()
                                                                .getRequest()
                                                                .getQueryParameters()
                                                                .getParameterValue("yourName");
-                System.out.println(String.format("Hello %s", parameterValue.toString()));
+                System.out.printf("Hello %s%n", parameterValue.toString());
             }
 
             @Override

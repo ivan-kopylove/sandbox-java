@@ -5,7 +5,7 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
 
-public class FormExample extends WebPage
+class FormExample extends WebPage
 {
     @Override
     protected void onInitialize()

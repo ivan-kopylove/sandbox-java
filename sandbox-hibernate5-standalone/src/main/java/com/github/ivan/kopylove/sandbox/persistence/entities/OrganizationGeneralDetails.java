@@ -2,7 +2,7 @@ package com.github.ivan.kopylove.sandbox.persistence.entities;
 
 import javax.persistence.Column;
 
-public class OrganizationGeneralDetails
+class OrganizationGeneralDetails
 {
     @Column(name = "GOAL")
     private String goal;
@@ -21,7 +21,7 @@ public class OrganizationGeneralDetails
         return goal;
     }
 
-    public void setGoal(final String goal)
+    public void setGoal(String goal)
     {
         this.goal = goal;
     }
@@ -31,7 +31,7 @@ public class OrganizationGeneralDetails
         return found;
     }
 
-    public void setFound(final String found)
+    public void setFound(String found)
     {
         this.found = found;
     }
@@ -41,7 +41,7 @@ public class OrganizationGeneralDetails
         return motto;
     }
 
-    public void setMotto(final String motto)
+    public void setMotto(String motto)
     {
         this.motto = motto;
     }
@@ -51,7 +51,7 @@ public class OrganizationGeneralDetails
         return ogranizationalStructure;
     }
 
-    public void setOgranizationalStructure(final String ogranizationalStructure)
+    public void setOgranizationalStructure(String ogranizationalStructure)
     {
         this.ogranizationalStructure = ogranizationalStructure;
     }

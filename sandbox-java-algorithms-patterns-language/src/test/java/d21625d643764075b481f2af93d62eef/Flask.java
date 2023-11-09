@@ -1,6 +1,6 @@
 package d21625d643764075b481f2af93d62eef;
 
-public class Flask
+class Flask
 {
     private int    milliliters;
     private String color;

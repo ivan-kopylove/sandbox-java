@@ -9,7 +9,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class InjectMocksExample
+class InjectMocksExample
 {
     @Mock
     private MyClass myClass;
@@ -18,7 +18,7 @@ public class InjectMocksExample
     private MyClass3 myClass3;
 
     @Test
-    public void runMocked()
+    void runMocked()
     {
         Mockito.when(myClass.getSomeValue())
                .thenReturn("Hello world");

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "ORGANIZATION")
-public class OrganizationEntity
+class OrganizationEntity
 {
     @Id
     @Column(name = "ORGANIZATION_KEY")

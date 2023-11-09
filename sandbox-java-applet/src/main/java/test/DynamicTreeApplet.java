@@ -25,7 +25,7 @@ import java.util.Locale;
  * Created by ikopylov on 21.06.2017.
  */
 @SuppressWarnings("removal")
-public class DynamicTreeApplet extends JApplet
+class DynamicTreeApplet extends JApplet
 {
 
     private static final String LOGFILENAME         = "printing.log";

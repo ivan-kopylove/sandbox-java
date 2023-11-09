@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
  * - patterns
  * - decorator
  */
-public class DecoratorPatternEntryPointTest
+class DecoratorPatternEntryPointTest
 {
     @Test
-    public void main()
+    void main()
     {
         Window decoratedWindow = new HorizontalScrollbarDecorator(new VerticalScrollBarDecorator(new SimpleWindow()));
         System.out.println(decoratedWindow.getDescription());

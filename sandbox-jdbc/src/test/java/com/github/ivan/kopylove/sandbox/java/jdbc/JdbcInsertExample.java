@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 
-public class JdbcInsertExample
+class JdbcInsertExample
 {
     private static final String CREATE_PARENTTABLE = "CREATE TABLE PARENTTABLE (PARENTTABLE_KEY INTEGER NOT NULL, PARENTTABLE_NAME VARCHAR(255), PRIMARY KEY (PARENTTABLE_KEY))";
     private static final String SQL_INSERT         = "INSERT INTO PARENTTABLE (PARENTTABLE_KEY, PARENTTABLE_NAME) VALUES (?,?)";
@@ -43,7 +43,7 @@ public class JdbcInsertExample
     }
 
     @Test
-    public void run() throws SQLException
+    void run() throws SQLException
     {
         Connection conn = null;
         PreparedStatement preparedStatement = null;

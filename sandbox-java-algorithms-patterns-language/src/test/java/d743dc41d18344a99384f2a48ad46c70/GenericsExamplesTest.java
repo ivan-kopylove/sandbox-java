@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Various examples of generic methods.<br/>
  * Generics added to the Java programming language in 2004 within version J2SE 5.0.
  */
-public class GenericsExamplesTest
+class GenericsExamplesTest
 {
     /**
      * Generic method.
@@ -30,7 +30,7 @@ public class GenericsExamplesTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         String[] strings = new String[10];
         List<String> list = new ArrayList<>();
@@ -40,7 +40,7 @@ public class GenericsExamplesTest
     }
 
     @Test
-    public void raw_use_of_class_with_generics()
+    void raw_use_of_class_with_generics()
     {
         Box box = new Box();
         box.setT("str");
@@ -49,7 +49,7 @@ public class GenericsExamplesTest
     }
 
     @Test
-    public void generic_use_of_class_with_generics()
+    void generic_use_of_class_with_generics()
     {
         Box<Integer> box = new Box<>();
         //        box.setT("str"); //compile error
@@ -59,7 +59,7 @@ public class GenericsExamplesTest
     }
 
     @Test
-    public void unbounded_wildcard_example()
+    void unbounded_wildcard_example()
     {
         List<Integer> integerList = Arrays.asList(1, 2, 3);
         List<?> integers = printAll(integerList);

@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
-public class JpaEntityStateAfterFlush
+class JpaEntityStateAfterFlush
 {
     @BeforeAll
     public static void populate()
@@ -29,7 +29,7 @@ public class JpaEntityStateAfterFlush
     }
 
     @Test
-    public void run()
+    void run()
     {
         do_flush();
         read_again();

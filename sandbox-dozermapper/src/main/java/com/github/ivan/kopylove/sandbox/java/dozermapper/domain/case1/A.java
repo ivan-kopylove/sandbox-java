@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1;
 
-public class A
+class A
 {
     private String key;
 

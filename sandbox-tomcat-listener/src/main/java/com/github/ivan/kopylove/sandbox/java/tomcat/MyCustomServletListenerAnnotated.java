@@ -5,7 +5,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 @WebListener
-public class MyCustomServletListenerAnnotated implements ServletContextListener
+class MyCustomServletListenerAnnotated implements ServletContextListener
 {
     @Override
     public void contextDestroyed(ServletContextEvent arg0)

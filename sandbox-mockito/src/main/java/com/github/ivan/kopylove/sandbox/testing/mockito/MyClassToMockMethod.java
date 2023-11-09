@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-public class MyClassToMockMethod
+class MyClassToMockMethod
 {
     public static String myMethod()
     {

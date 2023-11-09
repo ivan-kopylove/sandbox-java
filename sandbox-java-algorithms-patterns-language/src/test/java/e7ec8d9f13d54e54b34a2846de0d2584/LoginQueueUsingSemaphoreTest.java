@@ -18,7 +18,7 @@ class LoginQueueUsingSemaphoreTest
 {
 
     @Test
-    public void givenLoginQueue_whenReachLimit_thenBlocked() throws InterruptedException
+    void givenLoginQueue_whenReachLimit_thenBlocked() throws InterruptedException
     {
         //given
         int slots = 10;

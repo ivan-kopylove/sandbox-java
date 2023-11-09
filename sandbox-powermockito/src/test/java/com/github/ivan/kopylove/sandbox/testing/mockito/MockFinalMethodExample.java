@@ -10,10 +10,10 @@ import org.powermock.modules.junit4.PowerMockRunnerDelegate;
 
 @PowerMockRunnerDelegate(MockitoJUnitRunner.class)
 @PrepareForTest(Bottle.class)
-public class MockFinalMethodExample
+class MockFinalMethodExample
 {
     @Test
-    public void mockfinal()
+    void mockfinal()
     {
         Bottle bottle = PowerMockito.mock(Bottle.class);
         PowerMockito.when(bottle.getBottle())

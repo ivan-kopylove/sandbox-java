@@ -13,7 +13,7 @@ class RevertedIfConditionTest
 
     @SuppressWarnings("ConstantConditions")
     @Test
-    public void run()
+    void run()
     {
         assertTrue(RevertedIfCondition.revertedIfConditionExampleOne(true, false));
         assertFalse(RevertedIfCondition.revertedIfConditionExampleOne(true, true));
@@ -23,7 +23,7 @@ class RevertedIfConditionTest
 
     @SuppressWarnings("ConstantConditions")
     @Test
-    public void run2()
+    void run2()
     {
         assertTrue(RevertedIfCondition.revertedIfConditionExampleTwo(true, false));
         assertFalse(RevertedIfCondition.revertedIfConditionExampleTwo(true, true));

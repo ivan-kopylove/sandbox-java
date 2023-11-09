@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * create table MinimalEntity (key bigint not null, primary key (key))
  */
 @Entity
-public class EntityMostBasic
+class EntityMostBasic
 {
     @Id
     private long key;

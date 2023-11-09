@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * To find cells of table, relatively of already found element, please use dot. E.g. .//td, not //td.
  */
-public class FindElementsRelativeToAnotherElement
+class FindElementsRelativeToAnotherElement
 {
 
     @BeforeAll
@@ -22,7 +22,7 @@ public class FindElementsRelativeToAnotherElement
     }
 
     @Test
-    public void mistake()
+    void mistake()
     {
         String url = Utils.convertClassPathToAbsolutePath("FindElementsRelevantToAnother.html");
         if (url != null)
@@ -48,7 +48,7 @@ public class FindElementsRelativeToAnotherElement
     }
 
     @Test
-    public void fixed_mistake()
+    void fixed_mistake()
     {
         String url = Utils.convertClassPathToAbsolutePath("FindElementsRelevantToAnother.html");
         if (url != null)

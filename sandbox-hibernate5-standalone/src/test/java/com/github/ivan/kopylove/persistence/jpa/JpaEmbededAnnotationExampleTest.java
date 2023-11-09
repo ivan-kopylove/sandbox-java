@@ -13,7 +13,7 @@ import javax.persistence.EntityManager;
 /**
  * @Embedded annotation demonstration.
  */
-public class JpaEmbededAnnotationExampleTest
+class JpaEmbededAnnotationExampleTest
 {
     @BeforeAll
     public static void populate()
@@ -45,7 +45,7 @@ public class JpaEmbededAnnotationExampleTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = HibernateSessionFactory.openSession();
         entityManager.getTransaction()

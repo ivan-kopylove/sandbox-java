@@ -24,10 +24,10 @@ interface CarElementVisitor
 /**
  * <a href="https://en.wikipedia.org/wiki/Visitor_pattern">...</a>
  */
-public class VisitorPatternEntryPoint
+class VisitorPatternEntryPoint
 {
     @Test
-    public void main()
+    void main()
     {
         Car car = new Car();
 

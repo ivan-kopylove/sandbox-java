@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @see <a href="https://stackoverflow.com/questions/4511368/">https://stackoverflow.com/questions/4511368/</a>
  */
-public class JpaFetchFetchPathNavigationTest2
+class JpaFetchFetchPathNavigationTest2
 {
     private static final String USER_NAME_ONE = "a";
     private static final String USER_NAME_TWO = "b";
@@ -53,7 +53,7 @@ public class JpaFetchFetchPathNavigationTest2
     }
 
     @Test
-    public void join_fetch_together()
+    void join_fetch_together()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -79,7 +79,7 @@ public class JpaFetchFetchPathNavigationTest2
     }
 
     @Test
-    public void cast_to_join()
+    void cast_to_join()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class VerifyExample
+class VerifyExample
 {
     @Test
-    public void run()
+    void run()
     {
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())
@@ -18,7 +18,7 @@ public class VerifyExample
     }
 
     @Test
-    public void notInvoked()
+    void notInvoked()
     {
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())
@@ -30,7 +30,7 @@ public class VerifyExample
     }
 
     @Test
-    public void notInvokedOneTimeNotTwo()
+    void notInvokedOneTimeNotTwo()
     {
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())

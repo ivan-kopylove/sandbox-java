@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CustomLoggerTest
+class CustomLoggerTest
 {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BasicExampleTest.class);
 
     @Test
-    public void run()
+    void run()
     {
         LOGGER.info("My custom message");
     }

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class LayeredStructureExample
+class LayeredStructureExample
 {
     private static ApplicationContext context;
 
@@ -19,7 +19,7 @@ public class LayeredStructureExample
     }
 
     @Test
-    public void run()
+    void run()
     {
         RestServiceEmulator documentService = context.getBean(RestServiceEmulator.class);
         Assertions.assertEquals("Alexander, Alexey", documentService.frontEndCallAcceptor("Alex"));

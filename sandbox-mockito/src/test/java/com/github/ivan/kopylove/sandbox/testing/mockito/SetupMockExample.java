@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class SetupMockExample
+class SetupMockExample
 {
     private MyClass myClass;
 
@@ -18,7 +18,7 @@ public class SetupMockExample
     }
 
     @Test
-    public void run()
+    void run()
     {
         MyClass2 myClass2 = new MyClass2();
         Assertions.assertEquals("Hello world", myClass2.getMyValue(myClass));

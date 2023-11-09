@@ -14,10 +14,10 @@ import java.util.LinkedList;
  * <p>
  * SoftReference > Weak Reference > PhantomReference
  */
-public class ReferencesTest
+class ReferencesTest
 {
     @Test
-    public void run()
+    void run()
     {
         int size = 10;
         LinkedList<SoftReference<VeryBig>> sa = new LinkedList<>();

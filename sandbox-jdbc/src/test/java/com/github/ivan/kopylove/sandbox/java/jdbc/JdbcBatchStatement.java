@@ -12,7 +12,7 @@ import java.sql.Statement;
 /**
  * Batch reduces the number of database roundtrip which again results in significant performance gain.
  */
-public class JdbcBatchStatement
+class JdbcBatchStatement
 {
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "";
@@ -44,7 +44,7 @@ public class JdbcBatchStatement
     }
 
     @Test
-    public void run() throws SQLException
+    void run() throws SQLException
     {
         Connection conn = null;
         Statement statement = null;

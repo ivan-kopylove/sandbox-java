@@ -7,10 +7,10 @@ import org.apache.wicket.markup.html.form.FormComponent;
 import org.apache.wicket.validation.IValidatable;
 import org.apache.wicket.validation.IValidator;
 
-public class ErrorIndicatorBehavior extends Behavior implements IValidator
+class ErrorIndicatorBehavior extends Behavior implements IValidator
 {
     @Override
-    public void validate(final IValidatable validatable)
+    public void validate(IValidatable validatable)
     {
         System.out.println("123");
     }

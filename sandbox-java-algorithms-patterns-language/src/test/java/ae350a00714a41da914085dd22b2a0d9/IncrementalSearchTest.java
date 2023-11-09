@@ -16,7 +16,7 @@ class IncrementalSearchTest
 {
 
     @Test
-    public void testDoSearch()
+    void testDoSearch()
     {
         MyNode element1_root = new MyNode("element1", "element1");
 

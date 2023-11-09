@@ -10,10 +10,10 @@ import org.junit.jupiter.api.Test;
  * Minimal example with Hibernate session - save and load saved entity<br/>
  * Example available at: https://github.com/ivan-kopylove/sandbox-java
  */
-public class HibernateBasicExampleTest
+class HibernateBasicExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         BookEntity bookEntity = new BookEntity();
         bookEntity.setName("Harry Potter");

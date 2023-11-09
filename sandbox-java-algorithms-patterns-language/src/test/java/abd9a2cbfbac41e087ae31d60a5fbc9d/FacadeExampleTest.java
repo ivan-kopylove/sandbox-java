@@ -14,11 +14,11 @@ import org.junit.jupiter.api.Test;
  * @see <a href=https://www.journaldev.com/1557/facade-design-pattern-in-java>https://www.journaldev.com/1557/facade-design-pattern-in-java</a>
  * @see <a href=https://www.baeldung.com/java-facade-pattern>https://www.baeldung.com/java-facade-pattern</a>
  */
-public class FacadeExampleTest
+class FacadeExampleTest
 {
 
     @Test
-    public void withoutFacade()
+    void withoutFacade()
     {
         FuelInjector injector = new FuelInjector();
         AirflowController airflowController = new AirflowController();
@@ -42,7 +42,7 @@ public class FacadeExampleTest
     }
 
     @Test
-    public void usingFacade()
+    void usingFacade()
     {
         CarEngineFacade engineFacade = new CarEngineFacade();
         engineFacade.startEngine();

@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.sandbox.persistence.domain;
 /**
  * Purpose: TODO .
  */
-public class CompoundObject
+class CompoundObject
 {
     private int    a;
     private String b;

@@ -9,13 +9,13 @@ import org.apache.wicket.model.PropertyModel;
 import java.util.Arrays;
 import java.util.List;
 
-public class RadioChoicePageExample extends WebPage
+class RadioChoicePageExample extends WebPage
 {
     private static final List<String> TYPES = Arrays.asList("Shared Host", "VPS", "Dedicated Server");
 
     private static final long serialVersionUID = -1923626121356192574L;
 
-    private String selected = null;
+    private final String selected = null;
 
     @Override
     protected void onInitialize()

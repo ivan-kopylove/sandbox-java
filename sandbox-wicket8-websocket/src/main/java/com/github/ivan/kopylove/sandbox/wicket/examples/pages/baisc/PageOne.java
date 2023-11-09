@@ -6,7 +6,7 @@ import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 import org.apache.wicket.protocol.ws.api.WebSocketRequestHandler;
 import org.apache.wicket.protocol.ws.api.message.TextMessage;
 
-public class PageOne extends WebPage
+class PageOne extends WebPage
 {
     @Override
     protected void onInitialize()

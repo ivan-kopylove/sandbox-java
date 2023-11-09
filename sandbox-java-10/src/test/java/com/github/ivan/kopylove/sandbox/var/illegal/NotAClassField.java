@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.var.illegal;
 
-public class NotAClassField
+class NotAClassField
 {
     /*
 

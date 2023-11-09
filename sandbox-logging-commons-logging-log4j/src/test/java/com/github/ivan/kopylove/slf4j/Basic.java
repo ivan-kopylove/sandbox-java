@@ -5,13 +5,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.jupiter.api.Test;
 
-public class Basic
+class Basic
 {
 
     private static final Log LOGGER = LogFactory.getLog(Runner.class);
 
     @Test
-    public void main()
+    void main()
     {
         LOGGER.debug("Example debug message ..");
         LOGGER.info("Example info message ..");

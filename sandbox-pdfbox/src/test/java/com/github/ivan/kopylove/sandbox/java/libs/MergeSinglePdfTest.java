@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class MergeSinglePdfTest
+class MergeSinglePdfTest
 {
     private static byte[] readPdf()
     {
@@ -26,7 +26,7 @@ public class MergeSinglePdfTest
     }
 
     @Test
-    public void a()
+    void a()
     {
         byte[] result = new byte[0];
 

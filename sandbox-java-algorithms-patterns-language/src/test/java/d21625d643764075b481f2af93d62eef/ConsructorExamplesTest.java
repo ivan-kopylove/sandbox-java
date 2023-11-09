@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Test;
 /**
  * Constructor is a way to set initial value(s) to an object.
  */
-public class ConsructorExamplesTest
+class ConsructorExamplesTest
 {
     @Test
-    public void runBottle()
+    void runBottle()
     {
         Bottle bottle = new Bottle();
         bottle.initializeMyBottleWithMyCustomMethod(500, "Green", "Metal");
@@ -20,7 +20,7 @@ public class ConsructorExamplesTest
     }
 
     @Test
-    public void runFlask()
+    void runFlask()
     {
         Flask flask = new Flask(500, "Green", "Metal");
 
@@ -30,7 +30,7 @@ public class ConsructorExamplesTest
     }
 
     @Test
-    public void runFlaskWithSetters()
+    void runFlaskWithSetters()
     {
         Bottle flask = new Bottle();
 

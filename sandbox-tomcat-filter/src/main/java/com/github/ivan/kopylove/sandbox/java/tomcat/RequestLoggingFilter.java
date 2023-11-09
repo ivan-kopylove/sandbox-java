@@ -15,7 +15,7 @@ import java.util.Enumeration;
 /**
  * @see <a href="https://www.journaldev.com/1933/java-servlet-filter-example-tutorial">https://www.journaldev.com/1933/java-servlet-filter-example-tutorial</a>
  */
-public class RequestLoggingFilter implements Filter
+class RequestLoggingFilter implements Filter
 {
     private ServletContext context;
 

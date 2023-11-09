@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
  * - patterns
  * - singleton
  */
-public class MyEnumSingletonTest
+class MyEnumSingletonTest
 {
     @Test
-    public void run()
+    void run()
     {
         String result = MyEnumSingleton.INSTANCE.utilMethod();
         Assertions.assertEquals(MyEnumSingleton.RETURN_RESULT, result);

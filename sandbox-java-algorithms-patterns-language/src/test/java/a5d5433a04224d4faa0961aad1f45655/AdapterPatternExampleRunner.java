@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
  * - patterns
  * - adapter
  */
-public class AdapterPatternExampleRunner
+class AdapterPatternExampleRunner
 {
     @Test
-    public void run()
+    void run()
     {
         Indicator celsius = new CelsiusScaleThermometer();
         IndicatorAdapter indicatorAdapter = new IndicatorAdapterImpl(celsius);

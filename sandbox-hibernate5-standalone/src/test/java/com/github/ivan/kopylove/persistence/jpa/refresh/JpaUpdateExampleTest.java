@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 /**
  * Example of EntityManager#refresh.
  */
-public class JpaUpdateExampleTest
+class JpaUpdateExampleTest
 {
     @BeforeAll
     public static void prepareData()
@@ -29,7 +29,7 @@ public class JpaUpdateExampleTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity parentEntity = entityManger.find(ParentEntity.class, 101);

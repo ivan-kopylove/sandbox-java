@@ -1,6 +1,6 @@
 package d743dc41d18344a99384f2a48ad46c70;
 
-public class Box<T>
+class Box<T>
 {
     private T t;
 

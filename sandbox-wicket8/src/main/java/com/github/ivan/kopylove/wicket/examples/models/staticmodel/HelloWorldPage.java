@@ -10,15 +10,15 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-public class HelloWorldPage extends WebPage
+class HelloWorldPage extends WebPage
 {
     private static final long serialVersionUID = 7209213881940063981L;
 
-    public HelloWorldPage(final PageParameters parameters)
+    public HelloWorldPage(PageParameters parameters)
     {
         add(new FeedbackPanel("feedback"));
 
-        final TextField<String> username = new TextField<String>("username", Model.of("1"));
+        TextField<String> username = new TextField<String>("username", Model.of("1"));
         username.add(new AjaxEventBehavior("onclick")
         {
             private static final long serialVersionUID = -7872335862420393072L;
@@ -52,7 +52,7 @@ public class HelloWorldPage extends WebPage
             @Override
             protected void onSubmit()
             {
-                final String usernameValue = username.getModelObject();
+                String usernameValue = username.getModelObject();
 
                 PageParameters pageParameters = new PageParameters();
                 pageParameters.add("username", usernameValue);

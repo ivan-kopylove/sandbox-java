@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
-public class PersonEntity
+class PersonEntity
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

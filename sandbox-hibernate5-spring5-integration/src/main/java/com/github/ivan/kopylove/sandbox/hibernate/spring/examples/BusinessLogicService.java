@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  */
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class BusinessLogicService
+class BusinessLogicService
 {
     @Autowired
     private DocumentLoader documentLoader;

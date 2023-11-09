@@ -6,10 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CarServiceTest
+class CarServiceTest
 {
     @Test
-    public void run()
+    void run()
     {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         CarService carService = ctx.getBean(CarService.class);

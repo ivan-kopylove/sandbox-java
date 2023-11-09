@@ -11,7 +11,7 @@ import java.util.List;
 class CastList
 {
     @Test
-    public void run()
+    void run()
     {
         Child child = new Child();
         child.addValue(new Child());

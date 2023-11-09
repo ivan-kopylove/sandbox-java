@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.wicket.examples.behaviors.ajax;
 
-public class AjaxEventBehaviorPreconditionModel
+class AjaxEventBehaviorPreconditionModel
 {
     private String textField;
 
@@ -9,7 +9,7 @@ public class AjaxEventBehaviorPreconditionModel
         return textField;
     }
 
-    public void setTextField(final String textField)
+    public void setTextField(String textField)
     {
         this.textField = textField;
     }

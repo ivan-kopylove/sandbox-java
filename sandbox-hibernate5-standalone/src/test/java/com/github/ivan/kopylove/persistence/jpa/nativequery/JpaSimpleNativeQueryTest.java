@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Minimal JPA example - save and load saved entity.
  */
-public class JpaSimpleNativeQueryTest
+class JpaSimpleNativeQueryTest
 {
     @BeforeEach
     public void populate()
@@ -34,7 +34,7 @@ public class JpaSimpleNativeQueryTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
 

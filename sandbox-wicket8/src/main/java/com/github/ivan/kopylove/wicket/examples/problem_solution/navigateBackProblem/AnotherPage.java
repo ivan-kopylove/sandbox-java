@@ -6,9 +6,9 @@ import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.WebPage;
 
-public class AnotherPage extends WebPage
+class AnotherPage extends WebPage
 {
-    private PageReference previousPageReference;
+    private final PageReference previousPageReference;
 
     public AnotherPage(PageReference previousPageReference)
     {

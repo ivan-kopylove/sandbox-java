@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
 /**
  * https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/mapping.html#d0e5294
  */
-public class HibernateGenericGeneratorUuid
+class HibernateGenericGeneratorUuid
 {
     @Test
-    public void run()
+    void run()
     {
         GeneratedValueUuid generatedKey = new GeneratedValueUuid();
 

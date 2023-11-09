@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "PARENTTABLE")
-public class ParentEntityWithEmbedded
+class ParentEntityWithEmbedded
 {
     @Id
     @Column(name = "PARENTTABLE_KEY", unique = true, nullable = false)

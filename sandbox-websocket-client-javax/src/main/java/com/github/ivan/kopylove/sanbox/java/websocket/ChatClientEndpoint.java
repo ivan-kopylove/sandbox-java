@@ -11,7 +11,7 @@ import javax.websocket.WebSocketContainer;
 import java.net.URI;
 
 @ClientEndpoint
-public class ChatClientEndpoint
+class ChatClientEndpoint
 {
     Session userSession = null;
     private MessageHandler messageHandler;

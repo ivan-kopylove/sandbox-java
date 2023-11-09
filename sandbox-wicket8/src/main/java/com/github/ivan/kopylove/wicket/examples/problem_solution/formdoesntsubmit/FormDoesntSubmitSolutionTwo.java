@@ -8,7 +8,7 @@ import org.apache.wicket.markup.html.form.Form;
 /**
  * Demonstrates solution (see package for the problem)
  */
-public class FormDoesntSubmitSolutionTwo extends WebPage
+class FormDoesntSubmitSolutionTwo extends WebPage
 {
     @Override
     protected void onInitialize()

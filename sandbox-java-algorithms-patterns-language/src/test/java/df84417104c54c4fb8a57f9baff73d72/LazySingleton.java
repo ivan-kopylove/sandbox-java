@@ -1,6 +1,6 @@
 package df84417104c54c4fb8a57f9baff73d72;
 
-public class LazySingleton
+class LazySingleton
 {
     private static LazySingleton INSTANCE = null;
 

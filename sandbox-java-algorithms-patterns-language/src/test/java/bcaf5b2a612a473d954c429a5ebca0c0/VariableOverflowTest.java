@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 /**
  * variable overflow demo
  */
-public class VariableOverflowTest
+class VariableOverflowTest
 {
     @Test
-    public void run()
+    void run()
     {
         int x = 10;
         do

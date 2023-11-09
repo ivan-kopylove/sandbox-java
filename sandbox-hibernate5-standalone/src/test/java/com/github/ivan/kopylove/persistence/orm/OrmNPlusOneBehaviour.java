@@ -19,7 +19,7 @@ import java.util.Set;
 /**
  * ORM N+1 problem demonstration
  */
-public class OrmNPlusOneBehaviour
+class OrmNPlusOneBehaviour
 {
     @BeforeAll
     public static void populate()
@@ -54,7 +54,7 @@ public class OrmNPlusOneBehaviour
      * No additional queries without proxy's getter call
      */
     @Test
-    public void noDbHits()
+    void noDbHits()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
 
@@ -78,7 +78,7 @@ public class OrmNPlusOneBehaviour
      * N+1 additional queries when accessing db through child proxy
      */
     @Test
-    public void nPlusOne()
+    void nPlusOne()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -107,7 +107,7 @@ public class OrmNPlusOneBehaviour
     }
 
     @Test
-    public void solutionIsFetch()
+    void solutionIsFetch()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -139,7 +139,7 @@ public class OrmNPlusOneBehaviour
     }
 
     @Test
-    public void joinIsntASolution()
+    void joinIsntASolution()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
 

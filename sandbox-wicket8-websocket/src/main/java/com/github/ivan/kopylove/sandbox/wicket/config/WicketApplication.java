@@ -5,7 +5,7 @@ import com.github.ivan.kopylove.sandbox.wicket.examples.pages.chartupdater.MyWeb
 import org.apache.wicket.Page;
 import org.apache.wicket.protocol.http.WebApplication;
 
-public class WicketApplication extends WebApplication
+class WicketApplication extends WebApplication
 {
     public Class<? extends Page> getHomePage()
     {

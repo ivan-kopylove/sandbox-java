@@ -11,10 +11,10 @@ import org.junit.jupiter.api.Test;
 /**
  * This example demonstrates exception when saving child before parent
  */
-public class SaveChildBeforeParentTest
+class SaveChildBeforeParentTest
 {
     @Test
-    public void saveChildBeforeParent()
+    void saveChildBeforeParent()
     {
         Assertions.assertThrows(TransientPropertyValueException.class, () -> {
             Session session = HibernateSessionFactory.openSession();

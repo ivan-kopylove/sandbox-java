@@ -1,6 +1,6 @@
 package ab26524c2e5c421c84c763680f24b886;
 
-public class Counter
+class Counter
 {
     private int value = 0;
 

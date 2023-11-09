@@ -12,7 +12,7 @@ import javax.swing.tree.DefaultTreeModel;
 /**
  *
  */
-public class MyPage extends WebPage
+class MyPage extends WebPage
 {
     @Override
     protected void onInitialize()

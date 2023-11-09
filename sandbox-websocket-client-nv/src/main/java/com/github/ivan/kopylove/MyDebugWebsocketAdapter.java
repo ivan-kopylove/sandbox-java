@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 import java.util.Map;
 
-public class MyDebugWebsocketAdapter extends WebSocketAdapter
+class MyDebugWebsocketAdapter extends WebSocketAdapter
 {
     private static final Logger LOGGER = LogManager.getLogger(MyDebugWebsocketAdapter.class);
 

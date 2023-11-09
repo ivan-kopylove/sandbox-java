@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2;
 
-public class Inner
+class Inner
 {
     public static String value = "overrided toString() value";
 

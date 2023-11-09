@@ -8,7 +8,7 @@ import org.springframework.web.servlet.DispatcherServlet;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
 
-public class MyWebAppInitializer implements WebApplicationInitializer
+class MyWebAppInitializer implements WebApplicationInitializer
 {
 
     public void onStartup(ServletContext container)

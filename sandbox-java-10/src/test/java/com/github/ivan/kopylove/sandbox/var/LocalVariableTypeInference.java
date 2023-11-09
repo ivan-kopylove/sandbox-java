@@ -6,16 +6,16 @@ import org.junit.jupiter.api.Test;
 /**
  * JEP 286: Local-Variable Type Inference
  */
-public class LocalVariableTypeInference
+class LocalVariableTypeInference
 {
     @Test
-    public void run()
+    void run()
     {
         var a = 10;
     }
 
     @Test
-    public void run2()
+    void run2()
     {
         var puma = new CustomClass();
     }

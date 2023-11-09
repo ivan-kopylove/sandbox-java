@@ -1,6 +1,6 @@
 package one;
 
-public class Runner
+class Runner
 {
 
 }

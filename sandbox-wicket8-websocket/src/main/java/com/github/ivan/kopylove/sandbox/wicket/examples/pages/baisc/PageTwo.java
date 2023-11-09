@@ -8,7 +8,7 @@ import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 /**
  *
  */
-public class PageTwo extends WebPage
+class PageTwo extends WebPage
 {
     @Override
     protected void onInitialize()

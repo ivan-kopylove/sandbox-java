@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.wicket.examples.components.defaultnestedtree.ba
 import java.util.ArrayList;
 import java.util.List;
 
-public class DbMock
+class DbMock
 {
     public static List<MyStruct> loadFromDb()
     {

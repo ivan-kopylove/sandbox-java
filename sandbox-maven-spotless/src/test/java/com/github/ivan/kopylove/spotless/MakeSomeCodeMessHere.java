@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.spotless;
 
-public class MakeSomeCodeMessHere
+class MakeSomeCodeMessHere
 {
 
     public void main() {}

@@ -11,7 +11,7 @@ import org.apache.wicket.model.Model;
 /**
  * When component refreshes, data is not changed
  */
-public class DynamicModelExample extends WebPage
+class DynamicModelExample extends WebPage
 {
     private static final long serialVersionUID = 3545275013317507348L;
 

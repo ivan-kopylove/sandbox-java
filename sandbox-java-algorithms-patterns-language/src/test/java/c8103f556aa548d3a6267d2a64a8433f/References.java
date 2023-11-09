@@ -3,7 +3,7 @@ package c8103f556aa548d3a6267d2a64a8433f;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 
-public class References
+class References
 {
     private static final ReferenceQueue<VeryBig> rq = new ReferenceQueue<>();
 

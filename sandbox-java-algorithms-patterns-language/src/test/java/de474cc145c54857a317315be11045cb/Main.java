@@ -3,7 +3,7 @@ package de474cc145c54857a317315be11045cb;
 /**
  * finalVariableInsideCallback
  */
-public class Main
+class Main
 {
     public static void main(String[] args)
     {

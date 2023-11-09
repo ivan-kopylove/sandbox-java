@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * http://examples7x.wicket.apache.org/compref/wicket/bookmarkable/org.apache.wicket.examples.compref.RadioChoicePage?0
  */
-public class RadioChoiceOnUpdate extends WebPage
+class RadioChoiceOnUpdate extends WebPage
 {
     private static final List<String> TYPES = Arrays.asList("Shared Host", "VPS", "Dedicated Server");
 

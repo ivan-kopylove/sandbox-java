@@ -6,7 +6,7 @@ import org.hibernate.engine.spi.SessionFactoryImplementor;
 import org.hibernate.integrator.spi.Integrator;
 import org.hibernate.service.spi.SessionFactoryServiceRegistry;
 
-public class MetadataExtractorIntegrator implements Integrator
+class MetadataExtractorIntegrator implements Integrator
 {
 
     public static final MetadataExtractorIntegrator INSTANCE = new MetadataExtractorIntegrator();

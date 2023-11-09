@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * @see <a href=https://stackoverflow.com/questions/22603291/how-to-autowire-bean-of-generic-type-t-in-spring>https://stackoverflow.com/questions/22603291/how-to-autowire-bean-of-generic-type-t-in-spring</a>
  */
 @Service
-public class GenericsAsQualifierExample
+class GenericsAsQualifierExample
 {
     private final GenericService<Event> eventGenericService; // Injects the EventService bean
     private final GenericService<User>  userGenericService; // Injects the UserService bean

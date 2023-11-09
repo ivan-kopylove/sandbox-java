@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Transactional
-public class DocumentLoader
+class DocumentLoader
 {
     @PersistenceContext
     private EntityManager entityManager;

@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
  * - listener
  * - patterns
  */
-public class ObserverPatternExampleTest
+class ObserverPatternExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         Initiater initiater = new Initiater();
         Responder responder = new Responder();

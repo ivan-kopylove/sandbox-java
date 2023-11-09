@@ -2,7 +2,7 @@ package com.github.ivan.kopylove.someapp;
 
 import com.github.ivan.kopylove.somemodule.Run;
 
-public class SomeappRunner
+class SomeappRunner
 {
     public static void main(String[] args)
     {

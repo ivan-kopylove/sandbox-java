@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "USERS")
-public class UserEntity implements Serializable
+class UserEntity implements Serializable
 {
     @Id
     @Column(name = "USERS_LOGIN")
@@ -26,7 +26,7 @@ public class UserEntity implements Serializable
         return name;
     }
 
-    public void setName(final String name)
+    public void setName(String name)
     {
         this.name = name;
     }
@@ -36,7 +36,7 @@ public class UserEntity implements Serializable
         return ssn;
     }
 
-    public void setSsn(final int ssn)
+    public void setSsn(int ssn)
     {
         this.ssn = ssn;
     }
@@ -46,7 +46,7 @@ public class UserEntity implements Serializable
         return city;
     }
 
-    public void setCity(final String city)
+    public void setCity(String city)
     {
         this.city = city;
     }
