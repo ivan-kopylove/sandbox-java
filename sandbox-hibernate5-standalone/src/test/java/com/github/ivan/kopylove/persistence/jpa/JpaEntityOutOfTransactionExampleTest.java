@@ -12,9 +12,6 @@ import javax.persistence.EntityManager;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-/**
- *
- */
 class JpaEntityOutOfTransactionExampleTest
 {
     private static int pageId;

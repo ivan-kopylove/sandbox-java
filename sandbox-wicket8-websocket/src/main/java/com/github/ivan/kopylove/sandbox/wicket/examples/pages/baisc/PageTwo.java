@@ -5,9 +5,6 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 
-/**
- *
- */
 class PageTwo extends WebPage
 {
     @Override

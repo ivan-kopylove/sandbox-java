@@ -11,9 +11,6 @@ import org.apache.wicket.protocol.ws.api.registry.IWebSocketConnectionRegistry;
 
 import java.io.IOException;
 
-/**
- *
- */
 class MyWebsocketResource extends WebSocketResource
 {
     @Override

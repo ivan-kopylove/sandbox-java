@@ -9,9 +9,6 @@ import org.apache.wicket.model.Model;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
-/**
- *
- */
 class MyPage extends WebPage
 {
     @Override

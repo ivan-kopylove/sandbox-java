@@ -2,14 +2,14 @@ package d2307d9652884bd79433040697710475;
 
 class PrivateConstructorClass
 {
-    private static String value    = "initial value";
+    private static String value = "initial value";
 
     static
     {
         value = "put breakpoint here";
     }
 
-    private        String myString = "field initial value";
+    private String myString = "field initial value";
 
     private PrivateConstructorClass(String myString)
     {
@@ -22,13 +22,13 @@ class PrivateConstructorClass
         return new PrivateConstructorClass(myString);
     }
 
-    public String getMyString()
-    {
-        return myString;
-    }
-
     public static String getValue()
     {
         return value;
+    }
+
+    public String getMyString()
+    {
+        return myString;
     }
 }
