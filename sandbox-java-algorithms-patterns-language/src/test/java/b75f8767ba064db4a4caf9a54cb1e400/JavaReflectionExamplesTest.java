@@ -1,11 +1,11 @@
 package b75f8767ba064db4a4caf9a54cb1e400;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
@@ -33,7 +33,7 @@ class JavaReflectionExamplesTest
         f1.setAccessible(true);
         f1.set(picture, 500);
 
-        Assertions.assertEquals(500, picture.getSize());
+        assertEquals(500, picture.getSize());
     }
 
     @Test
@@ -63,7 +63,7 @@ class JavaReflectionExamplesTest
         field.set(null, "red");
         // modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
-        Assertions.assertEquals("red", Lamp.getColor());
+        assertEquals("red", Lamp.getColor());
     }
 
     /**
@@ -83,6 +83,6 @@ class JavaReflectionExamplesTest
         modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
         field.set(null, "myValue");
-        Assertions.assertEquals("myValue", Wall.getKek());
+        assertEquals("myValue", Wall.getKek());
     }
 }
