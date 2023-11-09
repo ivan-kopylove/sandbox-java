@@ -1,6 +1,5 @@
 package cd9adff2234249969ed8e5141f5cb32b;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -15,7 +14,10 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class LocalDateTimeTest
 {
@@ -23,14 +25,14 @@ class LocalDateTimeTest
     void happyPathLocalDateTime()
     {
         LocalDateTime result = LocalDateTime.parse("24.12.2020 14:58", DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
-        Assertions.assertEquals("2020-12-24T14:58", result.toString());
+        assertEquals("2020-12-24T14:58", result.toString());
     }
 
     @Test
     void happyPathLocalDate()
     {
         LocalDate result = LocalDate.parse("24.12.2020", DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        Assertions.assertEquals("2020-12-24", result.toString());
+        assertEquals("2020-12-24", result.toString());
     }
 
     @Test
@@ -41,7 +43,7 @@ class LocalDateTimeTest
 
         LocalDate result = LocalDate.parse("31.02.2020", formatter);
 
-        Assertions.assertEquals("2020-03-02", result.toString());
+        assertEquals("2020-03-02", result.toString());
     }
 
     @Test
@@ -52,7 +54,7 @@ class LocalDateTimeTest
 
         LocalDateTime result = LocalDateTime.parse("18.02.2020 15:23", formatter);
 
-        Assertions.assertEquals("2020-02-18T15:23", result.toString());
+        assertEquals("2020-02-18T15:23", result.toString());
     }
 
     @Test
@@ -77,8 +79,8 @@ class LocalDateTimeTest
 
         LocalDateTime result = LocalDateTime.parse("31.02.2020 15:23", formatter);
 
-        Assertions.assertEquals(2, result.getDayOfMonth());
-        Assertions.assertEquals(3, result.getMonthValue());
+        assertEquals(2, result.getDayOfMonth());
+        assertEquals(3, result.getMonthValue());
     }
 
     /**
@@ -92,8 +94,8 @@ class LocalDateTimeTest
 
         LocalDateTime result = LocalDateTime.parse("31.02.2020 15:23", formatter);
 
-        Assertions.assertEquals(29, result.getDayOfMonth());
-        Assertions.assertEquals(2, result.getMonthValue());
+        assertEquals(29, result.getDayOfMonth());
+        assertEquals(2, result.getMonthValue());
     }
 
     @Test
@@ -113,7 +115,7 @@ class LocalDateTimeTest
     void happyPathLocalTime()
     {
         LocalTime result = LocalTime.parse("23:55", DateTimeFormatter.ofPattern("HH:mm"));
-        Assertions.assertEquals("23:55", result.toString());
+        assertEquals("23:55", result.toString());
     }
 
     /**
@@ -130,9 +132,9 @@ class LocalDateTimeTest
                               .toInstant()
                               .toEpochMilli();
 
-        Assertions.assertEquals(3600000L, b - a);
-        Assertions.assertEquals(1592223300000L, a);
-        Assertions.assertEquals(1592226900000L, b);
+        assertEquals(3600000L, b - a);
+        assertEquals(1592223300000L, a);
+        assertEquals(1592226900000L, b);
     }
 
     /**
@@ -149,9 +151,9 @@ class LocalDateTimeTest
 
         if (b - a > 15)
         {
-            Assertions.fail();
+            fail();
         }
-        Assertions.assertTrue(true);
+        assertTrue(true);
     }
 
     @Test
@@ -206,9 +208,9 @@ class LocalDateTimeTest
 
         if (b - a > 5)
         {
-            Assertions.fail();
+            fail();
         }
-        Assertions.assertTrue(true);
+        assertTrue(true);
     }
 
     /**
@@ -227,8 +229,8 @@ class LocalDateTimeTest
         long c = localDateTime.atZone(ZoneId.of("Asia/Beirut"))
                               .toInstant()
                               .toEpochMilli();
-        Assertions.assertEquals(a, b);
-        Assertions.assertEquals(a, c);
+        assertEquals(a, b);
+        assertEquals(a, c);
     }
 
     @Test
@@ -242,6 +244,6 @@ class LocalDateTimeTest
                               .toInstant()
                               .toEpochMilli();
 
-        Assertions.assertEquals(3600000L, b - a);
+        assertEquals(3600000L, b - a);
     }
 }
