@@ -43,6 +43,7 @@
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
         <module>sandbox-java-10</module>
+        <module>sandbox-java-17</module>
         <module>sandbox-java-8</module>
         <module>sandbox-java-algorithms-patterns-language</module>
         <module>sandbox-java-9</module>
