@@ -43,7 +43,8 @@
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
         <module>sandbox-java-10</module>
-        <module>sandbox-java-17</module>
+        <module>sandbox-java-10</module>
+        <module>sandbox-java-21</module>
         <module>sandbox-java-8</module>
         <module>sandbox-java-algorithms-patterns-language</module>
         <module>sandbox-java-9</module>
@@ -63,6 +64,7 @@
         <module>sandbox-programming-challenges</module>
         <module>sandbox-quartz</module>
         <module>sandbox-selenium</module>
+        <module>sandbox-json-unit</module>
         <module>sandbox-servlet-basic-example</module>
         <module>sandbox-servlets</module>
         <module>sandbox-spring-annotations-configuration</module>
