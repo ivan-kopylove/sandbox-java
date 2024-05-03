@@ -3,18 +3,19 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.GeneratedValueUuid2;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/mapping.html#d0e5294
- *
- * @author Ivan Kopylov
  */
-public class HibernateGenericGeneratorUuid2
+class HibernateGenericGeneratorUuid2
 {
     @Test
-    public void run()
+    void run()
     {
         GeneratedValueUuid2 generatedKey = new GeneratedValueUuid2();
 
@@ -26,10 +27,10 @@ public class HibernateGenericGeneratorUuid2
                .commit();
         session.close();
 
-        Assertions.assertNotNull(generatedKey.getKey());
-        Assertions.assertTrue(generatedKey.getKey() instanceof String);
-        Assertions.assertEquals(36,
-                                generatedKey.getKey()
-                                            .length());
+        assertNotNull(generatedKey.getKey());
+        assertInstanceOf(String.class, generatedKey.getKey());
+        assertEquals(36,
+                     generatedKey.getKey()
+                                 .length());
     }
 }

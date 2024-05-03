@@ -1,10 +1,14 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities.a;
 
-import javax.persistence.*;
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
+import javax.persistence.Embeddable;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import java.util.Map;
 
 @Embeddable
-public class GenericProperties
+class GenericProperties
 {
     @ElementCollection(fetch = FetchType.LAZY, targetClass = PropertyValue.class)
     @CollectionTable(name = "PROPERTIES", joinColumns = @JoinColumn(name = "PROPERTIES_KEY"))
@@ -15,7 +19,7 @@ public class GenericProperties
         return properties;
     }
 
-    public void setProperties(final Map<String, PropertyValue> properties)
+    public void setProperties(Map<String, PropertyValue> properties)
     {
         this.properties = properties;
     }

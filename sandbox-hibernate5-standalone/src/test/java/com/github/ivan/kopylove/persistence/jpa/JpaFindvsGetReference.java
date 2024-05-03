@@ -11,13 +11,14 @@ import javax.persistence.EntityNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Difference between EntityManager#find and EntityManager#getReference
  */
-public class JpaFindvsGetReference
+class JpaFindvsGetReference
 {
     @BeforeAll
     public static void populate()
@@ -36,7 +37,7 @@ public class JpaFindvsGetReference
     }
 
     @Test
-    public void find_method()
+    void find_method()
     {
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
 
@@ -56,7 +57,7 @@ public class JpaFindvsGetReference
      * The object content is retrieved from the database and the persistent fields are initialized, lazily, when the entity object is first accessed.
      */
     @Test
-    public void getReference()
+    void getReference()
     {
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
 
@@ -66,13 +67,13 @@ public class JpaFindvsGetReference
         assertTrue(parent.getClass()
                          .toString()
                          .contains("$HibernateProxy$"));
-        assertTrue(parent instanceof HibernateProxy);
+        assertInstanceOf(HibernateProxy.class, parent);
 
         entityManger.close();
     }
 
     @Test
-    public void getReferenceException()
+    void getReferenceException()
     {
         assertThrows(EntityNotFoundException.class, () -> {
 
@@ -85,7 +86,7 @@ public class JpaFindvsGetReference
             assertTrue(parent.getClass()
                              .toString()
                              .contains("$HibernateProxy$"));
-            assertTrue(parent instanceof HibernateProxy);
+            assertInstanceOf(HibernateProxy.class, parent);
             parent.getName(); //produces exception
 
             entityManger.close();

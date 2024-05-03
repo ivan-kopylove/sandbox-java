@@ -8,11 +8,11 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.PropertyModel;
 
-public class MyPanel extends Panel
+class MyPanel extends Panel
 {
-    private MyModelObject myModelObject = new MyModelObject();
+    private final MyModelObject myModelObject = new MyModelObject();
 
-    public MyPanel(final String id)
+    public MyPanel(String id)
     {
         super(id);
     }
@@ -34,7 +34,7 @@ public class MyPanel extends Panel
         form.setOutputMarkupId(true);
         add(form);
 
-        final TextField<String> textField = new TextField<>("textField", new PropertyModel<>(myModelObject, "prop"));
+        TextField<String> textField = new TextField<>("textField", new PropertyModel<>(myModelObject, "prop"));
         textField.setOutputMarkupId(true);
         form.add(textField);
 

@@ -14,11 +14,11 @@ import java.util.List;
 /**
  * Dropdown choice submits on form submit, not only selecting dropdown element
  */
-public class DropDownChoiceExample extends WebPage
+class DropDownChoiceExample extends WebPage
 {
-    private static final List<String> SEARCH_ENGINES = Arrays.asList(new String[]{"1", "2", "3"});
+    private static final List<String> SEARCH_ENGINES = Arrays.asList("1", "2", "3");
 
-    public DropDownChoiceExample(final PageParameters parameters)
+    public DropDownChoiceExample(PageParameters parameters)
     {
         add(new FeedbackPanel("feedback"));
 

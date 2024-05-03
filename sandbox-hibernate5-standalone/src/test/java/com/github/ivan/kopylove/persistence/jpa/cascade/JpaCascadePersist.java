@@ -10,13 +10,11 @@ import java.util.Collections;
 
 /**
  * https://www.baeldung.com/jpa-cascade-types
- *
- * @author Ivan Kopylov
  */
-public class JpaCascadePersist
+class JpaCascadePersist
 {
     @Test
-    public void whenParentSavedThenChildSaved()
+    void whenParentSavedThenChildSaved()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -36,7 +34,7 @@ public class JpaCascadePersist
     }
 
     @Test
-    public void whenParentRemovedThenChildRemoved()
+    void whenParentRemovedThenChildRemoved()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -68,7 +66,7 @@ public class JpaCascadePersist
     }
 
     @Test
-    public void a()
+    void a()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -103,7 +101,7 @@ public class JpaCascadePersist
     }
 
     @Test
-    public void whenParentSavedThenMerged()
+    void whenParentSavedThenMerged()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

@@ -4,7 +4,7 @@ import org.apache.wicket.ajax.AjaxEventBehavior;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.markup.html.WebPage;
 
-public class BehaviorAjaxEventExample extends WebPage
+class BehaviorAjaxEventExample extends WebPage
 {
     private static final long serialVersionUID = -5801026524059171943L;
     int i = 0;

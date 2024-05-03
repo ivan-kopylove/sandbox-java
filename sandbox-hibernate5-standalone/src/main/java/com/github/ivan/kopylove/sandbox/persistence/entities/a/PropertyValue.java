@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class PropertyValue
+class PropertyValue
 {
     @Column(name = "PROPERTIES_VALUE")
     private String value;
@@ -14,7 +14,7 @@ public class PropertyValue
         return value;
     }
 
-    public void setValue(final String value)
+    public void setValue(String value)
     {
         this.value = value;
     }

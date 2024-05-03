@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * drop sequence if exists MyGeneratorName
  */
 @Entity
-public class GeneratedValueMostBasicSecond
+class GeneratedValueMostBasicSecond
 {
     @Id
     @GeneratedValue

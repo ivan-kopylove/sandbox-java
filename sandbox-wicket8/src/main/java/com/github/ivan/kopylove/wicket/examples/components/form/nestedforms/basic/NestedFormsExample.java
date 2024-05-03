@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.wicket.examples.components.form.nestedforms.bas
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 
-public class NestedFormsExample extends WebPage
+class NestedFormsExample extends WebPage
 {
     @Override
     protected void onInitialize()

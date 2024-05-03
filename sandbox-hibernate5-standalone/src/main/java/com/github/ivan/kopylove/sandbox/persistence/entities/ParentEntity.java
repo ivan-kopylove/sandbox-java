@@ -1,12 +1,17 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "PARENTTABLE")
-public class ParentEntity
+class ParentEntity
 {
     @Id
     @Column(name = "PARENTTABLE_KEY", unique = true, nullable = false)
@@ -43,7 +48,7 @@ public class ParentEntity
         return childs;
     }
 
-    public void setChilds(final Set<ChildEntity> childs)
+    public void setChilds(Set<ChildEntity> childs)
     {
         this.childs = new HashSet(childs);
     }

@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class WaitTest
+class WaitTest
 {
 
     private WebDriver  driver;
@@ -35,7 +35,7 @@ public class WaitTest
 
     @Test
     @Disabled
-    public void testUntitled() throws Exception
+    public void testUntitled()
     {
         //        driver.get(baseUrl);
         //        element = driver.findElement(By.className("input__control"));
@@ -49,7 +49,7 @@ public class WaitTest
     }
 
     @AfterEach
-    public void tearDown() throws Exception
+    public void tearDown()
     {
         driver.quit();
     }

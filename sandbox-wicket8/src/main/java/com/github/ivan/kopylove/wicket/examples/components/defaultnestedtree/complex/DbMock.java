@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.wicket.examples.components.defaultnestedtree.co
 import java.io.File;
 import java.util.List;
 
-public class DbMock
+class DbMock
 {
     public static MyNode loadFromDb()
     {

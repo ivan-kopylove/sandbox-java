@@ -1,10 +1,10 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-public class MyClass3
+class MyClass3
 {
-    private MyClass myClass;
+    private final MyClass myClass;
 
-    public MyClass3(final MyClass myClass)
+    public MyClass3(MyClass myClass)
     {
         this.myClass = myClass;
     }

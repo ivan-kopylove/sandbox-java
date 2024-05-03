@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.log4j;
 
-public class SomeService
+class SomeService
 {
     public void veryComplexLogic()
     {

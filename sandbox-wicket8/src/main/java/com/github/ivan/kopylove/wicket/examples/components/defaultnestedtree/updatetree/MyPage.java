@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * https://i.imgur.com/Wh82sDX.gif
  */
-public class MyPage extends WebPage
+class MyPage extends WebPage
 {
     public static TreeNode getDemoStruct2() throws IOException, ParserConfigurationException, SAXException
     {
@@ -89,8 +89,7 @@ public class MyPage extends WebPage
             e.printStackTrace();
         }
 
-        final TreeModelProvider<DefaultMutableTreeNode> modelProvider = new TreeModelProvider<DefaultMutableTreeNode>(
-                model)
+        TreeModelProvider<DefaultMutableTreeNode> modelProvider = new TreeModelProvider<DefaultMutableTreeNode>(model)
         {
             @Override
             public IModel<DefaultMutableTreeNode> model(DefaultMutableTreeNode object)
@@ -99,7 +98,7 @@ public class MyPage extends WebPage
             }
         };
 
-        final DefaultNestedTree tree = new DefaultNestedTree("tree", modelProvider);
+        DefaultNestedTree tree = new DefaultNestedTree("tree", modelProvider);
         tree.setOutputMarkupId(true);
         add(tree);
 
@@ -107,7 +106,7 @@ public class MyPage extends WebPage
         {
 
             @Override
-            public void onClick(final AjaxRequestTarget target)
+            public void onClick(AjaxRequestTarget target)
             {
                 target.add(tree);
             }

@@ -15,7 +15,8 @@ import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.swing.*;
+import javax.swing.JApplet;
+import javax.swing.SwingUtilities;
 import javax.ws.rs.core.HttpHeaders;
 import java.io.File;
 import java.util.Locale;
@@ -24,7 +25,7 @@ import java.util.Locale;
  * Created by ikopylov on 21.06.2017.
  */
 @SuppressWarnings("removal")
-public class DynamicTreeApplet extends JApplet
+class DynamicTreeApplet extends JApplet
 {
 
     private static final String LOGFILENAME         = "printing.log";

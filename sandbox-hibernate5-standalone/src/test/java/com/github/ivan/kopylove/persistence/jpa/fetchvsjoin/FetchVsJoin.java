@@ -12,16 +12,14 @@ import javax.persistence.criteria.Root;
 
 /**
  * In this two examples, JOIN query is used to load. They have certain difference.
- *
- * @author Ivan Kopylov
  */
-public class FetchVsJoin
+class FetchVsJoin
 {
     /**
      * Join will not add information to the generated SQL query projection, so, no chance for hibernate to cache joined entity.
      */
     @Test
-    public void join()
+    void join()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -45,7 +43,7 @@ public class FetchVsJoin
      * Hibernate adds projections to joined table, so data is returned into Hibernate, so that Hibernate can cache this data.
      */
     @Test
-    public void fetch()
+    void fetch()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()

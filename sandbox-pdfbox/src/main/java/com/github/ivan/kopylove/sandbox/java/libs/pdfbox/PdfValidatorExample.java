@@ -2,12 +2,16 @@ package com.github.ivan.kopylove.sandbox.java.libs.pdfbox;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Hello world!
  */
-public class PdfValidatorExample
+class PdfValidatorExample
 {
     public static void main(String[] args)
     {
@@ -24,11 +28,11 @@ public class PdfValidatorExample
                     barray = readFully(is);
                     if (!validatePDF(barray))
                     {
-                        System.out.println(String.format("[FAILED] %s", file));
+                        System.out.printf("[FAILED] %s%n", file);
                     }
                     else
                     {
-                        System.out.println(String.format("[OK] %s", file));
+                        System.out.printf("[OK] %s%n", file);
                     }
                 }
                 catch (IOException e)

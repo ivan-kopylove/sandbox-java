@@ -2,7 +2,7 @@ package com.github.ivan.kopylove.wicket.examples.components.textfield;
 
 import java.io.Serializable;
 
-public class MyModelObject implements Serializable
+class MyModelObject implements Serializable
 {
     private String prop;
 
@@ -11,7 +11,7 @@ public class MyModelObject implements Serializable
 
     }
 
-    public MyModelObject(final String prop)
+    public MyModelObject(String prop)
     {
         this.prop = prop;
     }
@@ -21,7 +21,7 @@ public class MyModelObject implements Serializable
         return prop;
     }
 
-    public void setProp(final String prop)
+    public void setProp(String prop)
     {
         this.prop = prop;
     }

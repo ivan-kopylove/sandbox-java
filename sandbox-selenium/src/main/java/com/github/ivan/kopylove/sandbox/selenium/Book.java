@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.selenium;
 
-public class Book
+class Book
 {
 
     private int number;

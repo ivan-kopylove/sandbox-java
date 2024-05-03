@@ -1,12 +1,13 @@
 package com.github.ivan.kopylove.sandbox.persistence.jpa.fetchvsjoin;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-/**
- * @author Ivan Kopylov
- */
 @Entity(name = "GAMER")
-public class Gamer
+class Gamer
 {
     @Id
     private int id;

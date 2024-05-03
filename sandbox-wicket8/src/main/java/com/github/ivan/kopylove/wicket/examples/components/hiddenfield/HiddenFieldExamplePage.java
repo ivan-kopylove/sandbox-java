@@ -6,7 +6,7 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.HiddenField;
 
-public class HiddenFieldExamplePage extends WebPage
+class HiddenFieldExamplePage extends WebPage
 {
 
     @Override

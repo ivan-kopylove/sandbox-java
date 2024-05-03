@@ -6,24 +6,24 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class MyStruct implements Serializable
+class MyStruct implements Serializable
 {
     private String         id;
     private MyStruct       parent;
     private List<MyStruct> siblings = new ArrayList<>();
 
-    public MyStruct(final String id)
+    public MyStruct(String id)
     {
         this.id = id;
     }
 
-    public MyStruct(final MyStruct parent, String id)
+    public MyStruct(MyStruct parent, String id)
     {
         this.parent = parent;
         this.id = id;
     }
 
-    public void addChild(final MyStruct struct)
+    public void addChild(MyStruct struct)
     {
         siblings.add(struct);
     }
@@ -33,7 +33,7 @@ public class MyStruct implements Serializable
         return id;
     }
 
-    public void setId(final String id)
+    public void setId(String id)
     {
         this.id = id;
     }
@@ -43,7 +43,7 @@ public class MyStruct implements Serializable
         return parent;
     }
 
-    public void setParent(final MyStruct parent)
+    public void setParent(MyStruct parent)
     {
         this.parent = parent;
     }
@@ -53,7 +53,7 @@ public class MyStruct implements Serializable
         return Collections.unmodifiableList(siblings);
     }
 
-    public void setSiblings(final List<MyStruct> siblings)
+    public void setSiblings(List<MyStruct> siblings)
     {
         this.siblings = siblings;
     }
@@ -65,7 +65,7 @@ public class MyStruct implements Serializable
     }
 
     @Override
-    public boolean equals(final Object o)
+    public boolean equals(Object o)
     {
         if (this == o)
         {
@@ -75,7 +75,7 @@ public class MyStruct implements Serializable
         {
             return false;
         }
-        final MyStruct myStruct = (MyStruct) o;
+        MyStruct myStruct = (MyStruct) o;
         return id.equals(myStruct.id);
     }
 

@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -8,8 +7,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @ExtendWith(MockitoExtension.class)
-public class InjectMocksExample
+class InjectMocksExample
 {
     @Mock
     private MyClass myClass;
@@ -18,10 +19,10 @@ public class InjectMocksExample
     private MyClass3 myClass3;
 
     @Test
-    public void runMocked()
+    void runMocked()
     {
         Mockito.when(myClass.getSomeValue())
                .thenReturn("Hello world");
-        Assertions.assertEquals("Hello world", myClass3.getValue());
+        assertEquals("Hello world", myClass3.getValue());
     }
 }

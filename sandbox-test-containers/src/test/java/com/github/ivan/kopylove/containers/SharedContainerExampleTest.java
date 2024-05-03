@@ -14,7 +14,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @Testcontainers
-public class SharedContainerExampleTest
+class SharedContainerExampleTest
 {
     @Container
     public static GenericContainer sharedContainer = new GenericContainer(DockerImageName.parse("redis:5.0.3-alpine")).withExposedPorts(
@@ -34,7 +34,7 @@ public class SharedContainerExampleTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         assertThat(sharedContainer.isRunning(), equalTo(true));
         assertThat(sharedContainer.getHost(), equalTo("localhost"));

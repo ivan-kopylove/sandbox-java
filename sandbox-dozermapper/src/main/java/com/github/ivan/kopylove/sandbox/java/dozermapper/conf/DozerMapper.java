@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.sandbox.java.dozermapper.conf;
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
 
-public class DozerMapper
+class DozerMapper
 {
     private static final DozerBeanMapper instance;
 

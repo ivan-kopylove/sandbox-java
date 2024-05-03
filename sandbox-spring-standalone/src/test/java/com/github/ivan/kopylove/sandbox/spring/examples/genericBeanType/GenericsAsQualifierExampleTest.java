@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class GenericsAsQualifierExampleTest
+class GenericsAsQualifierExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         GenericsAsQualifierExample runnerService = ctx.getBean(GenericsAsQualifierExample.class);

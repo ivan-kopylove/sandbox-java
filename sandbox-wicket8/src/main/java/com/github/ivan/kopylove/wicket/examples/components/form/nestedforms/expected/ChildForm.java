@@ -5,9 +5,9 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-public class ChildForm extends Panel
+class ChildForm extends Panel
 {
-    public ChildForm(final String id)
+    public ChildForm(String id)
     {
         super(id);
     }

@@ -6,15 +6,15 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class MockStaticMethodOfInstance
+class MockStaticMethodOfInstance
 {
     @Mock
     private MyClassToMockMethod myClassToMockMethod;
 
     @Test
-    public void runMocked()
+    void runMocked()
     {
         //        Mockito.when(myClassToMockMethod.myMethod()).thenReturn("Custom value");
-        //        Assertions.assertEquals("Custom value", myClassToMockMethod.myMethod());
+        //        assertEquals("Custom value", myClassToMockMethod.myMethod());
     }
 }

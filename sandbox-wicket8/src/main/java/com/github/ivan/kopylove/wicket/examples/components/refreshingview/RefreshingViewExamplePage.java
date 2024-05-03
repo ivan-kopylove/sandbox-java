@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Inspect resulting markup to understand how the refreshing view works
  */
-public class RefreshingViewExamplePage extends WebPage
+class RefreshingViewExamplePage extends WebPage
 {
 
     @Override
@@ -22,7 +22,7 @@ public class RefreshingViewExamplePage extends WebPage
     {
         super.onInitialize();
 
-        final List<IModel<String>> strings = new ArrayList<>();
+        List<IModel<String>> strings = new ArrayList<>();
         strings.add(Model.of("123"));
         strings.add(Model.of("456"));
 
@@ -35,7 +35,7 @@ public class RefreshingViewExamplePage extends WebPage
             }
 
             @Override
-            protected void populateItem(final Item<String> item)
+            protected void populateItem(Item<String> item)
             {
                 String value = item.getModelObject();
                 Label label = new Label("myText", value);

@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Transactional
-public class PopulatorService
+class PopulatorService
 {
     @PersistenceContext
     private EntityManager entityManager;

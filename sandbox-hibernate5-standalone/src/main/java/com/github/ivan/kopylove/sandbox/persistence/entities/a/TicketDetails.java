@@ -4,7 +4,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 
 @Embeddable
-public class TicketDetails
+class TicketDetails
 {
     @Embedded
     private GenericProperties genericProperties;
@@ -14,7 +14,7 @@ public class TicketDetails
         return genericProperties;
     }
 
-    public void setGenericProperties(final GenericProperties genericProperties)
+    public void setGenericProperties(GenericProperties genericProperties)
     {
         this.genericProperties = genericProperties;
     }

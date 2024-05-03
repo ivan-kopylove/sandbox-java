@@ -6,7 +6,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.model.Model;
 
-public class PageWithValidator extends WebPage
+class PageWithValidator extends WebPage
 {
     @Override
     protected void onInitialize()

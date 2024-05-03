@@ -7,7 +7,7 @@ import org.apache.wicket.ajax.attributes.AjaxCallListener;
 import org.apache.wicket.ajax.attributes.AjaxRequestAttributes;
 import org.apache.wicket.markup.html.form.TextField;
 
-public class AjaxPreventSubmitBehavior extends AjaxEventBehavior
+class AjaxPreventSubmitBehavior extends AjaxEventBehavior
 {
     public AjaxPreventSubmitBehavior()
     {
@@ -15,12 +15,12 @@ public class AjaxPreventSubmitBehavior extends AjaxEventBehavior
     }
 
     @Override
-    protected void updateAjaxAttributes(final AjaxRequestAttributes attributes)
+    protected void updateAjaxAttributes(AjaxRequestAttributes attributes)
     {
         super.updateAjaxAttributes(attributes);
 
         Component component = getComponent();
-        if (component instanceof TextField<?> == false)
+        if (!(component instanceof TextField<?>))
         {
             attributes.setChildSelector("input");
         }
@@ -35,7 +35,7 @@ public class AjaxPreventSubmitBehavior extends AjaxEventBehavior
     }
 
     @Override
-    protected final void onEvent(final AjaxRequestTarget target)
+    protected final void onEvent(AjaxRequestTarget target)
     {
         System.out.println("AjaxPreventSubmitBehavior - onevent");
     }

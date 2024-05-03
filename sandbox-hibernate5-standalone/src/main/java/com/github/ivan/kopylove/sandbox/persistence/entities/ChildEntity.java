@@ -1,10 +1,15 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "CHILDTABLE")
-public class ChildEntity
+class ChildEntity
 {
     @Id
     @Column(name = "CHILDTABLE_KEY", unique = true, nullable = false)

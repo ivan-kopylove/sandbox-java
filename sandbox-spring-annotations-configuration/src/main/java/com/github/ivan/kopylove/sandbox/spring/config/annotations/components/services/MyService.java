@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class MyService
+class MyService
 {
     public void run()
     {

@@ -43,6 +43,8 @@
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
         <module>sandbox-java-10</module>
+        <module>sandbox-java-10</module>
+        <module>sandbox-java-21</module>
         <module>sandbox-java-8</module>
         <module>sandbox-java-algorithms-patterns-language</module>
         <module>sandbox-java-9</module>
@@ -62,6 +64,7 @@
         <module>sandbox-programming-challenges</module>
         <module>sandbox-quartz</module>
         <module>sandbox-selenium</module>
+        <module>sandbox-json-unit</module>
         <module>sandbox-servlet-basic-example</module>
         <module>sandbox-servlets</module>
         <module>sandbox-spring-annotations-configuration</module>
@@ -83,6 +86,13 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.9.3</version>
             <scope>test</scope>
         </dependency>
 

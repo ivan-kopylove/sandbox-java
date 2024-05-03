@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 @Service
-public class MyService
+class MyService
 {
-    private Date myDate = new Date();
+    private final Date myDate = new Date();
 
     public void myMethod()
     {

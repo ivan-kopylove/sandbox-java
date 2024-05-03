@@ -9,10 +9,7 @@ import org.apache.wicket.model.Model;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
-/**
- *
- */
-public class MyPage extends WebPage
+class MyPage extends WebPage
 {
     @Override
     protected void onInitialize()

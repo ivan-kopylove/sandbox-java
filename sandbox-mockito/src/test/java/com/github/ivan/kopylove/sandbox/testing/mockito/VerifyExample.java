@@ -1,24 +1,25 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class VerifyExample
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class VerifyExample
 {
     @Test
-    public void run()
+    void run()
     {
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())
                .thenReturn("hello world");
-        Assertions.assertEquals("hello world", myclass.getSomeValue());
+        assertEquals("hello world", myclass.getSomeValue());
         Mockito.verify(myclass)
                .getSomeValue();
     }
 
     @Test
-    public void notInvoked()
+    void notInvoked()
     {
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())
@@ -30,12 +31,12 @@ public class VerifyExample
     }
 
     @Test
-    public void notInvokedOneTimeNotTwo()
+    void notInvokedOneTimeNotTwo()
     {
         MyClass myclass = Mockito.mock(MyClass.class);
         Mockito.when(myclass.getSomeValue())
                .thenReturn("hello world");
-        Assertions.assertEquals("hello world", myclass.getSomeValue());
+        assertEquals("hello world", myclass.getSomeValue());
         Mockito.verify(myclass, Mockito.times(2))
                .getSomeValue();
     }

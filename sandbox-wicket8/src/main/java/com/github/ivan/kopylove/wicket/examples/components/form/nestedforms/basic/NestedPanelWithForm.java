@@ -5,9 +5,9 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-public class NestedPanelWithForm extends Panel
+class NestedPanelWithForm extends Panel
 {
-    public NestedPanelWithForm(final String id)
+    public NestedPanelWithForm(String id)
     {
         super(id);
     }

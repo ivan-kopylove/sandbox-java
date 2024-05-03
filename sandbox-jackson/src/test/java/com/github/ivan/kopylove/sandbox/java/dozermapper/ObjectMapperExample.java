@@ -2,7 +2,6 @@ package com.github.ivan.kopylove.sandbox.java.dozermapper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -10,10 +9,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ObjectMapperExample
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class ObjectMapperExample
 {
     @Test
-    public void main() throws JsonProcessingException
+    void main() throws JsonProcessingException
     {
         List<MyDto> list = new ArrayList<MyDto>();
         list.add(new MyDto("k1", "v1", "cv1"));
@@ -22,13 +23,13 @@ public class ObjectMapperExample
 
         String result = new ObjectMapper().writeValueAsString(list);
         System.out.println(result);
-        Assertions.assertEquals(
+        assertEquals(
                 "[{\"key\":\"k1\",\"value\":\"v1\",\"myCustomValue\":\"cv1\"},{\"key\":\"k2\",\"value\":\"v2\",\"myCustomValue\":\"cv2\"},{\"key\":\"k3\",\"value\":\"v3\",\"myCustomValue\":\"cv3\"}]",
                 result);
     }
 
     @Test
-    public void run() throws JsonProcessingException
+    void run() throws JsonProcessingException
     {
         List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 
@@ -44,6 +45,6 @@ public class ObjectMapperExample
 
         String result = new ObjectMapper().writeValueAsString(list);
         System.out.println(result);
-        Assertions.assertEquals("[{\"k1\":\"v1\",\"k2\":\"v2\"},{\"k3\":\"v3\",\"k4\":\"v4\"}]", result);
+        assertEquals("[{\"k1\":\"v1\",\"k2\":\"v2\"},{\"k3\":\"v3\",\"k4\":\"v4\"}]", result);
     }
 }

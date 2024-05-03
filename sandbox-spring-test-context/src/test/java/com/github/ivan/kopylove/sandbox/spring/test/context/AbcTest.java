@@ -1,7 +1,6 @@
 package com.github.ivan.kopylove.sandbox.spring.test.context;
 
 import com.github.ivan.kopylove.sandbox.spring.test.context.entities.MyTestTableEntity;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -12,10 +11,12 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @ContextConfiguration(locations = "classpath:spring-hibernate-test-context.xml")
 @TestPropertySource("classpath:spring-hibernate-test.properties")
 @ExtendWith(SpringExtension.class)
-public class AbcTest
+class AbcTest
 {
 
     @PersistenceContext
@@ -26,6 +27,6 @@ public class AbcTest
     public void run()
     {
         MyTestTableEntity myTestTableEntity = entityManager.find(MyTestTableEntity.class, 987);
-        Assertions.assertEquals(987, myTestTableEntity.getId());
+        assertEquals(987, myTestTableEntity.getId());
     }
 }

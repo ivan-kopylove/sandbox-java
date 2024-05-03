@@ -24,7 +24,7 @@ import java.io.IOException;
 /**
  * https://i.imgur.com/Wh82sDX.gif
  */
-public class MyPage extends WebPage
+class MyPage extends WebPage
 {
     public static TreeNode getDemoStruct2() throws IOException, ParserConfigurationException, SAXException
     {

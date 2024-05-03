@@ -8,7 +8,7 @@ import org.apache.wicket.markup.html.form.Button;
 /**
  * Purpose of this example: this is one of examples in a set of demonstrating wicket ways to call backend with various types of triggers
  */
-public class ButtonExample extends WebPage
+class ButtonExample extends WebPage
 {
     @Override
     protected void onInitialize()

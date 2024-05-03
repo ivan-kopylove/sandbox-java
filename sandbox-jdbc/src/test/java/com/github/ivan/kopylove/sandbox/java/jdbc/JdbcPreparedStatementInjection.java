@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +10,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * Reproduces 1+1 attack
  */
-public class JdbcPreparedStatementInjection
+class JdbcPreparedStatementInjection
 {
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "INSERT INTO GEMS (GEM_KEY, NAME) VALUES (?,?)";
@@ -31,7 +32,7 @@ public class JdbcPreparedStatementInjection
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, lines);
+            assertEquals(0, lines);
 
             preparedStatement = conn.prepareStatement(SQL_INSERT_TEMPLATE);
             preparedStatement.setInt(1, 0);
@@ -61,7 +62,7 @@ public class JdbcPreparedStatementInjection
     }
 
     @Test
-    public void injection_sucess() throws SQLException
+    void injection_sucess() throws SQLException
     {
         Connection conn = null;
         Statement statement = null;
@@ -84,7 +85,7 @@ public class JdbcPreparedStatementInjection
                 System.out.printf("id: %s, name: %s%n", id, name);
             }
 
-            Assertions.assertEquals(2, count);
+            assertEquals(2, count);
 
             statement.close();
             conn.close();
@@ -112,7 +113,7 @@ public class JdbcPreparedStatementInjection
      * 2. Injection-safe.<br/>
      */
     @Test
-    public void injection_prevented() throws SQLException
+    void injection_prevented() throws SQLException
     {
         Connection conn = null;
         PreparedStatement preparedStatement = null;
@@ -136,7 +137,7 @@ public class JdbcPreparedStatementInjection
                 String name = rs.getString(2);
                 System.out.printf("id: %s, name: %s%n", id, name);
             }
-            Assertions.assertEquals(0, count);
+            assertEquals(0, count);
 
             preparedStatement.close();
             conn.close();

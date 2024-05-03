@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Scope("prototype")
-public class MyClass2
+class MyClass2
 {
     @Lazy
     @Autowired

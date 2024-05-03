@@ -7,7 +7,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.util.time.Duration;
 
-public class BehaviorAjaxAbstractTimer extends WebPage
+class BehaviorAjaxAbstractTimer extends WebPage
 {
     private static final long serialVersionUID = 1090726579020985087L;
 
@@ -25,7 +25,7 @@ public class BehaviorAjaxAbstractTimer extends WebPage
             private static final long serialVersionUID = 4953810211188590750L;
 
             @Override
-            protected void onTimer(final AjaxRequestTarget target)
+            protected void onTimer(AjaxRequestTarget target)
             {
                 System.out.println("AbstractAjaxTimerBehavior - onTimer");
                 target.add(label);

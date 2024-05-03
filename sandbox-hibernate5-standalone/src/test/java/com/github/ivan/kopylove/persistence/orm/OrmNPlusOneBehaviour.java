@@ -3,7 +3,6 @@ package com.github.ivan.kopylove.persistence.orm;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ChildEntity;
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -16,10 +15,12 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 /**
  * ORM N+1 problem demonstration
  */
-public class OrmNPlusOneBehaviour
+class OrmNPlusOneBehaviour
 {
     @BeforeAll
     public static void populate()
@@ -54,7 +55,7 @@ public class OrmNPlusOneBehaviour
      * No additional queries without proxy's getter call
      */
     @Test
-    public void noDbHits()
+    void noDbHits()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
 
@@ -78,7 +79,7 @@ public class OrmNPlusOneBehaviour
      * N+1 additional queries when accessing db through child proxy
      */
     @Test
-    public void nPlusOne()
+    void nPlusOne()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -107,7 +108,7 @@ public class OrmNPlusOneBehaviour
     }
 
     @Test
-    public void solutionIsFetch()
+    void solutionIsFetch()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
         entityManager.getTransaction()
@@ -130,7 +131,7 @@ public class OrmNPlusOneBehaviour
             Set<ChildEntity> childs = parent.getChilds();
             for (ChildEntity childEntity : childs)
             {
-                Assertions.assertNotNull(childEntity.getName());
+                assertNotNull(childEntity.getName());
             }
         }
 
@@ -139,7 +140,7 @@ public class OrmNPlusOneBehaviour
     }
 
     @Test
-    public void joinIsntASolution()
+    void joinIsntASolution()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
 
@@ -162,7 +163,7 @@ public class OrmNPlusOneBehaviour
             Set<ChildEntity> childs = parent.getChilds();
             for (ChildEntity childEntity : childs)
             {
-                Assertions.assertNotNull(childEntity.getName());
+                assertNotNull(childEntity.getName());
             }
         }
     }

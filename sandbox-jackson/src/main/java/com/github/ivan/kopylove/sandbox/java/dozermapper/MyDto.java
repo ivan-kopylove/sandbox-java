@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.dozermapper;
 
-public class MyDto
+class MyDto
 {
     private String key;
     private String value;

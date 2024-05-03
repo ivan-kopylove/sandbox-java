@@ -9,12 +9,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MapObjectToString
+class MapObjectToString
 {
     private final Mapper MAPPER = DozerMapper.getInstance();
 
     @Test
-    public void run()
+    void run()
     {
         Inner inner = new Inner();
         From from = new From();

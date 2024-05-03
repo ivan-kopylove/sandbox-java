@@ -5,10 +5,7 @@ import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.ws.api.WebSocketBehavior;
 
-/**
- * @author Ivan Kopylov
- */
-public class PageTwo extends WebPage
+class PageTwo extends WebPage
 {
     @Override
     protected void onInitialize()

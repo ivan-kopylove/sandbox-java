@@ -2,7 +2,7 @@ package com.github.ivan.kopylove.wicket.util;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class RandomStringGenerator
+class RandomStringGenerator
 {
     public static String getNext()
     {

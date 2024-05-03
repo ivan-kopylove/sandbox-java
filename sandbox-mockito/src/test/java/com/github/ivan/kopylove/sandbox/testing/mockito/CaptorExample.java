@@ -8,10 +8,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CaptorExample
+class CaptorExample
 {
     @Test
-    public void whenNotUseCaptorAnnotation_thenCorrect()
+    void whenNotUseCaptorAnnotation_thenCorrect()
     {
         List<String> mockList = Mockito.mock(List.class);
         ArgumentCaptor<String> arg = ArgumentCaptor.forClass(String.class);

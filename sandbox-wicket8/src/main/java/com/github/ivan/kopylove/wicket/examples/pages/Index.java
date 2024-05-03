@@ -18,7 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Index extends WebPage
+class Index extends WebPage
 {
     @Override
     protected void onInitialize()

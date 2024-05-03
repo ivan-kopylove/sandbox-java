@@ -8,12 +8,11 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-public class NestedPanel extends Panel
+class NestedPanel extends Panel
 {
 
-    private TextField<String> textFieldNested;
-
-    private Form<?> parentForm;
+    private final Form<?>           parentForm;
+    private       TextField<String> textFieldNested;
 
     public NestedPanel(String id, Form<?> parentForm)
     {

@@ -11,7 +11,7 @@ import org.apache.wicket.model.Model;
 /**
  * When page refreshes, data is not changed
  */
-public class StaticModelExample extends WebPage
+class StaticModelExample extends WebPage
 {
     private static final long serialVersionUID = -4220168511329289392L;
 

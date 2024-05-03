@@ -7,7 +7,7 @@ import org.apache.wicket.markup.html.WebPage;
 /**
  * Purpose of this example: this is one of examples in a set of demonstrating wicket ways to call backend with various types of triggers
  */
-public class AjaxLinkExample extends WebPage
+class AjaxLinkExample extends WebPage
 {
     @Override
     protected void onInitialize()

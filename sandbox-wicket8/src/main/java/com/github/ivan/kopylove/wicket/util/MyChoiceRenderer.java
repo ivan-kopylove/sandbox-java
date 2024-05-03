@@ -5,19 +5,19 @@ import org.apache.wicket.model.IModel;
 
 import java.util.List;
 
-public class MyChoiceRenderer implements IChoiceRenderer<String>
+class MyChoiceRenderer implements IChoiceRenderer<String>
 {
     @Override
     public Object getDisplayValue(String object)
     {
-        System.out.println(String.format("object: %s", object));
+        System.out.printf("object: %s%n", object);
         return object + " my custom postfix";
     }
 
     @Override
     public String getIdValue(String object, int index)
     {
-        System.out.println(String.format("index: %s, object: %s", index, object));
+        System.out.printf("index: %s, object: %s%n", index, object);
         return object + " my custom postfix";
     }
 

@@ -8,16 +8,16 @@ import org.apache.wicket.extensions.markup.html.repeater.tree.DefaultNestedTree;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.Model;
 
-public class DefaultNestedTreeExampleWithProvider extends WebPage
+class DefaultNestedTreeExampleWithProvider extends WebPage
 {
     @Override
     protected void onInitialize()
     {
         super.onInitialize();
 
-        final MyStructProvider myStructProvider = new MyStructProvider();
+        MyStructProvider myStructProvider = new MyStructProvider();
 
-        final DefaultNestedTree<MyStruct> defaultNestedTree = new DefaultNestedTree<MyStruct>("tree", myStructProvider)
+        DefaultNestedTree<MyStruct> defaultNestedTree = new DefaultNestedTree<MyStruct>("tree", myStructProvider)
         {
 
         };
@@ -27,7 +27,7 @@ public class DefaultNestedTreeExampleWithProvider extends WebPage
         AjaxLink<String> ajaxLink = new AjaxLink<String>("updateTree", Model.of("button text"))
         {
             @Override
-            public void onClick(final AjaxRequestTarget target)
+            public void onClick(AjaxRequestTarget target)
             {
                 myStructProvider.detach();
                 myStructProvider.reload();

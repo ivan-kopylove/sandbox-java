@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class SomeTreeNodeProvider implements ITreeProvider<CheckedFolderNode>
+class SomeTreeNodeProvider implements ITreeProvider<CheckedFolderNode>
 {
     private List<CheckedFolderNode> state = new ArrayList<>();
 
@@ -20,20 +20,20 @@ public class SomeTreeNodeProvider implements ITreeProvider<CheckedFolderNode>
     }
 
     @Override
-    public IModel<CheckedFolderNode> model(final CheckedFolderNode object)
+    public IModel<CheckedFolderNode> model(CheckedFolderNode object)
     {
         return Model.of(object);
     }
 
     @Override
-    public Iterator<? extends CheckedFolderNode> getChildren(final CheckedFolderNode node)
+    public Iterator<? extends CheckedFolderNode> getChildren(CheckedFolderNode node)
     {
         return node.getChildren()
                    .iterator();
     }
 
     @Override
-    public boolean hasChildren(final CheckedFolderNode node)
+    public boolean hasChildren(CheckedFolderNode node)
     {
         return node.hasChildren();
     }

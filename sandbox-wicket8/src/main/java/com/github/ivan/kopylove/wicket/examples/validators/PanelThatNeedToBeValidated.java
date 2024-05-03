@@ -6,7 +6,7 @@ import org.apache.wicket.model.IModel;
 /**
  * Panel - is a container, that holds markup and other components. Usually it is reusable.
  */
-public class PanelThatNeedToBeValidated extends Panel
+class PanelThatNeedToBeValidated extends Panel
 {
     public PanelThatNeedToBeValidated(String id, IModel<?> model)
     {

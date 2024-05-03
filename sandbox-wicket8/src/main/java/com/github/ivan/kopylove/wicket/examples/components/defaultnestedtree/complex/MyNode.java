@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class MyNode implements Serializable
+class MyNode implements Serializable
 {
     private static final long serialVersionUID = 9064729471628113857L;
 
@@ -15,27 +15,27 @@ public class MyNode implements Serializable
     private String       title;
     private List<MyNode> childs = new ArrayList<>();
 
-    MyNode(final String id, final String title)
+    MyNode(String id, String title)
     {
         this.id = id;
         this.title = title;
     }
 
-    MyNode(final String id, final String title, final MyNode parent)
+    MyNode(String id, String title, MyNode parent)
     {
         this.id = id;
         this.parent = parent;
         this.title = title;
     }
 
-    MyNode(final String id, final String title, final boolean isLeaf)
+    MyNode(String id, String title, boolean isLeaf)
     {
         this.id = id;
         this.title = title;
         this.isLeaf = isLeaf;
     }
 
-    void addChild(final MyNode struct)
+    void addChild(MyNode struct)
     {
         childs.add(struct);
     }
@@ -45,7 +45,7 @@ public class MyNode implements Serializable
         return id;
     }
 
-    public void setId(final String id)
+    public void setId(String id)
     {
         this.id = id;
     }
@@ -55,7 +55,7 @@ public class MyNode implements Serializable
         return parent;
     }
 
-    public void setParent(final MyNode parent)
+    public void setParent(MyNode parent)
     {
         this.parent = parent;
     }
@@ -65,7 +65,7 @@ public class MyNode implements Serializable
         return isLeaf;
     }
 
-    public void setLeaf(final boolean leaf)
+    public void setLeaf(boolean leaf)
     {
         isLeaf = leaf;
     }
@@ -80,7 +80,7 @@ public class MyNode implements Serializable
         return title;
     }
 
-    public void setTitle(final String title)
+    public void setTitle(String title)
     {
         this.title = title;
     }
@@ -90,7 +90,7 @@ public class MyNode implements Serializable
         return childs;
     }
 
-    public void setChilds(final List<MyNode> childs)
+    public void setChilds(List<MyNode> childs)
     {
         this.childs = childs;
     }
@@ -102,7 +102,7 @@ public class MyNode implements Serializable
     }
 
     @Override
-    public boolean equals(final Object o)
+    public boolean equals(Object o)
     {
         if (this == o)
         {
@@ -112,7 +112,7 @@ public class MyNode implements Serializable
         {
             return false;
         }
-        final MyNode myStruct = (MyNode) o;
+        MyNode myStruct = (MyNode) o;
         return id.equals(myStruct.id);
     }
 

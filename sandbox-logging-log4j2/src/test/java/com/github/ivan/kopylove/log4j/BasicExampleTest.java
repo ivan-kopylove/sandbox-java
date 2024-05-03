@@ -4,13 +4,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
-public class BasicExampleTest
+class BasicExampleTest
 {
 
     private static final Logger LOGGER = LogManager.getLogger(BasicExampleTest.class);
 
     @Test
-    public void main()
+    void main()
     {
         LOGGER.trace("Hello World");
     }

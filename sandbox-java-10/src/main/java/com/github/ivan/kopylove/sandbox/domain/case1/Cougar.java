@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.domain.case1;
 
-//public class Cougar implements HasTail
+//class Cougar implements HasTail
 //{
 //    public static void main(String[] args)
 //    {

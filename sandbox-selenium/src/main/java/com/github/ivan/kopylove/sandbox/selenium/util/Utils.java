@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 import java.io.File;
 import java.net.URL;
 
-public class Utils
+class Utils
 {
     @Nullable
     public static String convertClassPathToAbsolutePath(String path)

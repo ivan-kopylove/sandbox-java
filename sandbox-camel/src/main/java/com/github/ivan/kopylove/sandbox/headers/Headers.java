@@ -6,7 +6,7 @@ import org.apache.camel.spring.SpringCamelContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Headers
+class Headers
 {
     public static void main(String[] args) throws Exception
     {

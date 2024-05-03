@@ -1,10 +1,16 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "DOCUMENT")
-public class DocumentEntity
+class DocumentEntity
 {
     @Id
     @Column(name = "DOCUMENT_KEY")
@@ -22,7 +28,7 @@ public class DocumentEntity
         return key;
     }
 
-    public void setKey(final int key)
+    public void setKey(int key)
     {
         this.key = key;
     }
@@ -32,7 +38,7 @@ public class DocumentEntity
         return name;
     }
 
-    public void setName(final String name)
+    public void setName(String name)
     {
         this.name = name;
     }
@@ -42,7 +48,7 @@ public class DocumentEntity
         return user;
     }
 
-    public void setUser(final UserEntity user)
+    public void setUser(UserEntity user)
     {
         this.user = user;
     }

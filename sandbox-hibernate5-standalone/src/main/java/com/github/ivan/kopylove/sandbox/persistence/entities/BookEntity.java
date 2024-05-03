@@ -7,8 +7,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "BOOK")
-//@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
-public class BookEntity
+        //@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+class BookEntity
 {
     @Id
     @Column(name = "BOOK_KEY")
@@ -22,7 +22,7 @@ public class BookEntity
         return id;
     }
 
-    public void setId(final int id)
+    public void setId(int id)
     {
         this.id = id;
     }
@@ -32,7 +32,7 @@ public class BookEntity
         return name;
     }
 
-    public void setName(final String name)
+    public void setName(String name)
     {
         this.name = name;
     }

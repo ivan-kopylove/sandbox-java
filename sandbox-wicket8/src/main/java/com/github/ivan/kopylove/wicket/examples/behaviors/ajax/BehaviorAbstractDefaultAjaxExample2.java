@@ -11,7 +11,7 @@ import org.apache.wicket.request.cycle.RequestCycle;
 import org.apache.wicket.request.http.WebRequest;
 import org.apache.wicket.util.string.StringValue;
 
-public class BehaviorAbstractDefaultAjaxExample2 extends WebPage
+class BehaviorAbstractDefaultAjaxExample2 extends WebPage
 {
 
     private static final long serialVersionUID = 7352203927463159738L;

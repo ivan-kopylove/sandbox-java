@@ -36,19 +36,23 @@ package test;
  * a tutorial reader.
  */
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.tree.DefaultMutableTreeNode;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DynamicTreePanel extends JPanel implements ActionListener
+class DynamicTreePanel extends JPanel implements ActionListener
 {
-    private static String      ADD_COMMAND    = "add";
-    private static String      REMOVE_COMMAND = "remove";
-    private static String      CLEAR_COMMAND  = "clear";
-    private        int         newNodeSuffix  = 1;
-    private        DynamicTree treePanel;
+    private static final String      ADD_COMMAND    = "add";
+    private static final String      REMOVE_COMMAND = "remove";
+    private static final String      CLEAR_COMMAND  = "clear";
+    private final        DynamicTree treePanel;
+    private              int         newNodeSuffix  = 1;
 
     public DynamicTreePanel()
     {
@@ -104,10 +108,10 @@ public class DynamicTreePanel extends JPanel implements ActionListener
 
     public void populateTree(DynamicTree treePanel)
     {
-        String p1Name = new String("Parent 1");
-        String p2Name = new String("Parent 2");
-        String c1Name = new String("Child 1");
-        String c2Name = new String("Child 2");
+        String p1Name = "Parent 1";
+        String p2Name = "Parent 2";
+        String c1Name = "Child 1";
+        String c2Name = "Child 2";
 
         DefaultMutableTreeNode p1, p2;
 

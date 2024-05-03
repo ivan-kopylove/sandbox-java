@@ -5,11 +5,11 @@ import org.apache.wicket.model.LoadableDetachableModel;
 import java.util.List;
 import java.util.Objects;
 
-public class MyStructModel extends LoadableDetachableModel<MyStruct>
+class MyStructModel extends LoadableDetachableModel<MyStruct>
 {
-    private String id;
+    private final String id;
 
-    public MyStructModel(final MyStruct object)
+    public MyStructModel(MyStruct object)
     {
         super(object);
         this.id = object.getId();
@@ -24,7 +24,7 @@ public class MyStructModel extends LoadableDetachableModel<MyStruct>
     }
 
     @Override
-    public boolean equals(final Object o)
+    public boolean equals(Object o)
     {
         if (this == o)
         {
@@ -34,7 +34,7 @@ public class MyStructModel extends LoadableDetachableModel<MyStruct>
         {
             return false;
         }
-        final MyStructModel that = (MyStructModel) o;
+        MyStructModel that = (MyStructModel) o;
         return Objects.equals(id, that.id);
     }
 

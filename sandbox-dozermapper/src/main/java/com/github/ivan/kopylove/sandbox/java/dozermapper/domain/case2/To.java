@@ -1,6 +1,6 @@
 package com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2;
 
-public class To
+class To
 {
     private String receiver;
 

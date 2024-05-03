@@ -12,7 +12,7 @@ import org.apache.wicket.markup.html.form.Form;
  * <p>
  * How much buttons can be added to submit form?
  */
-public class FormDoesntSubmitSolutionOne extends WebPage
+class FormDoesntSubmitSolutionOne extends WebPage
 {
     @Override
     protected void onInitialize()

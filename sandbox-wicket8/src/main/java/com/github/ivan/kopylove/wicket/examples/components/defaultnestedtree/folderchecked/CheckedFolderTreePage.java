@@ -10,11 +10,11 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 
-public class CheckedFolderTreePage extends WebPage
+class CheckedFolderTreePage extends WebPage
 {
+    private final SomeTreeNodeProvider                 nodeProvider = new SomeTreeNodeProvider();
     private DefaultNestedTree<CheckedFolderNode> defaultNestedTree;
-    private SomeTreeNodeProvider                 nodeProvider = new SomeTreeNodeProvider();
-    private ProviderSubset<CheckedFolderNode>    checked;
+    private       ProviderSubset<CheckedFolderNode>    checked;
 
     protected boolean isChecked(CheckedFolderNode CheckedFolderNode)
     {
@@ -46,20 +46,20 @@ public class CheckedFolderTreePage extends WebPage
             private static final long serialVersionUID = 8576320104417070206L;
 
             @Override
-            protected Component newContentComponent(final String id, final IModel<CheckedFolderNode> model)
+            protected Component newContentComponent(String id, IModel<CheckedFolderNode> model)
             {
                 return new CheckedFolder<CheckedFolderNode>(id, this, model)
                 {
                     private static final long serialVersionUID = -5758392313825309170L;
 
                     @Override
-                    protected void onUpdate(final AjaxRequestTarget target)
+                    protected void onUpdate(AjaxRequestTarget target)
                     {
                         super.onUpdate(target);
                     }
 
                     @Override
-                    protected IModel<Boolean> newCheckBoxModel(final IModel<CheckedFolderNode> model)
+                    protected IModel<Boolean> newCheckBoxModel(IModel<CheckedFolderNode> model)
                     {
                         return new IModel<Boolean>()
                         {

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Ticket
+class Ticket
 {
     @Id
     @Column(name = "TICKET_ID", unique = true, nullable = false)
@@ -25,7 +25,7 @@ public class Ticket
         return key;
     }
 
-    public void setKey(final int key)
+    public void setKey(int key)
     {
         this.key = key;
     }
@@ -35,7 +35,7 @@ public class Ticket
         return name;
     }
 
-    public void setName(final String name)
+    public void setName(String name)
     {
         this.name = name;
     }
@@ -45,7 +45,7 @@ public class Ticket
         return ticketDetails;
     }
 
-    public void setTicketDetails(final TicketDetails ticketDetails)
+    public void setTicketDetails(TicketDetails ticketDetails)
     {
         this.ticketDetails = ticketDetails;
     }

@@ -14,7 +14,7 @@ import org.apache.wicket.model.PropertyModel;
  * What reader should know:
  * Complexity:
  */
-public class AjaxEventBehaviorPreconditionExample extends WebPage
+class AjaxEventBehaviorPreconditionExample extends WebPage
 {
     private AjaxEventBehaviorPreconditionModel model;
 
@@ -31,12 +31,12 @@ public class AjaxEventBehaviorPreconditionExample extends WebPage
         myTextField.add(new AjaxFormComponentUpdatingBehavior("keydown")
         {
             @Override
-            protected void updateAjaxAttributes(final AjaxRequestAttributes attributes)
+            protected void updateAjaxAttributes(AjaxRequestAttributes attributes)
             {
                 super.updateAjaxAttributes(attributes);
 
                 Component component = getComponent();
-                if (component instanceof TextField<?> == false)
+                if (!(component instanceof TextField<?>))
                 {
                     attributes.setChildSelector("input");
                 }
@@ -51,9 +51,9 @@ public class AjaxEventBehaviorPreconditionExample extends WebPage
             }
 
             @Override
-            protected void onUpdate(final AjaxRequestTarget target)
+            protected void onUpdate(AjaxRequestTarget target)
             {
-                System.out.println("");
+                System.out.println();
             }
         });
         add(myTextField);

@@ -2,18 +2,17 @@ package com.github.ivan.kopylove.persistence.jpa.refresh;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * Example of EntityManager#refresh.
- *
- * @author Ivan Kopylov
  */
-public class JpaUpdateExampleTest
+class JpaUpdateExampleTest
 {
     @BeforeAll
     public static void prepareData()
@@ -31,7 +30,7 @@ public class JpaUpdateExampleTest
     }
 
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity parentEntity = entityManger.find(ParentEntity.class, 101);
@@ -40,10 +39,10 @@ public class JpaUpdateExampleTest
         parentEntity = entityManger.find(ParentEntity.class,
                                          101); //loads from persistence context first, then from database
 
-        Assertions.assertEquals("Linda Hamilton", parentEntity.getName());
+        assertEquals("Linda Hamilton", parentEntity.getName());
 
         entityManger.refresh(parentEntity); //forces to update entity from database
 
-        Assertions.assertEquals("Robert Patrick", parentEntity.getName());
+        assertEquals("Robert Patrick", parentEntity.getName());
     }
 }

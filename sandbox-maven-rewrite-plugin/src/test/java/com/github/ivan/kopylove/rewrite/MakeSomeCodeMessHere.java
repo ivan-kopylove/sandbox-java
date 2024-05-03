@@ -2,8 +2,8 @@ package com.github.ivan.kopylove.rewrite;
 
 import org.junit.jupiter.api.Test;
 
-public class MakeSomeCodeMessHere
+class MakeSomeCodeMessHere
 {
     @Test
-    public void main() {}
+    void main() {}
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service(value = "someService")
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class SomeService
+class SomeService
 {
     @Cacheable(value = "cacheName", key = "#arg")
     public String getValue(String arg)

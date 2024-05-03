@@ -12,10 +12,10 @@ import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
-public class ElemCollectionJoin
+class ElemCollectionJoin
 {
     @Test
-    public void run()
+    void run()
     {
         EntityManager entityManager = JpaEntityManagerFactory.getEntityManger();
 

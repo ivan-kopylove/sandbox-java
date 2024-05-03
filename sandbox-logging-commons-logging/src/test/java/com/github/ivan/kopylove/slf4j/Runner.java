@@ -4,12 +4,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.jupiter.api.Test;
 
-public class Runner
+class Runner
 {
     private static final Log LOGGER = LogFactory.getLog(Runner.class);
 
     @Test
-    public void main()
+    void main()
     {
         LOGGER.trace("trace");
         LOGGER.info("info");

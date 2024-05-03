@@ -2,18 +2,19 @@ package com.github.ivan.kopylove.persistence.jpa.merge;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.ParentEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.JpaEntityManagerFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * Difference vs merge and persist
  */
-public class JpaMergeExampleTest
+class JpaMergeExampleTest
 {
     @Test
-    public void merge_set_new_name_original_object()
+    void merge_set_new_name_original_object()
     {
         ParentEntity initialEntity = new ParentEntity();
         initialEntity.setId(1);
@@ -33,14 +34,14 @@ public class JpaMergeExampleTest
 
         entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity reloadedEntity = entityManger.find(ParentEntity.class, 1);
-        Assertions.assertEquals("initial name", reloadedEntity.getName());
-        Assertions.assertEquals("initial name", merged.getName());
-        Assertions.assertEquals("initial updated name", initialEntity.getName());
+        assertEquals("initial name", reloadedEntity.getName());
+        assertEquals("initial name", merged.getName());
+        assertEquals("initial updated name", initialEntity.getName());
         entityManger.close();
     }
 
     @Test
-    public void merge_set_new_name_merged_object()
+    void merge_set_new_name_merged_object()
     {
         ParentEntity initialEntity = new ParentEntity();
         initialEntity.setId(2);
@@ -60,14 +61,14 @@ public class JpaMergeExampleTest
 
         entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity reloadedEntity = entityManger.find(ParentEntity.class, 2);
-        Assertions.assertEquals("merged updated name", reloadedEntity.getName());
-        Assertions.assertEquals("merged updated name", merged.getName());
-        Assertions.assertEquals("initial name", initialEntity.getName());
+        assertEquals("merged updated name", reloadedEntity.getName());
+        assertEquals("merged updated name", merged.getName());
+        assertEquals("initial name", initialEntity.getName());
         entityManger.close();
     }
 
     @Test
-    public void persist_then_merge()
+    void persist_then_merge()
     {
         ParentEntity entity1 = new ParentEntity();
         entity1.setId(3);
@@ -97,7 +98,7 @@ public class JpaMergeExampleTest
     }
 
     @Test
-    public void persist()
+    void persist()
     {
         ParentEntity originalEntity = new ParentEntity();
         originalEntity.setId(4);
@@ -117,7 +118,7 @@ public class JpaMergeExampleTest
 
         entityManger = JpaEntityManagerFactory.getEntityManger();
         ParentEntity parentEntity1 = entityManger.find(ParentEntity.class, 4);
-        Assertions.assertEquals("new parent name", parentEntity1.getName());
+        assertEquals("new parent name", parentEntity1.getName());
         entityManger.close();
     }
 }

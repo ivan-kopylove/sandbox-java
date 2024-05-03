@@ -7,7 +7,7 @@ import org.apache.wicket.ajax.attributes.AjaxCallListener;
 import org.apache.wicket.ajax.attributes.AjaxRequestAttributes;
 import org.apache.wicket.ajax.attributes.IAjaxCallListener;
 
-public class BehaviorFactory
+class BehaviorFactory
 {
     public static AjaxEventBehavior get()
     {
@@ -17,7 +17,7 @@ public class BehaviorFactory
             private static final long serialVersionUID = -7734303667397500L;
 
             @Override
-            protected void onEvent(final AjaxRequestTarget target)
+            protected void onEvent(AjaxRequestTarget target)
             {
                 System.out.println("123");
             }

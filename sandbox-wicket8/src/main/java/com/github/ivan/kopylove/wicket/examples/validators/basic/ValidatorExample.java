@@ -9,14 +9,14 @@ import org.apache.wicket.validation.validator.EmailAddressValidator;
 /**
  * Check html output. On falied validation wicked adds "error" class thanks to {@link ErrorIndicatorBehavior}
  */
-public class ValidatorExample extends WebPage
+class ValidatorExample extends WebPage
 {
     @Override
     protected void onInitialize()
     {
         super.onInitialize();
 
-        final Form<?> form = new Form("form")
+        Form<?> form = new Form("form")
         {
             private static final long serialVersionUID = 4742924626390708189L;
 

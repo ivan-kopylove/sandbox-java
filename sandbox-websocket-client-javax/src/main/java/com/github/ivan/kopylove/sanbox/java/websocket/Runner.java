@@ -1,14 +1,13 @@
 package com.github.ivan.kopylove.sanbox.java.websocket;
 
-public class Runner
+class Runner
 {
     /**
      * main
      *
      * @param args
-     * @throws Exception
      */
-    public static void main(String[] args) throws Exception
+    public static void main(String[] args)
     {
 
     }

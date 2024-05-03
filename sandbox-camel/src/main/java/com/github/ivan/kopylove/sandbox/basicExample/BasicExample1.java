@@ -6,7 +6,7 @@ import org.apache.camel.spring.SpringCamelContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class BasicExample1
+class BasicExample1
 {
     public static void main(String[] args) throws Exception
     {

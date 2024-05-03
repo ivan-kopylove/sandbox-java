@@ -13,16 +13,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * http://examples7x.wicket.apache.org/compref/wicket/bookmarkable/org.apache.wicket.examples.compref.RadioChoicePage?0
- *
- * @author Ivan Kopylov
  */
-public class RadioChoiceOnUpdate extends WebPage
+class RadioChoiceOnUpdate extends WebPage
 {
     private static final List<String> TYPES = Arrays.asList("Shared Host", "VPS", "Dedicated Server");
 
     private static final long serialVersionUID = -1923626121356192574L;
 
-    private String selected = null;
+    private final String selected = null;
 
     @Override
     protected void onInitialize()
@@ -38,7 +36,7 @@ public class RadioChoiceOnUpdate extends WebPage
         radioGroup.setOutputMarkupId(true);
         add(radioGroup);
 
-        final AtomicInteger i = new AtomicInteger();
+        AtomicInteger i = new AtomicInteger();
         i.set(0);
 
         radioGroup.add(new AjaxFormChoiceComponentUpdatingBehavior()

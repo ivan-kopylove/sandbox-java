@@ -3,17 +3,18 @@ package com.github.ivan.kopylove.persistence.hibernate;
 import com.github.ivan.kopylove.sandbox.persistence.entities.BookEntity;
 import com.github.ivan.kopylove.sandbox.persistence.util.HibernateSessionFactory;
 import org.hibernate.Session;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Minimal example with Hibernate session - save and load saved entity<br/>
  * Example available at: https://github.com/ivan-kopylove/sandbox-java
  */
-public class HibernateBasicExampleTest
+class HibernateBasicExampleTest
 {
     @Test
-    public void run()
+    void run()
     {
         BookEntity bookEntity = new BookEntity();
         bookEntity.setName("Harry Potter");
@@ -31,7 +32,7 @@ public class HibernateBasicExampleTest
         session.getTransaction()
                .begin();
         BookEntity entity = session.find(BookEntity.class, 0);
-        Assertions.assertEquals(entity.getName(), "Harry Potter");
+        assertEquals(entity.getName(), "Harry Potter");
         session.getTransaction()
                .commit();
         session.close();

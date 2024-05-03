@@ -7,7 +7,7 @@ import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.OnLoadHeaderItem;
 import org.apache.wicket.markup.html.WebPage;
 
-public class BehaviorAbstractDefaultAjaxExample extends WebPage
+class BehaviorAbstractDefaultAjaxExample extends WebPage
 {
 
     private static final long serialVersionUID = 7352203927463159738L;

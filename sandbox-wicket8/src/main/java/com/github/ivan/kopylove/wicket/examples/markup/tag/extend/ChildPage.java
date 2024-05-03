@@ -5,5 +5,5 @@ package com.github.ivan.kopylove.wicket.examples.markup.tag.extend;
  * Reader experience: basic
  * Complexity: low
  */
-public class ChildPage extends ParentPage
+class ChildPage extends ParentPage
 {}

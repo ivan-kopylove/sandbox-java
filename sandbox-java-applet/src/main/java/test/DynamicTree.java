@@ -36,18 +36,25 @@ package test;
  * a tutorial reader.
  */
 
-import javax.swing.*;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTree;
 import javax.swing.event.TreeModelEvent;
 import javax.swing.event.TreeModelListener;
-import javax.swing.tree.*;
-import java.awt.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
+import javax.swing.tree.TreePath;
+import javax.swing.tree.TreeSelectionModel;
+import java.awt.GridLayout;
+import java.awt.Toolkit;
 
-public class DynamicTree extends JPanel
+class DynamicTree extends JPanel
 {
-    protected DefaultMutableTreeNode rootNode;
-    protected DefaultTreeModel       treeModel;
-    protected JTree                  tree;
-    private   Toolkit                toolkit = Toolkit.getDefaultToolkit();
+    private final Toolkit                toolkit = Toolkit.getDefaultToolkit();
+    protected     DefaultMutableTreeNode rootNode;
+    protected     DefaultTreeModel       treeModel;
+    protected     JTree                  tree;
 
     public DynamicTree()
     {

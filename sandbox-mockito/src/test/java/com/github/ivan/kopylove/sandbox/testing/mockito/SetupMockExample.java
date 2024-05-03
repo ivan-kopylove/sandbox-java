@@ -1,11 +1,12 @@
 package com.github.ivan.kopylove.sandbox.testing.mockito;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-public class SetupMockExample
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class SetupMockExample
 {
     private MyClass myClass;
 
@@ -18,9 +19,9 @@ public class SetupMockExample
     }
 
     @Test
-    public void run()
+    void run()
     {
         MyClass2 myClass2 = new MyClass2();
-        Assertions.assertEquals("Hello world", myClass2.getMyValue(myClass));
+        assertEquals("Hello world", myClass2.getMyValue(myClass));
     }
 }

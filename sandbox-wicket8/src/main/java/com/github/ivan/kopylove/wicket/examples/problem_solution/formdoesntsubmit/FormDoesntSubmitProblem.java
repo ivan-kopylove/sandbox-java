@@ -12,7 +12,7 @@ import org.apache.wicket.markup.html.form.Form;
  * <p>
  * How much buttons can be added to submit form?
  */
-public class FormDoesntSubmitProblem extends WebPage
+class FormDoesntSubmitProblem extends WebPage
 {
     @Override
     protected void onInitialize()
@@ -37,7 +37,7 @@ public class FormDoesntSubmitProblem extends WebPage
         AjaxLink link = new AjaxLink("myButton")
         {
             @Override
-            public void onClick(final AjaxRequestTarget target)
+            public void onClick(AjaxRequestTarget target)
             {
                 System.out.println("triggered");
             }

@@ -1,10 +1,14 @@
 package com.github.ivan.kopylove.sandbox.persistence.entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "ORGANIZATION")
-public class OrganizationEntity
+class OrganizationEntity
 {
     @Id
     @Column(name = "ORGANIZATION_KEY")
@@ -21,7 +25,7 @@ public class OrganizationEntity
         return key;
     }
 
-    public void setKey(final int key)
+    public void setKey(int key)
     {
         this.key = key;
     }
@@ -31,7 +35,7 @@ public class OrganizationEntity
         return organizationBuildingDetails;
     }
 
-    public void setOrganizationBuildingDetails(final OrganizationBuildingDetails organizationBuildingDetails)
+    public void setOrganizationBuildingDetails(OrganizationBuildingDetails organizationBuildingDetails)
     {
         this.organizationBuildingDetails = organizationBuildingDetails;
     }
@@ -41,7 +45,7 @@ public class OrganizationEntity
         return organizationGeneralDetails;
     }
 
-    public void setOrganizationGeneralDetails(final OrganizationGeneralDetails organizationGeneralDetails)
+    public void setOrganizationGeneralDetails(OrganizationGeneralDetails organizationGeneralDetails)
     {
         this.organizationGeneralDetails = organizationGeneralDetails;
     }

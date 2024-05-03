@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "UserServlet", urlPatterns = {"/testAnnotated"})
-public class MyAnnotatedServlet extends HttpServlet
+class MyAnnotatedServlet extends HttpServlet
 {
     private static final long serialVersionUID = -2517292163679509370L;
 
     @Override
-    protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
         super.doGet(req, resp);
         Util.print(req);

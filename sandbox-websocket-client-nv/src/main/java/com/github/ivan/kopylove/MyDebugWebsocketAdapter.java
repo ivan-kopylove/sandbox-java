@@ -1,18 +1,23 @@
 package com.github.ivan.kopylove;
 
-import com.neovisionaries.ws.client.*;
+import com.neovisionaries.ws.client.ThreadType;
+import com.neovisionaries.ws.client.WebSocket;
+import com.neovisionaries.ws.client.WebSocketAdapter;
+import com.neovisionaries.ws.client.WebSocketException;
+import com.neovisionaries.ws.client.WebSocketFrame;
+import com.neovisionaries.ws.client.WebSocketState;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 import java.util.Map;
 
-public class MyDebugWebsocketAdapter extends WebSocketAdapter
+class MyDebugWebsocketAdapter extends WebSocketAdapter
 {
-    private static Logger LOGGER = LogManager.getLogger(MyDebugWebsocketAdapter.class);
+    private static final Logger LOGGER = LogManager.getLogger(MyDebugWebsocketAdapter.class);
 
     @Override
-    public void onTextMessage(WebSocket websocket, String message) throws Exception
+    public void onTextMessage(WebSocket websocket, String message)
     {
         LOGGER.info("onTextMessage: {}", message);
     }

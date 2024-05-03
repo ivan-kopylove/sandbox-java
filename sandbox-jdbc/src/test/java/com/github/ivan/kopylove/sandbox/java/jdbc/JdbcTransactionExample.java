@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +9,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcTransactionExample
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class JdbcTransactionExample
 {
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "INSERT INTO GEMS (GEM_KEY, NAME) VALUES (?,?)";
@@ -27,7 +28,7 @@ public class JdbcTransactionExample
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, lines);
+            assertEquals(0, lines);
 
             preparedStatement = conn.prepareStatement(SQL_INSERT_TEMPLATE);
             preparedStatement.setInt(1, 0);
@@ -57,7 +58,7 @@ public class JdbcTransactionExample
     }
 
     @Test
-    public void transaction_run() throws SQLException
+    void transaction_run() throws SQLException
     {
         Connection conn = null;
         Statement statement = null;

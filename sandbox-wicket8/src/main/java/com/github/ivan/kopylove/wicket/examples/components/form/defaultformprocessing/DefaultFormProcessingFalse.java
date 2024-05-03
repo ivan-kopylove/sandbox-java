@@ -5,7 +5,7 @@ import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.form.Form;
 
-public class DefaultFormProcessingFalse extends WebPage
+class DefaultFormProcessingFalse extends WebPage
 {
     @Override
     protected void onInitialize()

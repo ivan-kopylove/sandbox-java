@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +10,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Random;
 
-public class JdbcInsertExample
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class JdbcInsertExample
 {
     private static final String CREATE_PARENTTABLE = "CREATE TABLE PARENTTABLE (PARENTTABLE_KEY INTEGER NOT NULL, PARENTTABLE_NAME VARCHAR(255), PRIMARY KEY (PARENTTABLE_KEY))";
     private static final String SQL_INSERT         = "INSERT INTO PARENTTABLE (PARENTTABLE_KEY, PARENTTABLE_NAME) VALUES (?,?)";
@@ -27,7 +28,7 @@ public class JdbcInsertExample
             preparedStatement = conn.createStatement();
 
             int i = preparedStatement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, i);
+            assertEquals(0, i);
         }
         finally
         {
@@ -43,7 +44,7 @@ public class JdbcInsertExample
     }
 
     @Test
-    public void run() throws SQLException
+    void run() throws SQLException
     {
         Connection conn = null;
         PreparedStatement preparedStatement = null;
@@ -59,7 +60,7 @@ public class JdbcInsertExample
             int row = preparedStatement.executeUpdate();
 
             // rows affected
-            Assertions.assertEquals(1, row);
+            assertEquals(1, row);
 
             preparedStatement.close();
             conn.close();

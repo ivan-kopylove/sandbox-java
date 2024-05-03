@@ -2,10 +2,15 @@ package com.github.ivan.kopylove.sandbox.persistence.entities;
 
 import com.github.ivan.kopylove.sandbox.persistence.jpa.cascade.PersonEntity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class AddressEntity
+class AddressEntity
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +32,7 @@ public class AddressEntity
         return street;
     }
 
-    public void setStreet(final String street)
+    public void setStreet(String street)
     {
         this.street = street;
     }
@@ -37,7 +42,7 @@ public class AddressEntity
         return houseNumber;
     }
 
-    public void setHouseNumber(final int houseNumber)
+    public void setHouseNumber(int houseNumber)
     {
         this.houseNumber = houseNumber;
     }
@@ -47,7 +52,7 @@ public class AddressEntity
         return city;
     }
 
-    public void setCity(final String city)
+    public void setCity(String city)
     {
         this.city = city;
     }
@@ -57,7 +62,7 @@ public class AddressEntity
         return zipCode;
     }
 
-    public void setZipCode(final int zipCode)
+    public void setZipCode(int zipCode)
     {
         this.zipCode = zipCode;
     }
@@ -67,7 +72,7 @@ public class AddressEntity
         return person;
     }
 
-    public void setPerson(final PersonEntity person)
+    public void setPerson(PersonEntity person)
     {
         this.person = person;
     }

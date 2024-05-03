@@ -8,7 +8,7 @@ import org.apache.wicket.markup.html.form.Form;
 /**
  * Demonstrates that ajaxsubmit link not in the hierarchy
  */
-public class FormDoesntSubmitSolutionThree extends WebPage
+class FormDoesntSubmitSolutionThree extends WebPage
 {
     @Override
     protected void onInitialize()

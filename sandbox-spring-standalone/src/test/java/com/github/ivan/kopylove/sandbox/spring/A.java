@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class A
+class A
 {
     @Test
-    public void run() throws InterruptedException
+    void run() throws InterruptedException
     {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         String[] allBeans = ctx.getBeanDefinitionNames();

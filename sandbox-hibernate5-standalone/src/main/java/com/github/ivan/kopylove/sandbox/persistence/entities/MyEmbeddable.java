@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class MyEmbeddable
+class MyEmbeddable
 {
     @Column(name = "PARENTTABLE_NAME")
     private String name;
@@ -14,7 +14,7 @@ public class MyEmbeddable
         return name;
     }
 
-    public void setName(final String name)
+    public void setName(String name)
     {
         this.name = name;
     }

@@ -1,3 +1,3 @@
 package packagea;
 
-public class ClassA {}
+class ClassA {}

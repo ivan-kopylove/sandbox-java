@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.sandbox.java.tomcat;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-public class MyCustomServletListener implements ServletContextListener
+class MyCustomServletListener implements ServletContextListener
 {
     @Override
     public void contextDestroyed(ServletContextEvent arg0)

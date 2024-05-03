@@ -2,9 +2,9 @@ package com.github.ivan.kopylove.wicket.examples.components.tab;
 
 import org.apache.wicket.markup.html.panel.Panel;
 
-public class MyTabTwo extends Panel
+class MyTabTwo extends Panel
 {
-    public MyTabTwo(final String id)
+    public MyTabTwo(String id)
     {
         super(id);
     }

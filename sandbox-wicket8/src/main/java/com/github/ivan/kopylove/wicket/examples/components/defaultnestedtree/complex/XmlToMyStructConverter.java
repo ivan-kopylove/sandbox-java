@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
 
-public class XmlToMyStructConverter
+class XmlToMyStructConverter
 {
     private XmlToMyStructConverter()
     {

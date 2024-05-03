@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.java.jdbc;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -9,10 +8,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * Batch reduces the number of database roundtrip which again results in significant performance gain.
  */
-public class JdbcBatchStatement
+class JdbcBatchStatement
 {
     private static final String CREATE_PARENTTABLE  = "CREATE TABLE GEMS (GEM_KEY INTEGER NOT NULL, NAME VARCHAR(255), PRIMARY KEY (GEM_KEY))";
     private static final String SQL_INSERT_TEMPLATE = "";
@@ -28,7 +29,7 @@ public class JdbcBatchStatement
             statement = conn.createStatement();
 
             int lines = statement.executeUpdate(CREATE_PARENTTABLE);
-            Assertions.assertEquals(0, lines);
+            assertEquals(0, lines);
         }
         finally
         {
@@ -44,7 +45,7 @@ public class JdbcBatchStatement
     }
 
     @Test
-    public void run() throws SQLException
+    void run() throws SQLException
     {
         Connection conn = null;
         Statement statement = null;
@@ -61,9 +62,9 @@ public class JdbcBatchStatement
             int[] recordsAffected = statement.executeBatch();
 
 
-            Assertions.assertEquals(1, recordsAffected[0]);
-            Assertions.assertEquals(2, recordsAffected[1]);
-            Assertions.assertEquals(3, recordsAffected[2]);
+            assertEquals(1, recordsAffected[0]);
+            assertEquals(2, recordsAffected[1]);
+            assertEquals(3, recordsAffected[2]);
 
             statement.close();
             conn.close();

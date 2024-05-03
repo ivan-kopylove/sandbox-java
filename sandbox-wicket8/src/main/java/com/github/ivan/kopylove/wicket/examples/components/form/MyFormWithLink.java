@@ -7,7 +7,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.model.Model;
 
-public class MyFormWithLink extends WebPage
+class MyFormWithLink extends WebPage
 {
     private static final long serialVersionUID = -4348869317433578819L;
 

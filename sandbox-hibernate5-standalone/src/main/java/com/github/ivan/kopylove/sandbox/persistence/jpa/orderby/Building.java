@@ -7,7 +7,7 @@ import javax.persistence.OrderBy;
 import java.util.List;
 
 @Entity
-public class Building
+class Building
 {
     @Id
     private long         key;

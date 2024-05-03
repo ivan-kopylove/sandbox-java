@@ -1,12 +1,16 @@
 package com.github.ivan.kopylove.sandbox.java.dozermapper.conf;
 
-import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.*;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.A;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.B;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.C;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.D;
+import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case1.E;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.From;
 import com.github.ivan.kopylove.sandbox.java.dozermapper.domain.case2.To;
 import org.dozer.loader.api.BeanMappingBuilder;
 import org.dozer.loader.api.TypeMappingOptions;
 
-public class MapperConfiguration extends BeanMappingBuilder
+class MapperConfiguration extends BeanMappingBuilder
 {
     @Override
     protected void configure()

@@ -2,11 +2,16 @@ package com.github.ivan.kopylove.sandbox.persistence.jpa.cascade;
 
 import com.github.ivan.kopylove.sandbox.persistence.entities.AddressEntity;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
-public class PersonEntity
+class PersonEntity
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,7 +30,7 @@ public class PersonEntity
         return name;
     }
 
-    public void setName(final String name)
+    public void setName(String name)
     {
         this.name = name;
     }
@@ -35,7 +40,7 @@ public class PersonEntity
         return addresses;
     }
 
-    public void setAddresses(final List<AddressEntity> addresses)
+    public void setAddresses(List<AddressEntity> addresses)
     {
         this.addresses = addresses;
     }
