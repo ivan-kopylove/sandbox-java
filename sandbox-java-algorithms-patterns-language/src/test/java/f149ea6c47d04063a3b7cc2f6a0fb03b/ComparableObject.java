@@ -1,4 +1,4 @@
-package f149ea6c47d04063a3b7cc2f6a0fb03b;
+package com.github.ivan.kopylove.challenges.f149ea6c47d04063a3b7cc2f6a0fb03b;
 
 import java.util.Date;
 

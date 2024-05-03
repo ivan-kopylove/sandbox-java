@@ -1,4 +1,4 @@
-package b75f8767ba064db4a4caf9a54cb1e400;
+package com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.function.Supplier;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * java.util.* playground
@@ -18,19 +16,19 @@ class JavaCachesVariableWhenOverridesWithReflectionTest
     @Disabled
     void run() throws NoSuchFieldException, IllegalAccessException
     {
-        setValue(ObjectHolder.class.getDeclaredField("FINAL_STR"), "overrided");
-        setValue(ObjectHolder.class.getDeclaredField("STR"), "overrided");
-        setValue(ObjectHolder.class.getDeclaredField("intFinalValue"), 10000);
-        setValue(ObjectHolder.class.getDeclaredField("intValue"), 10000);
+        setValue(com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.class.getDeclaredField("FINAL_STR"), "overrided");
+        setValue(com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.class.getDeclaredField("STR"), "overrided");
+        setValue(com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.class.getDeclaredField("intFinalValue"), 10000);
+        setValue(com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.class.getDeclaredField("intValue"), 10000);
 
         Supplier<String> supplier = () -> "overrided";
-        setValue(ObjectHolder.class.getDeclaredField("SUPPLIER"), supplier);
+        setValue(com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.class.getDeclaredField("SUPPLIER"), supplier);
 
-        assertEquals("initial", ObjectHolder.getFinalStr());
-        assertEquals("overrided", ObjectHolder.getSTR());
-        assertEquals("overrided", ObjectHolder.getValueFromSuplier());
-        assertEquals(5000, ObjectHolder.getIntFinalValue());
-        assertEquals(10000, ObjectHolder.getIntValue());
+        assertEquals("initial", com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.getFinalStr());
+        assertEquals("overrided", com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.getSTR());
+        assertEquals("overrided", com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.getValueFromSuplier());
+        assertEquals(5000, com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.getIntFinalValue());
+        assertEquals(10000, com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.ObjectHolder.getIntValue());
     }
 
     private void setValue(Field field, Object newValue) throws NoSuchFieldException, IllegalAccessException

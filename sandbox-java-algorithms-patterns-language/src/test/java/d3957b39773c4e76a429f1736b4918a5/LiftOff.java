@@ -1,4 +1,4 @@
-package d3957b39773c4e76a429f1736b4918a5;
+package com.github.ivan.kopylove.challenges.d3957b39773c4e76a429f1736b4918a5;
 
 class LiftOff implements Runnable
 {

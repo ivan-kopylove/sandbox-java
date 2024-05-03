@@ -1,4 +1,4 @@
-package df84417104c54c4fb8a57f9baff73d72;
+package com.github.ivan.kopylove.challenges.df84417104c54c4fb8a57f9baff73d72;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ class LazySingletonExampleTest
     @Test
     void lazySingleton()
     {
-        LazySingleton instance = LazySingleton.getInstance();
+        com.github.ivan.kopylove.challenges.df84417104c54c4fb8a57f9baff73d72.LazySingleton instance = com.github.ivan.kopylove.challenges.df84417104c54c4fb8a57f9baff73d72.LazySingleton.getInstance();
         assertNotNull(instance);
     }
 }

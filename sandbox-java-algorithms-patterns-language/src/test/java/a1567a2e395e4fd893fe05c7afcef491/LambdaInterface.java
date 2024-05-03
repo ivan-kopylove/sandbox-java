@@ -1,4 +1,4 @@
-package a1567a2e395e4fd893fe05c7afcef491;
+package com.github.ivan.kopylove.challenges.a1567a2e395e4fd893fe05c7afcef491;
 
 /**
  * The default implementation of smth.

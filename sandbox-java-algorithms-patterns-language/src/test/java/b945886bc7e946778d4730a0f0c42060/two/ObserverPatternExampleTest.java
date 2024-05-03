@@ -1,4 +1,4 @@
-package b945886bc7e946778d4730a0f0c42060.two;
+package com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.two;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,8 +13,8 @@ class ObserverPatternExampleTest
     @Test
     void run()
     {
-        Initiater initiater = new Initiater();
-        Responder responder = new Responder();
+        com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.two.Initiater initiater = new com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.two.Initiater();
+        com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.two.Responder responder = new com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.two.Responder();
 
         initiater.addListener(responder);
 

@@ -1,4 +1,4 @@
-package b9062e2a984f48e88071c236c14c3881;
+package com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,7 @@ class GenericsAndWildcardsTest
      * @param catList
      * @param cat
      */
-    public static void deleteCat(List<? extends Cat> catList, Cat cat)
+    public static void deleteCat(List<? extends com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.Cat> catList, com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.Cat cat)
     {
         catList.remove(cat);
     }
@@ -26,9 +26,9 @@ class GenericsAndWildcardsTest
      *
      * @param catList
      */
-    public static void addCat(List<? super RedCat> catList)
+    public static void addCat(List<? super com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.RedCat> catList)
     {
-        catList.add(new RedCat("red cat"));
+        catList.add(new com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.RedCat("red cat"));
     }
 
     /**
@@ -45,8 +45,8 @@ class GenericsAndWildcardsTest
     @Test
     void run()
     {
-        List<Animal> animalList = new ArrayList<Animal>();
-        List<RedCat> redCatList = new ArrayList<RedCat>();
+        List<com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.Animal> animalList = new ArrayList<com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.Animal>();
+        List<com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.RedCat> redCatList = new ArrayList<com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.RedCat>();
 
         //add list of super class Animal of Cat class
         addCat(animalList);
@@ -59,7 +59,7 @@ class GenericsAndWildcardsTest
         System.out.println("redCatList: ");
         printAll(redCatList);
 
-        Cat cat = redCatList.get(0);
+        com.github.ivan.kopylove.challenges.b9062e2a984f48e88071c236c14c3881.Cat cat = redCatList.get(0);
         //delete cat
         deleteCat(redCatList, cat);
         System.out.println("redCatList: ");

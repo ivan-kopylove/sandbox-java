@@ -1,4 +1,4 @@
-package d2307d9652884bd79433040697710475;
+package com.github.ivan.kopylove.challenges.d2307d9652884bd79433040697710475;
 
 class PrivateConstructorClass
 {

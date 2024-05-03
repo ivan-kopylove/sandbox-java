@@ -1,4 +1,4 @@
-package e7ec8d9f13d54e54b34a2846de0d2584;
+package com.github.ivan.kopylove.challenges.e7ec8d9f13d54e54b34a2846de0d2584;
 
 import java.util.concurrent.Semaphore;
 

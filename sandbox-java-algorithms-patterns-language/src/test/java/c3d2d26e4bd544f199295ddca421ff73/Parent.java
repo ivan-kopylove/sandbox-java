@@ -1,4 +1,4 @@
-package c3d2d26e4bd544f199295ddca421ff73;
+package com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73;
 
 class Parent
 {

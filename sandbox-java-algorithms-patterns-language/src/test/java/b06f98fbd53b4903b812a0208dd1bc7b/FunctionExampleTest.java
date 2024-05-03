@@ -1,4 +1,4 @@
-package b06f98fbd53b4903b812a0208dd1bc7b;
+package com.github.ivan.kopylove.challenges.b06f98fbd53b4903b812a0208dd1bc7b;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +15,7 @@ class FunctionExampleTest
     void main()
     {
         Function<Double, Double> square = (Double x) -> x * x;
-        Function<Double, Double> square2 = SquareCalculator::square;
+        Function<Double, Double> square2 = com.github.ivan.kopylove.challenges.b06f98fbd53b4903b812a0208dd1bc7b.SquareCalculator::square;
 
         double d1 = square.apply(2d);
         double d2 = square2.apply(2d);

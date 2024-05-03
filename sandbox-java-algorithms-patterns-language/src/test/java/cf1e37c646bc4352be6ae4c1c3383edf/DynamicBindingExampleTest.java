@@ -1,8 +1,6 @@
-package cf1e37c646bc4352be6ae4c1c3383edf;
+package com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * facets:
@@ -14,8 +12,8 @@ class DynamicBindingExampleTest
     @Test
     void run()
     {
-        A a = new A();
-        A b = new B();
+        com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.A a = new com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.A();
+        com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.A b = new com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.B();
 
         System.out.println("a.i:" + a.i);
         System.out.println("b.i:" + b.i);
@@ -27,8 +25,8 @@ class DynamicBindingExampleTest
     @Test
     void run2()
     {
-        A a = new A();
-        B b = new B();
+        com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.A a = new com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.A();
+        com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.B b = new com.github.ivan.kopylove.challenges.cf1e37c646bc4352be6ae4c1c3383edf.B();
 
         System.out.println("a.i:" + a.i);
         System.out.println("b.i:" + b.i);

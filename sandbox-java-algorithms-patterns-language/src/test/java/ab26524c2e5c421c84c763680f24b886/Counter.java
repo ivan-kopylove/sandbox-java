@@ -1,4 +1,4 @@
-package ab26524c2e5c421c84c763680f24b886;
+package com.github.ivan.kopylove.challenges.ab26524c2e5c421c84c763680f24b886;
 
 class Counter
 {

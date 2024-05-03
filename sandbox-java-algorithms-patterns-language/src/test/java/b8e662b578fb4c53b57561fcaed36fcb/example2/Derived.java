@@ -1,9 +1,9 @@
-package b8e662b578fb4c53b57561fcaed36fcb.example2;
+package com.github.ivan.kopylove.challenges.b8e662b578fb4c53b57561fcaed36fcb.example2;
 
 /**
  * java.mechanics.oop.overriding.example
  */
-class Derived extends Base
+class Derived extends com.github.ivan.kopylove.challenges.b8e662b578fb4c53b57561fcaed36fcb.example2.Base
 {
     public void get(Integer i)
     {

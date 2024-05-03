@@ -1,8 +1,7 @@
-package a68959c146514196a332aea363edbeb3;
+package com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -13,7 +12,7 @@ class ClonableExamplesTests
     {
         assertThrows(CloneNotSupportedException.class, () -> {
 
-            MyNotClonableObj original = new MyNotClonableObj();
+            com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3.MyNotClonableObj original = new com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3.MyNotClonableObj();
             original.get();
         });
     }
@@ -21,9 +20,9 @@ class ClonableExamplesTests
     @Test
     void clonable() throws CloneNotSupportedException
     {
-        MyClonableObj original = new MyClonableObj();
+        com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3.MyClonableObj original = new com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3.MyClonableObj();
 
-        MyClonableObj cloned = (MyClonableObj) original.get();
+        com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3.MyClonableObj cloned = (com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3.MyClonableObj) original.get();
         assertNotSame(original, cloned);
         assertEquals(cloned.getField(), original.getField());
     }

@@ -1,4 +1,4 @@
-package cae578a4c7984b4da6ae30102f2d59ef;
+package com.github.ivan.kopylove.challenges.cae578a4c7984b4da6ae30102f2d59ef;
 
 /**
  * Java method signature example. Method signature makes method unique (at least in java).<br>

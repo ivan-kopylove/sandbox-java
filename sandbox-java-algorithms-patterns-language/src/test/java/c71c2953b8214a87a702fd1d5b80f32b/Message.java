@@ -1,4 +1,4 @@
-package c71c2953b8214a87a702fd1d5b80f32b;
+package com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b;
 
 class Message
 {

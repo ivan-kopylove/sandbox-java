@@ -1,4 +1,4 @@
-package e6cf57e0ef6c4c1b81def52bb7df2119;
+package com.github.ivan.kopylove.challenges.e6cf57e0ef6c4c1b81def52bb7df2119;
 
 /**
  * immutability

@@ -1,4 +1,4 @@
-package b75f8767ba064db4a4caf9a54cb1e400;
+package com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,7 @@ class VariableInsideAnonymousClassCallTest
     @Test
     void test()
     {
-        B b = new B()
+        com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.B b = new com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.B()
         {
             @Override
             public void targetMethodToCall()
@@ -25,7 +25,7 @@ class VariableInsideAnonymousClassCallTest
             }
         };
 
-        A a = new A()
+        com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.A a = new com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.A()
         {
             //b field is created implicitly
 
@@ -38,12 +38,12 @@ class VariableInsideAnonymousClassCallTest
         Field[] a_fields = a.getClass()
                             .getDeclaredFields();
         Stream.of(a_fields)
-              .filter(field -> B.class.isAssignableFrom(field.getType()))
+              .filter(field -> com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.B.class.isAssignableFrom(field.getType()))
               .forEach(field -> {
                   try
                   {
                       field.setAccessible(true);
-                      ((B) field.get(a)).targetMethodToCall();
+                      ((com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.B) field.get(a)).targetMethodToCall();
                   }
                   catch (Exception ex)
                   {

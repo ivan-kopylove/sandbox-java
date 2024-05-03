@@ -1,9 +1,6 @@
-package b93a3f80423b4421955f90e3433aaacd;
+package com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  * facets:
@@ -16,7 +13,7 @@ class JavaPassReferenceInsideMethodTest
     @Test
     void test1()
     {
-        Dog aDog = new Dog("Max");
+        com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog aDog = new com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog("Max");
         createNewInstanceInside(aDog);
         // aDog variable is still pointing to the "Max" dog
         assertEquals(aDog.getName(), "Max");
@@ -26,7 +23,7 @@ class JavaPassReferenceInsideMethodTest
     @Test
     void test2()
     {
-        Dog aDog = new Dog("Max");
+        com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog aDog = new com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog("Max");
         modifyField(aDog);
         assertEquals(aDog.getName(), "Puppy");
     }
@@ -34,25 +31,25 @@ class JavaPassReferenceInsideMethodTest
     @Test
     void test3()
     {
-        Dog aDog = new Dog("Max");
+        com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog aDog = new com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog("Max");
         createADogInside(aDog);
         assertEquals(aDog.getName(), "Puppy");
     }
 
-    private void createNewInstanceInside(Dog dog)
+    private void createNewInstanceInside(com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog dog)
     {
         // change dog inside of foo() to point to a new Dog instance "Fifi"
-        dog = new Dog("Fifi");
+        dog = new com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog("Fifi");
     }
 
-    private void modifyField(Dog dog)
+    private void modifyField(com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog dog)
     {
         dog.setName("Puppy");
     }
 
-    private void createADogInside(Dog dog)
+    private void createADogInside(com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog dog)
     {
-        Dog dog1 = new Dog("Jack London");
+        com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog dog1 = new com.github.ivan.kopylove.challenges.b93a3f80423b4421955f90e3433aaacd.Dog("Jack London");
         dog1 = dog;
         dog1.setName("Puppy");
     }

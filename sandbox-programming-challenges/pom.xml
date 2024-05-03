@@ -5,9 +5,11 @@
     <packaging>jar</packaging>
     <version>snapshot</version>
 
-
     <properties>
     </properties>
+
+    <dependencies>
+    </dependencies>
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
@@ -16,7 +18,16 @@
     </parent>
 
 
-    <dependencies>
-
-    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>21</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

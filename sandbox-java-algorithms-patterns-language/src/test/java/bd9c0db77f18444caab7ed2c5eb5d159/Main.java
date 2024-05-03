@@ -1,4 +1,4 @@
-package bd9c0db77f18444caab7ed2c5eb5d159;
+package com.github.ivan.kopylove.challenges.bd9c0db77f18444caab7ed2c5eb5d159;
 
 import java.util.Scanner;
 

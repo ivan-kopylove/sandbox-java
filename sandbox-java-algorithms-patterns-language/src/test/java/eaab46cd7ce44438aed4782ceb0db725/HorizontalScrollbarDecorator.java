@@ -1,6 +1,6 @@
-package eaab46cd7ce44438aed4782ceb0db725;
+package com.github.ivan.kopylove.challenges.eaab46cd7ce44438aed4782ceb0db725;
 
-class HorizontalScrollbarDecorator extends WindowDecorator
+class HorizontalScrollbarDecorator extends com.github.ivan.kopylove.challenges.eaab46cd7ce44438aed4782ceb0db725.WindowDecorator
 {
 
     public HorizontalScrollbarDecorator(Window windowToBeDecorated)

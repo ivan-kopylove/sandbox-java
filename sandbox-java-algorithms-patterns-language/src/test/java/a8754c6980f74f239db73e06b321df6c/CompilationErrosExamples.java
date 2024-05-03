@@ -1,4 +1,4 @@
-package a8754c6980f74f239db73e06b321df6c;
+package com.github.ivan.kopylove.challenges.a8754c6980f74f239db73e06b321df6c;
 
 class CompilationErrosExamples
 {

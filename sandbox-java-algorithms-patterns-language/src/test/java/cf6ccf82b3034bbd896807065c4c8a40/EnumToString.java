@@ -1,4 +1,4 @@
-package cf6ccf82b3034bbd896807065c4c8a40;
+package com.github.ivan.kopylove.challenges.cf6ccf82b3034bbd896807065c4c8a40;
 
 public enum EnumToString
 {

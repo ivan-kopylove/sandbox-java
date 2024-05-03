@@ -1,4 +1,4 @@
-package b382751f454549899395db49f523d002;
+package com.github.ivan.kopylove.challenges.b382751f454549899395db49f523d002;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class MainTest
     @Test
     void main()
     {
-        assertNotEquals(null, new Foo());
+        assertNotEquals(null, new com.github.ivan.kopylove.challenges.b382751f454549899395db49f523d002.Foo());
         assertNotEquals(null, new Date());
     }
 }

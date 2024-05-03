@@ -1,4 +1,4 @@
-package e5e6045791054b6fa9dd017be89ac930;
+package com.github.ivan.kopylove.challenges.e5e6045791054b6fa9dd017be89ac930;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ class MyEnumLazySingletonTest
         assertThrows(IllegalArgumentException.class, () -> {
 
 
-            Field field = MyEnumSingletonImpl.class.getDeclaredField("INSTANCE");
+            Field field = com.github.ivan.kopylove.challenges.e5e6045791054b6fa9dd017be89ac930.MyEnumSingletonImpl.class.getDeclaredField("INSTANCE");
 
             Field modifiersField = Field.class.getDeclaredField("modifiers");
             modifiersField.setAccessible(true);
@@ -32,7 +32,7 @@ class MyEnumLazySingletonTest
 
             // next operation is impossible, because static field instance is of type MyEnumSingletonImpl
             // and not MyEnumSingleton
-            field.set(null, new MyEnumSingletonMock());
+            field.set(null, new com.github.ivan.kopylove.challenges.e5e6045791054b6fa9dd017be89ac930.MyEnumSingletonMock());
         });
     }
 }

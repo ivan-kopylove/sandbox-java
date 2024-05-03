@@ -1,4 +1,4 @@
-package e33ae699623946a9addfa4489afafb00;
+package com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00;
 
 class Person
 {

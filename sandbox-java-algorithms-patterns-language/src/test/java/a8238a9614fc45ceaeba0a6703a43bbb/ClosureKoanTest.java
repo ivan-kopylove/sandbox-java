@@ -1,4 +1,4 @@
-package a8238a9614fc45ceaeba0a6703a43bbb;
+package com.github.ivan.kopylove.challenges.a8238a9614fc45ceaeba0a6703a43bbb;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package c8103f556aa548d3a6267d2a64a8433f;
+package com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f;
 
 class VeryBig
 {

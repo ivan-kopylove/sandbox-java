@@ -1,4 +1,4 @@
-package b945886bc7e946778d4730a0f0c42060.one;
+package com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.one;
 
 /**
  * facets:
@@ -11,7 +11,7 @@ class ListenerEntryPointTest
     public void run()
     {
 
-        MyLongRunningTask myLongRunningTask = new MyLongRunningTask(new OnCompleteListener()
+        com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.one.MyLongRunningTask myLongRunningTask = new com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.one.MyLongRunningTask(new com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.one.OnCompleteListener()
         {
             @Override
             public void onComplete()

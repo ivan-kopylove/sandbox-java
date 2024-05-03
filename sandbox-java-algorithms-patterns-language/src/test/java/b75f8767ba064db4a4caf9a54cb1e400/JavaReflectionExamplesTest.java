@@ -1,10 +1,9 @@
-package b75f8767ba064db4a4caf9a54cb1e400;
+package com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400;
 
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
@@ -25,7 +24,7 @@ class JavaReflectionExamplesTest
     @Test
     void run() throws IllegalAccessException, NoSuchFieldException
     {
-        Picture picture = new Picture();
+        com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.Picture picture = new com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.Picture();
 
         Field f1 = picture.getClass()
                           .getDeclaredField("size");
@@ -41,7 +40,7 @@ class JavaReflectionExamplesTest
         assertThrows(NoSuchFieldException.class, () -> {
 
 
-            Picture picture = new Picture();
+            com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.Picture picture = new com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.Picture();
 
             Field f1 = picture.getClass()
                               .getField("size");
@@ -57,11 +56,11 @@ class JavaReflectionExamplesTest
     @Test
     void run3() throws IllegalAccessException, NoSuchFieldException
     {
-        Field field = Lamp.class.getDeclaredField("color");
+        Field field = com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.Lamp.class.getDeclaredField("color");
         field.setAccessible(true);
         field.set(null, "red");
         // modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 
-        assertEquals("red", Lamp.getColor());
+        assertEquals("red", com.github.ivan.kopylove.challenges.b75f8767ba064db4a4caf9a54cb1e400.Lamp.getColor());
     }
 }

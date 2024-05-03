@@ -1,4 +1,4 @@
-package d79b5ea6ee3d468b8ff28dfb9c6cc25a;
+package com.github.ivan.kopylove.challenges.d79b5ea6ee3d468b8ff28dfb9c6cc25a;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +15,7 @@ class PredicateExample
     {
         Stream<String> myStream = Stream.of("a", "b", "c");
 
-        List<String> result = myStream.filter(PredicateCreator.build(a -> a.equalsIgnoreCase("a")))
+        List<String> result = myStream.filter(com.github.ivan.kopylove.challenges.d79b5ea6ee3d468b8ff28dfb9c6cc25a.PredicateCreator.build(a -> a.equalsIgnoreCase("a")))
                                       .collect(Collectors.toList());
 
         assertEquals(1, result.size());

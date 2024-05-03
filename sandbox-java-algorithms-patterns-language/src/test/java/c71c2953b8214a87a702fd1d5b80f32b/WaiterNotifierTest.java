@@ -1,4 +1,4 @@
-package c71c2953b8214a87a702fd1d5b80f32b;
+package com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,14 +10,14 @@ class WaiterNotifierTest
     @Test
     void run() throws InterruptedException
     {
-        Message msg = new Message("process it");
-        Waiter waiter = new Waiter(msg);
+        com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Message msg = new com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Message("process it");
+        com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Waiter waiter = new com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Waiter(msg);
         new Thread(waiter, "waiter").start();
 
-        Waiter waiter1 = new Waiter(msg);
+        com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Waiter waiter1 = new com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Waiter(msg);
         new Thread(waiter1, "waiter1").start();
 
-        Notifier notifier = new Notifier(msg);
+        com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Notifier notifier = new com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Notifier(msg);
         new Thread(notifier, "notifier").start();
 
         Thread.sleep(5000);

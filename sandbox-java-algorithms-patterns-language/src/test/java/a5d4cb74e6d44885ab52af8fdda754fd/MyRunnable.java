@@ -1,4 +1,4 @@
-package a5d4cb74e6d44885ab52af8fdda754fd;
+package com.github.ivan.kopylove.challenges.a5d4cb74e6d44885ab52af8fdda754fd;
 
 class MyRunnable implements Runnable
 {

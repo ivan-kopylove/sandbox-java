@@ -1,4 +1,4 @@
-package e439b1624e954252b908c6ad9b8c4693;
+package com.github.ivan.kopylove.challenges.e439b1624e954252b908c6ad9b8c4693;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class StringsTests
     void test()
     {
 
-        Stream.of(new MyObj("a"), new MyObj("b"))
+        Stream.of(new com.github.ivan.kopylove.challenges.e439b1624e954252b908c6ad9b8c4693.MyObj("a"), new com.github.ivan.kopylove.challenges.e439b1624e954252b908c6ad9b8c4693.MyObj("b"))
               .peek(o -> {
                   if (true)
                   {
@@ -21,7 +21,7 @@ class StringsTests
               .collect(Collectors.toList());
 
 
-        Stream.of(new MyObj("a"), new MyObj("b"))
+        Stream.of(new com.github.ivan.kopylove.challenges.e439b1624e954252b908c6ad9b8c4693.MyObj("a"), new com.github.ivan.kopylove.challenges.e439b1624e954252b908c6ad9b8c4693.MyObj("b"))
               .filter(obj -> {
                   return true;
               })

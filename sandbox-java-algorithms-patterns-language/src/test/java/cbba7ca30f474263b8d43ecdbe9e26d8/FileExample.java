@@ -1,4 +1,4 @@
-package cbba7ca30f474263b8d43ecdbe9e26d8;
+package com.github.ivan.kopylove.challenges.cbba7ca30f474263b8d43ecdbe9e26d8;
 
 import java.io.File;
 import java.io.IOException;

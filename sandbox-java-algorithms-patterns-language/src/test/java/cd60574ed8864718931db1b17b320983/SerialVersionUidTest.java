@@ -1,4 +1,4 @@
-package cd60574ed8864718931db1b17b320983;
+package com.github.ivan.kopylove.challenges.cd60574ed8864718931db1b17b320983;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SerialVersionUidTest
@@ -24,7 +23,7 @@ class SerialVersionUidTest
         File file = new File(FILE_NAME);
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         ObjectOutputStream os = new ObjectOutputStream(fileOutputStream);
-        os.writeObject(new SerializableClass(TEST_VALUE));
+        os.writeObject(new com.github.ivan.kopylove.challenges.cd60574ed8864718931db1b17b320983.SerializableClass(TEST_VALUE));
         os.flush();
         os.close();
 
@@ -36,7 +35,7 @@ class SerialVersionUidTest
     {
         FileInputStream fileInputStream = new FileInputStream(FILE_NAME);
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-        SerializableClass result = (SerializableClass) objectInputStream.readObject();
+        com.github.ivan.kopylove.challenges.cd60574ed8864718931db1b17b320983.SerializableClass result = (com.github.ivan.kopylove.challenges.cd60574ed8864718931db1b17b320983.SerializableClass) objectInputStream.readObject();
 
         objectInputStream.close();
 

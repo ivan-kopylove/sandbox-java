@@ -1,4 +1,4 @@
-package d743dc41d18344a99384f2a48ad46c70;
+package com.github.ivan.kopylove.challenges.d743dc41d18344a99384f2a48ad46c70;
 
 import org.junit.jupiter.api.Test;
 
@@ -51,7 +51,7 @@ class GenericsExamplesTest
     @Test
     void generic_use_of_class_with_generics()
     {
-        Box<Integer> box = new Box<>();
+        com.github.ivan.kopylove.challenges.d743dc41d18344a99384f2a48ad46c70.Box<Integer> box = new Box<>();
         //        box.setT("str"); //compile error
         box.setT(1);
 

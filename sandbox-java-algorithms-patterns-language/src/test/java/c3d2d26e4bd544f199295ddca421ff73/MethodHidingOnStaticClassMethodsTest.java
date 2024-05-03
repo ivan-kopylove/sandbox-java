@@ -1,8 +1,6 @@
-package c3d2d26e4bd544f199295ddca421ff73;
+package com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * java.mechanics.oop.methodhiding
@@ -15,29 +13,29 @@ class MethodHidingOnStaticClassMethodsTest
     @Test
     void test()
     {
-        Child child = new Child();
+        com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Child child = new com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Child();
 
-        assertEquals("child", Child.getValue());
-        assertEquals("parent", Parent.getValue());
+        assertEquals("child", com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Child.getValue());
+        assertEquals("parent", com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Parent.getValue());
 
-        assertEquals("child", Child.getValue());
-        assertEquals("parent", Parent.getValue());
+        assertEquals("child", com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Child.getValue());
+        assertEquals("parent", com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Parent.getValue());
     }
 
     @Test
     void test2()
     {
-        Parent instance = new Child();
+        com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Parent instance = new com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Child();
 
-        assertEquals("parent", Parent.getValue());
-        assertEquals("child", Child.getValue());
+        assertEquals("parent", com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Parent.getValue());
+        assertEquals("child", com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Child.getValue());
     }
 
     @Test
     void test3()
     {
-        Parent instance = new Parent();
+        com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Parent instance = new com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Parent();
 
-        assertEquals("parent", Parent.getValue());
+        assertEquals("parent", com.github.ivan.kopylove.challenges.c3d2d26e4bd544f199295ddca421ff73.Parent.getValue());
     }
 }

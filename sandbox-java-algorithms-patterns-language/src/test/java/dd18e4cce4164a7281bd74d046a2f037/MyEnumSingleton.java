@@ -1,4 +1,4 @@
-package dd18e4cce4164a7281bd74d046a2f037;
+package com.github.ivan.kopylove.challenges.dd18e4cce4164a7281bd74d046a2f037;
 
 public enum MyEnumSingleton
 {

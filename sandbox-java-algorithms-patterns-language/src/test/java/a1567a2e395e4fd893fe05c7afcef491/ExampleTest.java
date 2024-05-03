@@ -1,8 +1,6 @@
-package a1567a2e395e4fd893fe05c7afcef491;
+package com.github.ivan.kopylove.challenges.a1567a2e395e4fd893fe05c7afcef491;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * functional interface playground
@@ -12,7 +10,7 @@ class ExampleTest
     @Test
     void run()
     {
-        LambdaInterface lambdaInterface = (str, num) -> {
+        com.github.ivan.kopylove.challenges.a1567a2e395e4fd893fe05c7afcef491.LambdaInterface lambdaInterface = (str, num) -> {
             System.out.println("Lambda function");
             return 2L;
         };
@@ -23,7 +21,7 @@ class ExampleTest
     @Test
     void run01()
     {
-        LambdaInterface lambdaInterface = (str, num) -> {
+        com.github.ivan.kopylove.challenges.a1567a2e395e4fd893fe05c7afcef491.LambdaInterface lambdaInterface = (str, num) -> {
             System.out.println("Lambda function");
             return 2L;
         };
@@ -35,7 +33,7 @@ class ExampleTest
     void run02()
     {
 
-        LambdaInterface lambdaInterface = new LambdaInterface2Impl();
+        com.github.ivan.kopylove.challenges.a1567a2e395e4fd893fe05c7afcef491.LambdaInterface lambdaInterface = new com.github.ivan.kopylove.challenges.a1567a2e395e4fd893fe05c7afcef491.LambdaInterface2Impl();
 
         assertEquals(1, lambdaInterface.someDefaultMethod());
     }

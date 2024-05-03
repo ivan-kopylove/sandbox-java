@@ -1,4 +1,4 @@
-package df84417104c54c4fb8a57f9baff73d72;
+package com.github.ivan.kopylove.challenges.df84417104c54c4fb8a57f9baff73d72;
 
 class LazySingleton
 {

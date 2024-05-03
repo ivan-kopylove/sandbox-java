@@ -1,10 +1,10 @@
-package b945886bc7e946778d4730a0f0c42060.one;
+package com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.one;
 
 class MyLongRunningTask implements Runnable
 {
-    private final OnCompleteListener onCompleteListener;
+    private final com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.one.OnCompleteListener onCompleteListener;
 
-    public MyLongRunningTask(OnCompleteListener onCompleteListener)
+    public MyLongRunningTask(com.github.ivan.kopylove.challenges.b945886bc7e946778d4730a0f0c42060.one.OnCompleteListener onCompleteListener)
     {
         this.onCompleteListener = onCompleteListener;
     }

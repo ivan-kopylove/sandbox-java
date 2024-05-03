@@ -1,4 +1,4 @@
-package f5eaf6660f964ac8b0d10fd2cbcf3eff;
+package com.github.ivan.kopylove.challenges.f5eaf6660f964ac8b0d10fd2cbcf3eff;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ class Runner
     @Test
     void haveToWrapWithTry()
     {
-        Parent b = new Child();
+        com.github.ivan.kopylove.challenges.f5eaf6660f964ac8b0d10fd2cbcf3eff.Parent b = new com.github.ivan.kopylove.challenges.f5eaf6660f964ac8b0d10fd2cbcf3eff.Child();
         try
         {
             b.run();
@@ -24,7 +24,7 @@ class Runner
     @Test
     void dontHaveToWrapWithTry()
     {
-        Child b = new Child();
+        com.github.ivan.kopylove.challenges.f5eaf6660f964ac8b0d10fd2cbcf3eff.Child b = new com.github.ivan.kopylove.challenges.f5eaf6660f964ac8b0d10fd2cbcf3eff.Child();
         b.run();
     }
 }

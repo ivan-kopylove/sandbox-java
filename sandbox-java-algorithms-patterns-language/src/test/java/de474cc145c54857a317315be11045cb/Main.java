@@ -1,4 +1,4 @@
-package de474cc145c54857a317315be11045cb;
+package com.github.ivan.kopylove.challenges.de474cc145c54857a317315be11045cb;
 
 /**
  * finalVariableInsideCallback
@@ -10,7 +10,7 @@ class Main
         //errors: cannot access a non-final variable inside an inner class defined in a different method
 
         final String str = "";//why this have to be final?
-        new One()
+        new com.github.ivan.kopylove.challenges.de474cc145c54857a317315be11045cb.One()
         {
             //With anonymous classes, you are actually declaring a "nameless" nested class q
             @Override

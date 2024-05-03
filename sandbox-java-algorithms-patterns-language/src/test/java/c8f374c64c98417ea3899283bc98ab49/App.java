@@ -1,4 +1,4 @@
-package c8f374c64c98417ea3899283bc98ab49;
+package com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -28,13 +28,13 @@ class App
 
         Node root = doc.getDocumentElement();
 
-        DocumentNode treeRoot = new DocumentNode(String.valueOf(new Random().nextInt(500000)), root.getNodeName());
+        com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode treeRoot = new com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode(String.valueOf(new Random().nextInt(500000)), root.getNodeName());
 
-        DocumentNode result = getStruct(treeRoot, root);
+        com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode result = getStruct(treeRoot, root);
         System.out.println("12");
     }
 
-    private static DocumentNode getStruct(DocumentNode treeNode, Node node)
+    private static com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode getStruct(com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode treeNode, Node node)
     {
 
         if (node.hasChildNodes())
@@ -46,16 +46,16 @@ class App
                 Node subNode = list.item(i);
                 if (subNode.getNodeType() == Node.ELEMENT_NODE)
                 {
-                    DocumentNode child = new DocumentNode(String.valueOf(new Random().nextInt(500000)),
-                                                          subNode.getNodeName(),
-                                                          treeNode);
+                    com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode child = new com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode(String.valueOf(new Random().nextInt(500000)),
+                                                                                                                                                                                                    subNode.getNodeName(),
+                                                                                                                                                                                                    treeNode);
                     treeNode.addChild(getStruct(child, subNode));
                 }
             }
         }
         else
         {
-            treeNode.addChild(new DocumentNode(String.valueOf(new Random().nextInt(500000)), node.getNodeName(), true));
+            treeNode.addChild(new com.github.ivan.kopylove.challenges.c8f374c64c98417ea3899283bc98ab49.DocumentNode(String.valueOf(new Random().nextInt(500000)), node.getNodeName(), true));
         }
 
         return treeNode;

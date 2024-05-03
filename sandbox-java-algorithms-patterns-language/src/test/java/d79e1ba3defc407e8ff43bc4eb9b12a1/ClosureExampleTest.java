@@ -1,4 +1,4 @@
-package d79e1ba3defc407e8ff43bc4eb9b12a1;
+package com.github.ivan.kopylove.challenges.d79e1ba3defc407e8ff43bc4eb9b12a1;
 
 import org.junit.jupiter.api.Test;
 

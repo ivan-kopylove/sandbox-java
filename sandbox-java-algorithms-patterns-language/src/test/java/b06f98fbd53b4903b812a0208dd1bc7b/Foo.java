@@ -1,4 +1,4 @@
-package b06f98fbd53b4903b812a0208dd1bc7b;
+package com.github.ivan.kopylove.challenges.b06f98fbd53b4903b812a0208dd1bc7b;
 
 class Foo
 {

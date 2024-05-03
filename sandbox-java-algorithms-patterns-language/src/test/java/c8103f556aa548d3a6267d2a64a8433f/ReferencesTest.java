@@ -1,4 +1,4 @@
-package c8103f556aa548d3a6267d2a64a8433f;
+package com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f;
 
 import org.junit.jupiter.api.Test;
 
@@ -20,30 +20,30 @@ class ReferencesTest
     void run()
     {
         int size = 10;
-        LinkedList<SoftReference<VeryBig>> sa = new LinkedList<>();
+        LinkedList<SoftReference<com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig>> sa = new LinkedList<>();
         for (int i = 0; i < size; i++)
         {
-            sa.add(new SoftReference<>(new VeryBig("Soft " + i), References.getRq()));
+            sa.add(new SoftReference<>(new com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig("Soft " + i), com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.References.getRq()));
             System.out.println("Just created: " + sa.getLast());
-            References.checkQueue();
+            com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.References.checkQueue();
         }
-        LinkedList<WeakReference<VeryBig>> wa = new LinkedList<>();
+        LinkedList<WeakReference<com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig>> wa = new LinkedList<>();
         for (int i = 0; i < size; i++)
         {
-            wa.add(new WeakReference<VeryBig>(new VeryBig("Weak " + i)));
+            wa.add(new WeakReference<com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig>(new com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig("Weak " + i)));
             System.out.println("Just created: " + wa.getLast());
-            References.checkQueue();
+            com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.References.checkQueue();
         }
-        SoftReference<VeryBig> s = new SoftReference<>(new VeryBig("Soft"));
-        WeakReference<VeryBig> w = new WeakReference<>(new VeryBig("Weak"));
+        SoftReference<com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig> s = new SoftReference<>(new com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig("Soft"));
+        WeakReference<com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig> w = new WeakReference<>(new com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig("Weak"));
         System.gc();
 
-        LinkedList<PhantomReference<VeryBig>> pa = new LinkedList<>();
+        LinkedList<PhantomReference<com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig>> pa = new LinkedList<>();
         for (int i = 0; i < size; i++)
         {
-            pa.add(new PhantomReference<>(new VeryBig("Phanom " + i), References.getRq()));
+            pa.add(new PhantomReference<>(new com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.VeryBig("Phanom " + i), com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.References.getRq()));
             System.out.println("Just created: " + pa.getLast());
-            References.checkQueue();
+            com.github.ivan.kopylove.challenges.c8103f556aa548d3a6267d2a64a8433f.References.checkQueue();
         }
         System.gc();
     }

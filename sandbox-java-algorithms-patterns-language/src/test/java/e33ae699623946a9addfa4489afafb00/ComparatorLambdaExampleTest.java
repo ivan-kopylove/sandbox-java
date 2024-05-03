@@ -1,4 +1,4 @@
-package e33ae699623946a9addfa4489afafb00;
+package com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,15 +15,15 @@ class ComparatorLambdaExampleTest
     @Test
     void main()
     {
-        List<Person> personList = new ArrayList<Person>();
-        personList.add(new Person("B", "Z", 20));
-        personList.add(new Person("Z", "Z", 25));
-        personList.add(new Person("A", "A", 30));
+        List<com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person> personList = new ArrayList<com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person>();
+        personList.add(new com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person("B", "Z", 20));
+        personList.add(new com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person("Z", "Z", 25));
+        personList.add(new com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person("A", "A", 30));
 
         // Sort with Inner Class
-        Collections.sort(personList, new Comparator<Person>()
+        Collections.sort(personList, new Comparator<com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person>()
         {
-            public int compare(Person p1, Person p2)
+            public int compare(com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person p1, com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person p2)
             {
                 return p1.getSurName()
                          .compareTo(p2.getSurName());
@@ -31,7 +31,7 @@ class ComparatorLambdaExampleTest
         });
 
         System.out.println("=== Sorted Asc SurName ===");
-        for (Person p : personList)
+        for (com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person p : personList)
         {
             System.out.println(p.getGivenName());
         }
@@ -40,10 +40,10 @@ class ComparatorLambdaExampleTest
         // Print Asc
         System.out.println("=== Sorted Asc SurName ===");
         Collections.sort(personList,
-                         (Person p1, Person p2) -> p1.getSurName()
-                                                     .compareTo(p2.getSurName()));
+                         (com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person p1, com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person p2) -> p1.getSurName()
+                                                                                                                                                                                               .compareTo(p2.getSurName()));
 
-        for (Person p : personList)
+        for (com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person p : personList)
         {
             System.out.println(p.getGivenName());
         }
@@ -54,7 +54,7 @@ class ComparatorLambdaExampleTest
                          (p1, p2) -> p2.getSurName()
                                        .compareTo(p1.getSurName()));
 
-        for (Person p : personList)
+        for (com.github.ivan.kopylove.challenges.e33ae699623946a9addfa4489afafb00.Person p : personList)
         {
             System.out.println(p.getGivenName());
         }

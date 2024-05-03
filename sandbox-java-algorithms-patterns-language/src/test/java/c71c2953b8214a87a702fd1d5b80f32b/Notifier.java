@@ -1,11 +1,11 @@
-package c71c2953b8214a87a702fd1d5b80f32b;
+package com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b;
 
 class Notifier implements Runnable
 {
 
-    private final Message msg;
+    private final com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Message msg;
 
-    public Notifier(Message msg)
+    public Notifier(com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Message msg)
     {
         this.msg = msg;
     }

@@ -1,4 +1,4 @@
-package a68959c146514196a332aea363edbeb3;
+package com.github.ivan.kopylove.challenges.a68959c146514196a332aea363edbeb3;
 
 class MyClonableObj implements Cloneable
 {

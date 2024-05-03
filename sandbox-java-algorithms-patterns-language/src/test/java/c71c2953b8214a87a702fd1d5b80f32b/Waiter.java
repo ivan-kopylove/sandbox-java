@@ -1,10 +1,10 @@
-package c71c2953b8214a87a702fd1d5b80f32b;
+package com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b;
 
 class Waiter implements Runnable
 {
-    private final Message msg;
+    private final com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Message msg;
 
-    public Waiter(Message m)
+    public Waiter(com.github.ivan.kopylove.challenges.c71c2953b8214a87a702fd1d5b80f32b.Message m)
     {
         this.msg = m;
     }

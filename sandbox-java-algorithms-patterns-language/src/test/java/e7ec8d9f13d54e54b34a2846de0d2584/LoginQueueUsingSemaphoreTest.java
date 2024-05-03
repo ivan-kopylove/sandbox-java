@@ -1,4 +1,4 @@
-package e7ec8d9f13d54e54b34a2846de0d2584;
+package com.github.ivan.kopylove.challenges.e7ec8d9f13d54e54b34a2846de0d2584;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,6 @@ import static java.util.concurrent.Executors.newFixedThreadPool;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  * java concurrency example
@@ -24,7 +23,7 @@ class LoginQueueUsingSemaphoreTest
         int slots = 10;
 
         ExecutorService executorService = newFixedThreadPool(slots);
-        LoginQueueUsingSemaphore loginQueue = new LoginQueueUsingSemaphore(slots);
+        com.github.ivan.kopylove.challenges.e7ec8d9f13d54e54b34a2846de0d2584.LoginQueueUsingSemaphore loginQueue = new com.github.ivan.kopylove.challenges.e7ec8d9f13d54e54b34a2846de0d2584.LoginQueueUsingSemaphore(slots);
 
         // when
         IntStream.range(0, slots)

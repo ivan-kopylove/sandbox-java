@@ -1,4 +1,4 @@
-package c22bfa3796df4a1ea8904db11eb4ccf1;
+package com.github.ivan.kopylove.challenges.c22bfa3796df4a1ea8904db11eb4ccf1;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,10 +13,10 @@ class CastList
     @Test
     void run()
     {
-        Child child = new Child();
-        child.addValue(new Child());
-        child.addValue(new Child());
+        com.github.ivan.kopylove.challenges.c22bfa3796df4a1ea8904db11eb4ccf1.Child child = new com.github.ivan.kopylove.challenges.c22bfa3796df4a1ea8904db11eb4ccf1.Child();
+        child.addValue(new com.github.ivan.kopylove.challenges.c22bfa3796df4a1ea8904db11eb4ccf1.Child());
+        child.addValue(new com.github.ivan.kopylove.challenges.c22bfa3796df4a1ea8904db11eb4ccf1.Child());
 
-        Iterator<Child> iterator = ((List<Child>) (List<?>) child.getList()).iterator();
+        Iterator<com.github.ivan.kopylove.challenges.c22bfa3796df4a1ea8904db11eb4ccf1.Child> iterator = ((List<com.github.ivan.kopylove.challenges.c22bfa3796df4a1ea8904db11eb4ccf1.Child>) (List<?>) child.getList()).iterator();
     }
 }

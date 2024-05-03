@@ -1,4 +1,4 @@
-package ca583342f7184f9ab6c7e2422f2f695f;
+package com.github.ivan.kopylove.challenges.ca583342f7184f9ab6c7e2422f2f695f;
 
 import com.github.ivan.kopylove.sandbox.util.Util;
 import org.junit.jupiter.api.Test;

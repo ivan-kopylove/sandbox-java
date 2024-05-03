@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "PARENTTABLE")
-class ParentEntity
+public class ParentEntity
 {
     @Id
     @Column(name = "PARENTTABLE_KEY", unique = true, nullable = false)
