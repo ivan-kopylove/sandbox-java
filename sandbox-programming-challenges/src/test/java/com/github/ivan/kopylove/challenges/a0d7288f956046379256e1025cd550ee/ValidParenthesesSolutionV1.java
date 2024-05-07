@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.challenges.a0d7288f956046379256e1025cd550ee;
 /**
  * <a href="https://leetcode.com/problems/valid-parentheses/submissions/458753197/">20. Valid Parentheses</a>
  */
-class ValidParenthesesSolution
+class ValidParenthesesSolutionV1
 {
     public boolean isValid(String s)
     {

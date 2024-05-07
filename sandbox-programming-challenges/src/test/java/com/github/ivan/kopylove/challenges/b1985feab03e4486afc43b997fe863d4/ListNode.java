@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.challenges.ef9219a1ac684510a1b5e5b03f2bc9cb;
+package com.github.ivan.kopylove.challenges.b1985feab03e4486afc43b997fe863d4;
 
 class ListNode
 {
