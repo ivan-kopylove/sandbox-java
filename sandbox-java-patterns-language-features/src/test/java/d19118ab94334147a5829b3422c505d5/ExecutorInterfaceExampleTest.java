@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * facets:
+ * <p>
  * - concurrency
  */
 class ExecutorInterfaceExampleTest

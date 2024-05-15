@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * <a href="https://leetcode.com/problems/climbing-stairs/submissions/923072640/">70. Climbing Stairs</a>
  */
-class Solution
+class ClimbStairsSolutionV1
 {
     public int climbStairs(int n)
     {

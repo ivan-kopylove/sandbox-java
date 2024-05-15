@@ -3,7 +3,7 @@ package com.github.ivan.kopylove.challenges.a88794e1f76a4a4b8c741668d5f54a78;
 /**
  * <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/927040706/">121. Best Time to Buy and Sell Stock</a>
  */
-class Solution
+class MaxProfitSolutionV1
 {
     public int maxProfit(int[] prices)
     {
