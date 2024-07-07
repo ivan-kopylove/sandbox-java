@@ -45,6 +45,7 @@
 
     <modules>
         <module>notes-tags-creator</module>
+        <module>telegram-bot-api-client</module>
         <!--        <module>clipboard-to-markdown</module>-->
         <module>sandbox-camel</module>
         <module>sandbox-dozermapper</module>
