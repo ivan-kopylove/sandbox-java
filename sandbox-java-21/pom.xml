@@ -7,13 +7,11 @@
     <artifactId>sandbox-java-21</artifactId>
     <version>snapshot</version>
 
-
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
         <artifactId>sandbox-java-parent</artifactId>
         <version>snapshot</version>
     </parent>
-
 
     <build>
         <plugins>

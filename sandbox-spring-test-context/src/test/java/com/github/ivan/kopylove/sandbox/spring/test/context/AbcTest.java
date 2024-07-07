@@ -1,6 +1,5 @@
 package com.github.ivan.kopylove.sandbox.spring.test.context;
 
-import com.github.ivan.kopylove.sandbox.spring.test.context.entities.MyTestTableEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;

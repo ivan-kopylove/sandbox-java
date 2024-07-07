@@ -7,7 +7,6 @@
     <artifactId>sandbox-java-patterns-language-features</artifactId>
     <version>snapshot</version>
 
-
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
         <artifactId>sandbox-java-parent</artifactId>
