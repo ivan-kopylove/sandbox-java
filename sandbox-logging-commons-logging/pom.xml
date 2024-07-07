@@ -6,8 +6,6 @@
     <version>snapshot</version>
 
 
-    <properties>
-    </properties>
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>

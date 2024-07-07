@@ -5,8 +5,6 @@
     <packaging>jar</packaging>
     <version>snapshot</version>
 
-    <properties>
-    </properties>
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
