@@ -181,7 +181,7 @@
 
         <dependency>
             <groupId>com.github.ivan.kopylove</groupId>
-            <artifactId>sandbox-java-8</artifactId>
+            <artifactId>kopylove-commons</artifactId>
             <version>snapshot</version>
         </dependency>
 

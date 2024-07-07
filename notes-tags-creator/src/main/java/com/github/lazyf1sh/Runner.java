@@ -12,10 +12,8 @@ import java.util.List;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
-import static java.util.Spliterator.ORDERED;
-import static java.util.Spliterators.spliteratorUnknownSize;
+import static com.github.ivan.kopylove.commons.stream.StreamUtil.iteratorToStream;
 
 public final class Runner
 {
@@ -73,23 +71,23 @@ public final class Runner
         {
             return;
         }
-        StreamSupport.stream(spliteratorUnknownSize(aliases.elements(), ORDERED), false)
-                     .map(JsonNode::asText)
-                     .forEach(alias -> {
-                         try
-                         {
-                             Path path = Path.of(directory.toString(), alias + FISH_ALIAS);
-                             Path truncated = truncatePath(path, FISH_ALIAS);
-                             if (Files.notExists(truncated))
-                             {
-                                 Files.createFile(truncated);
-                             }
-                         }
-                         catch (Exception e)
-                         {
-                             System.out.println(e);
-                         }
-                     });
+
+        iteratorToStream(aliases.elements()).map(JsonNode::asText)
+                                            .forEach(alias -> {
+                                                try
+                                                {
+                                                    Path path = Path.of(directory.toString(), alias);
+                                                    Path truncated = truncatePath(path, FISH_ALIAS);
+                                                    if (Files.notExists(truncated))
+                                                    {
+                                                        Files.createFile(truncated);
+                                                    }
+                                                }
+                                                catch (Exception e)
+                                                {
+                                                    System.out.println(e);
+                                                }
+                                            });
     }
 
     private static void createIndividualTags(Path directory, JsonNode frontMatterYaml)
@@ -100,39 +98,41 @@ public final class Runner
             return;
         }
 
-        tagsYamlNode.forEach(tag -> {
-            try
-            {
-                Path path = Path.of(directory.toString(), tag + FISH_TAG);
-                Path truncated = truncatePath(path, FISH_TAG);
-                if (Files.notExists(truncated))
-                {
-                    Files.createFile(truncated);
-                }
-            }
-            catch (Exception e)
-            {
-                System.out.println(e);
-            }
-        });
+        iteratorToStream(tagsYamlNode.elements()).map(JsonNode::asText)
+                                                 .forEach(tag -> {
+                                                     try
+                                                     {
+                                                         Path path = Path.of(directory.toString(), tag + FISH_TAG);
+                                                         Path truncated = truncatePath(path, FISH_TAG);
+                                                         if (Files.notExists(truncated))
+                                                         {
+                                                             Files.createFile(truncated);
+                                                         }
+                                                     }
+                                                     catch (Exception e)
+                                                     {
+                                                         System.out.println(e);
+                                                     }
+                                                 });
     }
 
     private static void createJoinedTag(Path directory, JsonNode tags)
     {
-        NavigableSet<String> sortedTags = new TreeSet<>();
         JsonNode tagsNode = tags.get("tags");
         if (tagsNode == null)
         {
             return;
         }
+
+        NavigableSet<String> sortedTags = new TreeSet<>();
+
         tagsNode.elements()
                 .forEachRemaining(s -> sortedTags.add(s.asText()));
 
         try
         {
             String joinedTags = sortedTags.stream()
-                                          .filter(v -> !v
-                                                         .contains(VISIBILITY))
+                                          .filter(v -> !v.contains(VISIBILITY))
                                           .collect(Collectors.joining(";"));
 
             Path joinedPath = Path.of(directory.toString(), joinedTags);
