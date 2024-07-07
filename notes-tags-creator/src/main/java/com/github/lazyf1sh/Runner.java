@@ -3,6 +3,7 @@ package com.github.lazyf1sh;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.github.ivan.kopylove.commons.util.Pair;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
