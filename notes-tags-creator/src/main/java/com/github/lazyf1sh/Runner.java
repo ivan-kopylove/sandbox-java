@@ -125,7 +125,6 @@ public final class Runner
         }
 
         NavigableSet<String> sortedTags = new TreeSet<>();
-
         tagsNode.elements()
                 .forEachRemaining(s -> sortedTags.add(s.asText()));
 
