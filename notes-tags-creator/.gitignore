@@ -1,0 +1,14 @@
+.idea/
+*.iml
+target/
+*.class
+*.log
+output/
+output-ogg/
+*.mp3
+*.ogg
+projects.index
+yoga.index
+cache/
+.nomedia
+/1ccd9013-97ff-4efd-a214-25888e6bece0.folder-id

@@ -7,13 +7,11 @@
     <artifactId>sandbox-java-21</artifactId>
     <version>snapshot</version>
 
-
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
-        <artifactId>sandbox-java-parent</artifactId>
+        <artifactId>sandbox-java-incubator</artifactId>
         <version>snapshot</version>
     </parent>
-
 
     <build>
         <plugins>
@@ -23,6 +21,8 @@
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>21</release>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
         </plugins>

@@ -5,12 +5,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sandbox-java-8</artifactId>
-    <version>snapshot</version>
 
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
-        <artifactId>sandbox-java-parent</artifactId>
+        <artifactId>sandbox-java-incubator</artifactId>
         <version>snapshot</version>
     </parent>
 
@@ -22,12 +21,7 @@
             <version>1.19.4</version>
         </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
 

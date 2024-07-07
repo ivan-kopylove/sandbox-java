@@ -5,12 +5,10 @@
     <packaging>war</packaging>
     <version>snapshot</version>
 
-    <properties>
-    </properties>
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
-        <artifactId>sandbox-java-parent</artifactId>
+        <artifactId>sandbox-java-incubator</artifactId>
         <version>snapshot</version>
     </parent>
 
@@ -32,5 +30,4 @@
             <version>5.0.4.RELEASE</version>
         </dependency>
     </dependencies>
-
 </project>

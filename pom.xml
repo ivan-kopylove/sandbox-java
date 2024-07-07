@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.ivan.kopylove</groupId>
-    <artifactId>sandbox-java-parent</artifactId>
+    <artifactId>sandbox-java-incubator</artifactId>
     <version>snapshot</version>
     <packaging>pom</packaging>
 
@@ -15,6 +15,17 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>21</release>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -33,23 +44,27 @@
 
 
     <modules>
+        <module>notes-tags-creator</module>
+        <module>telegram-bot-api-client</module>
+        <!--        <module>clipboard-to-markdown</module>-->
         <module>sandbox-camel</module>
         <module>sandbox-dozermapper</module>
         <module>sandbox-ehcache</module>
-        <module>sandbox-gRPC</module>
+        <!--        <module>sandbox-gRPC</module>-->
         <module>sandbox-hibernate5-spring5-integration</module>
-        <module>sandbox-hibernate5-standalone</module>
+        <!--        <module>sandbox-hibernate5-standalone</module>-->
         <module>sandbox-jackson</module>
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
-        <module>sandbox-java-10</module>
-        <module>sandbox-java-10</module>
+        <module>kopylove-commons</module>
+        <!--        <module>sandbox-java-10</module>-->
         <module>sandbox-java-21</module>
+        <module>car-parts-logic</module>
         <module>sandbox-java-8</module>
-        <module>sandbox-java-algorithms-patterns-language</module>
+        <module>sandbox-java-patterns-language-features</module>
         <module>sandbox-java-9</module>
         <module>sandbox-jdbc</module>
-        <module>sandbox-liquibase-maven</module>
+        <!--        <module>sandbox-liquibase-maven</module>-->
         <module>sandbox-logging-commons-logging-log4j</module>
         <module>sandbox-logging-commons-logging</module>
         <module>sandbox-logging-log4j2</module>
@@ -57,28 +72,29 @@
         <module>sandbox-logging-slf4j</module>
         <module>sandbox-maven-git-build-hook</module>
         <module>sandbox-maven-rewrite-plugin</module>
-        <module>sandbox-maven-spotless</module>
+        <!--        <module>sandbox-maven-spotless</module>-->
         <module>sandbox-mockito</module>
         <module>sandbox-pdfbox</module>
-        <module>sandbox-powermockito</module>
+        <!--        <module>sandbox-powermockito</module>-->
         <module>sandbox-programming-challenges</module>
         <module>sandbox-quartz</module>
         <module>sandbox-selenium</module>
         <module>sandbox-json-unit</module>
         <module>sandbox-servlet-basic-example</module>
         <module>sandbox-servlets</module>
-        <module>sandbox-spring-annotations-configuration</module>
+        <!--        <module>sandbox-spring-annotations-configuration</module>-->
         <module>sandbox-spring-standalone</module>
-        <module>sandbox-spring-test-context</module>
+        <!--        <module>sandbox-spring-test-context</module>-->
+        <module>sandbox-spring-statemachine</module>
         <module>sandbox-spring-webmvc</module>
-        <module>sandbox-test-containers</module>
+        <!--        <module>sandbox-test-containers</module>-->
         <module>sandbox-tomcat-context-param</module>
         <module>sandbox-tomcat-filter</module>
         <module>sandbox-tomcat-listener</module>
         <module>sandbox-websocket-client-javax</module>
         <module>sandbox-websocket-client-nv</module>
-        <module>sandbox-wicket8-websocket</module>
-        <module>sandbox-wicket8</module>
+        <!--        <module>sandbox-wicket8-websocket</module>-->
+        <!--        <module>sandbox-wicket8</module>-->
 
     </modules>
     <dependencies>
@@ -86,6 +102,13 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
 

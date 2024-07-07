@@ -2,21 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sandbox-programming-challenges</artifactId>
-    <packaging>jar</packaging>
-    <version>snapshot</version>
 
-    <properties>
-    </properties>
-
-    <dependencies>
-    </dependencies>
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
-        <artifactId>sandbox-java-parent</artifactId>
+        <artifactId>sandbox-java-incubator</artifactId>
         <version>snapshot</version>
     </parent>
-
 
     <build>
         <plugins>
@@ -30,4 +22,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

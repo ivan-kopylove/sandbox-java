@@ -6,12 +6,10 @@
     <version>snapshot</version>
 
 
-    <properties>
-    </properties>
 
     <parent>
         <groupId>com.github.ivan.kopylove</groupId>
-        <artifactId>sandbox-java-parent</artifactId>
+        <artifactId>sandbox-java-incubator</artifactId>
         <version>snapshot</version>
     </parent>
 
