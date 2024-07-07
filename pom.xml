@@ -59,6 +59,7 @@
         <module>kopylove-commons</module>
         <!--        <module>sandbox-java-10</module>-->
         <module>sandbox-java-21</module>
+        <module>car-parts-logic</module>
         <module>sandbox-java-8</module>
         <module>sandbox-java-patterns-language-features</module>
         <module>sandbox-java-9</module>

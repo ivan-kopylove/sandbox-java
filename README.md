@@ -1,14 +1,13 @@
-# Java Sandbox: A Developer's Playground
+# Java incubator
 
 Welcome to the Java Incubator.
 
 This projects serves as
-
 - a dynamic, evolving space designed to experiment with various Java language practices and
   scenarios.
-- a startup incubator for more complex projects — a set of boilerplate snippets / patterns to give a momentum for more
-  complex
-  projects before the complex project will be extracted into separate structure.
+- a startup incubator / template for complex projects — a set of boilerplate snippets / patterns to give a momentum for
+  more
+  complex projects before the complex project will be extracted into separate project.
 
 You'll find a range of examples here—from simple "Hello World" applications to more
 comprehensive explorations of Java's capabilities.
