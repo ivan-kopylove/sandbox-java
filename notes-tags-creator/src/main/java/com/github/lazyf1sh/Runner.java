@@ -2,7 +2,6 @@ package com.github.lazyf1sh;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -17,19 +16,12 @@ import static com.github.ivan.kopylove.commons.stream.StreamUtil.iteratorToStrea
 
 public final class Runner
 {
-    public static final  ObjectMapper YAML_MAPPER;
+    public static final ObjectMapper YAML_MAPPER = new ObjectMapper();
     private static final String       VISIBILITY         = "visibility";
     private static final String       FISH_TAG           = ".fish-tag";
     private static final String       FISH_ALIAS         = ".fish-alias";
     private static final int          MAX_SYSTEM_LENGTH  = 255;
     private static final String       MARKDOWN_EXTENSION = ".md";
-
-    static
-    {
-        YAMLFactory yamlFactory = new YAMLFactory();
-
-        YAML_MAPPER = new ObjectMapper(yamlFactory);
-    }
 
     private Runner()
     {
