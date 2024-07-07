@@ -17,12 +17,12 @@ import static com.github.ivan.kopylove.commons.stream.StreamUtil.iteratorToStrea
 
 public final class Runner
 {
-    public static final ObjectMapper YAML_MAPPER = new ObjectMapper(new YAMLFactory());
-    private static final String VISIBILITY         = "visibility";
-    private static final String FISH_TAG           = ".fish-tag";
-    private static final String FISH_ALIAS         = ".fish-alias";
-    private static final int    MAX_SYSTEM_LENGTH  = 255;
-    private static final String MARKDOWN_EXTENSION = ".md";
+    public static final  ObjectMapper YAML_MAPPER        = new ObjectMapper(new YAMLFactory());
+    private static final String       VISIBILITY         = "visibility";
+    private static final String       FISH_TAG           = ".fish-tag";
+    private static final String       FISH_ALIAS         = ".fish-alias";
+    private static final int          MAX_SYSTEM_LENGTH  = 255;
+    private static final String       MARKDOWN_EXTENSION = ".md";
 
     private Runner()
     {
