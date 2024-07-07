@@ -2,6 +2,7 @@ package com.github.lazyf1sh;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -16,12 +17,12 @@ import static com.github.ivan.kopylove.commons.stream.StreamUtil.iteratorToStrea
 
 public final class Runner
 {
-    public static final ObjectMapper YAML_MAPPER = new ObjectMapper();
-    private static final String       VISIBILITY         = "visibility";
-    private static final String       FISH_TAG           = ".fish-tag";
-    private static final String       FISH_ALIAS         = ".fish-alias";
-    private static final int          MAX_SYSTEM_LENGTH  = 255;
-    private static final String       MARKDOWN_EXTENSION = ".md";
+    public static final ObjectMapper YAML_MAPPER = new ObjectMapper(new YAMLFactory());
+    private static final String VISIBILITY         = "visibility";
+    private static final String FISH_TAG           = ".fish-tag";
+    private static final String FISH_ALIAS         = ".fish-alias";
+    private static final int    MAX_SYSTEM_LENGTH  = 255;
+    private static final String MARKDOWN_EXTENSION = ".md";
 
     private Runner()
     {
@@ -125,6 +126,10 @@ public final class Runner
             String joinedTags = sortedTags.stream()
                                           .filter(v -> !v.contains(VISIBILITY))
                                           .collect(Collectors.joining(";"));
+            if (joinedTags.isBlank())
+            {
+                return;
+            }
 
             Path joinedPath = Path.of(directory.toString(), joinedTags);
             Path truncatePath = truncatePath(joinedPath, FISH_TAG);
@@ -136,7 +141,7 @@ public final class Runner
         }
         catch (Exception e)
         {
-            throw new RuntimeException(e);
+            System.out.println(e);
         }
     }
 
@@ -166,11 +171,11 @@ public final class Runner
         }
     }
 
-    private static JsonNode readNode(Path first1)
+    private static JsonNode readNode(Path path)
     {
         try
         {
-            return YAML_MAPPER.readTree(first1.toFile());
+            return YAML_MAPPER.readTree(path.toFile());
         }
         catch (Exception e)
         {
