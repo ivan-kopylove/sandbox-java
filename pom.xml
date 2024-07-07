@@ -33,6 +33,8 @@
 
 
     <modules>
+        <module>notes-tags-creator</module>
+        <!--        <module>clipboard-to-markdown</module>-->
         <module>sandbox-camel</module>
         <module>sandbox-dozermapper</module>
         <module>sandbox-ehcache</module>
@@ -42,7 +44,7 @@
         <module>sandbox-jackson</module>
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
-        <!--        <module>kopylove-commons</module>-->
+        <module>kopylove-commons</module>
         <!--        <module>sandbox-java-10</module>-->
         <module>sandbox-java-21</module>
         <module>sandbox-java-8</module>

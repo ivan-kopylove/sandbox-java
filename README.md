@@ -1,10 +1,16 @@
 # Java Sandbox: A Developer's Playground
 
-Welcome to the Java Sandbox!
+Welcome to the Java Incubator.
 
-This repository serves as a dynamic, evolving space designed to experiment with various Java language practices and
-scenarios. You'll find a range of examples here—from simple "Hello World" applications to more comprehensive
-explorations of Java's capabilities.
+This projects serves as
+
+- a dynamic, evolving space designed to experiment with various Java language practices and
+  scenarios.
+- incubator for more complex projects — a set of boilerplate snippets / patterns to serve as a trampoline for a more
+  complex project.
+
+You'll find a range of examples here—from simple "Hello World" applications to more
+comprehensive explorations of Java's capabilities.
 
 ### Key Features:
 
