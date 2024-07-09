@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 class SomeSpringComponent2
 {
-    public Integer bar()
+    Integer bar()
     {
         return 1;
     }

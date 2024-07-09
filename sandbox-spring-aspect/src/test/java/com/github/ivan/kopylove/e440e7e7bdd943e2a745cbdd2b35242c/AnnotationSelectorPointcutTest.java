@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.e440e7e7bdd943e2a745cbdd2b35241e;
+package com.github.ivan.kopylove.e440e7e7bdd943e2a745cbdd2b35242c;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,16 +10,17 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.not;
 
-/**
- * A basic example just to check if Spring context is safe and sound.
- */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class, classes = {AppConfig.class})
-class BroadAspectTest
+class AnnotationSelectorPointcutTest
 {
     @Autowired
-    private SomeSpringComponent2 someSpringComponent;
+    private MyAnnotationComponent someSpringComponent;
+
+    @Autowired
+    private NoAnnotationComponent noAnnotationComponent;
 
     @Autowired
     private VerificationContainer verificationContainer;
@@ -27,7 +28,10 @@ class BroadAspectTest
     @Test
     void runExample()
     {
-        assertThat(someSpringComponent.bar(), equalTo(1));
-        assertThat(verificationContainer.listCalled(), contains(SomeSpringComponent2.class.getSimpleName()));
+        assertThat(noAnnotationComponent.call(), equalTo(1));
+        assertThat(someSpringComponent.call(), equalTo(1));
+
+        assertThat(verificationContainer.listCalled(), contains(MyAnnotationComponent.class.getSimpleName()));
+        assertThat(verificationContainer.listCalled(), not(contains(NoAnnotationComponent.class.getSimpleName())));
     }
 }

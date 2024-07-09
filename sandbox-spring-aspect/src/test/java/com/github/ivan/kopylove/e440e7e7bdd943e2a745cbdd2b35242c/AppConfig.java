@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.e440e7e7bdd943e2a745cbdd2b35241f;
+package com.github.ivan.kopylove.e440e7e7bdd943e2a745cbdd2b35242c;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import java.util.ArrayList;
 
 @Configuration
-@ComponentScan(basePackages = "com.github.ivan.kopylove.e440e7e7bdd943e2a745cbdd2b35241f")
+@ComponentScan(basePackages = "com.github.ivan.kopylove.e440e7e7bdd943e2a745cbdd2b35242c")
 @EnableAspectJAutoProxy
 class AppConfig
 {
@@ -17,5 +17,4 @@ class AppConfig
     {
         return new VerificationContainer(new ArrayList<>());
     }
-
 }
