@@ -34,6 +34,8 @@ public final class Runner
         List<Pair<Path, JsonNode>> collect = Files.walk(Path.of("d:\\1\\notes\\notes-payload\\"))
                                                   .filter(path -> path.toString()
                                                                       .endsWith(MARKDOWN_EXTENSION))
+                                                  .filter(path -> !path.toString()
+                                                                       .contains("_tesseract_"))
                                                   .filter(Files::isRegularFile)
                                                   //                .limit(20)
                                                   .map(s -> new Pair<>(s, readNode(s)))

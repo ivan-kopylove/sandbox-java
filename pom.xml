@@ -54,6 +54,7 @@
         <module>sandbox-hibernate5-spring5-integration</module>
         <!--        <module>sandbox-hibernate5-standalone</module>-->
         <module>sandbox-jackson</module>
+        <module>sandbox-spring-aspect</module>
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
         <module>kopylove-commons</module>
