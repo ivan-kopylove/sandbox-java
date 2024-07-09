@@ -15,7 +15,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class, classes = {AppConfig.class})
-class SpringAopBasicExampleTest
+class BroadAspectTest
 {
     @Autowired
     private SomeSpringComponent2 someSpringComponent;
