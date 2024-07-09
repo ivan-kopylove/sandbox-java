@@ -6,25 +6,21 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Aspect
 @Component
 class AspectConfig
 {
-    private final VerificationContainer verificationContainer;
-
-    AspectConfig(VerificationContainer verificationContainer)
-    {
-        this.verificationContainer = verificationContainer;
-    }
-    
+    static List<String> CALLED_TYPES = new ArrayList<>();
     
     @Before(value = "myPointCut()")
     void logBefore(JoinPoint joinPoint)
     {
-        verificationContainer.listCalled()
-                             .add(joinPoint.getSignature()
-                                           .getDeclaringType()
-                                           .getSimpleName());
+        CALLED_TYPES.add(joinPoint.getSignature()
+                                  .getDeclaringType()
+                                  .getSimpleName());
 
     }
 
