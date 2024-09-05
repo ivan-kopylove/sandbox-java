@@ -1,5 +1,8 @@
+---
+id: readme
+tags: []
+---
 - Run mvn install to check results. (not clean install). It will compile only changed files.
-
 
 - useIncrementalCompilation set to false (not recommended)
     - This will only compile source files which are newer than their corresponding class files, i.e. which have been

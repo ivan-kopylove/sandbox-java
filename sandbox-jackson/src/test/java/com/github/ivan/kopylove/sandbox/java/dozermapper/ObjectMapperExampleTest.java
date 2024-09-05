@@ -11,12 +11,12 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ObjectMapperExample
+class ObjectMapperExampleTest
 {
     @Test
     void main() throws JsonProcessingException
     {
-        List<MyDto> list = new ArrayList<MyDto>();
+        List<MyDto> list = new ArrayList<>();
         list.add(new MyDto("k1", "v1", "cv1"));
         list.add(new MyDto("k2", "v2", "cv2"));
         list.add(new MyDto("k3", "v3", "cv3"));
@@ -31,14 +31,14 @@ class ObjectMapperExample
     @Test
     void run() throws JsonProcessingException
     {
-        List<Map<String, String>> list = new ArrayList<Map<String, String>>();
+        List<Map<String, String>> list = new ArrayList<>();
 
-        Map<String, String> m = new HashMap<String, String>();
+        Map<String, String> m = new HashMap<>();
         m.put("k1", "v1");
         m.put("k2", "v2");
         list.add(m);
 
-        m = new HashMap<String, String>();
+        m = new HashMap<>();
         m.put("k3", "v3");
         m.put("k4", "v4");
         list.add(m);
