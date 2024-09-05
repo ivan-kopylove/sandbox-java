@@ -77,7 +77,7 @@
         <module>sandbox-mockito</module>
         <module>sandbox-pdfbox</module>
         <!--        <module>sandbox-powermockito</module>-->
-        <module>sandbox-programming-challenges</module>
+
         <module>sandbox-quartz</module>
         <module>sandbox-selenium</module>
         <module>sandbox-json-unit</module>
