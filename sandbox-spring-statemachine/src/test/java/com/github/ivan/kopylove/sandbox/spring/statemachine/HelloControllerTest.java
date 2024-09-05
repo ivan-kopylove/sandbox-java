@@ -34,7 +34,7 @@ public class HelloControllerTest
 {
 
     @Test
-    public void basic_example() throws Exception
+    public void runExample() throws Exception
     {
         StateMachineBuilder.Builder<States, Events> builder = StateMachineBuilder.builder();
 

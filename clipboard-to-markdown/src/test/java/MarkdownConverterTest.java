@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MarkdownConverterTest {
 
     @Test
-    public void basic_example() throws Exception
+    public void runExample() throws Exception
     {
         MutableDataSet options = new MutableDataSet()
                 .set(Parser.EXTENSIONS, Collections.singletonList(HtmlConverterTextExtension.create()));

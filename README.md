@@ -1,3 +1,8 @@
+---
+id: README
+tags: []
+---
+
 # Java incubator
 
 Welcome to the Java Incubator.
@@ -8,6 +13,8 @@ This projects serves as
 - a startup incubator / template for complex projects — a set of boilerplate snippets / patterns to give a momentum for
   more
   complex projects before the complex project will be extracted into separate project.
+- the collection of atomic, focused and isolated examples to try out different Java practices and scenarios I come
+  across.
 
 You'll find a range of examples here—from simple "Hello World" applications to more
 comprehensive explorations of Java's capabilities.

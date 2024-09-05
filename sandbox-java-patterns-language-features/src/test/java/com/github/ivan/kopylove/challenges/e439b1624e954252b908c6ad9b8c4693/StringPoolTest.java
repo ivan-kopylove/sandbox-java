@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class StringPoolTest
 {
     @Test
-    void basic_example()
+    void runExample()
     {
         // given
         String a = "Duke"; // all compile-time constant goes into the string pool
