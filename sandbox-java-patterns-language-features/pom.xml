@@ -13,7 +13,6 @@
         <version>snapshot</version>
     </parent>
 
-
     <build>
         <plugins>
             <plugin>
@@ -21,11 +20,12 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <release>8</release>
+                    <release>21</release>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 
 </project>
