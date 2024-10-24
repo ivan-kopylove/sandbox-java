@@ -5,16 +5,14 @@ class InterruptedSleepingRunner implements Runnable
     @Override
     public void run()
     {
-        doAPseudoHeavyWeightJob();
+        doHeavyJob();
     }
 
-    private void doAPseudoHeavyWeightJob()
+    private void doHeavyJob()
     {
         for (int i = 0; i < Integer.MAX_VALUE; i++)
         {
-            // You are kidding me
             System.out.println(i + " " + i * 2);
-            // Let me sleep <evil grin>
             if (Thread.currentThread()
                       .isInterrupted())
             {
@@ -23,12 +21,12 @@ class InterruptedSleepingRunner implements Runnable
             }
             else
             {
-                sleepBabySleep();
+                sleep();
             }
         }
     }
 
-    protected void sleepBabySleep()
+    protected void sleep()
     {
         try
         {
