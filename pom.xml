@@ -44,7 +44,6 @@
 
 
     <modules>
-        <module>notes-tags-creator</module>
         <module>telegram-bot-api-client</module>
         <!--        <module>clipboard-to-markdown</module>-->
         <module>sandbox-camel</module>
@@ -85,6 +84,7 @@
         <module>sandbox-servlets</module>
         <!--        <module>sandbox-spring-annotations-configuration</module>-->
         <module>sandbox-spring-standalone</module>
+        <module>sandbox-spring-security</module>
         <!--        <module>sandbox-spring-test-context</module>-->
         <module>sandbox-spring-statemachine</module>
         <module>sandbox-spring-webmvc</module>

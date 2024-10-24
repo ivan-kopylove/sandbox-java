@@ -1,30 +1,43 @@
 package com.github.ivan.kopylove.sandbox.a1;
 
- class InterruptedSleepingRunner implements Runnable {
+class InterruptedSleepingRunner implements Runnable
+{
     @Override
-    public void run() {
+    public void run()
+    {
         doAPseudoHeavyWeightJob();
     }
 
-    private void doAPseudoHeavyWeightJob() {
-        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+    private void doAPseudoHeavyWeightJob()
+    {
+        for (int i = 0; i < Integer.MAX_VALUE; i++)
+        {
             // You are kidding me
             System.out.println(i + " " + i * 2);
             // Let me sleep <evil grin>
-            if (Thread.currentThread().isInterrupted()) {
+            if (Thread.currentThread()
+                      .isInterrupted())
+            {
                 System.out.println("Thread interrupted\n Exiting...");
                 break;
-            } else {
+            }
+            else
+            {
                 sleepBabySleep();
             }
         }
     }
 
-    protected void sleepBabySleep() {
-        try {
+    protected void sleepBabySleep()
+    {
+        try
+        {
             Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+        }
+        catch (InterruptedException e)
+        {
+            Thread.currentThread()
+                  .interrupt();
         }
     }
 }
