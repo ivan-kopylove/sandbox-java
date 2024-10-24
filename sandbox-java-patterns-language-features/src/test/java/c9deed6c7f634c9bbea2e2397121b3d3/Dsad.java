@@ -8,9 +8,6 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-/**
- * The default implementation of smth.
- */
 class Dsad
 {
     @Test

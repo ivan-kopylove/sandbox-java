@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.a1;
+package a1;
 
 import org.junit.jupiter.api.Test;
 

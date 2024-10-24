@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.e294114e82ec4bbba658cb1ac4c92299;
+package e294114e82ec4bbba658cb1ac4c92299;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
