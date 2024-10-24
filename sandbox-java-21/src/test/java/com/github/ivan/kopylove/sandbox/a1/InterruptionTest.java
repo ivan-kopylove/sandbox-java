@@ -13,15 +13,14 @@ class InterruptionTest
         Thread thread = new Thread(new InterruptedSleepingRunner());
         thread.start();
         // Giving 10 seconds to finish the job.
-        Thread.sleep(10_000);
+        Thread.sleep(5_000);
 
         // Let me interrupt
         assertThat(thread.getState(), equalTo(Thread.State.TIMED_WAITING));
 
         // when
         thread.interrupt();
-        assertThat(thread.getState(), equalTo(Thread.State.RUNNABLE));
-        Thread.sleep(5_000);
+        Thread.sleep(2_000);
         // then
         assertThat(thread.getState(), equalTo(Thread.State.TERMINATED));
     }

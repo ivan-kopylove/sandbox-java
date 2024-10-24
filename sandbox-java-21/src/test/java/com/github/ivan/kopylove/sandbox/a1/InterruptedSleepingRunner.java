@@ -16,7 +16,7 @@ class InterruptedSleepingRunner implements Runnable
             if (Thread.currentThread()
                       .isInterrupted())
             {
-                System.out.println("Thread interrupted\n Exiting...");
+                System.out.println("My thread interrupted");
                 break;
             }
             else
@@ -30,7 +30,7 @@ class InterruptedSleepingRunner implements Runnable
     {
         try
         {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         }
         catch (InterruptedException e)
         {
