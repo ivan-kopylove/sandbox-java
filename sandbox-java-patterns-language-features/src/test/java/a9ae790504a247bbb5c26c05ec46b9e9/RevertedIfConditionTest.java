@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * boolean logic playground
+ * Boolean logic playground.
  */
 class RevertedIfConditionTest
 {
