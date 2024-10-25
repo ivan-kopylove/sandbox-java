@@ -10,47 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class RevertedIfConditionTest
 {
-
-    @SuppressWarnings("ConstantConditions")
+    @SuppressWarnings({"ConstantConditions", "PointlessBooleanExpression", "DuplicateCondition"})
     @Test
-    void run()
+    void should_produce_expected_values()
     {
-        assertTrue(RevertedIfCondition.revertedIfConditionExampleOne(true, false));
-        assertFalse(RevertedIfCondition.revertedIfConditionExampleOne(true, true));
-        assertFalse(RevertedIfCondition.revertedIfConditionExampleOne(false, true));
-        assertFalse(RevertedIfCondition.revertedIfConditionExampleOne(false, false));
-    }
-
-    @SuppressWarnings("ConstantConditions")
-    @Test
-    void run2()
-    {
-        assertTrue(RevertedIfCondition.revertedIfConditionExampleTwo(true, false));
-        assertFalse(RevertedIfCondition.revertedIfConditionExampleTwo(true, true));
-        assertFalse(RevertedIfCondition.revertedIfConditionExampleTwo(false, true));
-        assertFalse(RevertedIfCondition.revertedIfConditionExampleTwo(false, false));
-    }
-
-    private static class RevertedIfCondition
-    {
-        /**
-         * @param a e.g.: should be done
-         * @param b e.g.: but not done
-         * @return true if should be done, but not done. otherwise false
-         */
-        public static boolean revertedIfConditionExampleOne(boolean a, boolean b)
-        {
-            return a && !b;
-        }
-
-        /**
-         * @param a e.g.: should be done
-         * @param b e.g.: but not done
-         * @return true if should be done, but not done. otherwise false
-         */
-        public static boolean revertedIfConditionExampleTwo(boolean a, boolean b)
-        {
-            return a && !b;
-        }
+        assertTrue(true && !false);
+        assertFalse(true && !true);
+        assertFalse(false && !true);
+        assertFalse(false && !false);
     }
 }
