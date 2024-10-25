@@ -1,6 +1,6 @@
 package d19118ab94334147a5829b3422c505d5;
 
-class DefaultValuesClass
+class SomeClass
 {
     String  str;
     int     myInt;

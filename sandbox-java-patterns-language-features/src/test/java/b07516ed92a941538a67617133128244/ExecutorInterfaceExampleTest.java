@@ -1,4 +1,4 @@
-package d19118ab94334147a5829b3422c505d5;
+package b07516ed92a941538a67617133128244;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +7,7 @@ import java.util.concurrent.Executor;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * facets:
+ * Facets:
  * <p>
  * - concurrency
  */
@@ -24,11 +24,7 @@ class ExecutorInterfaceExampleTest
                 runnable.run();
             }
         };
-        assertEquals("main",
-                     Thread.currentThread()
-                           .getName());
-        executor.execute(() -> assertEquals("main",
-                                            Thread.currentThread()
-                                                  .getName()));
+        assertEquals("main", Thread.currentThread().getName());
+        executor.execute(() -> assertEquals("main", Thread.currentThread().getName()));
     }
 }

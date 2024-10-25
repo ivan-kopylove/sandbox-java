@@ -1,4 +1,4 @@
-package d19118ab94334147a5829b3422c505d5;
+package a509c1fcae04417fa8f15fe0289d5654;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +7,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
 class OutOfMemoryErrorTest
 {
     @Test

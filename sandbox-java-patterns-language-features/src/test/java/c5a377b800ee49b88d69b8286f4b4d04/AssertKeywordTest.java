@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class AssertKeywordTest
 {
     @Test
-    void run()
+    void should_throw_assertion_error()
     {
         assertThrows(AssertionError.class, () -> {
             assert 2 == 1;

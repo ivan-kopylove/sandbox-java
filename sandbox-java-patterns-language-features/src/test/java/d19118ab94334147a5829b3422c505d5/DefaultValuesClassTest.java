@@ -12,9 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 class DefaultValuesClassTest
 {
     @Test
-    void objectDefaultValues()
+    void class_should_be_with_default_values_of_fields()
     {
-        DefaultValuesClass defaultValues = new DefaultValuesClass();
+        SomeClass defaultValues = new SomeClass();
 
         assertNull(defaultValues.str);
         assertEquals(defaultValues.myInt, 0);
@@ -22,7 +22,7 @@ class DefaultValuesClassTest
     }
 
     @Test
-    void objectDefaultValues2()
+    void array_should_be_initialized_with_zeroes()
     {
         int[] array = new int[3];//initialized with zeros
 

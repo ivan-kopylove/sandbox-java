@@ -3,6 +3,8 @@ package c71c2953b8214a87a702fd1d5b80f32b;
 import org.junit.jupiter.api.Test;
 
 /**
+ * Facets:
+ * - concurrency
  * https://www.journaldev.com/1037/java-thread-wait-notify-and-notifyall-example
  */
 class WaiterNotifierTest

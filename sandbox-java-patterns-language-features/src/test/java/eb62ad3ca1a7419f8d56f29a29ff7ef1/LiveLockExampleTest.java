@@ -7,7 +7,12 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
-public class LiveLockExampleTest
+
+/**
+ * Facets:
+ * - concurrency
+ */
+ class LiveLockExampleTest
 {
     private final Lock lock1 = new ReentrantLock(true);
     private final Lock lock2 = new ReentrantLock(true);
