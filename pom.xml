@@ -10,6 +10,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <spring.version>6.1.14</spring.version>
     </properties>
 
 
