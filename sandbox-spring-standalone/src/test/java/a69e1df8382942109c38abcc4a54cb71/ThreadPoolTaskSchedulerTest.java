@@ -1,6 +1,8 @@
 package a69e1df8382942109c38abcc4a54cb71;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
@@ -57,4 +59,46 @@ class ThreadPoolTaskSchedulerTest
         Thread.sleep(5_000);
         assertThat(result.get(), greaterThanOrEqualTo(5));
     }
+
+    @Nested
+    class RenameMe
+    {
+        @Test
+        @DisplayName("Should wait before running - again testing 'successive' word in the method javadoc")
+        void should_wait_before_running_next() throws InterruptedException
+        {
+            AtomicInteger result = new AtomicInteger(0);
+
+            // given
+            ThreadPoolTaskScheduler threadPoolTaskScheduler = new ThreadPoolTaskScheduler();
+            threadPoolTaskScheduler.setPoolSize(1);
+            threadPoolTaskScheduler.setThreadNamePrefix("ThreadPoolTaskScheduler");
+            threadPoolTaskScheduler.initialize();
+
+            // when
+
+            threadPoolTaskScheduler.scheduleAtFixedRate(() -> {
+                                                            result.incrementAndGet();
+                                                            waitLong();
+                                                        },
+                                                        Instant.now(),
+                                                        Duration.ofSeconds(1));
+
+            Thread.sleep(10_000);
+            assertThat(result.get(), greaterThanOrEqualTo(1));
+        }
+    }
+
+    private void waitLong()
+    {
+        try
+        {
+            Thread.sleep(60_000);
+        }
+        catch (InterruptedException e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
