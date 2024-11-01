@@ -23,11 +23,12 @@ public class IteratingWhilePoppingTest
         deque.add("some value");
         deque.add("some value");
 
+
+        // when
         while (!deque.isEmpty())
         {
             deque.pop();
         }
-
 
         // then
         assertTrue(deque.isEmpty());
