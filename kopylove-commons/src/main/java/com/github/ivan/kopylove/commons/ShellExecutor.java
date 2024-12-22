@@ -21,26 +21,29 @@ public class ShellExecutor
         this.shellExecutorParameters = shellExecutorParameters;
     }
 
-    public void exec(String command) throws InterruptedException, IOException, ExecutionException, TimeoutException
-    {
-        LOGGER.trace("Executing {}", command);
-        ProcessBuilder builder = new ProcessBuilder();
+    public void exec(String command) {
+        try {
+            LOGGER.trace("Executing {}", command);
+            ProcessBuilder builder = new ProcessBuilder();
 //        builder.redirectErrorStream(true);
 
-        builder.command(command.split(" "));
-        builder.directory(shellExecutorParameters.getWorkingDir().toFile().getAbsoluteFile());
-        Process process = builder.start();
+            builder.command(command.split(" "));
+            builder.directory(shellExecutorParameters.getWorkingDir().toFile().getAbsoluteFile());
+            Process process = builder.start();
 
-        StreamGobbler regular = new StreamGobbler(process.getInputStream(), "regular");
-        StreamGobbler err = new StreamGobbler(process.getErrorStream(), "errors");
+            StreamGobbler regular = new StreamGobbler(process.getInputStream(), "regular");
+            StreamGobbler err = new StreamGobbler(process.getErrorStream(), "errors");
 
-        Future<?> errFuture = shellExecutorParameters.getStreamGobblerPool().submit(err);
-        Future<?> future = shellExecutorParameters.getStreamGobblerPool().submit(regular);
+            Future<?> errFuture = shellExecutorParameters.getStreamGobblerPool().submit(err);
+            Future<?> future = shellExecutorParameters.getStreamGobblerPool().submit(regular);
 
-        int exitCode = process.waitFor();
-        LOGGER.trace("exitcode: {}", exitCode);
+            int exitCode = process.waitFor();
+            LOGGER.trace("exitcode: {}", exitCode);
 
-        future.get(10, SECONDS);
-        errFuture.get(10, SECONDS);
+            future.get(10, SECONDS);
+            errFuture.get(10, SECONDS);
+        } catch (IOException | InterruptedException | ExecutionException | TimeoutException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

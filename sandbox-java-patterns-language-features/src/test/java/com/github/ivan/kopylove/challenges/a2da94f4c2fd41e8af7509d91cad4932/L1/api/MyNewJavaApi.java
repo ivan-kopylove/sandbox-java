@@ -1,7 +1,7 @@
 package com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.api;
 
 @FunctionalInterface
-public interface MyNewJava_Api {
+public interface MyNewJavaApi {
     Result callMe(Payload myPayload);
 
     record Payload(String myPayload) {
