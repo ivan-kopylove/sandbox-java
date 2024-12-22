@@ -1,5 +1,8 @@
 package com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1;
 
+import com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.adapter.MyNewJava_Adapter;
+import com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.spi.MyNewJava_Spi;
+import com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.usecase.MyNewJava_UseCase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

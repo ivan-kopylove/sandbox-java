@@ -1,5 +1,8 @@
-package com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1;
+package com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.adapter;
 
+
+import com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.api.MyNewJava_Api;
+import com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.spi.MyNewJava_Spi;
 
 public class MyNewJava_Adapter implements MyNewJava_Spi, MyNewJava_Api.Result.ResultAdapter<String> {
 
