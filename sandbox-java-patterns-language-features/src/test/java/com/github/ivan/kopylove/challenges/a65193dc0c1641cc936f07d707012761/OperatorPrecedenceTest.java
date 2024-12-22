@@ -13,7 +13,7 @@ class OperatorPrecedenceTest
         int x = 5;
         int y = 10;
         int result = ++x * y--;
-        //        assertEquals(, result);
+        //        assertEquals(, myResultField);
     }
 
     @Test
@@ -44,6 +44,6 @@ class OperatorPrecedenceTest
     {
         int year = 2020;
         boolean result = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
-        //        assertEquals(, result);
+        //        assertEquals(, myResultField);
     }
 }

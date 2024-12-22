@@ -44,7 +44,6 @@
 
 
     <modules>
-        <module>telegram-bot-api-client</module>
         <module>sandbox-camel</module>
         <module>sandbox-dozermapper</module>
         <module>sandbox-ehcache</module>
@@ -57,6 +56,7 @@
         <module>sandbox-java-applet</module>
         <module>kopylove-commons</module>
         <!--        <module>sandbox-java-10</module>-->
+        <module>sandbox-java-jcstress</module>
         <module>sandbox-java-21</module>
         <module>sandbox-java-patterns-language-features</module>
         <module>sandbox-java-9</module>
