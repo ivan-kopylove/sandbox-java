@@ -25,7 +25,7 @@ public class ShellExecutor
     {
         LOGGER.trace("Executing {}", command);
         ProcessBuilder builder = new ProcessBuilder();
-        builder.redirectErrorStream(true);
+//        builder.redirectErrorStream(true);
 
         builder.command(command.split(" "));
         builder.directory(shellExecutorParameters.getWorkingDir().toFile().getAbsoluteFile());

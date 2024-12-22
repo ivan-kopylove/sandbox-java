@@ -13,14 +13,8 @@ import java.net.http.HttpResponse;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static com.github.lazyf1sh.api.yandex.Voices.alena;
-import static com.github.lazyf1sh.api.yandex.Voices.ermil;
-import static com.github.lazyf1sh.api.yandex.Voices.jane;
-import static com.github.lazyf1sh.api.yandex.Voices.john;
-import static com.github.lazyf1sh.api.yandex.Voices.madirus;
-import static com.github.lazyf1sh.api.yandex.Voices.omazh;
-import static com.github.lazyf1sh.api.yandex.Voices.philip;
-import static com.github.lazyf1sh.api.yandex.Voices.zahar;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voice.*;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.*;
 import static java.net.http.HttpClient.newHttpClient;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
@@ -56,7 +50,7 @@ public final class YandexSpeechSynthesisAPI {
     /**
      * The IAM token lifetime doesn't exceed 12 hours, but we recommend requesting the token more often, like once per hour.
      */
-    public byte[] yandexSpeechGenerate(String text, com.github.lazyf1sh.domain.Voice voice) throws InterruptedException {
+    public byte[] yandexSpeechGenerate(String text, Voice voice) throws InterruptedException {
         if (text.length() > YANDEX_API_TEXT_LIMIT) {
             throw new RuntimeException();
         }
