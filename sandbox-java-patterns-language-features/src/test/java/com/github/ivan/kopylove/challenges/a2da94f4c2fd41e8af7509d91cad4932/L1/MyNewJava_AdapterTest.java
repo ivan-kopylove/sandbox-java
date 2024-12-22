@@ -21,7 +21,7 @@ class MyNewJava_AdapterTest {
         );
 
         // when
-        String result = myNewJavaAdapter.callMe(new MyNewJava_Spi.Payload(new IllegalArgumentException()));
+        String result = myNewJavaAdapter.callMe(new MyNewJava_Spi.Payload(""));
 
         // then
         assertThat(result, equalTo("expected result"));
