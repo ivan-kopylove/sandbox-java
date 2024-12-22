@@ -5,8 +5,9 @@ import com.github.ivan.kopylove.challenges.a2da94f4c2fd41e8af7509d91cad4932.L1.a
 
 public class MyNewJava_UseCase implements MyNewJava_Api {
 
+
     @Override
-    public Result callMe() {
+    public Result callMe(Payload myPayload) {
         return new MySuccessResult("");
     }
 }

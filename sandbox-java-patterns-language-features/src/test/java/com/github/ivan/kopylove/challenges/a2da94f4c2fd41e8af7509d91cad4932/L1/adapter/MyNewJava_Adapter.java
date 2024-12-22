@@ -15,7 +15,7 @@ public class MyNewJava_Adapter implements MyNewJava_Spi, MyNewJava_Api.Result.Re
 
     @Override
     public String callMe(Payload myPayload) {
-        MyNewJava_Api.Result wrappedResult = myApi.callMe();
+        MyNewJava_Api.Result wrappedResult = myApi.callMe(new MyNewJava_Api.Payload(myPayload.myPayload()));
 
         String result = wrappedResult.adapt(this);
 

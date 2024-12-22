@@ -7,7 +7,7 @@ public interface MyNewJava_Spi {
     String callMe(Payload myPayload);
 
 
-    record Payload(IllegalArgumentException myPayload) {
+    record Payload(String myPayload) {
     }
 
 }
