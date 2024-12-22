@@ -38,8 +38,8 @@ class Base64EncodingExamplesTest
     void jersey_bytes_to_Base64()
     {
         //        byte[] encoded = com.sun.jersey.core.util.Base64.encode(STR.getBytes());
-        //        String result = new String(encoded, StandardCharsets.US_ASCII);
-        //        assertEquals(BASE64_STR, result);
+        //        String myResultField = new String(encoded, StandardCharsets.US_ASCII);
+        //        assertEquals(BASE64_STR, myResultField);
     }
 
     @Test
@@ -82,8 +82,8 @@ class Base64EncodingExamplesTest
         //            byte[] bytes = Files.readAllBytes(Paths.get(myFile.getAbsolutePath()));
         //
         //            byte[] encoded = com.sun.jersey.core.util.Base64.encode(bytes);
-        //            String result = new String(encoded, StandardCharsets.US_ASCII);
-        //            assertEquals(BASE64_FILE, result);
+        //            String myResultField = new String(encoded, StandardCharsets.US_ASCII);
+        //            assertEquals(BASE64_FILE, myResultField);
         //        }
         //        else
         //        {
