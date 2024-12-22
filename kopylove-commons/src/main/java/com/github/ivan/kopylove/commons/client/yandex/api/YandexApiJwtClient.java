@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.api;
+package com.github.ivan.kopylove.commons.client.yandex.api;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

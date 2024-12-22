@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.api.yandex;
+package com.github.ivan.kopylove.commons.client.yandex.api.speech;
 
 import java.util.HashMap;
 import java.util.Map;

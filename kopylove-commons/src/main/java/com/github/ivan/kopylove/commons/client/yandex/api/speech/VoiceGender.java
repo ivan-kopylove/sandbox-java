@@ -1,4 +1,4 @@
-package com.github.lazyf1sh.domain;
+package com.github.ivan.kopylove.commons.client.yandex.api.speech;
 
 public enum VoiceGender
 {
