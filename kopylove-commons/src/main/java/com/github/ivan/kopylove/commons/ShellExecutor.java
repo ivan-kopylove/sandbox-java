@@ -28,18 +28,14 @@ public class ShellExecutor
         builder.redirectErrorStream(true);
 
         builder.command(command.split(" "));
-        builder.directory(shellExecutorParameters.getWorkingDir()
-                                                 .toFile()
-                                                 .getAbsoluteFile());
+        builder.directory(shellExecutorParameters.getWorkingDir().toFile().getAbsoluteFile());
         Process process = builder.start();
 
         StreamGobbler regular = new StreamGobbler(process.getInputStream(), "regular");
         StreamGobbler err = new StreamGobbler(process.getErrorStream(), "errors");
 
-        Future<?> errFuture = shellExecutorParameters.getStreamGobblerPool()
-                                                     .submit(err);
-        Future<?> future = shellExecutorParameters.getStreamGobblerPool()
-                                                  .submit(regular);
+        Future<?> errFuture = shellExecutorParameters.getStreamGobblerPool().submit(err);
+        Future<?> future = shellExecutorParameters.getStreamGobblerPool().submit(regular);
 
         int exitCode = process.waitFor();
         LOGGER.trace("exitcode: {}", exitCode);
