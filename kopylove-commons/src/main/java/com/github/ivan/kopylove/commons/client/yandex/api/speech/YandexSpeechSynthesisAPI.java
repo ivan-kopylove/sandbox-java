@@ -50,38 +50,39 @@ public final class YandexSpeechSynthesisAPI {
     /**
      * The IAM token lifetime doesn't exceed 12 hours, but we recommend requesting the token more often, like once per hour.
      */
-    public byte[] yandexSpeechGenerate(String text, Voice voice) throws InterruptedException {
-        if (text.length() > YANDEX_API_TEXT_LIMIT) {
-            throw new RuntimeException();
-        }
+    public byte[] yandexSpeechGenerate(String text, Voice voice) {
+        try {
+            if (text.length() > YANDEX_API_TEXT_LIMIT) {
+                throw new RuntimeException();
+            }
 
 
-        Map<String, String> voiceParam = switch (voice) {
-            case JOHN -> john();
-            case ERMIL -> ermil();
-            case PHILIP -> philip();
-            case ALENA -> alena();
-            case MADIRUS -> madirus();
-            case JANE -> jane();
-            case ZAHAR -> zahar();
-            case OMAZH -> omazh();
-            default -> throw new RuntimeException("unhandled voice");
-        };
+            Map<String, String> voiceParam = switch (voice) {
+                case JOHN -> john();
+                case ERMIL -> ermil();
+                case PHILIP -> philip();
+                case ALENA -> alena();
+                case MADIRUS -> madirus();
+                case JANE -> jane();
+                case ZAHAR -> zahar();
+                case OMAZH -> omazh();
+                default -> throw new RuntimeException("unhandled voice");
+            };
 
-        voiceParam.put("text", text);
-        voiceParam.put("folderId", apiParameters.folderId());
+            voiceParam.put("text", text);
+            voiceParam.put("folderId", apiParameters.folderId());
 
-        String url = YANDEX_TTS_API_URL + "?";
-        url += urlEncode(voiceParam);
+            String url = YANDEX_TTS_API_URL + "?";
+            url += urlEncode(voiceParam);
 
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
-                .header("Authorization", "Bearer " + apiParameters.token())
-                .POST(HttpRequest.BodyPublishers.noBody())
-                .build();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .header("Authorization", "Bearer " + apiParameters.token())
+                    .POST(HttpRequest.BodyPublishers.noBody())
+                    .build();
 
-        for (int i = 0; i < 6; i++) {
-            try {
+            for (int i = 0; i < 6; i++) {
+
                 HttpResponse<byte[]> response = httpClient.send(request, HttpResponse.BodyHandlers.ofByteArray());
 
                 if (response.statusCode() != 200) {
@@ -92,18 +93,20 @@ public final class YandexSpeechSynthesisAPI {
                     throw new RuntimeException(response.toString());
                 }
 
-                byte[] data = response.body();
-
-
-                return data;
-            } catch (RuntimeException | IOException e) {
-                LOGGER.error("Error calling yandex API", e);
-                Thread.sleep(1000);
-
+                return response.body();
             }
+            throw new RuntimeException("failed to load using several attempts" + request);
+        } catch (RuntimeException | IOException | InterruptedException e) {
+            LOGGER.error("Error calling yandex API", e);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                throw new RuntimeException(ex);
+            }
+
         }
 
+        throw  new RuntimeException("unexpected");
 
-        throw new RuntimeException("failed to load using several attempts" + request);
     }
 }
