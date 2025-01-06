@@ -4,9 +4,6 @@
     <artifactId>sandbox-spring-aspect</artifactId>
     <packaging>jar</packaging>
 
-    <properties>
-        <spring.version>6.1.10</spring.version>
-    </properties>
 
 
     <parent>

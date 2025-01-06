@@ -1,13 +1,11 @@
-package com.github.lazyf1sh.domain;
-
-import com.github.ivan.kopylove.commons.client.yandex.api.speech.Language;
+package com.github.ivan.kopylove.commons.client.yandex.api.speech;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Language.*;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.VoiceGender.*;
 import static com.github.ivan.kopylove.commons.stream.StreamUtil.shuffleComparator;
-import static com.github.lazyf1sh.domain.VoiceGender.*;
 import static java.util.stream.Collectors.toList;
 
 public enum Voice
@@ -24,11 +22,11 @@ public enum Voice
 
     private static final List<Voice> ALL_VOICES        = List.of(Voice.values());
     private static final List<Voice> VOICE_RANDOM_POOL = new ArrayList<>();
-    private static com.github.lazyf1sh.domain.VoiceGender nextRandomGender  = MALE;
-    private final com.github.lazyf1sh.domain.VoiceGender gender;
+    private static VoiceGender nextRandomGender  = MALE;
+    private final VoiceGender gender;
     private final Language language;
 
-    Voice(com.github.lazyf1sh.domain.VoiceGender gender, Language language)
+    Voice(VoiceGender gender, Language language)
     {
         this.gender = gender;
         this.language = language;
@@ -86,7 +84,7 @@ public enum Voice
         throw new RuntimeException("case is not handled");
     }
 
-    public com.github.lazyf1sh.domain.VoiceGender getGender()
+    public VoiceGender getGender()
     {
         return gender;
     }
