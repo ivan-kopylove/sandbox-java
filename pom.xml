@@ -47,7 +47,6 @@
     <modules>
         <!--        <module>clipboard-to-markdown</module>-->
         <module>sandbox-camel</module>
-        <module>whisper-runner-incubated</module>
         <module>sandbox-dozermapper</module>
         <module>sandbox-ehcache</module>
         <!--        <module>sandbox-gRPC</module>-->
@@ -80,7 +79,6 @@
         <module>sandbox-selenium</module>
         <module>sandbox-json-unit</module>
         <module>sandbox-servlet-basic-example</module>
-        <module>sandbox-servlets</module>
         <!--        <module>sandbox-spring-annotations-configuration</module>-->
         <module>sandbox-spring-standalone</module>
         <module>sandbox-spring-security</module>

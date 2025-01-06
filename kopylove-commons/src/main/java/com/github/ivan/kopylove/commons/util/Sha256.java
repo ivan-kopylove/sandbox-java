@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.util;
+package com.github.ivan.kopylove.commons.util;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Util
+public class Sha256
 {
-    public static String calculateFileSha256(byte[] bytes) throws NoSuchAlgorithmException, IOException
+    public static String sha256(byte[] bytes) throws NoSuchAlgorithmException, IOException
     {
         byte[] buffer = new byte[8192];
         int count;

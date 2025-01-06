@@ -1,6 +1,6 @@
 package a98b24895fa11c8513a37be3f0c10d740;
 
-import com.github.ivan.kopylove.sandbox.util.Util;
+import static com.github.ivan.kopylove.commons.util.Sha256.sha256;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -67,7 +67,7 @@ class Base64EncodingExamplesTest
     {
         byte[] decoded = Base64.getDecoder()
                                .decode(BASE64_FILE);
-        String sha256 = Util.calculateFileSha256(decoded);
+        String sha256 = sha256(decoded);
         assertEquals(SHA256_FILE, sha256);
     }
 

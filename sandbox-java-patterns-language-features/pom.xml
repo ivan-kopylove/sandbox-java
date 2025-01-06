@@ -28,4 +28,13 @@
         </plugins>
     </build>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.github.ivan.kopylove</groupId>
+            <artifactId>kopylove-commons</artifactId>
+            <version>snapshot</version>
+        </dependency>
+    </dependencies>
+
 </project>
