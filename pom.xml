@@ -47,6 +47,7 @@
     <modules>
         <!--        <module>clipboard-to-markdown</module>-->
         <module>sandbox-camel</module>
+        <module>whisper-runner-incubated</module>
         <module>sandbox-dozermapper</module>
         <module>sandbox-ehcache</module>
         <!--        <module>sandbox-gRPC</module>-->

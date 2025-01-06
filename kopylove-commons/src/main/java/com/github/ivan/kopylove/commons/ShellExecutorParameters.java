@@ -19,9 +19,8 @@ public class ShellExecutorParameters
     {
         this.workingDir = workingDir;
 
-        Thread unfortunateHook = new Thread(() -> {shutDownGobblerExecutor(streamGobblerPool);});
-        Runtime.getRuntime()
-               .addShutdownHook(unfortunateHook);
+        Thread unfortunateHook = new Thread(() -> shutDownGobblerExecutor(streamGobblerPool));
+        Runtime.getRuntime().addShutdownHook(unfortunateHook);
     }
 
     private static void shutDownGobblerExecutor(ExecutorService executorService)
