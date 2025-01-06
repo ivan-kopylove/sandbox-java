@@ -8,6 +8,6 @@ public class MyNewJava_UseCase implements MyNewJava_Api {
 
     @Override
     public Result callMe(Payload myPayload) {
-        return new Result.MySuccessResult("");
+        return new Result.MySuccessResult("some result 123");
     }
 }
