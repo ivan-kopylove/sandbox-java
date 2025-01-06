@@ -58,7 +58,6 @@
         <module>sandbox-java-applet</module>
         <module>kopylove-commons</module>
         <!--        <module>sandbox-java-10</module>-->
-        <module>sandbox-java-21</module>
         <module>sandbox-java-patterns-language-features</module>
         <module>sandbox-java-9</module>
         <module>sandbox-jdbc</module>
