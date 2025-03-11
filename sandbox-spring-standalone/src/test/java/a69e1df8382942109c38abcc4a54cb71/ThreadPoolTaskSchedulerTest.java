@@ -16,7 +16,7 @@ import static org.hamcrest.number.OrderingComparison.greaterThanOrEqualTo;
 class ThreadPoolTaskSchedulerTest
 {
     @Test
-    void should_serve_as_basic_example_of_ThreadPoolTaskScheduler() throws InterruptedException
+    void should_serve_as_hello_world_example_of_ThreadPoolTaskScheduler() throws InterruptedException
     {
         AtomicInteger result = new AtomicInteger(0);
 
