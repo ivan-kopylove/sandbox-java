@@ -1,7 +1,3 @@
----
-id: README
-tags: []
----
 
 # Java incubator
 
