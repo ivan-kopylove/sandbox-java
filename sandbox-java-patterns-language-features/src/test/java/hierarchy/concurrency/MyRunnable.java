@@ -1,4 +1,4 @@
-package heap.ad113d689d5d479e28da6c6acd5e0e1cd;
+package hierarchy.concurrency;
 
 class MyRunnable implements Runnable
 {
@@ -10,16 +10,6 @@ class MyRunnable implements Runnable
         this.name = threadName;
         thread = new Thread(this, threadName);
         thread.start();
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
     }
 
     public Thread getThread()
@@ -36,7 +26,7 @@ class MyRunnable implements Runnable
     {
         try
         {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
             System.out.println(this.name);
         }
         catch (InterruptedException e)

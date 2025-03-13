@@ -77,7 +77,8 @@
         <!--        <module>sandbox-powermockito</module>-->
 
         <module>sandbox-quartz</module>
-        <module>sandbox-selenium</module>
+        <module>sandbox-test-containers</module>
+        <module>sandbox-test-selenium</module>
         <module>sandbox-json-unit</module>
         <module>sandbox-servlet-basic-example</module>
         <module>sandbox-servlets</module>
@@ -101,7 +102,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.2</version>
+            <version>5.12.0</version>
             <scope>test</scope>
         </dependency>
 

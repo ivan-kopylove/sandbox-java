@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class ListOfKoan
 {
     /**
@@ -23,5 +26,7 @@ public class ListOfKoan
 
         // when
         integers.add(1);
+
+        assertThat(integers.size(), equalTo(3));
     }
 }
