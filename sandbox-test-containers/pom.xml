@@ -25,7 +25,7 @@
             <version>1.18.3</version>
             <scope>test</scope>
         </dependency>
-        <!--        try to remove it and check if java: cannot access org.junit.rules.TestRule have been fixed or not by this time  -->
+        <!-- try to remove junit v4 it and check if java: cannot access org.junit.rules.TestRule have been fixed or not by this time  -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
