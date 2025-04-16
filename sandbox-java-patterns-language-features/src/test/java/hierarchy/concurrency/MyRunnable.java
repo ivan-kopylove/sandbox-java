@@ -14,6 +14,7 @@ class MyRunnable implements Runnable
 
     public Thread getThread()
     {
+        int abc;
         return thread;
     }
 
