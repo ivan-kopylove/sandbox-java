@@ -10,11 +10,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
- * Documentation related:
- * <p>
- * <a href="obsidian://search/?vault=notes&query=ad57cce4">obsidian</a>
- * </p>
- * <a href="https://ivan-kopylove.github.io/ad57cce4-610d-4519-8362-140e9facf32c">blog</a>
+ * @see <a href="obsidian://search/?vault=notes&query=ad57cce4">obsidian</a>
+ * @see <a href="https://ivan-kopylove.github.io/ad57cce4-610d-4519-8362-140e9facf32c">blog</a>
  */
 public class WaitErrorExampleTest {
 
