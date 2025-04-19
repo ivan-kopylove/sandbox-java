@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * Documentation related:
  * <p>
- * <a href="obsidian://open?vault=notes&file=ad57cce4-610d-4519-8362-140e9facf32c%2Fad57cce4-610d-4519-8362-140e9facf32c">obsidian</a>
+ * <a href="obsidian://open?vault=notes&file=ad57cce4-610d-4519-8362-140e9facf32c">obsidian</a>
  * </p>
  * <a href="https://ivan-kopylove.github.io/ad57cce4-610d-4519-8362-140e9facf32c">blog</a>
  */
