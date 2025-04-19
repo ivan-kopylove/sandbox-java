@@ -69,7 +69,7 @@ class LocalDateTimeTest
     }
 
     /**
-     * {@link ResolverStyle.LENIENT} overflows result.
+     * {@link ResolverStyle.LENIENT} overflows myResultField.
      */
     @Test
     void localDateTimeLenientIncorrectDate()
@@ -84,7 +84,7 @@ class LocalDateTimeTest
     }
 
     /**
-     * {@link ResolverStyle.SMART} fixes result to maximum available date.
+     * {@link ResolverStyle.SMART} fixes myResultField to maximum available date.
      */
     @Test
     void localDateTimeSmartIncorrectDate()

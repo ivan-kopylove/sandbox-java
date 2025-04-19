@@ -1,6 +1,8 @@
 package com.github.ivan.kopylove.commons.stream;
 
+import java.util.Comparator;
 import java.util.Iterator;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
@@ -14,5 +16,10 @@ public class StreamUtil
     {
         requireNonNull(iterator);
         return StreamSupport.stream(spliteratorUnknownSize(iterator, ORDERED), false);
+    }
+
+    public static <T> Comparator<T> shuffleComparator() {
+        return Comparator.comparing(e -> ThreadLocalRandom.current()
+                .nextBoolean());
     }
 }

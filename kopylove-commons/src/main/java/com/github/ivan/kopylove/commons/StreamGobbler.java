@@ -32,10 +32,10 @@ public class StreamGobbler implements Runnable
             String line = null;
             while ((line = br.readLine()) != null)
             {
+                LOGGER.info("line: {}", line);
                 if (lines > 30)
                 {
-                    br.lines()
-                      .forEach(LOGGER::info);
+                    br.lines().forEach(LOGGER::info);
                     LOGGER.info("lines {}", lines);
                 }
                 lines++;

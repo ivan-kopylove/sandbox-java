@@ -4,7 +4,7 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>sandbox-java-patterns-language-features</artifactId>
+    <artifactId>sandbox-java-jcstress</artifactId>
     <version>snapshot</version>
 
     <parent>
@@ -12,6 +12,15 @@
         <artifactId>sandbox-java-incubator</artifactId>
         <version>snapshot</version>
     </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjdk.jcstress</groupId>
+            <artifactId>jcstress-core</artifactId>
+            <version>0.16</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -27,14 +36,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-
-        <dependency>
-            <groupId>com.github.ivan.kopylove</groupId>
-            <artifactId>kopylove-commons</artifactId>
-            <version>snapshot</version>
-        </dependency>
-    </dependencies>
-
 </project>
