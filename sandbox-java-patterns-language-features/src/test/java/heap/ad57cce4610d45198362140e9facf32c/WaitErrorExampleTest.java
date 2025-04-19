@@ -12,33 +12,37 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * Documentation related:
  * <p>
- * <a href="obsidian://open?vault=notes&file=ad57cce4-610d-4519-8362-140e9facf32c">obsidian</a>
+ * <a href="obsidian://search/?vault=notes&query=ad57cce4">obsidian</a>
  * </p>
  * <a href="https://ivan-kopylove.github.io/ad57cce4-610d-4519-8362-140e9facf32c">blog</a>
  */
 public class WaitErrorExampleTest {
 
-    @Test
-    void should_do_something_when_condition() throws InterruptedException {
-        // given
-        Object lock = new Object();
+    @Nested
+    class Problem
+    {
+        @Test
+        void should_throw_because_monitor_is_not_locked() throws InterruptedException
+        {
+            // given
+            Object lock = new Object();
 
-        // when
-        IllegalMonitorStateException ex = assertThrows(IllegalMonitorStateException.class,
-                         () -> {
-                             lock.wait(); // ← This will throw exception
-                         });
+            // when
+            IllegalMonitorStateException ex = assertThrows(IllegalMonitorStateException.class, () -> {
+                lock.wait(); // ← This will throw exception
+            });
 
 
-        // then
-        assertThat(ex.getMessage(), equalTo("current thread is not owner"));
+            // then
+            assertThat(ex.getMessage(), equalTo("current thread is not owner"));
+        }
     }
 
     @Nested
     class Solution
     {
         @Test
-        void should_do_something_when_condition() throws InterruptedException
+        void should_call_wait_normally() throws InterruptedException
         {
             // given
             Object lock = new Object();
