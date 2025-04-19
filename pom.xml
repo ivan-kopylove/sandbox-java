@@ -54,7 +54,6 @@
         <module>sandbox-jasper-embedded</module>
         <module>sandbox-java-applet</module>
         <module>kopylove-commons</module>
-        <module>sandbox-java-21</module>
         <module>sandbox-java-patterns-language-features</module>
         <module>sandbox-java-9</module>
         <module>sandbox-jdbc</module>
@@ -65,14 +64,13 @@
         <module>sandbox-logging-slf4j</module>
         <module>sandbox-maven-git-build-hook</module>
         <module>sandbox-maven-rewrite-plugin</module>
-        <module>sandbox-mockito</module>
+        <module>sandbox-test-mockito</module>
         <module>sandbox-pdfbox</module>
         <module>sandbox-quartz</module>
         <module>sandbox-test-containers</module>
         <module>sandbox-test-selenium</module>
-        <module>sandbox-json-unit</module>
+        <module>sandbox-test-json-unit</module>
         <module>sandbox-servlet-basic-example</module>
-        <module>sandbox-servlets</module>
         <module>sandbox-spring-standalone</module>
         <module>sandbox-spring-security</module>
         <module>sandbox-spring-statemachine</module>
