@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.ivan.kopylove</groupId>
-    <artifactId>sandbox-java-incubator</artifactId>
+    <artifactId>java-incubator</artifactId>
     <version>snapshot</version>
     <packaging>pom</packaging>
 
@@ -55,7 +55,6 @@
         <module>sandbox-java-applet</module>
         <module>kopylove-commons</module>
         <module>sandbox-java-21</module>
-        <module>sandbox-java-8</module>
         <module>sandbox-java-patterns-language-features</module>
         <module>sandbox-java-9</module>
         <module>sandbox-jdbc</module>
