@@ -3,8 +3,8 @@ package heap.b860f78d6f8b4bf984de3da73d06edac;
 import org.junit.jupiter.api.Test;
 
 /**
- * @see <a href="obsidian://search/?vault=notes&query=b860f78d">obsidian</a>
  * @see <a href="https://ivan-kopylove.github.io/b860f78d-6f8b-4bf9-84de-3da73d06edac">blog</a>
+ * @see <a href="obsidian://search/?vault=notes&query=b860f78d">obsidian</a>
  */
 public class BasicNotificationTest
 {
