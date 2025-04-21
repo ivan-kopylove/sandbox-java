@@ -14,7 +14,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class LiveLockTest
 {
         @Test
-        void should_do_something_when_condition() throws InterruptedException
+        void should_do_something_when_condition()
         {
             // given
             ReentrantLock lock1 = new ReentrantLock(true);
