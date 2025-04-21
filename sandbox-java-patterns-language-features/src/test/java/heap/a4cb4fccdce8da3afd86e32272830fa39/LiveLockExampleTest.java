@@ -9,8 +9,8 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 
 /**
- * Facets:
- * - concurrency
+ * @see <a href="https://ivan-kopylove.github.io/f50e8fff-7e74-47c9-ab98-1be96f5d2f81">blog</a>
+ * @see <a href="obsidian://search/?vault=notes&query=f50e8fff">obsidian</a>
  */
  class LiveLockExampleTest
 {
