@@ -28,7 +28,7 @@ public class VolatileTest
             }
 
             latch.await();
-            fail("try to guess");
-            System.out.println(counter1); // try to guess
+            fail("try to predict");
+            System.out.println(counter1);
         }
 }
