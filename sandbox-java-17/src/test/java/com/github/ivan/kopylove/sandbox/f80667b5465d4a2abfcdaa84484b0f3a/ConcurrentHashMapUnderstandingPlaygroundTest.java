@@ -31,7 +31,7 @@ class ConcurrentHashMapUnderstandingPlaygroundTest {
         }
         Thread.sleep(15_000);
 
-        fail("try to check yourself before running the assertion");
+        fail("try to predict yourself before running the assertion");
         assertThat(collector.size(), equalTo(loops));
     }
 
@@ -49,7 +49,7 @@ class ConcurrentHashMapUnderstandingPlaygroundTest {
         }
         Thread.sleep(15_000);
 
-        fail("try to check yourself before running the assertion");
+        fail("try to predict yourself before running the assertion");
         assertThat(collector.size(), greaterThan(loops / 10));
         assertThat(collector.size(), lessThan(loops));
     }

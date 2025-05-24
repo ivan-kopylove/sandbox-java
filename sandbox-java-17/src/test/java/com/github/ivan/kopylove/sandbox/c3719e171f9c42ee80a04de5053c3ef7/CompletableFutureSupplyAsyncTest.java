@@ -30,7 +30,7 @@ class CompletableFutureSupplyAsyncTest {
     void return_value() throws ExecutionException, InterruptedException {
         CompletableFuture<String> stringCompletableFuture = CompletableFuture.supplyAsync(() -> "world");
 
-        fail("try to check yourself before running the assertion");
+        fail("try to predict yourself before running the assertion");
         assertThat(stringCompletableFuture.get(), equalTo("world"));
     }
 }

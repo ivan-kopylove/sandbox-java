@@ -28,7 +28,7 @@ public class VolatileTest
             }
 
             latch.await();
-            fail("try to predict");
+            fail("try to predict yourself before running the assertion");
             System.out.println(counter1);
         }
 }
