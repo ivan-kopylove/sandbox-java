@@ -18,7 +18,7 @@ class ComparatorLambdaExampleTest
         List<Person> personList = new ArrayList<Person>();
         personList.add(new Person("B", "Z", 20));
         personList.add(new Person("Z", "Z", 25));
-        personList.add(new Person("A", "A", 30));
+        personList.add(new Person("VolatileTest", "VolatileTest", 30));
 
         // Sort with Inner Class
         Collections.sort(personList, new Comparator<Person>()

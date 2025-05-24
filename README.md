@@ -8,7 +8,7 @@ This projects serves as
   scenarios.
 - a startup incubator / template for complex projects — a set of boilerplate snippets / patterns to give a momentum for
   more
-  complex projects before the complex project will be extracted into separate project.
+  complex projects before the complex project will be extracted into a separate project.
 - the collection of atomic, focused and isolated examples to try out different Java practices and scenarios I come
   across.
 

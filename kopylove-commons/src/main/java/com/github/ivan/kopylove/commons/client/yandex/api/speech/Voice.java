@@ -16,7 +16,7 @@ public enum Voice
     ALENA(FEMALE, RU),
     MADIRUS(MALE, RU),
     ZAHAR(MALE, RU),
-    OMAZH(MALE, RU),
+//    OMAZH(MALE, RU),
     JANE(FEMALE, RU),
     PREVIOUS(UNKNOWN_GENDER, UNKNOWN_LANG);
 

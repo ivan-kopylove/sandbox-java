@@ -13,8 +13,13 @@ import java.net.http.HttpResponse;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voice.*;
-import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.*;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.alena;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.ermil;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.jane;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.john;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.madirus;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.philip;
+import static com.github.ivan.kopylove.commons.client.yandex.api.speech.Voices.zahar;
 import static java.net.http.HttpClient.newHttpClient;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
@@ -65,7 +70,7 @@ public final class YandexSpeechSynthesisAPI {
                 case MADIRUS -> madirus();
                 case JANE -> jane();
                 case ZAHAR -> zahar();
-                case OMAZH -> omazh();
+//                case OMAZH -> omazh();
                 default -> throw new RuntimeException("unhandled voice");
             };
 

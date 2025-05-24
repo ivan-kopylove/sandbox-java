@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 class BasicThreadsTest
 {
     @Test
-    void main()
+    void run_test()
     {
         Thread t = new Thread(new LiftOff());
         t.start();
