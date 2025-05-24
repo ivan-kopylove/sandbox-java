@@ -6,12 +6,14 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static junit.framework.Assert.fail;
+
 public class VolatileTest
 {
     private static volatile int counter1 = 0;
 
         @Test
-        void should_do_something_when_condition() throws InterruptedException
+        void what_is_expected_result() throws InterruptedException
         {
             int tasksCount = 100_000;
             CountDownLatch latch = new CountDownLatch(tasksCount);
@@ -26,7 +28,7 @@ public class VolatileTest
             }
 
             latch.await();
-
-            System.out.println(counter1);
+            fail("try to guess");
+            System.out.println(counter1); // try to guess
         }
 }
