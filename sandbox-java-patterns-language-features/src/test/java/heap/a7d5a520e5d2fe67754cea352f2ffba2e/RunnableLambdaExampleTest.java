@@ -7,10 +7,10 @@ class RunnableLambdaExampleTest
     /**
      * Java lambdas.
      * <p>
-     * A functional interface is an interface that contains only one abstract method
+     * VolatileTest functional interface is an interface that contains only one abstract method
      * {@link Runnable}, ActionListener, Comparable are some of the examples of functional interfaces
      * <p>
-     * A lambda expression is composed of three parts.
+     * VolatileTest lambda expression is composed of three parts.
      * Argument List  | Arrow	| 	Token Body
      * (int x, int y) | ->		|	x + y
      */

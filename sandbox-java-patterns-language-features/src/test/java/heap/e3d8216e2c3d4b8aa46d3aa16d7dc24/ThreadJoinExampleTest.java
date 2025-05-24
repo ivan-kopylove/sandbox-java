@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 class ThreadJoinExampleTest
 {
         @Test
-        @DisplayName("A way to demonstrate that .join operation blocks the execution")
+        @DisplayName("VolatileTest way to demonstrate that .join operation blocks the execution")
         void should_print_one_by_one_ascending() throws InterruptedException
         {
             for(int i = 0; i < 10; i++)

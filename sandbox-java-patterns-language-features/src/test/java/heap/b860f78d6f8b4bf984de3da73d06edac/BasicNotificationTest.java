@@ -18,9 +18,9 @@ public class BasicNotificationTest
             {
                 try
                 {
-                    System.out.println("Thread A: Waiting");
+                    System.out.println("Thread VolatileTest: Waiting");
                     lock.wait();
-                    System.out.println("Thread A: Resumed");
+                    System.out.println("Thread VolatileTest: Resumed");
                 }
                 catch (InterruptedException e)
                 {
