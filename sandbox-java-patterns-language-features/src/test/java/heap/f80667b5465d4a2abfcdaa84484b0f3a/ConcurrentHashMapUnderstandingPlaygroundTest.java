@@ -1,4 +1,4 @@
-package com.github.ivan.kopylove.sandbox.f80667b5465d4a2abfcdaa84484b0f3a;
+package heap.f80667b5465d4a2abfcdaa84484b0f3a;
 
 import org.junit.jupiter.api.Test;
 

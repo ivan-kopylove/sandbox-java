@@ -1,3 +1,0 @@
-package packagea;
-
-class ClassA {}
