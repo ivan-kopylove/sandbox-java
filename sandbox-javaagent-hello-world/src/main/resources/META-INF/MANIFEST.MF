@@ -1,4 +1,0 @@
-Agent-Class: com.github.ivan.kopylove.sandbox.instrumentation.agent.MyInstrumentationAgent
-Can-Redefine-Classes: true
-Can-Retransform-Classes: true
-Premain-Class: com.github.ivan.kopylove.sandbox.instrumentation.agent.MyInstrumentationAgent
