@@ -9,10 +9,10 @@ import java.util.List;
  * The term "unchecked" refers to the fact that the compiler and the runtime system do not have enough type information to perform all type checks that would be necessary to ensure type safety.
  * In this sense, certain operations are "unchecked".
  */
-class UncheckedGenericWarningExample
+class UncheckedGenericWarningExampleTest
 {
     @Test
-    void main()
+    void run()
     {
         List list = new ArrayList();
         list.add("String"); // unchecked warning
