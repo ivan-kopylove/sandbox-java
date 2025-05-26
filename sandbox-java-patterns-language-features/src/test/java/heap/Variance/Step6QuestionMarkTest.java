@@ -1,3 +1,4 @@
+
 package heap.Variance;
 
 import org.junit.jupiter.api.Test;
@@ -9,18 +10,18 @@ import java.util.List;
  * Answer the questions stated in {@link heap.Variance.Fruit}.
  */
 @SuppressWarnings("unused")
-class ExtendsTest
+class Step6QuestionMarkTest
 {
     @Test
     void test1()
     {
         //            List<Integer> ints = Arrays.asList(1, 2);
-        //            List<? extends Number> nums = ints;
+        //            List<?> nums = ints;
     }
 
     void test2()
     {
-        List<? extends Apple> apples = new ArrayList<>();
+        List<?> apples = new ArrayList<>();
 
         // apples.add(new Object());
         // apples.add(new Fruit());
@@ -29,7 +30,7 @@ class ExtendsTest
         // apples.add(new Jonathan());
     }
 
-    void test3(List<? extends Apple> apples)
+    void test3(List<?> apples)
     {
         // apples.add(new Object());
         // apples.add(new Fruit());
