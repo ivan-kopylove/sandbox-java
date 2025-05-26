@@ -1,24 +1,24 @@
-
-package heap.a40acebbfce84599b3d9cacc0ffc9143;
+package heap.Variance;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 @SuppressWarnings("unused")
-class SuperTest
+class ExtendsTest
 {
     @Test
     void test1()
     {
         //            List<Integer> ints = Arrays.asList(1, 2);
-        //            List<? super Number> nums = ints;
+        //            List<? extends Number> nums = ints;
     }
 
     void test2()
     {
-        List<? super Apple> apples = new ArrayList<>();
+        List<? extends Apple> apples = new ArrayList<>();
 
         // apples.add(new Object());
         // apples.add(new Fruit());
@@ -27,7 +27,9 @@ class SuperTest
         // apples.add(new Jonathan());
     }
 
-    void test3(List<? super Apple> apples)
+    // what if I uncomment a line?
+    // what PECS it is?
+    void test3(List<? extends Apple> apples)
     {
         // apples.add(new Object());
         // apples.add(new Fruit());
@@ -35,5 +37,4 @@ class SuperTest
         // apples.add(new Orange());
         // apples.add(new Jonathan());
     }
-
 }

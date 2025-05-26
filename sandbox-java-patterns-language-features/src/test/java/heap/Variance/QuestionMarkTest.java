@@ -1,5 +1,5 @@
 
-package heap.a40acebbfce84599b3d9cacc0ffc9143;
+package heap.Variance;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("unused")
-class JustQuestion
+class QuestionMarkTest
 {
     @Test
     void test1()
