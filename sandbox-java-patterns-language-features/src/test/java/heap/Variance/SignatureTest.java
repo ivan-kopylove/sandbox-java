@@ -17,6 +17,9 @@ class B extends A
 //        }
 }
 
+/**
+ * Answer the questions stated in {@link heap.Variance.Fruit}.
+ */
 public class SignatureTest
 {
 

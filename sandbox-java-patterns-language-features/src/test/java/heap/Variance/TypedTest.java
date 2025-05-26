@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Typed
+/**
+ * Answer the questions stated in {@link heap.Variance.Fruit}.
+ */
+public class TypedTest
 {
 
     @Test

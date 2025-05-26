@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Answer the questions stated in {@link heap.Variance.Fruit}.
+ */
 @SuppressWarnings("unused")
 class SuperTest
 {
