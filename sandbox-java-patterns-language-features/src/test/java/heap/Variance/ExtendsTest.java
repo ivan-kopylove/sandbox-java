@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Answer the questions stated in {@link heap.Variance.Fruit}.
+ */
 @SuppressWarnings("unused")
 class ExtendsTest
 {
@@ -27,8 +29,6 @@ class ExtendsTest
         // apples.add(new Jonathan());
     }
 
-    // what if I uncomment a line?
-    // what PECS it is?
     void test3(List<? extends Apple> apples)
     {
         // apples.add(new Object());
