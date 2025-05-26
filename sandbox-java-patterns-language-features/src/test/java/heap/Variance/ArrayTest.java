@@ -3,7 +3,7 @@ package heap.Variance;
 import org.junit.jupiter.api.Test;
 
 
-public class Array
+public class ArrayTest
 {
 
     @Test

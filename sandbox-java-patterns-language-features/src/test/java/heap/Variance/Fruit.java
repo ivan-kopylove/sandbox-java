@@ -7,6 +7,8 @@ package heap.Variance;
 // how can I find the reasoning behind a compile error?
 // what PECS it is?
 // what type of variance is that?
+// super - is covariant or contravariant?
+// extends - is covariant or contravariant?
 
 class Fruit {}
 
